@@ -1,0 +1,19 @@
+/*
+Line clamping
+This mixin is useful for truncated text
+Here is a list of parameters you can use:
+*lines - the number of rows to display
+
+## Usage
+.component {
+    @include line-clamping($lines: 3);
+}
+*/
+
+@mixin line-clamping($lines: 2) {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

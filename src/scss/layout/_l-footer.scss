@@ -1,0 +1,85 @@
+.l-footer {
+    &__top {
+        @include grid;
+
+        grid-template-columns: 1fr;
+
+        @include media(md-up) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__top-cell {
+        @include media(sm-down) {
+            padding-left: $wrapper-padding-sm;
+            padding-right: $wrapper-padding-sm;
+        }
+
+        @include media(xs) {
+            padding-left: $wrapper-padding-xs;
+            padding-right: $wrapper-padding-xs;
+        }
+
+        &.m-comunity {
+            @include media(sm-down) {
+                background-color: #f1f1f1;
+            }
+        }
+
+        &.m-subscribe {
+            @include media(sm-down) {
+                background-color: #000000;
+            }
+        }
+    }
+
+    &__main {
+        @include grid;
+
+        grid-template-columns: 1fr;
+        grid-row-gap: 40px;
+        grid-template-areas:
+            "navigation"
+            "storloc-rew"
+            "copy-links"
+            "selector-payment";
+
+        @include media(md-up) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, auto);
+            grid-row-gap: 60px;
+            grid-template-areas:
+                "navigation navigation"
+                "storloc-rew storloc-rew"
+                "copy-links selector-payment";
+        }
+
+        @include media(xl-up) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, auto);
+            grid-template-areas:
+                "navigation navigation navigation storloc-rew"
+                "copy-links copy-links selector-payment selector-payment";
+        }
+    }
+
+    &__main-cell {
+        background-color: white;
+        
+        &.m-navigation {
+            grid-area: navigation;
+        }
+
+        &.m-storloc-rew {
+            grid-area: storloc-rew;
+        }
+
+        &.m-copy-links {
+            grid-area: copy-links;
+        }
+
+        &.m-selector-payment {
+            grid-area: selector-payment;
+        }
+    }
+}

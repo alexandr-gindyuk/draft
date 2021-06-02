@@ -1,0 +1,41 @@
+/*
+We have a `media` mixin for make it easier to implement responsive styling via media queries.
+
+You can nest them right within other blocks of CSS,which puts the properties and values you are changing right next
+to each other.
+That creates an obvious connection between them, which is a much nicer authoring experience than trying to maintain
+those changes separated by tons of other code or in a different file.
+
+## Usage
+
+Here is how to use `media()` mixin:
+
+.b-block {
+    // styles outside of a media query
+
+    @include media(sm) {
+        // styles for "s" viewports
+    };
+
+    @include media(md-up) {
+        // styles for "m" and "l" viewports
+    };
+}
+*/
+
+
+@mixin media($query) {
+    $__query: null;
+
+    @each $type in $query {
+        @if map-has-key($media, $type) {
+            $__query: append($__query, unquote(map-get($media, $type)), comma);
+        } @else {
+            @warn $type;
+        }
+    }
+
+    @media #{$__query} {
+        @content;
+    }
+}

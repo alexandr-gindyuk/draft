@@ -1,0 +1,27 @@
+.footer__nav {
+    &-title {
+        margin: 0;
+    }
+
+    &-button {
+        @include media(md-up) {
+            display: none;
+        }
+    }
+
+    &-heading {
+        display: none;
+
+        @include media(md-up) {
+            display: block;
+        }
+    }
+
+    &-content {
+        @include media(md-up) {
+            &:not(.show) {
+                display: block;
+            }
+        }
+    }
+}

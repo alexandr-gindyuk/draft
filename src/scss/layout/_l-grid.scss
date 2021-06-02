@@ -1,0 +1,16 @@
+@mixin grid {
+    display: grid;
+    grid-column-gap: $grid-column-gap-xs;
+
+    @include media(sm-up) {
+        grid-column-gap: $grid-column-gap-sm;
+    }
+
+    @include media(xxl) {
+        grid-column-gap: $grid-column-gap-xxl;
+    }
+}
+
+.l-grid {
+    @include grid;
+}

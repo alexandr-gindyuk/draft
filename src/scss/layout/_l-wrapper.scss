@@ -1,0 +1,76 @@
+@mixin wrapper {
+    padding-left: $wrapper-padding-xs;
+    padding-right: $wrapper-padding-xs;
+
+    @include media(sm) {
+        padding-left: $wrapper-padding-sm;
+        padding-right: $wrapper-padding-sm;
+    }
+
+    @include media(md) {
+        padding-left: $wrapper-padding-md;
+        padding-right: $wrapper-padding-md;
+    }
+
+    @include media(lg) {
+        padding-left: $wrapper-padding-lg;
+        padding-right: $wrapper-padding-lg;
+    }
+
+    @include media(xl) {
+        padding-left: $wrapper-padding-xl;
+        padding-right: $wrapper-padding-xl;
+    }
+    
+    @include media(xxl) {
+        max-width: $wrapper-width-max;
+        padding-left: $wrapper-padding-xxl;
+        padding-right: $wrapper-padding-xxl;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &.m-full-width {
+        padding-left: 0;
+        padding-right: 0;
+
+        @each $breakpoint in map-keys($media) {
+            &-#{$breakpoint} {
+                @include media($breakpoint) {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    &.m-stick-right {
+        padding-right: 0;
+
+        @each $breakpoint in map-keys($media) {
+            &-#{$breakpoint} {
+                @include media($breakpoint) {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    &.m-stick-left {
+        padding-left: 0;
+
+        @each $breakpoint in map-keys($media) {
+            &-#{$breakpoint} {
+                @include media($breakpoint) {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+
+.l-wrapper {
+    @include wrapper;
+}

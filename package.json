@@ -1,0 +1,46 @@
+{
+    "name": "draft",
+    "version": "1.0.0",
+    "description": "",
+    "private": true,
+    "scripts": {
+        "dev": "cross-env NODE_ENV=development webpack --mode development",
+        "build": "cross-env NODE_ENV=production webpack --mode production",
+        "watch": "webpack --mode development --watch",
+        "start": "cross-env NODE_ENV=development webpack serve --mode development"
+    },
+    "browserslist": [
+        "cover 99.5%"
+    ],
+    "keywords": [
+        "js",
+        "javascript",
+        "webpack"
+    ],
+    "author": "Astound Commerce",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.14.3",
+        "@babel/preset-env": "^7.14.2",
+        "babel-loader": "^8.2.2",
+        "clean-webpack-plugin": "^4.0.0-alpha.0",
+        "cross-env": "^7.0.3",
+        "css-loader": "^5.2.6",
+        "file-loader": "^6.2.0",
+        "html-loader": "^2.1.2",
+        "html-webpack-plugin": "^5.3.1",
+        "mini-css-extract-plugin": "^1.6.0",
+        "sass": "^1.34.0",
+        "sass-loader": "^11.1.1",
+        "style-loader": "^2.0.0",
+        "webpack": "^5.37.1",
+        "webpack-cli": "^4.7.0",
+        "webpack-dev-server": "^3.11.2"
+    },
+    "dependencies": {
+        "@babel/polyfill": "^7.12.1",
+        "@popperjs/core": "^2.9.2",
+        "bootstrap": "^5.0.1",
+        "normalize.css": "^8.0.1"
+    }
+}
