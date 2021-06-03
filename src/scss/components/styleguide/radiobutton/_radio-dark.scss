@@ -1,0 +1,34 @@
+.dark {
+    .radio {
+    
+        &__item {          
+    
+            input {  
+                &:checked ~ .radiomark {                
+                    border: 2px solid $white;               
+                }   
+                
+                &:disabled ~ .radiomark {  
+                    border: 2px solid $grey;              
+                    background: $grey-deep;             
+                }  
+            }  
+
+            &:not(&.error):hover input:not(:disabled) ~ .radiomark {
+                border: 2px solid $white;
+            } 
+    
+            &:hover {
+                input:checked  ~ .radiomark {
+                    border: 2px solid $white;
+                }
+            } 
+        }
+
+        .radiomark {
+            &:after {    
+                background: $white;    
+            }
+        }
+    }
+}
