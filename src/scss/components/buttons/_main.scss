@@ -1,0 +1,108 @@
+$buttons-main-type: ('outlined', 'filled');
+$buttons-main-theme: ('dark');
+
+@mixin button-main {
+    @include button;
+
+    font-family: $font-dinot-medium;
+    font-size: 15px;
+    text-transform: uppercase;
+    min-width: 160px;
+    height: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 1px solid transparent;
+
+    &:focus {
+        outline: 2px solid #0086bf;
+        outline-offset: 2px;
+    }
+}
+
+@mixin button-main-type-and-theme($type, $theme: 'default') {
+    @if ($type == 'outlined') {
+        @if ($theme == 'default') {
+            color: #000000;
+            background-color: transparent;
+            border-color: #e3e3e3;
+
+            &:hover {
+                color: #ffffff;
+                background-color: #5c6573;
+            }
+
+            &:disabled,
+            &.m-disabled {
+                color: #a1a8b2;
+                border-color: #f1f1f1;
+                pointer-events: none;
+            }
+        }
+
+        @if ($theme == 'dark') {
+            color: #ffffff;
+            background-color: transparent;
+            border-color: #5c6573;
+
+            &:hover {
+                color: #000000;
+                background-color: #ffffff;
+            }
+
+            &:focus {
+                outline-color: #ffffff;
+            }
+
+            &:disabled,
+            &.m-disabled {
+                color: #a1a8b2;
+                border-color: #5c6573;
+                pointer-events: none;
+            }
+        }
+    }
+
+    @if ($type == 'filled') {
+        @if ($theme == 'default') {
+            color: #ffffff;
+            background-color: #000000;
+
+            &:hover {
+                background-color: #5c6573;
+            }
+
+            &:disabled,
+            &.m-disabled {
+                background-color: #a1a8b2;
+                pointer-events: none;
+            }
+        }
+        @if ($theme == 'dark') {
+            color: #000000;
+            background-color: #e3e3e3;
+
+            &:hover {
+                background-color: #ffffff;
+            }
+
+            &:focus {
+                outline-color: #ffffff;
+            }
+
+            &:disabled,
+            &.m-disabled {
+                color: #a1a8b2;
+                background-color: #5c6573;
+                pointer-events: none;
+            }
+        }
+    }
+
+    @if index($buttons-main-type, $type) == null {
+        @warn 'Invalid argumment $type: `#{$type}`. Possible types: [#{$buttons-main-type}]';
+    }
+
+    @if index($buttons-main-theme, $theme) == null {
+        @warn 'Invalid argumment $theme: `#{$theme}`. Possible themes: [#{$buttons-main-theme}]';
+    }
+}

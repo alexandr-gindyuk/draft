@@ -1,0 +1,60 @@
+@each $type in $buttons-main-type {
+    .btn-main-#{$type} {
+        @include button-main;
+        @include button-main-type-and-theme($type);
+    }
+}
+
+@each $type in $buttons-main-type {
+    @each $theme in $buttons-main-theme {
+        .theme-#{$theme} {
+            .btn-main-#{$type} {
+                @include button-main-type-and-theme($type, $theme);
+            }
+        }
+    }
+}
+
+[class*='btn-main'] {
+    &.m-fixed {
+        min-width: 260px;
+    }
+
+    &.m-fixed-md-up {
+        @include media(md-up) {
+            min-width: 260px;
+        }
+    }
+
+    &.m-fluid {
+        width: 100%;
+    }
+
+    &.m-fluid-sm {
+        @include media(sm) {
+            width: 100%;
+        }
+    }
+
+    &.m-fluid-md-down {
+        @include media(md-down) {
+            width: 100%;
+            min-width: 0
+        }
+    }
+
+    &.m-small {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    &.m-tiny {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+// Custom buttons
+
+
+// 3rd party buttons
