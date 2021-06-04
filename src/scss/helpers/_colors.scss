@@ -1,0 +1,5 @@
+@each $key, $value in $colors {
+    .h-color-#{$key} {
+        color: $value !important;
+    }
+}
