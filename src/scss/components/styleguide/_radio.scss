@@ -1,0 +1,176 @@
+$radio-theme: ('dark');
+
+@mixin radio-theme($theme: 'default') {
+
+    $radio-size: 24px;
+
+    .radio {
+        display: inline-flex;
+
+        @if ($theme == 'dark') {
+            color: $white;
+        }
+
+        $root: &;
+
+        &--column {
+            flex-direction: column;
+
+            #{$root}__item {
+                margin-bottom: 20px;
+            }
+        }
+
+        &--row {
+
+            #{$root}__item {
+                margin-bottom: 12px;
+            }
+        }
+
+        &__item {
+            display: inline-flex;
+            position: relative;
+            padding-left: calc(#{$radio-size} + 10px);
+            cursor: pointer;
+            font-size: 14px;
+            user-select: none;
+
+            input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                transition: all .2s ease;
+
+                &:checked ~ .radiomark {
+                    @if ($theme == 'default') {
+                        border: 2px solid $black;
+                    }
+
+                    @if ($theme == 'dark') {
+                        border: 2px solid $white;
+                    }
+                }
+
+                &:checked ~ .radiomark:after {
+                    opacity: 1;
+                    visibility: visible;
+
+                    @if ($theme == 'default') {
+                        background: $black;
+                    }
+
+                    @if ($theme == 'dark') {
+                        background: $white;
+                    }
+                }
+
+                &:disabled ~ .radiomark {
+                    pointer-events: none;
+                    cursor: default;
+
+                    @if ($theme == 'default') {
+                        border: 2px solid $grey;
+                        background: $grey-light;
+                    }
+
+                    @if ($theme == 'dark') {
+                        border: 2px solid $grey;
+                        background: $grey-deep;
+                    }
+                }
+            }
+
+            &:not(&.error):hover input:not(:disabled) ~ .radiomark {
+                @if ($theme == 'default') {
+                    border: 2px solid $grey-deep;
+                }
+
+                @if ($theme == 'dark') {
+                    border: 2px solid $white;
+                }
+            }
+
+            &:not(&.error):hover input:not(:disabled) ~ .radiomark {
+                @if ($theme == 'default') {
+                    border: 2px solid $grey-deep;
+                }
+
+                @if ($theme == 'dark') {
+                    border: 2px solid $white;
+                }
+            }
+
+            &:hover,
+            &:not(&.error):hover {
+                input:checked  ~ .radiomark {
+                    @if ($theme == 'default') {
+                        border: 2px solid $black;
+                    }
+
+                    @if ($theme == 'dark') {
+                        border: 2px solid $white;
+                    }
+                }
+            }
+
+            &.error {
+                input {
+                    & ~ .radiomark {
+                        border: 2px solid $danger;
+                    }
+                }
+            }
+        }
+
+        .radiomark {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            height: $radio-size;
+            width: $radio-size;
+            background-color: transparent;
+            border: 1px solid $grey-light;
+            border-radius: 50%;
+            transition: all .2s ease;
+
+            &:after {
+                content: "";
+                position: absolute;
+                opacity: 0;
+                visibility: hidden;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 18.5px;
+                height: 18.5px;
+                border-radius: 50%;
+                transition: all .2s ease;
+
+                @if ($theme == 'default') {
+                    background: $black;
+                }
+
+                @if ($theme == 'dark') {
+                    background: $white;
+                }
+            }
+        }
+    }
+}
+
+@include radio-theme;
+
+@each $theme in $radio-theme {
+    .theme-#{$theme} {
+        @include radio-theme($theme);
+    }
+}
+
+.inputs-container {
+    width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+    font-family: "Open-Sans", sans-serif;
+}

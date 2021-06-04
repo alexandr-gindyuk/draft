@@ -1,1 +1,6 @@
 @import '~normalize.css'; // https://necolas.github.io/normalize.css/
+
+body,
+body * {
+    box-sizing: border-box;
+}
