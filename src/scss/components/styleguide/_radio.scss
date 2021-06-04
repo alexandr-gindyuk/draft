@@ -91,16 +91,6 @@ $radio-theme: ('dark');
                 }
             }
 
-            &:not(&.error):hover input:not(:disabled) ~ .radiomark {
-                @if ($theme == 'default') {
-                    border: 2px solid color(grey-deep);
-                }
-
-                @if ($theme == 'dark') {
-                    border: 2px solid color(white);
-                }
-            }
-
             &:hover,
             &:not(&.error):hover {
                 input:checked  ~ .radiomark {
