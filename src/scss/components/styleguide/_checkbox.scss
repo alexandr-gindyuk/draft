@@ -8,7 +8,7 @@ $checkbox-theme: ('dark');
         display: inline-flex;
 
         @if ($theme == 'dark') {
-            color: color(white);
+            color: color('white');
         }
 
         $root: &;
@@ -43,13 +43,13 @@ $checkbox-theme: ('dark');
 
                 &:checked ~ .checkmark {
                     @if ($theme == 'default') {
-                        border: 2px solid color(black);
-                        background: color(black);
+                        border: 2px solid color('black');
+                        background-color: color('black');
                     }
 
                     @if ($theme == 'dark') {
-                        border: 2px solid color(white);
-                        background: color(white);
+                        border: 2px solid color('white');
+                        background-color: color('white');
                     }
                 }
 
@@ -63,24 +63,24 @@ $checkbox-theme: ('dark');
                     cursor: default;
 
                     @if ($theme == 'default') {
-                        border: 2px solid color(grey);
-                        background: color(grey-light);
+                        border: 1px solid color('grey-deep');
+                        background-color: color('grey-light');
                     }
 
                     @if ($theme == 'dark') {
-                        border: 2px solid color(grey);
-                        background: color(grey-deep);
+                        border: 1px solid color('grey-light');
+                        background-color: color('grey-deep');
                     }
                 }
             }
 
             &:not(&.error):hover input:not(:disabled) ~ .checkmark {
                 @if ($theme == 'default') {
-                    border: 2px solid color(grey-deep);
+                    border: 2px solid color('grey-deep');
                 }
 
                 @if ($theme == 'dark') {
-                    border: 2px solid color(white);
+                    border: 2px solid color('white');
                 }
             }
 
@@ -88,11 +88,11 @@ $checkbox-theme: ('dark');
             &:not(&.error):hover {
                 input:checked  ~ .checkmark {
                     @if ($theme == 'default') {
-                        border: 2px solid color(black);
+                        border: 2px solid color('black');
                     }
 
                     @if ($theme == 'dark') {
-                        border: 2px solid color(white);
+                        border: 2px solid color('white');
                     }
                 }
             }
@@ -100,7 +100,7 @@ $checkbox-theme: ('dark');
             &.error {
                 input {
                     & ~ .checkmark {
-                        border: 2px solid color(danger);
+                        border: 2px solid color('danger');
                     }
                 }
             }
@@ -114,7 +114,7 @@ $checkbox-theme: ('dark');
             height: $check-size;
             width: $check-size;
             background-color: transparent;
-            border: 1px solid color(grey-light);
+            border: 1px solid color('grey-light');
             border-radius: 3px;
             transition: all .2s ease;
 

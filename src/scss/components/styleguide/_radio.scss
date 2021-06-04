@@ -8,7 +8,7 @@ $radio-theme: ('dark');
         display: inline-flex;
 
         @if ($theme == 'dark') {
-            color: color(white);
+            color: color('white');
         }
 
         $root: &;
@@ -44,25 +44,17 @@ $radio-theme: ('dark');
 
                 &:checked ~ .radiomark {
                     @if ($theme == 'default') {
-                        border: 2px solid color(black);
+                        border: 2px solid color('black');
                     }
 
                     @if ($theme == 'dark') {
-                        border: 2px solid color(white);
+                        border: 2px solid color('white');
                     }
                 }
 
                 &:checked ~ .radiomark:after {
                     opacity: 1;
                     visibility: visible;
-
-                    @if ($theme == 'default') {
-                        background: color(black);
-                    }
-
-                    @if ($theme == 'dark') {
-                        background: color(white);
-                    }
                 }
 
                 &:disabled ~ .radiomark {
@@ -70,24 +62,24 @@ $radio-theme: ('dark');
                     cursor: default;
 
                     @if ($theme == 'default') {
-                        border: 2px solid color(grey);
-                        background: color(grey-light);
+                        border: 1px solid color('grey-deep');
+                        background-color: color('grey-light');
                     }
 
                     @if ($theme == 'dark') {
-                        border: 2px solid color(grey);
-                        background: color(grey-deep);
+                        border: 1px solid color('grey-light');
+                        background-color: color('grey-deep');
                     }
                 }
             }
 
             &:not(&.error):hover input:not(:disabled) ~ .radiomark {
                 @if ($theme == 'default') {
-                    border: 2px solid color(grey-deep);
+                    border: 2px solid color('grey-deep');
                 }
 
                 @if ($theme == 'dark') {
-                    border: 2px solid color(white);
+                    border: 2px solid color('white');
                 }
             }
 
@@ -95,11 +87,11 @@ $radio-theme: ('dark');
             &:not(&.error):hover {
                 input:checked  ~ .radiomark {
                     @if ($theme == 'default') {
-                        border: 2px solid color(black);
+                        border: 2px solid color('black');
                     }
 
                     @if ($theme == 'dark') {
-                        border: 2px solid color(white);
+                        border: 2px solid color('white');
                     }
                 }
             }
@@ -107,7 +99,7 @@ $radio-theme: ('dark');
             &.error {
                 input {
                     & ~ .radiomark {
-                        border: 2px solid color(danger);
+                        border: 2px solid color('danger');
                     }
                 }
             }
@@ -121,9 +113,22 @@ $radio-theme: ('dark');
             height: $radio-size;
             width: $radio-size;
             background-color: transparent;
-            border: 1px solid color(grey-light);
+            border: 1px solid color('grey-light');
             border-radius: 50%;
             transition: all .2s ease;
+
+            @if ($theme == 'default') {
+                &:after {
+                    background-color: color('black');
+                    color: blue;
+                }
+            }
+
+            @if ($theme == 'dark') {
+                &:after {
+                    background-color: color('white');
+                }
+            }
 
             &:after {
                 content: "";
@@ -139,11 +144,11 @@ $radio-theme: ('dark');
                 transition: all .2s ease;
 
                 @if ($theme == 'default') {
-                    background: color(black);
+                    background-color: color('black');
                 }
 
                 @if ($theme == 'dark') {
-                    background: color(white);
+                    background-color: color('white');
                 }
             }
         }
