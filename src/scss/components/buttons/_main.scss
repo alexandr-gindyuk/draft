@@ -29,6 +29,7 @@ $buttons-main-theme: ('dark');
             &:hover {
                 color: #ffffff;
                 background-color: #5c6573;
+                border-color: #5c6573;
             }
 
             &:disabled,
@@ -47,6 +48,7 @@ $buttons-main-theme: ('dark');
             &:hover {
                 color: #000000;
                 background-color: #ffffff;
+                border-color: #ffffff;
             }
 
             &:focus {
@@ -100,9 +102,5 @@ $buttons-main-theme: ('dark');
 
     @if index($buttons-main-type, $type) == null {
         @warn 'Invalid argumment $type: `#{$type}`. Possible types: [#{$buttons-main-type}]';
-    }
-
-    @if index($buttons-main-theme, $theme) == null {
-        @warn 'Invalid argumment $theme: `#{$theme}`. Possible themes: [#{$buttons-main-theme}]';
     }
 }
