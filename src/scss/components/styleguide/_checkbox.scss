@@ -35,12 +35,6 @@ $checkbox-theme: ('dark');
             font-size: 14px;
             user-select: none;
 
-            &:has(> input:disabled) {
-                pointer-events: none;
-                cursor: default;
-                background-color: green;
-            }
-
             input {
                 position: absolute;
                 opacity: 0;
