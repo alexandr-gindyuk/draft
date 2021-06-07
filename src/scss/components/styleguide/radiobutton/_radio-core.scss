@@ -1,0 +1,107 @@
+$white: #fff;
+$black: #000;
+
+$grey: #A1A8B2 !default;
+$grey-light: #E3E3E3 !default;
+$grey-super-light: #F1F1F1 !default;
+$grey-deep: #5C6573 !default;
+
+$blue-deep: #132D40 !default;
+
+$danger: #E51755 !default;
+$success: #00856C !default;
+
+.radio {
+    box-sizing: border-box;
+    display: inline-flex;
+
+    $radio-size: 24px;
+
+    $root: &;
+
+    &--column {
+        flex-direction: column;
+
+        #{$root}__item {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__item {
+        display: inline-flex;
+        position: relative;
+        padding-left: calc(#{$radio-size} + 10px);
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 14px;
+        user-select: none;
+
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            transition: all .2s ease;           
+
+            &:checked ~ .radiomark:after {
+                opacity: 1;
+                visibility: visible;
+            }  
+            
+            &:disabled ~ .radiomark {  
+                pointer-events:none;  
+                cursor: default;         
+            }  
+        }              
+        
+        &.error {
+            input {   
+                & ~ .radiomark {                
+                    border: 2px solid $danger;               
+                }        
+            }
+        }
+    }
+
+    .radiomark {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        height: $radio-size;
+        width: $radio-size;
+        background-color: transparent;
+        border: 1px solid $grey-light;
+        border-radius: 50%;
+        transition: all .2s ease;
+
+        &:after {
+            content: "";
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;            
+            transition: all .2s ease;
+        }
+    }
+}
+
+.inputs-container {
+    width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+    font-family: "Open-Sans", sans-serif;   
+
+    &.light {
+        background: $white;
+    }
+
+    &.dark {
+        background: $black;
+        color: $white;
+    }
+}
