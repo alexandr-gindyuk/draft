@@ -22,7 +22,6 @@ $radio-theme: ('dark');
         }
 
         &--row {
-
             #{$root}__item {
                 margin-bottom: 12px;
             }
@@ -42,64 +41,58 @@ $radio-theme: ('dark');
                 cursor: pointer;
                 transition: all .2s ease;
 
-                &:checked ~ .radiomark {
+                &:checked ~ .radiomark:before {
+                    content: '\ea54';
+
                     @if ($theme == 'default') {
-                        border: 2px solid color('black');
+                        color: color('black');
                     }
 
                     @if ($theme == 'dark') {
-                        border: 2px solid color('white');
+                       color: color('white');
                     }
                 }
 
-                &:checked ~ .radiomark:after {
-                    opacity: 1;
-                    visibility: visible;
-                }
-
-                &:disabled ~ .radiomark {
+                &:disabled {
                     pointer-events: none;
                     cursor: default;
+                }
 
-                    @if ($theme == 'default') {
-                        border: 1px solid color('grey-deep');
-                        background-color: color('grey-light');
-                    }
-
-                    @if ($theme == 'dark') {
-                        border: 1px solid color('grey-light');
-                        background-color: color('grey-deep');
-                    }
+                &:disabled ~ .radiomark:before {
+                    content: '\e919';
                 }
             }
 
-            &:not(&.error):hover input:not(:disabled) ~ .radiomark {
+            &:not(&.error):hover input:not(:disabled) ~ .radiomark:before {
+                content: '\ea56';
+
                 @if ($theme == 'default') {
-                    border: 2px solid color('grey-deep');
+                   color: color('grey-deep');
                 }
 
                 @if ($theme == 'dark') {
-                    border: 2px solid color('white');
+                    color: color('white');
                 }
             }
 
-            &:hover,
-            &:not(&.error):hover {
-                input:checked  ~ .radiomark {
-                    @if ($theme == 'default') {
-                        border: 2px solid color('black');
-                    }
+            &:not(&.error):hover
+                input:checked  ~ .radiomark:before {
+                    content: '\ea54';
 
-                    @if ($theme == 'dark') {
-                        border: 2px solid color('white');
-                    }
+                @if ($theme == 'default') {
+                    color: color('black');
+                }
+
+                @if ($theme == 'dark') {
+                    color: color('white');
                 }
             }
 
             &.error {
                 input {
-                    & ~ .radiomark {
-                        border: 2px solid color('danger');
+                    & ~ .radiomark:before {
+                        content: '\ea56';
+                        color: color('danger');
                     }
                 }
             }
@@ -112,44 +105,17 @@ $radio-theme: ('dark');
             left: 0;
             height: $radio-size;
             width: $radio-size;
-            background-color: transparent;
-            border: 1px solid color('grey-light');
-            border-radius: 50%;
             transition: all .2s ease;
 
-            @if ($theme == 'default') {
-                &:after {
-                    background-color: color('black');
-                    color: blue;
-                }
-            }
-
-            @if ($theme == 'dark') {
-                &:after {
-                    background-color: color('white');
-                }
-            }
-
-            &:after {
-                content: "";
+            &:before {
+                content: '\e918';
                 position: absolute;
-                opacity: 0;
-                visibility: hidden;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 18.5px;
-                height: 18.5px;
-                border-radius: 50%;
+                font-size: $radio-size;
+                color: color('grey-light');
                 transition: all .2s ease;
-
-                @if ($theme == 'default') {
-                    background-color: color('black');
-                }
-
-                @if ($theme == 'dark') {
-                    background-color: color('white');
-                }
             }
         }
     }

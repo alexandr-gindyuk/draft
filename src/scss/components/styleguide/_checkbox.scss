@@ -41,66 +41,57 @@ $checkbox-theme: ('dark');
                 cursor: pointer;
                 transition: all .2s ease;
 
-                &:checked ~ .checkmark {
+                &:checked ~ .checkmark:before {
+                    content: '\ea52';
+
                     @if ($theme == 'default') {
-                        border: 2px solid color('black');
-                        background-color: color('black');
+                        color: color('black');
                     }
 
                     @if ($theme == 'dark') {
-                        border: 2px solid color('white');
-                        background-color: color('white');
+                       color: color('white');
                     }
                 }
 
-                &:checked ~ .checkmark:after {
-                    opacity: 1;
-                    visibility: visible;
-                }
-
-                &:disabled ~ .checkmark {
+                &:disabled {
                     pointer-events: none;
                     cursor: default;
+                }
 
-                    @if ($theme == 'default') {
-                        border: 1px solid color('grey-deep');
-                        background-color: color('grey-light');
-                    }
-
-                    @if ($theme == 'dark') {
-                        border: 1px solid color('grey-light');
-                        background-color: color('grey-deep');
-                    }
+                &:disabled ~ .checkmark:before {
+                    content: '\e91b';
                 }
             }
 
-            &:not(&.error):hover input:not(:disabled) ~ .checkmark {
+            &:not(&.error):hover input:not(:disabled) ~ .checkmark:before {
+                content: '\ea53';
+
                 @if ($theme == 'default') {
-                    border: 2px solid color('grey-deep');
+                   color: color('grey-deep');
                 }
 
                 @if ($theme == 'dark') {
-                    border: 2px solid color('white');
+                    color: color('white');
                 }
             }
 
-            &:hover,
-            &:not(&.error):hover {
-                input:checked  ~ .checkmark {
-                    @if ($theme == 'default') {
-                        border: 2px solid color('black');
-                    }
+            &:not(&.error):hover input:checked ~ .checkmark:before {
+                content: '\ea52';
 
-                    @if ($theme == 'dark') {
-                        border: 2px solid color('white');
-                    }
+                @if ($theme == 'default') {
+                    color: color('black');
+                }
+
+                 @if ($theme == 'dark') {
+                    color: color('white');
                 }
             }
 
             &.error {
                 input {
-                    & ~ .checkmark {
-                        border: 2px solid color('danger');
+                    & ~ .checkmark:before {
+                        content: '\ea53';
+                        color: color('danger');
                     }
                 }
             }
@@ -113,31 +104,17 @@ $checkbox-theme: ('dark');
             left: 0;
             height: $check-size;
             width: $check-size;
-            background-color: transparent;
-            border: 1px solid color('grey-light');
-            border-radius: 3px;
             transition: all .2s ease;
 
-            &:after {
-                content: "";
+            &:before {
+                content: '\e91c';
                 position: absolute;
-                opacity: 0;
-                visibility: hidden;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 12px;
-                height: 12px;
-                background-size: contain;
+                font-size: $check-size;
+                color: color('grey-light');
                 transition: all .2s ease;
-
-                @if ($theme == 'default') {
-                    background-image: url('https://image.flaticon.com/icons/png/128/1634/1634264.png');
-                }
-
-                @if ($theme == 'dark') {
-                    background-image: url('https://image.flaticon.com/icons/png/128/62/62025.png');
-                }
             }
         }
     }
