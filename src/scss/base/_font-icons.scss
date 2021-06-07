@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .icon-badges-eco:before {
+    content: "\e900";
+    color: #00856c;
+  }
+  .icon-m-arrow-down:before {
+    content: "\e901";
+  }
+  .icon-m-arrow-left:before {
+    content: "\e902";
+  }
+  .icon-m-arrow-right:before {
+    content: "\e903";
+  }
+  .icon-m-arrow-up:before {
+    content: "\e904";
+  }
+  .icon-m-burger:before {
+    content: "\e905";
+  }
+  .icon-m-close:before {
+    content: "\e906";
+  }
+  .icon-m-error .path1:before {
+    content: "\e907";
+    color: rgb(229, 23, 85);
+  }
+  .icon-m-error .path2:before {
+    content: "\e908";
+    margin-left: -0.7001953125em;
+    color: rgb(255, 255, 255);
+  }
+  .icon-m-filter:before {
+    content: "\e909";
+  }
+  .icon-m-location:before {
+    content: "\e90a";
+  }
+  .icon-m-message:before {
+    content: "\e90b";
+  }
+  .icon-m-search:before {
+    content: "\e90c";
+  }
+  .icon-m-sort:before {
+    content: "\e90d";
+  }
+  .icon-m-bag-filled:before {
+    content: "\e90e";
+  }
+  .icon-m-bag:before {
+    content: "\e90f";
+  }
+  .icon-m-heart-filled:before {
+    content: "\e910";
+  }
+  .icon-m-heart:before {
+    content: "\e911";
+  }
+  .icon-m-profile-filled:before {
+    content: "\e912";
+  }
+  .icon-m-profile:before {
+    content: "\e913";
+  }
+  .icon-s-close:before {
+    content: "\e914";
+  }
+  .icon-s-divider-breadcrumbs:before {
+    content: "\e915";
+  }
+  .icon-s-minus:before {
+    content: "\e916";
+  }
+  .icon-s-plus:before {
+    content: "\e917";
+  }

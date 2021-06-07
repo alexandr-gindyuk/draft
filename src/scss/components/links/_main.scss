@@ -1,0 +1,69 @@
+$links-main-type: ('primary', 'secondary', 'underline');
+$links-main-theme: ('dark');
+
+@mixin link-main-type($type, $theme: 'default') {
+    @include link;
+
+    &:focus {
+        outline: 2px solid #0086bf;
+        outline-offset: 2px;
+    }
+
+    @if ($type == 'primary') {
+        font-family: $font-dinot-medium;
+        font-size: 14px;
+        line-height: 20px;
+        text-transform: uppercase;
+
+        @if ($theme == 'default') {
+            color: #000000;
+        }
+        @if ($theme == 'dark') {
+            color: #ffffff;
+        }
+    }
+
+    @if ($type == 'secondary') {
+        font-family: $font-open-sans;
+        font-size: 14px;
+        line-height: 20px;
+
+        &:hover {
+            font-weight: 600;
+        }
+
+        @if ($theme == 'default') {
+            color: #000000;
+        }
+
+        @if ($theme == 'dark') {
+            color: #ffffff;
+        }
+    }
+
+    @if ($type == 'underline') {
+        font-family: $font-open-sans;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        &:focus {
+            text-decoration: underline;
+        }
+
+        @if ($theme == 'default') {
+            color: #000000;
+        }
+
+        @if ($theme == 'dark') {
+            color: #ffffff;
+        }
+    }
+
+    @if index($links-main-type, $type) == null {
+        @warn 'Invalid argumment $type: `#{$type}`. Possible types: [#{$links-main-type}]';
+    }
+}
