@@ -1,0 +1,159 @@
+$checkbox-theme: ('dark');
+
+@mixin checkbox-theme($theme: 'default') {
+
+    $check-size: 24px;
+
+    .checkbox {
+        display: inline-flex;
+
+        @if ($theme == 'dark') {
+            color: color('white');
+        }
+
+        $root: &;
+
+        &--column {
+            flex-direction: column;
+
+            #{$root}__item {
+                margin-bottom: 20px;
+            }
+        }
+
+        &--row {
+            #{$root}__item {
+                margin-bottom: 12px;
+            }
+        }
+
+        &__item {
+            display: inline-flex;
+            position: relative;
+            padding-left: calc(#{$check-size} + 10px);
+            cursor: pointer;
+            font-size: 14px;
+            user-select: none;
+
+            input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                transition: all .2s ease;
+
+                &:checked ~ .checkmark {
+                    @if ($theme == 'default') {
+                        border: 2px solid color('black');
+                        background-color: color('black');
+                    }
+
+                    @if ($theme == 'dark') {
+                        border: 2px solid color('white');
+                        background-color: color('white');
+                    }
+                }
+
+                &:checked ~ .checkmark:after {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                &:disabled ~ .checkmark {
+                    pointer-events: none;
+                    cursor: default;
+
+                    @if ($theme == 'default') {
+                        border: 1px solid color('grey-deep');
+                        background-color: color('grey-light');
+                    }
+
+                    @if ($theme == 'dark') {
+                        border: 1px solid color('grey-light');
+                        background-color: color('grey-deep');
+                    }
+                }
+            }
+
+            &:not(&.error):hover input:not(:disabled) ~ .checkmark {
+                @if ($theme == 'default') {
+                    border: 2px solid color('grey-deep');
+                }
+
+                @if ($theme == 'dark') {
+                    border: 2px solid color('white');
+                }
+            }
+
+            &:hover,
+            &:not(&.error):hover {
+                input:checked  ~ .checkmark {
+                    @if ($theme == 'default') {
+                        border: 2px solid color('black');
+                    }
+
+                    @if ($theme == 'dark') {
+                        border: 2px solid color('white');
+                    }
+                }
+            }
+
+            &.error {
+                input {
+                    & ~ .checkmark {
+                        border: 2px solid color('danger');
+                    }
+                }
+            }
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            height: $check-size;
+            width: $check-size;
+            background-color: transparent;
+            border: 1px solid color('grey-light');
+            border-radius: 3px;
+            transition: all .2s ease;
+
+            &:after {
+                content: "";
+                position: absolute;
+                opacity: 0;
+                visibility: hidden;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 12px;
+                height: 12px;
+                background-size: contain;
+                transition: all .2s ease;
+
+                @if ($theme == 'default') {
+                    background-image: url('https://image.flaticon.com/icons/png/128/1634/1634264.png');
+                }
+
+                @if ($theme == 'dark') {
+                    background-image: url('https://image.flaticon.com/icons/png/128/62/62025.png');
+                }
+            }
+        }
+    }
+}
+
+@include checkbox-theme;
+
+@each $theme in $checkbox-theme {
+    .theme-#{$theme} {
+        @include checkbox-theme($theme);
+    }
+}
+
+.inputs-container {
+    width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+    font-family: "Open-Sans", sans-serif;
+}
