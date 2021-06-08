@@ -15,5 +15,15 @@
 }
 
 [class*='link'] {
+    [class*="icon-"] {
+        font-weight: inherit;
 
+        &.m-margin-left {
+            margin-left: 10px;
+        }
+
+        &.m-margin-right {
+            margin-right: 10px;
+        }
+    }
 }
