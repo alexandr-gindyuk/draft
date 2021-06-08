@@ -6,11 +6,15 @@
     "scripts": {
         "dev": "cross-env NODE_ENV=development webpack --mode development",
         "build": "cross-env NODE_ENV=production webpack --mode production",
-        "watch": "webpack --mode development --watch",
-        "start": "cross-env NODE_ENV=development webpack serve --mode development"
+        "watch": "webpack --mode development --watch"
     },
     "browserslist": [
-        "cover 99.5%"
+        "last 1 Edge versions",
+        "last 2 Chrome versions",
+        "safari >= 12",
+        "last 2 Firefox versions",
+        "last 2 iOS versions",
+        "last 2 ChromeAndroid versions"
     ],
     "keywords": [
         "js",
@@ -34,8 +38,7 @@
         "sass-loader": "^11.1.1",
         "style-loader": "^2.0.0",
         "webpack": "^5.37.1",
-        "webpack-cli": "^4.7.0",
-        "webpack-dev-server": "^3.11.2"
+        "webpack-cli": "^4.7.0"
     },
     "dependencies": {
         "@babel/polyfill": "^7.12.1",
