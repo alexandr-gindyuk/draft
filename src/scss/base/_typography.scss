@@ -1,0 +1,42 @@
+//headings
+
+.h {
+    font-family: $font-dinot-medium;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 40px;
+
+    @include media(md-up) {
+        margin-bottom: 68px;
+    }
+}
+
+.h1 {
+    font-size: 26px;
+
+    @include media(md-up) {
+        font-size: 40px;
+    }
+}
+
+.h2 {
+    @include media(md-up) {
+        font-size: 35px;
+    }
+}
+
+.h3 {
+    @include media(md-up) {
+        font-size: 30px;
+    }
+}
+
+.h4 {
+    @include media(md-up) {
+        font-size: 25px;
+    }
+}
+
+.h5 {
+    text-transform: capitalize;
+}

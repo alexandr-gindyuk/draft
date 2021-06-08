@@ -15,6 +15,16 @@ $links-main-theme: ('dark');
         outline-offset: 2px;
     }
 
+    &:hover {
+        [class*="icon-"] {
+
+            &.filled {
+                background-color: color('black');
+                color: color('white');
+            }
+        }
+    }
+
     @if ($type == 'primary') {
         font-family: $font-dinot-medium;
         text-transform: uppercase;
@@ -46,3 +56,6 @@ $links-main-theme: ('dark');
         @warn 'Invalid argumment $type: `#{$type}`. Possible types: [#{$links-main-type}]';
     }
 }
+
+
+
