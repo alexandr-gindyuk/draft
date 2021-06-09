@@ -7,10 +7,6 @@ $radio-theme: ('dark');
     .radio {
         display: inline-flex;
 
-        @if ($theme == 'dark') {
-            color: color('white');
-        }
-
         $root: &;
 
         &--column {
@@ -46,53 +42,69 @@ $radio-theme: ('dark');
                 cursor: pointer;
                 transition: all .2s ease;
 
-                &:checked ~ .radiomark:before {
-                    content: '\ea54';
-
+                &:checked ~ .radiomark {
                     @if ($theme == 'default') {
-                        color: color('black');
+                        //radio-selected
+                        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 12.5a7.5 7.5 0 0115 0 7.5 7.5 0 01-15 0z' fill='%23000'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 12.5C2 18.299 6.701 23 12.5 23S23 18.299 23 12.5 18.299 2 12.5 2 2 6.701 2 12.5zM12.5 0C5.596 0 0 5.596 0 12.5S5.596 25 12.5 25 25 19.404 25 12.5 19.404 0 12.5 0z' fill='%23000'/%3E%3C/svg%3E");
                     }
 
                     @if ($theme == 'dark') {
-                       color: color('white');
+                        //radio-selected-dark
+                        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 12.5a7.5 7.5 0 0115 0 7.5 7.5 0 01-15 0z' fill='%23fff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 12.5C2 18.299 6.701 23 12.5 23S23 18.299 23 12.5 18.299 2 12.5 2 2 6.701 2 12.5zM12.5 0C5.596 0 0 5.596 0 12.5S5.596 25 12.5 25 25 19.404 25 12.5 19.404 0 12.5 0z' fill='%23fff'/%3E%3C/svg%3E");
                     }
                 }
 
-                &:disabled ~ .radiomark:before {
-                    content: '\e919';
+                &:disabled ~ .radiomark {
+                    @if ($theme == 'default') {
+                        //radio-disabled
+                        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 12.5C0 5.596 5.596 0 12.5 0S25 5.596 25 12.5 19.404 25 12.5 25 0 19.404 0 12.5z' fill='%23E3E3E3'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1 12.5C1 18.851 6.149 24 12.5 24S24 18.851 24 12.5 18.851 1 12.5 1 1 6.149 1 12.5zM12.5 0C5.596 0 0 5.596 0 12.5S5.596 25 12.5 25 25 19.404 25 12.5 19.404 0 12.5 0z' fill='%23A1A8B3'/%3E%3C/svg%3E");
+                    }
+
+                    @if ($theme == 'dark') {
+                        //radio-disabled-dark
+                        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 12.5C0 5.596 5.596 0 12.5 0S25 5.596 25 12.5 19.404 25 12.5 25 0 19.404 0 12.5z' fill='%235C6573'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1 12.5C1 18.851 6.149 24 12.5 24S24 18.851 24 12.5 18.851 1 12.5 1 1 6.149 1 12.5zM12.5 0C5.596 0 0 5.596 0 12.5S5.596 25 12.5 25 25 19.404 25 12.5 19.404 0 12.5 0z' fill='%23A1A8B3'/%3E%3C/svg%3E");
+                    }
                 }
             }
 
-            &:not(&.error):hover input:not(:disabled) ~ .radiomark:before {
-                content: '\ea56';
-
+            &:not(&.error):hover input:not(:disabled) ~ .radiomark {
                 @if ($theme == 'default') {
-                   color: color('grey-deep');
+                    //radio-hover
+                    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 12.5C0 5.596 5.596 0 12.5 0S25 5.596 25 12.5 19.404 25 12.5 25 0 19.404 0 12.5z' fill='%23fff' fill-opacity='.4'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 12.5C2 18.299 6.701 23 12.5 23S23 18.299 23 12.5 18.299 2 12.5 2 2 6.701 2 12.5zM12.5 0C5.596 0 0 5.596 0 12.5S5.596 25 12.5 25 25 19.404 25 12.5 19.404 0 12.5 0z' fill='%235C6573'/%3E%3C/svg%3E");
                 }
 
                 @if ($theme == 'dark') {
-                    color: color('white');
+                    //radio-hover-dark
+                    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 12.5C0 5.596 5.596 0 12.5 0S25 5.596 25 12.5 19.404 25 12.5 25 0 19.404 0 12.5z' fill='%23000' fill-opacity='.2'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 12.5C2 18.299 6.701 23 12.5 23S23 18.299 23 12.5 18.299 2 12.5 2 2 6.701 2 12.5zM12.5 0C5.596 0 0 5.596 0 12.5S5.596 25 12.5 25 25 19.404 25 12.5 19.404 0 12.5 0z' fill='%23fff'/%3E%3C/svg%3E");
                 }
             }
 
-            &:not(&.error):hover
-                input:checked  ~ .radiomark:before {
-                    content: '\ea54';
+            &:not(&.error):hover {
+                input:checked  ~ .radiomark {
+                    @if ($theme == 'default') {
+                        //radio-selected
+                        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 12.5a7.5 7.5 0 0115 0 7.5 7.5 0 01-15 0z' fill='%23000'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 12.5C2 18.299 6.701 23 12.5 23S23 18.299 23 12.5 18.299 2 12.5 2 2 6.701 2 12.5zM12.5 0C5.596 0 0 5.596 0 12.5S5.596 25 12.5 25 25 19.404 25 12.5 19.404 0 12.5 0z' fill='%23000'/%3E%3C/svg%3E");
+                    }
 
-                @if ($theme == 'default') {
-                    color: color('black');
-                }
-
-                @if ($theme == 'dark') {
-                    color: color('white');
+                    @if ($theme == 'dark') {
+                        //radio-selected-dark
+                        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 12.5a7.5 7.5 0 0115 0 7.5 7.5 0 01-15 0z' fill='%23fff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 12.5C2 18.299 6.701 23 12.5 23S23 18.299 23 12.5 18.299 2 12.5 2 2 6.701 2 12.5zM12.5 0C5.596 0 0 5.596 0 12.5S5.596 25 12.5 25 25 19.404 25 12.5 19.404 0 12.5 0z' fill='%23fff'/%3E%3C/svg%3E");
+                    }
                 }
             }
 
             &.error {
                 input {
-                    & ~ .radiomark:before {
-                        content: '\ea56';
-                        color: color('danger');
+                    & ~ .radiomark {
+                        @if ($theme == 'default') {
+                            //radio-error
+                            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 12.5C0 5.596 5.596 0 12.5 0S25 5.596 25 12.5 19.404 25 12.5 25 0 19.404 0 12.5z' fill='%23fff' fill-opacity='.4'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1 12.5C1 18.851 6.149 24 12.5 24S24 18.851 24 12.5 18.851 1 12.5 1 1 6.149 1 12.5zM12.5 0C5.596 0 0 5.596 0 12.5S5.596 25 12.5 25 25 19.404 25 12.5 19.404 0 12.5 0z' fill='%23e51755'/%3E%3C/svg%3E");
+                        }
+
+                        @if ($theme == 'dark') {
+                            //radio-error-dark
+                            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 12.5C0 5.596 5.596 0 12.5 0S25 5.596 25 12.5 19.404 25 12.5 25 0 19.404 0 12.5z' fill='%23000' fill-opacity='.2'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1 12.5C1 18.851 6.149 24 12.5 24S24 18.851 24 12.5 18.851 1 12.5 1 1 6.149 1 12.5zM12.5 0C5.596 0 0 5.596 0 12.5S5.596 25 12.5 25 25 19.404 25 12.5 19.404 0 12.5 0z' fill='%23e51755'/%3E%3C/svg%3E%0A");
+                        }
                     }
                 }
             }
@@ -105,17 +117,23 @@ $radio-theme: ('dark');
             left: 0;
             height: $radio-size;
             width: $radio-size;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            border-radius: 50%;
+            overflow: hidden;
+
             transition: all .2s ease;
 
-            &:before {
-                content: '\e918';
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                font-size: $radio-size;
-                color: color('grey-light');
-                transition: all .2s ease;
+            @if ($theme == 'default') {
+                //radio-default
+                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 12.5C0 5.596 5.596 0 12.5 0S25 5.596 25 12.5 19.404 25 12.5 25 0 19.404 0 12.5z' fill='%23fff' fill-opacity='.4'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1 12.5C1 18.851 6.149 24 12.5 24S24 18.851 24 12.5 18.851 1 12.5 1 1 6.149 1 12.5zM12.5 0C5.596 0 0 5.596 0 12.5S5.596 25 12.5 25 25 19.404 25 12.5 19.404 0 12.5 0z' fill='%23A1A8B3'/%3E%3C/svg%3E");
+            }
+
+            @if ($theme == 'dark') {
+                //radio-default-dark
+                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 12.5C0 5.596 5.596 0 12.5 0S25 5.596 25 12.5 19.404 25 12.5 25 0 19.404 0 12.5z' fill='%23000' fill-opacity='.2'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1 12.5C1 18.851 6.149 24 12.5 24S24 18.851 24 12.5 18.851 1 12.5 1 1 6.149 1 12.5zM12.5 0C5.596 0 0 5.596 0 12.5S5.596 25 12.5 25 25 19.404 25 12.5 19.404 0 12.5 0z' fill='%23A1A8B3'/%3E%3C/svg%3E");
             }
         }
     }
