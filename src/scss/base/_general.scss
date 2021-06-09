@@ -1,0 +1,23 @@
+// General site styles
+// Be very carefully since it affects all elements and styles!
+html {
+	background: #ffffff;
+	color: #000000;
+	direction: ltr;
+	font: 14px/1 $font-open-sans;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	scroll-behavior: smooth;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	min-width: 320px;
+	overflow-y: scroll;
+	padding: 0.01px 0 0; // Android UI status bar overlap browser window. Reproducible on Samsung S9 Chrome
+}
+
+* {
+    box-sizing: border-box;
+}
