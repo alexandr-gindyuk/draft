@@ -1,0 +1,145 @@
+$inputs: ('main' 'select');
+$inputs-theme: ('dark');
+
+@mixin input-text {
+    display: block;
+    appearance: none;
+    background: none;
+    border: 0;
+    font-family: $font-open-sans;
+    font-size: 16px;
+    vertical-align: baseline;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    transition: $motion-ease;
+    transition-property: border-color;
+
+    &::placeholder {
+        font-size: inherit;
+        color: color('grey');
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+@mixin input($type, $theme: 'default') {
+    @if ($type == 'main') {
+        @if ($theme == 'default') {
+            cursor: text;
+            padding: 0 15px;
+            transition: $motion-ease;
+            transition-property: box-shadow, border-color, color;
+            box-shadow: inset 0 -1px 0 0 transparent;
+            color: color('black');
+            background-color: rgba(255, 255, 255, .4);
+            border: 1px solid color('grey-light');
+        }
+        @if ($theme == 'dark') {
+            color: color('grey');
+            background-color: rgba(0, 0, 0, .2);
+            border: 1px solid color('grey-deep');
+        }
+
+        &:hover {
+            @if ($theme == 'default') {
+                border-bottom: 1px solid color('grey');
+                box-shadow: inset 0 -1px 0 0 color('grey');
+            }
+        }
+
+        &:focus {
+            @if ($theme == 'default') {
+                border-bottom: 1px solid color('black');
+                box-shadow: inset 0 -1px 0 0 color('black');
+            }
+            @if ($theme == 'dark') {
+                border-bottom: 1px solid color('white');
+                box-shadow: inset 0 -1px 0 0 color('white');
+                color: color('white')
+            }
+        }
+
+        &:disabled,
+        &.m-disabled {
+            @if ($theme == 'default') {
+                pointer-events: none;
+                border-color: transparent;
+                box-shadow: inset 0 -1px 0 0 transparent;
+                color: color('grey');
+                background-color: rgba(161, 168, 170, .2);
+            }
+            @if ($theme == 'dark') {
+                border-color: transparent;
+                color: color('grey-deep');
+                background-color: rgba(255, 255, 255, .1);
+            }
+        }
+    }
+
+    @if ($type == 'select') {
+        @if ($theme == 'default') {
+            background-repeat: no-repeat;
+            background-size: 14px;
+            background-position: right 5px center;
+            padding-right: 40px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            border-bottom: 1px solid color('grey-light');
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%23333'%3E%3Cpath d='M1 1L7 7 13 1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        @if ($theme == 'dark') {
+            border-bottom: 1px solid color('grey-deep');
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%23333'%3E%3Cpath d='M1 1L7 7 13 1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            color: color('white');
+        }
+
+        &:focus {
+            @if ($theme == 'default') {
+                border-bottom: 1px solid color('black');
+                box-shadow: inset 0 -1px 0 0 color('black');
+            }
+            @if ($theme == 'dark') {
+                border-bottom: 1px solid color('white');
+                box-shadow: inset 0 -1px 0 0 color('white');
+            }
+        }
+    }
+
+    @if index($inputs, $type) == null {
+        @warn 'Invalid argumment $type: `#{$type}`. Possible types: [#{$inputs}]';
+    }
+}
+
+@mixin input-invalid {
+    border-bottom: 1px solid color('danger');
+    box-shadow: inset 0 -1px 0 0 color('danger');
+}
+
+@each $type in $inputs {
+    .input-#{$type} {
+        @include input-text;
+        @include input($type);
+
+        &.m-invalid {
+            @include input-invalid;
+        }
+    }
+}
+
+@each $type in $inputs {
+    @each $theme in $inputs-theme {
+        .theme-#{$theme} {
+            .input-#{$type} {
+                @include input($type, $theme);
+
+                &.m-invalid {
+                    @include input-invalid;
+                }
+            }
+        }
+    }
+}

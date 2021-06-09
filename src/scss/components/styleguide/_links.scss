@@ -1,6 +1,19 @@
 $links-main-type: ('primary', 'secondary', 'underline');
 $links-main-theme: ('dark');
 
+@mixin link {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: inherit;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
 @mixin link-main-type($type, $theme: 'default') {
     @include link;
 
@@ -57,5 +70,37 @@ $links-main-theme: ('dark');
     }
 }
 
+@each $type in $links-main-type {
+    .link-#{$type} {
+        @include link-main-type($type);
+    }
+}
 
+@each $type in $links-main-type {
+    @each $theme in $links-main-theme {
+        .theme-#{$theme} {
+            .link-#{$type} {
+                @include link-main-type($type, $theme);
+            }
+        }
+    }
+}
 
+[class*='link'] {
+    [class*="icon-"] {
+        font-weight: inherit;
+        border-radius: 50%;
+
+        &.filled {
+            background-color: color('grey-super-light');
+        }
+
+        &.m-margin-left {
+            margin-left: 10px;
+        }
+
+        &.m-margin-right {
+            margin-right: 10px;
+        }
+    }
+}

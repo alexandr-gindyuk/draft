@@ -47,14 +47,16 @@
   .icon-m-close:before {
     content: "\e906";
   }
-  .icon-m-error .path1:before {
-    content: "\e907";
-    color: rgb(229, 23, 85);
-  }
-  .icon-m-error .path2:before {
-    content: "\e908";
-    margin-left: -0.7001953125em;
-    color: rgb(255, 255, 255);
+  .icon-m-error {
+    &:before {
+        content: "\e907";
+        color: rgb(229, 23, 85);
+    }
+    &:after {
+        content: "\e908";
+        margin-left: -0.7001953125em;
+        color: rgb(255, 255, 255);
+    }
   }
   .icon-m-filter:before {
     content: "\e909";
