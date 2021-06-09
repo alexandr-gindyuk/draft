@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <title>Webpack</title>
 </head>
 <body class="page__hp">
     <div class="l-page">
         <header class="header">
             <div style="padding: 50px;">
+
                 <h1 class="h h1">Title H1</h1>
                 <h2 class="h h2">Title H2</h2>
                 <h3 class="h h3">Title H3</h3>
@@ -38,6 +39,37 @@
                     <a href="" class="link-underline disabled">View All</a><br/><br/>
                 </div>
             </div>
+
+            <div style="padding: 50px;">
+                <form class="form m-registration" action="">
+                    <div class="form__section m-required">
+                        <label class="form__label" for="firstname">
+                            <span class="form__section-required" aria-hidden="true">*</span>
+                            First Name
+                        </label>
+                        <input class="input-main" id="firstname" type="text" placeholder="Placeholder">
+                    </div>
+
+                    <div class="form__section m-required">
+                        <label class="form__label" for="lastname">
+                            <span class="form__section-required" aria-hidden="true">*</span>
+                            Last Name
+                        </label>
+                        <input class="input-main m-invalid" id="lastname" type="text" placeholder="Placeholder">
+                        <div role="alert" class="form__section-message">This field is required</div>
+                    </div>
+
+
+                    <input class="input-main" disabled type="text" placeholder="Placeholder">
+                    <select class="input-select" type="text">
+                        <option value="" selected="">Please select</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                </form>
+            </div>
+
 
             <div style="padding: 50px;">
                 <button type="button" class="btn-main-outlined">outlined</button>
