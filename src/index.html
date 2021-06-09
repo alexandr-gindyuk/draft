@@ -11,31 +11,93 @@
         <header class="header">
             <div style="padding: 50px;">
                 <form class="form m-registration" action="">
-                    <div class="form__section m-required">
+                    <div class="form__section">
                         <label class="form__label" for="firstname">
-                            <span class="form__section-required" aria-hidden="true">*</span>
                             First Name
                         </label>
                         <input class="input-main" id="firstname" type="text" placeholder="Placeholder">
                     </div>
 
-                    <div class="form__section m-required">
+                    <div class="form__section">
                         <label class="form__label" for="lastname">
                             <span class="form__section-required" aria-hidden="true">*</span>
                             Last Name
                         </label>
                         <input class="input-main m-invalid" id="lastname" type="text" placeholder="Placeholder">
-                        <div role="alert" class="form__section-message">This field is required</div>
+                        <div class="form__error-message" role="alert">
+                            <i class="icon-m-error"></i>
+                            This field is required
+                        </div>
+                        <div class="form__caption">For delivery purposes only.</div>
                     </div>
 
 
-                    <input class="input-main" disabled type="text" placeholder="Placeholder">
-                    <select class="input-select" type="text">
-                        <option value="" selected="">Please select</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                    </select>
+                    <div class="form__section">
+                        <label class="form__label" for="email">
+                            <span class="form__section-required" aria-hidden="true">*</span>
+                            Email
+                        </label>
+                        <input class="input-main" id="email" disabled type="email" placeholder="Placeholder">
+                    </div>
+
+                    <div class="form__section">
+                        <label class="form__label" for="country">
+                            <span class="form__section-required" aria-hidden="true">*</span>
+                            Country
+                        </label>
+                        <select class="input-select" id="country" type="text">
+                            <option value="" selected="">Please select</option>
+                            <option value="1">Ukraine</option>
+                            <option value="2">Switzerland</option>
+                            <option value="3">USA</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+
+            <div class="theme-dark" style="padding: 50px;">
+                <form class="form m-registration" action="">
+                    <div class="form__section">
+                        <label class="form__label" for="firstname">
+                            First Name
+                        </label>
+                        <input class="input-main" id="firstname" type="text" placeholder="Placeholder">
+                    </div>
+
+                    <div class="form__section">
+                        <label class="form__label" for="lastname">
+                            <span class="form__section-required" aria-hidden="true">*</span>
+                            Last Name
+                        </label>
+                        <input class="input-main m-invalid" id="lastname" type="text" placeholder="Placeholder">
+                        <div class="form__error-message" role="alert">
+                            <i class="icon-m-error"></i>
+                            This field is required
+                        </div>
+                        <div class="form__caption">For delivery purposes only.</div>
+                    </div>
+
+
+                    <div class="form__section">
+                        <label class="form__label" for="email">
+                            <span class="form__section-required" aria-hidden="true">*</span>
+                            Email
+                        </label>
+                        <input class="input-main" id="email" disabled type="email" placeholder="Placeholder">
+                    </div>
+
+                    <div class="form__section">
+                        <label class="form__label" for="country">
+                            <span class="form__section-required" aria-hidden="true">*</span>
+                            Country
+                        </label>
+                        <select class="input-select" id="country" type="text">
+                            <option value="" selected="">Please select</option>
+                            <option value="1">Ukraine</option>
+                            <option value="2">Switzerland</option>
+                            <option value="3">USA</option>
+                        </select>
+                    </div>
                 </form>
             </div>
 

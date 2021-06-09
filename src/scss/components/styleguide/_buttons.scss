@@ -1,6 +1,26 @@
 $buttons-main-type: ('outlined', 'filled');
 $buttons-main-theme: ('dark');
 
+@mixin button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    max-width: 100%;
+    user-select: none;
+    text-decoration: none;
+    vertical-align: top;
+    transition: $motion-ease;
+    transition-property: background-color, border-color, color;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+
 @mixin button-main {
     @include button;
 
@@ -104,3 +124,56 @@ $buttons-main-theme: ('dark');
         @warn 'Invalid argumment $type: `#{$type}`. Possible types: [#{$buttons-main-type}]';
     }
 }
+
+@each $type in $buttons-main-type {
+    .btn-main-#{$type} {
+        @include button-main;
+        @include button-main-type-and-theme($type);
+    }
+}
+
+@each $type in $buttons-main-type {
+    @each $theme in $buttons-main-theme {
+        .theme-#{$theme} {
+            .btn-main-#{$type} {
+                @include button-main-type-and-theme($type, $theme);
+            }
+        }
+    }
+}
+
+[class*='btn-main'] {
+    [class*="icon-"] {
+        font-size: 20px;
+
+        &.m-margin-left {
+            margin-left: 10px;
+        }
+
+        &.m-margin-right {
+            margin-right: 10px;
+        }
+    }
+
+    &.m-fluid {
+        width: 100%;
+    }
+
+    &.m-fluid-sm {
+        @include media(sm) {
+            width: 100%;
+        }
+    }
+
+    &.m-fluid-md-down {
+        @include media(md-down) {
+            width: 100%;
+            min-width: 0
+        }
+    }
+}
+
+// Custom buttons
+
+
+// 3rd party buttons
