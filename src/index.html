@@ -3,12 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <title>Webpack</title>
 </head>
 <body class="page__hp">
     <div class="l-page">
         <header class="header">
+            <div style="padding: 50px;">
+                <form class="form m-registration" action="">
+                    <div class="form__section m-required">
+                        <label class="form__label">
+                            <span class="form__section-required" aria-hidden="true">*</span>
+                            First Name
+                        </label>
+                        <input class="input-main" type="text" placeholder="Placeholder">
+                    </div>
+                    <input class="input-main m-invalid" type="text" placeholder="Placeholder">
+                    <input class="input-main" disabled type="text" placeholder="Placeholder">
+                    <select class="input-select" type="text">
+                        <option value="" selected="">Please select</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                </form>
+            </div>
+
             <div style="padding: 50px;">
                 <a href="" class="link-primary">MORE TECHNOLOGIES</a><br/><br/>
                 <a href="" class="link-secondary">View All</a><br/><br/>
