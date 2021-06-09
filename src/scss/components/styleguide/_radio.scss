@@ -35,6 +35,11 @@ $radio-theme: ('dark');
             font-size: 14px;
             user-select: none;
 
+            &.m-disabled {
+                cursor: default;
+                pointer-events: none;
+            }
+
             input {
                 position: absolute;
                 opacity: 0;
@@ -51,11 +56,6 @@ $radio-theme: ('dark');
                     @if ($theme == 'dark') {
                        color: color('white');
                     }
-                }
-
-                &:disabled {
-                    pointer-events: none;
-                    cursor: default;
                 }
 
                 &:disabled ~ .radiomark:before {
