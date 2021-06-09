@@ -12,13 +12,23 @@
             <div style="padding: 50px;">
                 <form class="form m-registration" action="">
                     <div class="form__section m-required">
-                        <label class="form__label">
+                        <label class="form__label" for="firstname">
                             <span class="form__section-required" aria-hidden="true">*</span>
                             First Name
                         </label>
-                        <input class="input-main" type="text" placeholder="Placeholder">
+                        <input class="input-main" id="firstname" type="text" placeholder="Placeholder">
                     </div>
-                    <input class="input-main m-invalid" type="text" placeholder="Placeholder">
+
+                    <div class="form__section m-required">
+                        <label class="form__label" for="lastname">
+                            <span class="form__section-required" aria-hidden="true">*</span>
+                            Last Name
+                        </label>
+                        <input class="input-main m-invalid" id="lastname" type="text" placeholder="Placeholder">
+                        <div role="alert" class="form__section-message">This field is required</div>
+                    </div>
+
+
                     <input class="input-main" disabled type="text" placeholder="Placeholder">
                     <select class="input-select" type="text">
                         <option value="" selected="">Please select</option>
