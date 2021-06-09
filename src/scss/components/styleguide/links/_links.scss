@@ -15,5 +15,20 @@
 }
 
 [class*='link'] {
+    [class*="icon-"] {
+        font-weight: inherit;
+        border-radius: 50%;
 
+        &.filled {
+            background-color: color('grey-super-light');
+        }
+
+        &.m-margin-left {
+            margin-left: 10px;
+        }
+
+        &.m-margin-right {
+            margin-right: 10px;
+        }
+    }
 }

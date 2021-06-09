@@ -1,9 +1,12 @@
 @mixin link {
     text-decoration: none;
     cursor: pointer;
+    font-size: inherit;
+    color: inherit;
 
     &:hover,
     &:focus {
         text-decoration: none;
+        color: inherit;
     }
 }
