@@ -1,0 +1,59 @@
+$form-theme: ('dark');
+
+@mixin form($theme: 'default') {
+    @if ($theme == 'default') {
+        &__section {
+            margin-bottom: 25px;
+            line-height: 1.67;
+        }
+
+        &__label {
+            display: flex;
+            font-size: 14px;
+            padding-bottom: 10px;
+        }
+
+        &__section-required {
+            margin-right: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            color: color('danger');
+        }
+
+        &__error-message {
+            display: flex;
+            margin-top: 10px;
+            font-size: 12px;
+            color: color('danger');
+
+            [class*='icon-'] {
+                font-size: 20px;
+                margin-right: 5px;
+            }
+        }
+
+        &__caption {
+            font-size: 12px;
+            margin-top: 10px;
+            color: color('grey-deep');
+        }
+    }
+
+    @if ($theme == 'dark') {
+        &__caption {
+            color: color('grey-light');
+        }
+    }
+}
+
+.form {
+    @include form;
+}
+
+@each $theme in $form-theme {
+    .theme-#{$theme} {
+        .form {
+            @include form($theme);
+        }
+    }
+}
