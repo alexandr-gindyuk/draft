@@ -4,6 +4,7 @@
     font-family: $font-dinot-medium;
     text-transform: uppercase;
     font-size: 20px;
+    font-weight: 500;
     margin-bottom: 40px;
 
     @include media(md-up) {

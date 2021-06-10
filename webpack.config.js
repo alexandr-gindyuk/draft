@@ -18,14 +18,6 @@ module.exports = {
         assetModuleFilename: 'images/[name][ext]'
     },
     devtool: isProd ? false : 'source-map',
-    devServer: {
-        historyApiFallback: true,
-        contentBase: path.resolve(__dirname, 'dist'),
-        open: true,
-        compress: true,
-        hot: true,
-        port: 3000,
-    },
     plugins: [
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
@@ -62,6 +54,7 @@ module.exports = {
                         }
                     },
                     'css-loader',
+                    'postcss-loader',
                     'sass-loader'
                 ]
             },

@@ -6,6 +6,7 @@ $inputs-theme: ('dark');
     appearance: none;
     background: none;
     border: 0;
+    border-radius: 0;
     font-family: $font-open-sans;
     font-size: 16px;
     vertical-align: baseline;
@@ -72,9 +73,18 @@ $inputs-theme: ('dark');
                 background-color: rgba(161, 168, 170, .2);
             }
             @if ($theme == 'dark') {
-                border-color: transparent;
+                border-color: color('grey-deep');
                 color: color('grey-deep');
                 background-color: rgba(255, 255, 255, .1);
+            }
+
+            &::placeholder {
+                @if ($theme == 'default') {
+                    color: color('grey');
+                }
+                @if ($theme == 'dark') {
+                    color: color('grey-deep');
+                }
             }
         }
     }
