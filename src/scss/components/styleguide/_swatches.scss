@@ -1,0 +1,100 @@
+$swatch-size-default: 30px;
+$swatch-size-large: 40px;
+$swatch-size-small: 20px;
+
+$swatch-shadow-first-default: 5px; // = (($swatch-size - inner-block's width) / 2)
+$swatch-shadow-first-large: 6px;
+$swatch-shadow-first-small: 4px;
+
+$swatch-shadow-second-default: 4px;
+$swatch-shadow-second-large: 5px;
+$swatch-shadow-second-small: 3px;
+
+
+@function swatch($swatch-size, $swatch-shadow-first) {
+    @return ($swatch-size - $swatch-shadow-first);
+}
+
+.swatch {
+    position: relative;
+    width: swatch($swatch-size-default, $swatch-shadow-first-default);
+    height: swatch($swatch-size-default, $swatch-shadow-first-default);
+    border-radius: 50%;
+    box-shadow: 0 0 0 $swatch-shadow-second-default color('white'), 0 0 0 $swatch-shadow-first-default color('grey-light');
+
+    transition: all .2s ease;
+
+    &:after {
+        content: '';
+        width: 2px;
+        height: calc(#{$swatch-size-default + 1.5px});
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        border-left: 0.5px solid color('white');
+        border-right: 0.5px solid color('white');
+        background: color('grey');
+        display: none;
+    }
+
+    &:hover {
+        box-shadow: 0 0 0 ($swatch-shadow-second-default - 1px) color('white'), 0 0 0 $swatch-shadow-first-default color('grey');
+    }
+
+    &.selected {
+        box-shadow: 0 0 0 ($swatch-shadow-second-default - 1px) color('white'), 0 0 0 $swatch-shadow-first-default color('black');
+    }
+
+    &.disabled {
+        box-shadow: 0 0 0 ($swatch-shadow-second-default - 1px) color('white'), 0 0 0 $swatch-shadow-first-default color('grey');
+
+        &::after {
+            display: block;
+        }
+    }
+
+    &.m-large {
+        width: swatch($swatch-size-large, $swatch-shadow-first-large);
+        height: swatch($swatch-size-large, $swatch-shadow-first-large);
+        box-shadow: 0 0 0 $swatch-shadow-second-large color('white'), 0 0 0 $swatch-shadow-first-large color('grey-light');
+
+        &:hover {
+            box-shadow: 0 0 0 ($swatch-shadow-second-large - 1px) color('white'), 0 0 0 $swatch-shadow-first-large color('grey');
+        }
+
+        &.selected {
+            box-shadow: 0 0 0 ($swatch-shadow-second-large - 1px) color('white'), 0 0 0 $swatch-shadow-first-large color('black');
+        }
+
+        &.disabled {
+            box-shadow: 0 0 0 ($swatch-shadow-second-large - 1px) color('white'), 0 0 0 $swatch-shadow-first-large color('grey');
+        }
+
+        &:after {
+            height: calc(#{$swatch-size-large + 1.5px});
+        }
+    }
+
+    &.m-small {
+        width: swatch($swatch-size-small, $swatch-shadow-first-small);
+        height: swatch($swatch-size-small, $swatch-shadow-first-small);
+        box-shadow: 0 0 0 $swatch-shadow-second-small color('white'), 0 0 0 $swatch-shadow-first-small color('grey-light');
+
+        &:hover {
+            box-shadow: 0 0 0 ($swatch-shadow-second-small - 1px) color('white'), 0 0 0 $swatch-shadow-first-small color('grey');
+        }
+
+        &.selected {
+            box-shadow: 0 0 0 ($swatch-shadow-second-small - 1px) color('white'), 0 0 0 $swatch-shadow-first-small color('black');
+        }
+
+        &.disabled {
+            box-shadow: 0 0 0 ($swatch-shadow-second-small - 1px) color('white'), 0 0 0 $swatch-shadow-first-small color('grey');
+        }
+
+        &:after {
+            height: calc(#{$swatch-size-small + 1.5px});
+        }
+    }
+}
