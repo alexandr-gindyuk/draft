@@ -27,13 +27,12 @@ $swatch-shadow-second-small: 3px;
     &:after {
         content: '';
         width: 2px;
-        height: calc(#{$swatch-size-default + 1.5px});
+        height: calc(#{$swatch-size-default + $swatch-shadow-first-default});
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) rotate(45deg);
-        border-left: 0.5px solid color('white');
-        border-right: 0.5px solid color('white');
+        box-shadow: 0 0 0 0.5px #fff;
         background: color('grey');
         display: none;
     }
@@ -72,7 +71,7 @@ $swatch-shadow-second-small: 3px;
         }
 
         &:after {
-            height: calc(#{$swatch-size-large + 1.5px});
+            height: calc(#{$swatch-size-large + $swatch-shadow-first-large});
         }
     }
 
@@ -94,7 +93,7 @@ $swatch-shadow-second-small: 3px;
         }
 
         &:after {
-            height: calc(#{$swatch-size-small + 1.5px});
+            height: calc(#{$swatch-size-small + $swatch-shadow-first-small});
         }
     }
 }
