@@ -1,0 +1,28 @@
+.product-tile {
+    &__image {
+        display: block;
+        position: relative;
+        padding-bottom: 100%;
+        overflow: hidden;
+
+        img {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .m-feature & {
+        &__image {
+            padding-bottom: 0;
+
+            img {
+                position: static;
+            }
+        }
+    }
+}
