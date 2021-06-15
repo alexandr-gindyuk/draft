@@ -27,7 +27,7 @@ $swatch-shadow-second-small: 3px;
     &:after {
         content: '';
         width: 2px;
-        height: calc(#{$swatch-size-default + $swatch-shadow-first-default});
+        height: $swatch-size-default + $swatch-shadow-first-default;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -71,7 +71,7 @@ $swatch-shadow-second-small: 3px;
         }
 
         &:after {
-            height: calc(#{$swatch-size-large + $swatch-shadow-first-large});
+            height: $swatch-size-large + $swatch-shadow-first-large;
         }
     }
 
@@ -93,7 +93,7 @@ $swatch-shadow-second-small: 3px;
         }
 
         &:after {
-            height: calc(#{$swatch-size-small + $swatch-shadow-first-small});
+            height: $swatch-size-small + $swatch-shadow-first-small;
         }
     }
 }
