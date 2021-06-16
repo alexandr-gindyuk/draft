@@ -1,0 +1,28 @@
+.footer-storeloc {
+
+    &__title {
+        font-family: "DINOT-Medium";
+        font-size: 15px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        margin-bottom: 20px;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+        border: 1px solid color('white');
+        text-transform: uppercase;
+    }
+
+    span {
+        display: block;
+        margin-right: 11.5px;
+    }
+}

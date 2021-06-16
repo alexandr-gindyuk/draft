@@ -1,0 +1,23 @@
+.socials {
+    display: flex;
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        text-decoration: none;
+        border-radius: 50%;
+        background: color('white');
+        color: color('black');
+        overflow: hidden;
+    }
+}

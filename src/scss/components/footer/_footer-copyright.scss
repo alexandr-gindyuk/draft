@@ -1,0 +1,15 @@
+.footer-copyright {
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+}

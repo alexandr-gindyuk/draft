@@ -9,7 +9,7 @@
 <body class="page__hp">
     <div class="l-page">
 
-        <header class="header">
+        <header class="header" style="display: none;">
             <div class="header__inner">
                 <!-- <a href="#" class="header__logo">
                     logo
@@ -123,7 +123,7 @@
             </div>
         </header>
 
-        <main class="main">
+        <main class="main" style='display: none;'>
 
             <!-- swatches -->
             <div style="padding: 50px;">
@@ -306,7 +306,7 @@
                 <button type="button" class="btn-main-filled" disabled><i class="icon-m-arrow-left m-margin-right"></i> WITH ICON</button>
             </div>
 
-        <main class="main">
+
             <div class="inputs-container theme-dark">
                 <form class="radio radio--column ">
                     <label class="radio__item">Radiobutton checked
@@ -527,15 +527,61 @@
                     <div class="l-footer__top">
                         <div class="l-footer__top-cell m-comunity">
                             <!-- content asset -->
-                            <div class="footer__comunity">
-                                Join OUR COMMUNITY
+                            <div class="footer-comunity">
+                                <p class="footer-comunity__text">Follow us</p>
+                                <p class="footer-comunity__title">Join OUR COMMUNITY</p>
+                                <ul class="socials">
+                                    <li class="socials__item">
+                                        <a class="socials__link m-fb" href="#">
+                                            <i class="icon-social-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li class="socials__item">
+                                        <a class="socials__link m-instagram" href="#">
+                                            <i class="icon-social-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li class="socials__item">
+                                        <a class="socials__link m-youtube" href="#">
+                                            <i class="icon-social-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li class="socials__item">
+                                        <a class="socials__link m-linkedin" href="#">
+                                            <i class="icon-social-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li class="socials__item">
+                                        <a class="socials__link m-strava" href="#">
+                                            <i class="icon-social-strava"></i>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                             <!-- end content asset -->
                         </div>
                         <div class="l-footer__top-cell m-subscribe">
                             <!-- content asset -->
-                            <div class="footer__subscribe">
-                                Subscribe
+                            <div class="footer-subscribe">
+                                <div class="subscribe">
+                                    <p class="subscribe__title">Never miss any product release and promotions</p>
+                                    <form class="subscribe__form">
+                                        <input class="input-main" type="email" placeholder="Please enter your email...">
+                                        <input class="input-submit" type="submit" value="Subscribe">
+                                    </form>
+                                    <div class="subscribe__check">
+                                        <div class="checkbox">
+                                            <label class="checkbox__item">
+                                                <span>
+                                                    <span class="note">*</span>
+                                                    I want to receive e-mail from ODLO. I agree to Privacy policy
+                                                </span>
+                                                <input type="checkbox" name="check">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <!-- end content asset -->
                         </div>
@@ -545,6 +591,7 @@
             <div class="footer__main">
                 <div class="l-wrapper">
                     <div class="l-footer__main">
+
                         <div class="l-footer__main-cell m-navigation">
                             <div class="l-footer__nav">
 
@@ -642,22 +689,73 @@
                                     </div>
                                 </section>
 
-                                <a href="" class="">CONTACT US</a>
+                                <a href="#" class="footer__nav-contact-us">
+                                    <i class="icon-m-message"></i>
+                                    <span>CONTACT US</span>
+                                </a>
                                 <!-- end content asset -->
 
                             </div>
                         </div>
                         <div class="l-footer__main-cell m-storloc-rew">
-                            storlocator
-                            customer-reviews
+                            <div class="footer-storeloc">
+                                <p class="footer-storeloc__title">Store locator</p>
+                                <p class="footer-storeloc__text">Explore a retail store near you.</p>
+                                <a class="footer-storeloc__button" href="#">
+                                    <span>Find a store</span>
+                                    <i class="icon-m-location"></i>
+                                </a>
+                            </div>
                         </div>
                         <div class="l-footer__main-cell m-copy-links">
-                            copyright
-                            links
+                            <div class="footer-copyright">
+                                <p class="footer-copyright__title">&#169; 2021 ODLO International AG</p>
+                                <ul class="footer-copyright__list">
+                                    <li class="footer-copyright__item">
+                                        <a class="footer-copyright__link" href="#">Imprint</a>
+                                    </li>
+                                    <li class="footer-copyright__item">
+                                        <a class="footer-copyright__link" href="#">Terms and Conditions</a>
+                                    </li>
+                                    <li class="footer-copyright__item">
+                                        <a class="footer-copyright__link" href="#">Privacy Policy</a>
+                                    </li>
+                                    <li class="footer-copyright__item">
+                                        <a class="footer-copyright__link" href="#">Cookie Declaration</a>
+                                    </li>
+                                    <li class="footer-copyright__item">
+                                        <a class="footer-copyright__link" href="#">Right to Cancel</a>
+                                    </li>
+                                    <li class="footer-copyright__item">
+                                        <a class="footer-copyright__link" href="#">UV Decloration</a>
+                                    </li>
+                                    <li class="footer-copyright__item">
+                                        <a class="footer-copyright__link" href="#">Fair Wear Foundation</a>
+                                    </li>
+                                 </ul>
+                            </div>
                         </div>
                         <div class="l-footer__main-cell m-selector-payment">
-                            country-selector
-                            payment
+                            <div class="footer-payment">
+                                <div class="footer-payment__country">US/ENG</div>
+                                <ul class="footer-payment__list">
+                                    <li class="footer-payment__item">
+                                        <i class="icon-payment-visa"></i>
+                                    </li>
+                                    <li class="footer-payment__item">
+                                        <i class="icon-payment-master-card"></i>
+                                    </li>
+                                    <li class="footer-payment__item">
+                                        <i class="icon-payment-amex"></i>
+                                    </li>
+                                    <li class="footer-payment__item">
+                                        <i class="icon-payment-paypal"></i>
+                                    </li>
+                                    <li class="footer-payment__item">
+                                        <i class="icon-payment-sofort"></i>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

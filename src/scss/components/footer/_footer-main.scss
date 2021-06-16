@@ -1,3 +1,9 @@
 .footer__main {
-    background-color: #000000;
+    font-family: "DINOT-Medium";
+    font-size: 16px;
+    line-height: 1.25;
+    padding-top: 60px + $footer-size-top;
+    padding-bottom: 24px;
+    color: color('grey-deep-light');
+    background-color: color('black');
 }

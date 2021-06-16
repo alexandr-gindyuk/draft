@@ -25,6 +25,41 @@
 
   //icon-dynamic - the class name for those situations, when we just want to operate with the icon's content, not a class
 
+  .icon-payment-sofort:before {
+    content: "\e91d";
+    color: #5c6573;
+  }
+  .icon-payment-paypal:before {
+    content: "\e91e";
+    color: #5c6573;
+  }
+  .icon-payment-amex:before {
+    content: "\e91f";
+    color: #5c6573;
+  }
+  .icon-payment-master-card:before {
+    content: "\e920";
+    color: #5c6573;
+  }
+  .icon-payment-visa:before {
+    content: "\e921";
+    color: #5c6573;
+  }
+  .icon-social-strava:before {
+    content: "\e918";
+  }
+  .icon-social-linkedin:before {
+    content: "\e919";
+  }
+  .icon-social-youtube:before {
+    content: "\e91a";
+  }
+  .icon-social-instagram:before {
+    content: "\e91b";
+  }
+  .icon-social-facebook:before {
+    content: "\e91c";
+  }
   .icon-badges-eco:before {
     content: "\e900";
     color: #00856c;
@@ -47,16 +82,14 @@
   .icon-m-close:before {
     content: "\e906";
   }
-  .icon-m-error {
-    &:before {
-        content: "\e907";
-        color: rgb(229, 23, 85);
-    }
-    &:after {
-        content: "\e908";
-        margin-left: -0.7001953125em;
-        color: rgb(255, 255, 255);
-    }
+  .icon-m-error .path1:before {
+    content: "\e907";
+    color: rgb(229, 23, 85);
+  }
+  .icon-m-error .path2:before {
+    content: "\e908";
+    margin-left: -0.7001953125em;
+    color: rgb(255, 255, 255);
   }
   .icon-m-filter:before {
     content: "\e909";

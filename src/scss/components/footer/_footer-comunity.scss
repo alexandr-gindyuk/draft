@@ -1,3 +1,37 @@
-.footer__comunity {
-    padding: 40px 0;
+.footer-comunity {
+    font-family: "DINOT-Medium";
+    position: relative;
+    padding: 40px;
+    background: color('grey-deep-light');
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: (-$footer-size-top);
+        height: $footer-size-top;
+        background: color('grey-deep-light');
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: (-$footer-size-top);
+        height: $footer-size-top;
+        background: color('grey-deep-light');
+    }
+
+    &__text {
+        margin-bottom: 15px;
+    }
+
+    &__title {
+        font-family: "DINOT-Bold";
+        font-size: 35px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
 }

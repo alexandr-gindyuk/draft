@@ -1,4 +1,8 @@
 .footer__nav {
+    &:first-child {
+        margin-bottom: 60px;
+    }
+
     &-title {
         margin: 0;
     }
@@ -14,6 +18,8 @@
 
         @include media(md-up) {
             display: block;
+            margin-bottom: 30px;
+            text-transform: uppercase;
         }
     }
 
@@ -22,6 +28,25 @@
             &:not(.show) {
                 display: block;
             }
+        }
+    }
+
+    &-item {
+        margin-bottom: 20px;
+    }
+
+    &-link {
+        &:hover {
+            color: color('white');
+        }
+    }
+
+    &-contact-us {
+        display: flex;
+        align-items: center;
+
+        span {
+            padding-left: 12px;
         }
     }
 }

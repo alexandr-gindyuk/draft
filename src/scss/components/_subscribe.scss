@@ -1,0 +1,45 @@
+.subscribe {
+    &__title {
+        font-family: "DINOT-Medium";
+        font-size: 30px;
+        margin-bottom: 20px;
+        line-height: 1.17;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .input-main {
+            display: flex;
+            flex-grow: 1;
+            margin-right: 20px;
+            background: color('white');
+        }
+
+        .input-submit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            min-width: 160px;
+            text-transform: uppercase;
+            color: color('white');
+            border: 1px solid color('white');
+            background: transparent;
+        }
+    }
+
+    &__check {
+        .checkmark {
+            background-color: rgba(0, 0, 0, 0.2);
+            background-image: none;
+            border: 1px solid gray;
+        }
+    }
+
+    .note {
+        color: color('danger-dark');
+    }
+}

@@ -5,7 +5,7 @@
         grid-template-columns: 1fr;
 
         @include media(md-up) {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(12, 1fr);
         }
     }
 
@@ -21,14 +21,18 @@
         }
 
         &.m-comunity {
+            grid-column: span 5;
+
             @include media(sm-down) {
-                background-color: #f1f1f1;
+                background-color: color('grey-super-light');
             }
         }
 
         &.m-subscribe {
+            grid-column: 7 / span 5;
+
             @include media(sm-down) {
-                background-color: #000000;
+                background-color: color('black');
             }
         }
     }
@@ -59,13 +63,12 @@
             grid-template-rows: repeat(2, auto);
             grid-template-areas:
                 "navigation navigation navigation storloc-rew"
-                "copy-links copy-links selector-payment selector-payment";
+                "copy-links copy-links copy-links selector-payment";
         }
     }
 
     &__main-cell {
-        background-color: white;
-        
+
         &.m-navigation {
             grid-area: navigation;
         }
@@ -80,6 +83,17 @@
 
         &.m-selector-payment {
             grid-area: selector-payment;
+
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+
+    &__nav {
+
+        @include media(md-up) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 }
