@@ -1,8 +1,17 @@
 .footer-comunity {
     font-family: "DINOT-Medium";
     position: relative;
-    padding: 40px;
+    height: 100%;
+    padding: 0 20px 30px 20px;
     background: color('grey-deep-light');
+
+    @include media(md) {
+        padding: 0 30px 40px 30px;
+    }
+
+    @include media(lg-up) {
+        padding: 40px;
+    }
 
     &:before {
         content: '';
@@ -22,6 +31,11 @@
         bottom: (-$footer-size-top);
         height: $footer-size-top;
         background: color('grey-deep-light');
+        display: none;
+
+        @include media(lg-up) {
+            display: block;
+        }
     }
 
     &__text {

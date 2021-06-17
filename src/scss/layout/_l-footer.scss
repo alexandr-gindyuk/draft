@@ -4,7 +4,7 @@
 
         grid-template-columns: 1fr;
 
-        @include media(md-up) {
+        @include media(lg-up) {
             grid-template-columns: repeat(12, 1fr);
         }
     }
@@ -21,49 +21,105 @@
         }
 
         &.m-comunity {
-            grid-column: span 5;
-
-            @include media(sm-down) {
-                background-color: color('grey-super-light');
+            @include media(lg-up) {
+                grid-column: span 5;
             }
         }
 
         &.m-subscribe {
-            grid-column: 7 / span 5;
+            @include media(md-up) {
 
-            @include media(sm-down) {
-                background-color: color('black');
             }
+
+            @include media(lg) {
+                grid-column: 7 / span 5;
+            }
+
+            @include media(xl-up) {
+                grid-column: 8 / span 4;
+            }
+
+            // @include media(sm-down) {
+            //     background-color: color('black');
+            // }
         }
     }
+
+    // &__main {
+    //     @include grid;
+
+    //     grid-template-columns: 1fr;
+    //     grid-row-gap: 40px;
+    //     grid-template-areas:
+    //         "navigation"
+    //         "storloc-rew"
+    //         "copy-links"
+    //         "selector-payment";
+
+    //     @include media(md-up) {
+    //         grid-template-columns: repeat(2, 1fr);
+    //         grid-template-rows: repeat(3, auto);
+    //         grid-row-gap: 60px;
+    //         grid-template-areas:
+    //             "navigation navigation"
+    //             "storloc-rew storloc-rew"
+    //             "copy-links selector-payment";
+    //     }
+
+    //     @include media(xl-up) {
+    //         grid-template-columns: repeat(4, 1fr);
+    //         grid-template-rows: repeat(2, auto);
+    //         grid-template-areas:
+    //             "navigation navigation navigation storloc-rew"
+    //             "copy-links copy-links copy-links selector-payment";
+    //     }
+    // }
 
     &__main {
         @include grid;
 
         grid-template-columns: 1fr;
-        grid-row-gap: 40px;
-        grid-template-areas:
-            "navigation"
-            "storloc-rew"
-            "copy-links"
-            "selector-payment";
-
-        @include media(md-up) {
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(3, auto);
-            grid-row-gap: 60px;
-            grid-template-areas:
-                "navigation navigation"
-                "storloc-rew storloc-rew"
-                "copy-links selector-payment";
-        }
+        grid-template-rows: repeat(2, auto);
 
         @include media(xl-up) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__main-top {
+        @include grid;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+                "navigation"
+                "storloc-rew";
+
+        @include media(lg-up) {
             grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(2, auto);
+            grid-row-gap: 60px;
             grid-template-areas:
-                "navigation navigation navigation storloc-rew"
-                "copy-links copy-links copy-links selector-payment";
+                "navigation navigation navigation storloc-rew";
+
+            margin-bottom: 60px;
+        }
+    }
+
+    &__main-bottom {
+        @include grid;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+                "copy-links"
+                "selector-payment";
+
+        @include media(md-up) {
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 1fr;
+            grid-template-areas: none;
+            padding-top: 30px;
+            border-top: 1px solid color('grey-deep-light');
         }
     }
 
@@ -71,25 +127,62 @@
 
         &.m-navigation {
             grid-area: navigation;
+            outline: 1px solid blue;
+
+
+            // @include media(lg-up) {
+            //     grid-template-columns: repeat(3, 1fr);
+            //     grid-row-gap: 60px;
+
+            // }
         }
 
         &.m-storloc-rew {
+            outline: 1px solid gray;
             grid-area: storloc-rew;
         }
 
         &.m-copy-links {
             grid-area: copy-links;
+            outline: 1px solid red;
+
+            grid-column: 1 / span 1;
+
+            @include media(md-up) {
+                grid-column: 1 / span 7;
+            }
+
+            @include media(lg) {
+                grid-column: 1 / span 6;
+            }
+
+            @include media(xl-up) {
+                grid-column: 1 / span 7;
+            }
         }
 
         &.m-selector-payment {
             grid-area: selector-payment;
+            outline: 1px solid green;
 
-            display: flex;
-            align-items: flex-end;
+            grid-column: 1 / span 1;
+
+            @include media(md-up) {
+                grid-column: 8 / span 5;
+            }
+
+            @include media(lg) {
+                grid-column: 7 / span 6;
+            }
+
+            @include media(xl-up) {
+                grid-column: 8 / span 5;
+            }
         }
     }
 
     &__nav {
+
 
         @include media(md-up) {
             display: grid;

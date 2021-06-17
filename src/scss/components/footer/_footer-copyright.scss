@@ -5,9 +5,12 @@
 
     &__list {
         display: flex;
+        flex-wrap: wrap;
     }
 
     &__item {
+        margin-bottom: 20px;
+
         &:not(:last-child) {
             margin-right: 20px;
         }
