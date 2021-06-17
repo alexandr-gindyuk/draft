@@ -1,9 +1,13 @@
 .subscribe {
     &__title {
         font-family: "DINOT-Medium";
-        font-size: 30px;
+        font-size: 25px;
         margin-bottom: 20px;
         line-height: 1.17;
+
+        @include media(lg-up) {
+            font-size: 30px;
+        }
     }
 
     &__form {
@@ -18,16 +22,56 @@
             background: color('white');
         }
 
+        .input-submit-group {
+            position: relative;
+            height: 50px;
+            width: 50px;
+            min-width: 50px;
+            text-transform: uppercase;
+
+            @include media(lg-up) {
+                height: 50px;
+                width: auto;
+                min-width: 160px;
+            }
+        }
+
         .input-submit {
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 50px;
-            min-width: 160px;
-            text-transform: uppercase;
+            height: 100%;
+            width: 100%;
             color: color('white');
             border: 1px solid color('white');
             background: transparent;
+
+            &[attr="value"] {
+                content: '';
+            }
+        }
+
+        .input-submit-icon,
+        .input-submit-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .input-submit-icon {
+
+            @include media(lg-up) {
+                display: none;
+            }
+        }
+
+        .input-submit-text {
+            display: none;
+
+            @include media(lg-up) {
+                display: block;
+            }
         }
     }
 
@@ -37,9 +81,22 @@
             background-image: none;
             border: 1px solid gray;
         }
+
+        &-description {
+            position: relative;
+            padding-left: 10px;
+
+            &::before {
+                content: '*';
+                position: absolute;
+                top: 2px;
+                left: 0;
+                color: color('danger-dark');
+            }
+        }
     }
 
-    .note {
-        color: color('danger-dark');
+    .privacy-policy {
+        text-decoration: underline;
     }
 }

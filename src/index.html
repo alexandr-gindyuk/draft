@@ -528,38 +528,40 @@
                         <div class="l-footer__top-cell m-comunity">
                             <!-- content asset -->
                             <div class="footer-comunity">
-                                <div>
+                                <div class="m-comunity-text">
                                     <p class="footer-comunity__text">Follow us</p>
                                     <p class="footer-comunity__title">Join OUR COMMUNITY</p>
                                 </div>
 
-                                <ul class="socials">
-                                    <li class="socials__item">
-                                        <a class="socials__link m-fb" href="#">
-                                            <i class="icon-social-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li class="socials__item">
-                                        <a class="socials__link m-instagram" href="#">
-                                            <i class="icon-social-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li class="socials__item">
-                                        <a class="socials__link m-youtube" href="#">
-                                            <i class="icon-social-youtube"></i>
-                                        </a>
-                                    </li>
-                                    <li class="socials__item">
-                                        <a class="socials__link m-linkedin" href="#">
-                                            <i class="icon-social-linkedin"></i>
-                                        </a>
-                                    </li>
-                                    <li class="socials__item">
-                                        <a class="socials__link m-strava" href="#">
-                                            <i class="icon-social-strava"></i>
-                                        </a>
-                                    </li>
-                                </ul>
+                                <div class="m-comunity-socials">
+                                    <ul class="socials">
+                                        <li class="socials__item">
+                                            <a class="socials__link m-fb" href="#">
+                                                <i class="icon-social-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="socials__item">
+                                            <a class="socials__link m-instagram" href="#">
+                                                <i class="icon-social-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="socials__item">
+                                            <a class="socials__link m-youtube" href="#">
+                                                <i class="icon-social-youtube"></i>
+                                            </a>
+                                        </li>
+                                        <li class="socials__item">
+                                            <a class="socials__link m-linkedin" href="#">
+                                                <i class="icon-social-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li class="socials__item">
+                                            <a class="socials__link m-strava" href="#">
+                                                <i class="icon-social-strava"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                             <!-- end content asset -->
                         </div>
@@ -570,18 +572,22 @@
                                     <p class="subscribe__title">Never miss any product release and promotions</p>
                                     <form class="subscribe__form">
                                         <input class="input-main" type="email" placeholder="Please enter your email...">
-                                        <input class="input-submit" type="submit" value="Subscribe">
+                                        <div class="input-submit-group">
+                                            <input class="input-submit" type="submit" value=''>
+                                            <span class="input-submit-text">Subscribe</span>
+                                            <i class="input-submit-icon icon-m-arrow-right"></i>
+                                        </div>
+
                                     </form>
                                     <div class="subscribe__check">
                                         <div class="checkbox">
                                             <label class="checkbox__item">
-                                                <span>
-                                                    <span class="note">*</span>
-                                                    I want to receive e-mail from ODLO. I agree to Privacy policy
-                                                </span>
                                                 <input type="checkbox" name="check">
                                                 <span class="checkmark"></span>
                                             </label>
+                                            <span class="subscribe__check-description">
+                                                I want to receive e-mail from ODLO. I agree to <a class="privacy-policy" href="#">Privacy policy</a>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -603,10 +609,10 @@
                                     <section class="footer__nav">
                                         <h3 class="footer__nav-title">
                                             <button class="footer__nav-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseClientCare" aria-expanded="false" aria-controls="collapseClientCare">
-                                                <i class="footer__nav-icon"></i>
-                                                <span>CLIENT CARE</span>
+                                                <i class="footer__nav-icon icon-m-arrow-down"></i>
+                                                <span>Client care</span>
                                             </button>
-                                            <span class="footer__nav-heading">CLIENT CARE</span>
+                                            <span class="footer__nav-heading">Client care</span>
                                         </h3>
                                         <div class="footer__nav-content collapse" id="collapseClientCare">
                                             <ul class="footer__nav-list">
@@ -635,10 +641,10 @@
                                     <section class="footer__nav">
                                         <h3 class="footer__nav-title">
                                             <button class="footer__nav-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOurCompany" aria-expanded="false" aria-controls="collapseOurCompany">
-                                                <i class="footer__nav-icon"></i>
-                                                <span>OUR COMPANY</span>
+                                                <i class="footer__nav-icon icon-m-arrow-down"></i>
+                                                <span>Our company</span>
                                             </button>
-                                            <span class="footer__nav-heading">OUR COMPANY</span>
+                                            <span class="footer__nav-heading">Our company</span>
                                         </h3>
                                         <div class="footer__nav-content collapse" id="collapseOurCompany">
                                             <ul class="footer__nav-list">
@@ -667,10 +673,10 @@
                                     <section class="footer__nav">
                                         <h3 class="footer__nav-title">
                                             <button class="footer__nav-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseShopOnline" aria-expanded="false" aria-controls="collapseShopOnline">
-                                                <i class="footer__nav-icon"></i>
-                                                <span>SHOP ONLINE</span>
+                                                <i class="footer__nav-icon icon-m-arrow-down"></i>
+                                                <span>Shop online</span>
                                             </button>
-                                            <span class="footer__nav-heading">SHOP ONLINE</span>
+                                            <span class="footer__nav-heading">Shop online</span>
                                         </h3>
                                         <div class="footer__nav-content collapse" id="collapseShopOnline">
                                             <ul class="footer__nav-list">
@@ -703,18 +709,21 @@
                             </div>
 
                             <div class="l-footer__main-cell m-storloc-rew">
-                                <div class="footer-storeloc">
-                                    <p class="footer-storeloc__title">Store locator</p>
-                                    <p class="footer-storeloc__text">Explore a retail store near you.</p>
-                                    <a class="footer-storeloc__button" href="#">
-                                        <span>Find a store</span>
-                                        <i class="icon-m-location"></i>
-                                    </a>
+                                <div class="footer-storeloc-group">
+                                    <div class="footer-storeloc">
+                                        <p class="footer-storeloc__title">Store locator</p>
+                                        <p class="footer-storeloc__text">Explore a retail store near you.</p>
+                                        <a class="footer-storeloc__button" href="#">
+                                            <span>Find a store</span>
+                                            <i class="icon-m-location"></i>
+                                        </a>
+                                    </div>
+
+                                    <div class="review">
+                                        third-party review
+                                    </div>
                                 </div>
 
-                                <div class="review">
-                                    third-party review
-                                </div>
                             </div>
                         </div>
 

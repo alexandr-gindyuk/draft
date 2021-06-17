@@ -1,9 +1,19 @@
 .socials {
     display: flex;
+    height: 100%;
+    align-items: center;
 
     &__item {
         &:not(:last-child) {
-            margin-right: 30px;
+            margin-right: 13px;
+
+            @include media(md-up) {
+                margin-right: 20px;
+            }
+
+            @include media(xl-up) {
+                margin-right: 30px;
+            }
         }
     }
 

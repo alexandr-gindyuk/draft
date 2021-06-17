@@ -5,8 +5,19 @@
     padding: 0 20px 30px 20px;
     background: color('grey-deep-light');
 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+                "comunity-text"
+                "comunity-soc";
+
     @include media(md) {
         padding: 0 30px 40px 30px;
+
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: none;
     }
 
     @include media(lg-up) {
@@ -44,8 +55,32 @@
 
     &__title {
         font-family: "DINOT-Bold";
-        font-size: 35px;
-        margin-bottom: 30px;
+        font-size: 25px;
+        margin-bottom: 20px;
         text-transform: uppercase;
+
+        @include media(md) {
+            margin-bottom: 0;
+        }
+
+        @include media(lg-up) {
+            font-size: 35px;
+        }
+    }
+
+    .m-comunity-text {
+        grid-area: comunity-text;
+
+        @include media(md) {
+            grid-column: 1 / span 5;
+        }
+    }
+
+    .m-comunity-socials {
+        grid-area: comunity-soc;
+
+        @include media(md) {
+            grid-column: 6 / span 7;
+        }
     }
 }

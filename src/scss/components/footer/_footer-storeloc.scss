@@ -1,5 +1,11 @@
 .footer-storeloc {
     margin-bottom: 60px;
+    grid-area: storeloc;
+
+    @include media(md) {
+        grid-column: 1 / span 5;
+        margin-bottom: 0;
+    }
 
     &__title {
         font-family: "DINOT-Medium";
@@ -25,5 +31,25 @@
     span {
         display: block;
         margin-right: 11.5px;
+    }
+}
+
+.footer-storeloc-group {
+    @include media(md) {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .review {
+        grid-area: review;
+
+        @include media(sm-down) {
+            display: flex;
+            justify-content: center;
+        }
+
+        @include media(md) {
+            grid-column: 10 / span 3;
+        }
     }
 }
