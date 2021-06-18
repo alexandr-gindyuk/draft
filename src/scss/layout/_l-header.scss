@@ -1,0 +1,98 @@
+.l-header {
+    @include grid;
+
+    @include media(md-down) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    @include media(lg-up) {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    &__logo {
+        @include grid;
+    }
+
+    &__main {
+        @include grid;
+
+        @include media(lg-up) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, auto);
+        }
+    }
+
+    &__top {
+        @include grid;
+        outline: 1px solid white;
+
+        @include media(md-down) {
+            grid-row-start: 2;
+        }
+
+        @include media(lg-up) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: "info cust-service";
+        }
+    }
+
+    &__bottom {
+        @include grid;
+        outline: 1px solid darkgreen;
+
+        @include media(lg-up) {
+            grid-template-columns: repeat(11, 1fr);
+        }
+    }
+
+
+    .m-logo {
+        outline: 1px solid rgb(87, 5, 5);
+        background: rgb(87, 5, 5);
+
+        @include media(lg-up) {
+            grid-area: logo;
+            grid-column: 1 / span 1;
+        }
+    }
+
+    .m-header-main {
+        outline: 1px solid blue;
+
+        @include media(lg-up) {
+            grid-area: header-main;
+            grid-column: 2 / span 11;
+            padding-left: 32px;
+        }
+    }
+
+    .m-info {
+        // grid-area: info;
+        outline: 1px solid red;
+    }
+
+    .m-cust-service {
+        // grid-area: cust-service;
+        outline: 1px solid fuchsia;
+    }
+
+    .m-menu-search {
+        outline: 1px solid chartreuse;
+
+        @include media(lg-up) {
+            grid-area: menu-search;
+            grid-column: 1 / span 9;
+        }
+    }
+
+    .m-user-stuff {
+        outline: 1px solid orange;
+
+        @include media(lg-up) {
+            grid-area: user-stuff;
+            grid-column: 10 / span 2;
+        }
+    }
+}
+
