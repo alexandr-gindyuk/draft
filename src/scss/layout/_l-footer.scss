@@ -27,15 +27,15 @@
         }
 
         &.m-subscribe {
-            @include media(md-up) {
-
-            }
-
             @include media(lg) {
                 grid-column: 7 / span 5;
             }
 
             @include media(xl-up) {
+                grid-column: 7 / span 5;
+            }
+
+            @include media(xxl) {
                 grid-column: 8 / span 4;
             }
         }
