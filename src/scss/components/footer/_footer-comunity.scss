@@ -72,7 +72,7 @@
         grid-area: comunity-text;
 
         @include media(md) {
-            grid-column: 1 / span 5;
+            grid-column: 1 / span 4;
         }
     }
 

@@ -38,6 +38,7 @@
     @include media(md) {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
+        grid-column-gap: $grid-column-gap-sm;
     }
 
     .review {

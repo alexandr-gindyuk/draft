@@ -44,10 +44,13 @@
     &__main {
         @include grid;
 
-        grid-row-gap: 60px;
-
+        grid-row-gap: 30px;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, auto);
+
+        @include media(sm-down) {
+            grid-row-gap: 60px;
+        }
 
         @include media(xl-up) {
             grid-template-columns: 1fr;
@@ -58,6 +61,10 @@
         @include grid;
 
         grid-row-gap: 40px;
+
+        @include media(md) {
+            grid-row-gap: 60px;
+        }
 
         @include media(lg-up) {
             grid-row-gap: none;

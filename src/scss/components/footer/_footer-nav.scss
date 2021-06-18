@@ -2,6 +2,12 @@
 
     $root: &;
 
+    &:first-child {
+        @include media(sm-down) {
+            border-top: 1px solid color('grey-super-deep');
+        }
+    }
+
     &-title {
         margin: 0;
     }
@@ -23,6 +29,9 @@
         }
 
         &[aria-expanded="true"] {
+
+            border-bottom: 1px solid transparent;
+
             #{$root}-icon {
                 transform: translateY(-50%) rotate(180deg);
             }
@@ -49,10 +58,19 @@
                 display: block;
             }
         }
+
+        @include media(sm-down) {
+            padding-left: 45px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid color('grey-super-deep');
+        }
     }
 
     &-item {
-        margin-bottom: 20px;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
     }
 
     &-link {
