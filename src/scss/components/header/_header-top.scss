@@ -1,0 +1,15 @@
+.header__top {
+    display: flex;
+    color: color('grey-super-deep');
+
+    @include media(md-down) {
+        height: 40px;
+        align-items: center;
+        font-family: 'DINOT-Medium';
+        font-size: 16px;
+    }
+
+    @include media(lg-up) {
+        font-size: 14px;
+    }
+}

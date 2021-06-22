@@ -10,53 +10,217 @@
     <div class="l-page">
 
         <header class="header">
-            <div class="l-wrapper m-full-width-sm-down">
+            <div class="l-wrapper">
                 <div class="l-header">
-                    <div class="l-header__logo m-logo">
-                        <a href="#" class="header__logo">logo</a>
+                    <div class="l-header__mobile">
+                        <div class="header__mobile-buttons user-staff__item">
+                            <button class="burger">
+                                <i class="icon-m-burger"></i>
+                            </button>
+
+                            <button class="close">
+                                <i class="icon-m-close"></i>
+                            </button>
+                        </div>
+
+                        <a href="#" class="header__logo">
+                            <img src="images/svg/odlo-logo-primary.svg" alt="Odlo home" title="Odlo home">
+                        </a>
+
+                        <a class="user-staff__item user-staff__item--cart" href="#">
+                            <i class="icon-m-bag"></i>
+                            <span>(0)</span>
+                        </a>
                     </div>
 
-                    <div class="l-header__main m-header-main">
-                        <!-- <div class="header__group-main"> -->
+                    <div class="l-header__logo m-logo">
+                        <a href="#" class="header__logo">
+                            <img src="images/svg/odlo-logo-primary.svg" alt="Odlo home" title="Odlo home">
+                        </a>
+                    </div>
 
-                            <!-- header-top -->
-                            <div class="l-header__top">
-                                <div class="l-header__info m-info">
-                                    <div class="header__info">
-                                        <span>lang-country</span>
-                                        <span>store-loc</span>
+                    <div class="l-header__main header__main m-header-main">
+
+                        <!-- header-top -->
+                        <div class="l-header__top header__top">
+                            <div class="l-header__info m-info">
+                                <div class="header__info">
+                                    <div class="country-lang">
+                                        US/Eng
                                     </div>
+                                    <a class="store-locator" href="#">
+                                        <i class="icon-m-location"></i>&nbsp;
+                                        <p>Store locator</p>
+                                    </a>
                                 </div>
+                            </div>
 
-                                <div class="l-header__cust-service m-cust-service">
-                                    <div class="header__cust-service">
-                                        customer-service
+                            <div class="l-header__cust-service m-cust-service">
+                                <a class="header__cust-service" href="#">
+                                    Customer service
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- header-bottom  -->
+
+                        <div class="l-header__bottom">
+                            <div class="l-header__menu-search m-menu-search">
+                                <div class="header__search-menu-group">
+                                    <label class="header__search-mobile">
+                                        <input type="search" class="search" placeholder="Search In Odlo"/>
+                                        <i class="icon-m-search"></i>
+                                    </label>
+
+                                    <div class="header__menu menu">
+                                        <nav class="menu__body">
+                                            <ul class="menu__list m-level-1 m-show-level-1"> <!-- m-show-level-1, m-show-level-2, m-show-level-3 -->
+                                                <li class="menu__item">
+                                                    <a href="#" class="menu__link">WOMEN</a>
+                                                    <ul class="menu__list m-level-2">
+                                                        <li class="menu__item">
+                                                            <a href="#" class="menu__link">Levelw-2 1</a>
+                                                            <ul class="menu__list m-level-3">
+                                                                <li class="menu__item">
+                                                                    <a href="#" class="menu__link">Levelw-3 1 1</a>
+                                                                </li>
+                                                                <li class="menu__item">
+                                                                    <a href="#" class="menu__link">Levelw-3 1 2</a>
+                                                                </li>
+                                                                <li class="menu__item">
+                                                                    <a href="#" class="menu__link">Levelw-3 1 3</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="menu__item">
+                                                            <a href="#" class="menu__link">Levelw-2 2</a>
+                                                            <ul class="menu__list m-level-3">
+                                                                <li class="menu__item">
+                                                                    <a href="#" class="menu__link">Levelw-3 2 1</a>
+                                                                </li>
+                                                                <li class="menu__item">
+                                                                    <a href="#" class="menu__link">Levelw-3 2 2</a>
+                                                                </li>
+                                                                <li class="menu__item">
+                                                                    <a href="#" class="menu__link">Levelw-3 2 3</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="menu__item">
+                                                            <a href="#" class="menu__link">levelw-2 3</a>
+                                                            <ul class="menu__list m-level-3">
+                                                                <li class="menu__item">
+                                                                    <a href="#" class="menu__link">Levelw-3 3 1</a>
+                                                                </li>
+                                                                <li class="menu__item">
+                                                                    <a href="#" class="menu__link">Levelw-3 3 2</a>
+                                                                </li>
+                                                                <li class="menu__item">
+                                                                    <a href="#" class="menu__link">Levelw-3 3 3</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu__item">
+                                                    <a href="#" class="menu__link">MEN</a>
+                                                    <ul class="menu__list m-level-2">
+                                                        <li class="menu__item">
+                                                            <a href="#" class="menu__link">Levelm-2 1</a>
+                                                            <ul class="menu__list m-level-3">
+                                                                <li class="menu__item">
+                                                                    <a href="#" class="menu__link">Levelm-3 1 1</a>
+                                                                </li>
+                                                                <li class="menu__item">
+                                                                    <a href="#" class="menu__link">Levelm-3 1 2</a>
+                                                                </li>
+                                                                <li class="menu__item">
+                                                                    <a href="#" class="menu__link">Levelm-3 1 3</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="menu__item">
+                                                            <a href="#" class="menu__link">Levelm-2 2</a>
+                                                            <ul class="menu__list m-level-3">
+                                                                <li class="menu__item">
+                                                                    <a href="#" class="menu__link">Levelm-3 2 1</a>
+                                                                </li>
+                                                                <li class="menu__item">
+                                                                    <a href="#" class="menu__link">Levelm-3 2 2</a>
+                                                                </li>
+                                                                <li class="menu__item">
+                                                                    <a href="#" class="menu__link">Levelm-3 2 3</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="menu__item">
+                                                            <a href="#" class="menu__link">levelm-2 3</a>
+                                                            <ul class="menu__list m-level-3">
+                                                                <li class="menu__item">
+                                                                    <a href="#" class="menu__link">Levelm-3 3 1</a>
+                                                                </li>
+                                                                <li class="menu__item">
+                                                                    <a href="#" class="menu__link">Levelm-3 3 2</a>
+                                                                </li>
+                                                                <li class="menu__item">
+                                                                    <a href="#" class="menu__link">Levelm-3 3 3</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu__item">
+                                                    <a href="#" class="menu__link">KIDS</a>
+                                                </li>
+                                                <li class="menu__item">
+                                                    <a href="#" class="menu__link">COMMUNITY</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- header-bottom  -->
-                            <div class="l-header__bottom">
-                                <div class="l-header__menu-search m-menu-search">
-                                    <div>
-                                        <div>menu</div>
-                                        <div>search</div>
-                                    </div>
-                                </div>
+                            <div class="l-header__user-staff m-user-stuff">
+                                <div class="header__user-staff user-staff">
 
-                                <div class="l-header__user-staff m-user-stuff">
-                                    <div>
-                                        <div>
-                                            <span>favourite</span>
-                                            <span>user</span>
-                                        </div>
-                                        <div>
-                                            cart
-                                        </div>
-                                    </div>
+                                    <ul class="user-staff__list">
+                                        <li class="header__search user-staff__item">
+                                            <button class="header__search-button">
+                                                <i class="icon-m-search"></i>
+                                            </button>
+                                        </li>
+                                        <li class="user-staff__item">
+                                            <a class="user-staff__link" href="#">
+                                                <i class="icon-m-heart"></i>
+                                                <span class="user-staff__link-text">Wishlist</span>
+                                            </a>
+                                        </li>
+                                        <li class="user-staff__item">
+                                            <a class="user-staff__link" href="#">
+                                                <i class="icon-m-profile"></i>
+                                                <span class="user-staff__link-text">My Account</span>
+                                            </a>
+                                        </li>
+                                        <li class="user-staff__item user-staff__item--cart">
+                                            <a class="user-staff__link" href="#">
+                                                <i class="icon-m-bag"></i>
+                                                <span>(0)</span>
+                                            </a>
+                                        </li>
+                                        <li class="user-staff__item user-staff__item--store">
+                                            <a class="user-staff__link" href="#">
+                                                <i class="icon-m-location"></i>
+                                                <span class="user-staff__link-text">Store Locator</span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
                                 </div>
                             </div>
-                        <!-- </div> -->
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -776,7 +940,6 @@
                                         third-party review
                                     </div>
                                 </div>
-
                             </div>
                         </div>
 
@@ -811,7 +974,11 @@
                             </div>
                             <div class="l-footer__main-cell m-selector-payment">
                                 <div class="footer-payment">
-                                    <div class="footer-payment__country">US/ENG</div>
+                                    <div class="footer-payment__country">
+                                        <div class="country-lang">
+                                            US/ENG
+                                        </div>
+                                    </div>
                                     <ul class="footer-payment__list">
                                         <li class="footer-payment__item">
                                             <i class="icon-payment-visa"></i>

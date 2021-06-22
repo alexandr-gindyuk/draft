@@ -1,0 +1,7 @@
+.header__main {
+    display: none;
+
+    @include media(lg-up) {
+        display: block;
+    }
+}

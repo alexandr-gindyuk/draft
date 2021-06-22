@@ -1,0 +1,19 @@
+.header__search {
+    display: none;
+
+    @include media(lg-up) {
+        display: block;
+    }
+
+    &-button {
+        background: transparent;
+        padding: 0;
+    }
+
+    &-mobile {
+        @include media(lg-up) {
+            display: none;
+        }
+    }
+}
+

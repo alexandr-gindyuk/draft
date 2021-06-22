@@ -1,0 +1,27 @@
+.header {
+    font-family: $font-dinot;
+    padding-top: 9.5px;
+
+    @include media(md-down) {
+        margin-bottom: 26px;
+    }
+
+    @include media(lg-up) {
+        padding-top: 17px;
+        border-bottom: 1px solid color('grey-deep-light');
+    }
+
+    &__logo {
+        width: 53px;
+        height: 51px;
+
+        @include media(md-down) {
+            margin: auto;
+        }
+
+        @include media(lg-up) {
+            width: 68px;
+            height: 66px;
+        }
+    }
+}
