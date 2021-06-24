@@ -4,6 +4,8 @@
     @include media(md-down) {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
+        padding-left: $wrapper-padding-xs;
+        padding-right: $wrapper-padding-xs;
     }
 
     @include media(lg-up) {
@@ -52,6 +54,11 @@
     &__bottom {
         @include grid;
         outline: 1px solid darkgreen;
+
+        @include media(md-down) {
+            padding-left: $wrapper-padding-xs;
+            padding-right: $wrapper-padding-xs;
+        }
 
         @include media(lg-up) {
             grid-template-columns: repeat(11, 1fr);

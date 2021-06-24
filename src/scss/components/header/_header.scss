@@ -3,13 +3,18 @@
     padding-top: 9.5px;
 
     @include media(md-down) {
-        margin-bottom: 26px;
+        padding-bottom: 9.5px;
     }
 
     @include media(lg-up) {
         padding-top: 17px;
         border-bottom: 1px solid color('grey-deep-light');
     }
+
+    &__rel {
+        position: relative; //for wide dropdown-menu
+    }
+
 
     &__logo {
         width: 53px;
