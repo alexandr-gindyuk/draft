@@ -109,6 +109,23 @@ li {
                     bottom: 0;
                     left: 0;
                     height: 80px;
+
+                    scrollbar-color: #d4aa70 #e4e4e4;
+                    scrollbar-width: thin;
+
+                    &::-webkit-scrollbar {
+                        height: 4px;
+                    }
+
+                    &::-webkit-scrollbar-track {
+                        background-color: color('grey-deep-light');
+                        // border-radius: 100px;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        // border-radius: 100px;
+                        background: color('grey-super-deep');
+                    }
                 }
             }
         }
