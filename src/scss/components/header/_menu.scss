@@ -166,20 +166,24 @@ li {
     .menu {
         $root: &;
 
-        &__dropdown-content {
+        &__dropdown {
             position: absolute;
             top: 100%;
             left: 0;
             width: 100%;
-            display: flex;
             overflow: hidden;
             height: 0;
-            overflow: hidden;
             opacity: 0;
-            background: color('white');
             // border-top: 1px solid #cbcccc;
             transform: translateY(-10px);
             transition: all .3s;
+        }
+
+
+        &__dropdown-content {
+            display: flex;
+            // justify-content: flex-end;
+            position: relative;
             background: aliceblue;
         }
 
@@ -217,7 +221,7 @@ li {
 
         &__list.m-level-1 &__item:hover >  {
 
-            #{$root}__dropdown-content {
+            #{$root}__dropdown {
                 height: auto;
                 opacity: 1;
                 transform: translateY(0);
@@ -370,9 +374,6 @@ li {
     }
 
     @include media(lg-up) {
-        position: absolute;
-        top: 0;
-        right: 0;
         width: 70%;
         height: 100%;
 
