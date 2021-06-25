@@ -16,76 +16,38 @@ $checkbox-theme: ('dark');
         &--column {
             flex-direction: column;
 
-            #{$root}__item {
+            .checkbox-item {
                 margin-bottom: 20px;
             }
         }
 
         &--row {
-            #{$root}__item {
+            .checkbox-item {
                 margin-bottom: 12px;
             }
         }
+    }
 
-        &__item {
-            display: inline-flex;
-            position: relative;
-            padding-left: calc(#{$check-size} + 10px);
+    .checkbox-item {
+        display: inline-flex;
+        position: relative;
+        padding-left: calc(#{$check-size} + 10px);
+        cursor: pointer;
+        font-size: 14px;
+        user-select: none;
+
+        &.m-disabled {
+            cursor: default;
+            pointer-events: none;
+        }
+
+        input {
+            position: absolute;
+            opacity: 0;
             cursor: pointer;
-            font-size: 14px;
-            user-select: none;
+            transition: all .2s ease;
 
-            &.m-disabled {
-                cursor: default;
-                pointer-events: none;
-            }
-
-            input {
-                position: absolute;
-                opacity: 0;
-                cursor: pointer;
-                transition: all .2s ease;
-
-                &:checked ~ .checkmark {
-                    @if ($theme == 'default') {
-                        //check-selected
-                        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2a2 2 0 012-2h21a2 2 0 012 2v21a2 2 0 01-2 2H2a2 2 0 01-2-2V2z' fill='%23000'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.77 14.553l5.48-6.214 1.5 1.322-6.172 7a1 1 0 01-1.445.058l-4.828-4.667 1.39-1.438 4.075 3.94z' fill='%23fff'/%3E%3C/svg%3E");
-                    }
-
-                    @if ($theme == 'dark') {
-                        //check-selected-dark
-                        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='23' height='23' rx='1' fill='%23fff' stroke='%23fff' stroke-width='2'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.77 14.553l5.48-6.214 1.5 1.322-6.172 7a1 1 0 01-1.445.058l-4.828-4.667 1.39-1.438 4.075 3.94z' fill='%23000'/%3E%3C/svg%3E");
-                    }
-                }
-
-                &:disabled ~ .checkmark {
-                    @if ($theme == 'default') {
-                        //check-disabled
-                        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2a2 2 0 012-2h21a2 2 0 012 2v21a2 2 0 01-2 2H2a2 2 0 01-2-2V2z' fill='%23E3E3E3'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M23 1H2a1 1 0 00-1 1v21a1 1 0 001 1h21a1 1 0 001-1V2a1 1 0 00-1-1zM2 0a2 2 0 00-2 2v21a2 2 0 002 2h21a2 2 0 002-2V2a2 2 0 00-2-2H2z' fill='%23A1A8B3'/%3E%3C/svg%3E");
-                    }
-
-                    @if ($theme == 'dark') {
-                        //check-disabled-dark
-                        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2a2 2 0 012-2h21a2 2 0 012 2v21a2 2 0 01-2 2H2a2 2 0 01-2-2V2z' fill='%235C6573'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M23 1H2a1 1 0 00-1 1v21a1 1 0 001 1h21a1 1 0 001-1V2a1 1 0 00-1-1zM2 0a2 2 0 00-2 2v21a2 2 0 002 2h21a2 2 0 002-2V2a2 2 0 00-2-2H2z' fill='%23A1A8B3'/%3E%3C/svg%3E");
-                    }
-                }
-            }
-
-            &:not(&.error):hover input:not(:disabled) ~ .checkmark {
-                @if ($theme == 'default') {
-                    //check-hover
-                    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2a2 2 0 012-2h21a2 2 0 012 2v21a2 2 0 01-2 2H2a2 2 0 01-2-2V2z' fill='%23fff' fill-opacity='.4'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M23 2H2v21h21V2zM2 0a2 2 0 00-2 2v21a2 2 0 002 2h21a2 2 0 002-2V2a2 2 0 00-2-2H2z' fill='%235C6573'/%3E%3C/svg%3E");
-                }
-
-                @if ($theme == 'dark') {
-                    //check-hover-dark
-                    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='23' height='23' rx='1' fill='%23000' fill-opacity='.2' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E");
-                }
-            }
-
-            &:not(&.error):hover input:checked ~ .checkmark {
-                content: '\ea52';
-
+            &:checked ~ .checkbox-item__checkmark {
                 @if ($theme == 'default') {
                     //check-selected
                     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2a2 2 0 012-2h21a2 2 0 012 2v21a2 2 0 01-2 2H2a2 2 0 01-2-2V2z' fill='%23000'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.77 14.553l5.48-6.214 1.5 1.322-6.172 7a1 1 0 01-1.445.058l-4.828-4.667 1.39-1.438 4.075 3.94z' fill='%23fff'/%3E%3C/svg%3E");
@@ -97,44 +59,82 @@ $checkbox-theme: ('dark');
                 }
             }
 
-            &.error {
-                input {
-                    & ~ .checkmark {
-                        @if ($theme == 'default') {
-                            //check-error
-                            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2a2 2 0 012-2h21a2 2 0 012 2v21a2 2 0 01-2 2H2a2 2 0 01-2-2V2z' fill='%23fff' fill-opacity='.4'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M23 1H2a1 1 0 00-1 1v21a1 1 0 001 1h21a1 1 0 001-1V2a1 1 0 00-1-1zM2 0a2 2 0 00-2 2v21a2 2 0 002 2h21a2 2 0 002-2V2a2 2 0 00-2-2H2z' fill='%23e51755'/%3E%3C/svg%3E%0A");
-                        }
+            &:disabled ~ .checkbox-item__checkmark {
+                @if ($theme == 'default') {
+                    //check-disabled
+                    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2a2 2 0 012-2h21a2 2 0 012 2v21a2 2 0 01-2 2H2a2 2 0 01-2-2V2z' fill='%23E3E3E3'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M23 1H2a1 1 0 00-1 1v21a1 1 0 001 1h21a1 1 0 001-1V2a1 1 0 00-1-1zM2 0a2 2 0 00-2 2v21a2 2 0 002 2h21a2 2 0 002-2V2a2 2 0 00-2-2H2z' fill='%23A1A8B3'/%3E%3C/svg%3E");
+                }
 
-                        @if ($theme == 'dark') {
-                            //check-error-dark
-                            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2a2 2 0 012-2h21a2 2 0 012 2v21a2 2 0 01-2 2H2a2 2 0 01-2-2V2z' fill='%23000' fill-opacity='.2'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M23 1H2a1 1 0 00-1 1v21a1 1 0 001 1h21a1 1 0 001-1V2a1 1 0 00-1-1zM2 0a2 2 0 00-2 2v21a2 2 0 002 2h21a2 2 0 002-2V2a2 2 0 00-2-2H2z' fill='%23e51755'/%3E%3C/svg%3E%0A");
-                        }
-                    }
+                @if ($theme == 'dark') {
+                    //check-disabled-dark
+                    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2a2 2 0 012-2h21a2 2 0 012 2v21a2 2 0 01-2 2H2a2 2 0 01-2-2V2z' fill='%235C6573'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M23 1H2a1 1 0 00-1 1v21a1 1 0 001 1h21a1 1 0 001-1V2a1 1 0 00-1-1zM2 0a2 2 0 00-2 2v21a2 2 0 002 2h21a2 2 0 002-2V2a2 2 0 00-2-2H2z' fill='%23A1A8B3'/%3E%3C/svg%3E");
                 }
             }
         }
 
-        .checkmark {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 0;
-            height: $check-size;
-            width: $check-size;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            transition: all .2s ease;
-
+        &:not(&.error):hover input:not(:disabled) ~ .checkbox-item__checkmark {
             @if ($theme == 'default') {
-                //check-default
-                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2a2 2 0 012-2h21a2 2 0 012 2v21a2 2 0 01-2 2H2a2 2 0 01-2-2V2z' fill='%23fff' fill-opacity='.4'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M23 1H2a1 1 0 00-1 1v21a1 1 0 001 1h21a1 1 0 001-1V2a1 1 0 00-1-1zM2 0a2 2 0 00-2 2v21a2 2 0 002 2h21a2 2 0 002-2V2a2 2 0 00-2-2H2z' fill='%23A1A8B3'/%3E%3C/svg%3E");
+                //check-hover
+                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2a2 2 0 012-2h21a2 2 0 012 2v21a2 2 0 01-2 2H2a2 2 0 01-2-2V2z' fill='%23fff' fill-opacity='.4'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M23 2H2v21h21V2zM2 0a2 2 0 00-2 2v21a2 2 0 002 2h21a2 2 0 002-2V2a2 2 0 00-2-2H2z' fill='%235C6573'/%3E%3C/svg%3E");
             }
 
             @if ($theme == 'dark') {
-                //check-default-dark
-                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2a2 2 0 012-2h21a2 2 0 012 2v21a2 2 0 01-2 2H2a2 2 0 01-2-2V2z' fill='%23000' fill-opacity='.2'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M23 1H2a1 1 0 00-1 1v21a1 1 0 001 1h21a1 1 0 001-1V2a1 1 0 00-1-1zM2 0a2 2 0 00-2 2v21a2 2 0 002 2h21a2 2 0 002-2V2a2 2 0 00-2-2H2z' fill='%23A1A8B3'/%3E%3C/svg%3E");
+                //check-hover-dark
+                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='23' height='23' rx='1' fill='%23000' fill-opacity='.2' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E");
             }
+        }
+
+        &:not(&.error):hover input:checked ~ .checkbox-item__checkmark {
+            content: '\ea52';
+
+            @if ($theme == 'default') {
+                //check-selected
+                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2a2 2 0 012-2h21a2 2 0 012 2v21a2 2 0 01-2 2H2a2 2 0 01-2-2V2z' fill='%23000'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.77 14.553l5.48-6.214 1.5 1.322-6.172 7a1 1 0 01-1.445.058l-4.828-4.667 1.39-1.438 4.075 3.94z' fill='%23fff'/%3E%3C/svg%3E");
+            }
+
+            @if ($theme == 'dark') {
+                //check-selected-dark
+                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='23' height='23' rx='1' fill='%23fff' stroke='%23fff' stroke-width='2'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.77 14.553l5.48-6.214 1.5 1.322-6.172 7a1 1 0 01-1.445.058l-4.828-4.667 1.39-1.438 4.075 3.94z' fill='%23000'/%3E%3C/svg%3E");
+            }
+        }
+
+        &.error {
+            input {
+                & ~ .checkbox-item__checkmark {
+                    @if ($theme == 'default') {
+                        //check-error
+                        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2a2 2 0 012-2h21a2 2 0 012 2v21a2 2 0 01-2 2H2a2 2 0 01-2-2V2z' fill='%23fff' fill-opacity='.4'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M23 1H2a1 1 0 00-1 1v21a1 1 0 001 1h21a1 1 0 001-1V2a1 1 0 00-1-1zM2 0a2 2 0 00-2 2v21a2 2 0 002 2h21a2 2 0 002-2V2a2 2 0 00-2-2H2z' fill='%23e51755'/%3E%3C/svg%3E%0A");
+                    }
+
+                    @if ($theme == 'dark') {
+                        //check-error-dark
+                        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2a2 2 0 012-2h21a2 2 0 012 2v21a2 2 0 01-2 2H2a2 2 0 01-2-2V2z' fill='%23000' fill-opacity='.2'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M23 1H2a1 1 0 00-1 1v21a1 1 0 001 1h21a1 1 0 001-1V2a1 1 0 00-1-1zM2 0a2 2 0 00-2 2v21a2 2 0 002 2h21a2 2 0 002-2V2a2 2 0 00-2-2H2z' fill='%23e51755'/%3E%3C/svg%3E%0A");
+                    }
+                }
+            }
+        }
+    }
+
+    .checkbox-item__checkmark {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        height: $check-size;
+        width: $check-size;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all .2s ease;
+
+        @if ($theme == 'default') {
+            //check-default
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2a2 2 0 012-2h21a2 2 0 012 2v21a2 2 0 01-2 2H2a2 2 0 01-2-2V2z' fill='%23fff' fill-opacity='.4'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M23 1H2a1 1 0 00-1 1v21a1 1 0 001 1h21a1 1 0 001-1V2a1 1 0 00-1-1zM2 0a2 2 0 00-2 2v21a2 2 0 002 2h21a2 2 0 002-2V2a2 2 0 00-2-2H2z' fill='%23A1A8B3'/%3E%3C/svg%3E");
+        }
+
+        @if ($theme == 'dark') {
+            //check-default-dark
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2a2 2 0 012-2h21a2 2 0 012 2v21a2 2 0 01-2 2H2a2 2 0 01-2-2V2z' fill='%23000' fill-opacity='.2'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M23 1H2a1 1 0 00-1 1v21a1 1 0 001 1h21a1 1 0 001-1V2a1 1 0 00-1-1zM2 0a2 2 0 00-2 2v21a2 2 0 002 2h21a2 2 0 002-2V2a2 2 0 00-2-2H2z' fill='%23A1A8B3'/%3E%3C/svg%3E");
         }
     }
 }

@@ -19,6 +19,7 @@ $swatch-shadow-second-small: 3px;
     position: relative;
     width: swatch($swatch-size-default, $swatch-shadow-first-default);
     height: swatch($swatch-size-default, $swatch-shadow-first-default);
+    margin: $swatch-shadow-first-default; //to fullfill the size
     border-radius: 50%;
     box-shadow: 0 0 0 $swatch-shadow-second-default color('white'), 0 0 0 $swatch-shadow-first-default color('grey-light');
 
@@ -56,6 +57,7 @@ $swatch-shadow-second-small: 3px;
     &.m-large {
         width: swatch($swatch-size-large, $swatch-shadow-first-large);
         height: swatch($swatch-size-large, $swatch-shadow-first-large);
+        margin: $swatch-shadow-first-large; //to fullfill the size
         box-shadow: 0 0 0 $swatch-shadow-second-large color('white'), 0 0 0 $swatch-shadow-first-large color('grey-light');
 
         &:hover {
@@ -78,6 +80,7 @@ $swatch-shadow-second-small: 3px;
     &.m-small {
         width: swatch($swatch-size-small, $swatch-shadow-first-small);
         height: swatch($swatch-size-small, $swatch-shadow-first-small);
+        margin: $swatch-shadow-first-small; //to fullfill the size
         box-shadow: 0 0 0 $swatch-shadow-second-small color('white'), 0 0 0 $swatch-shadow-first-small color('grey-light');
 
         &:hover {

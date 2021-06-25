@@ -310,6 +310,113 @@
 
         <main class="main">
 
+            <!-- filter -->
+            <div style="padding: 50px;">
+                <section class="filter">
+                    <button class="filter__close">
+                        <i class="icon-m-close"></i>
+                    </button>
+
+                    <div>
+                        <h3 class="filter__title">Filters</h3>
+                        <ul class="filter__list">
+                            <li class="filter__item">
+                                <label class="filter__item-check">
+                                    <input class="input-check" type="checkbox">
+                                    <h5 class="filter__item-name">
+                                        <span class="name">Color</span>
+                                        <span class="quantity">1</span>
+                                    </h5>
+
+                                    <ul class="filter__variants">
+
+                                        <li class="filter__variants-item">
+                                            <label class="check">
+                                                <input class="check__input" type="checkbox">
+                                                <button class="swatch m-large" style="background: #0086bf;"></button>
+                                                <div class="check__info">
+                                                    <p class="name">blue</p>
+                                                    <p class="quantity">(872)</p>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li class="filter__variants-item">
+                                            <label class="check">
+                                                <input class="check__input" type="checkbox">
+                                                <button class="swatch m-large" style="background: green;"></button>
+                                                <div class="check__info">
+                                                    <p class="name">Green</p>
+                                                    <p class="quantity">(243)</p>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li class="filter__variants-item">
+                                            <label class="check">
+                                                <input class="check__input" type="checkbox">
+                                                <button class="swatch m-large" style="background: purple;"></button>
+                                                <div class="check__info">
+                                                    <p class="name">purple</p>
+                                                    <p class="quantity">(35)</p>
+                                                </div>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </label>
+                            </li>
+
+                            <li class="filter__item">
+                                <label class="filter__item-check">
+                                    <input class="input-check" type="checkbox">
+                                    <h5 class="filter__item-name">
+                                        <span class="name">Size</span>
+                                        <span class="quantity">1</span>
+                                    </h5>
+
+                                    <ul class="filter__variants">
+
+                                        <li class="filter__variants-item">
+                                            <label class="check checkbox-item">
+                                                <input type="checkbox">
+                                                <span class="checkbox-item__checkmark"></span>
+                                                <div class="check__info">
+                                                    <p class="name">S</p>
+                                                    <p class="quantity">(82)</p>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li class="filter__variants-item">
+                                            <label class="check checkbox-item">
+                                                <input type="checkbox">
+                                                <span class="checkbox-item__checkmark"></span>
+                                                <div class="check__info">
+                                                    <p class="name">M</p>
+                                                    <p class="quantity">(2)</p>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li class="filter__variants-item">
+                                            <label class="check checkbox-item">
+                                                <input type="checkbox">
+                                                <span class="checkbox-item__checkmark"></span>
+                                                <div class="check__info">
+                                                    <p class="name">L</p>
+                                                    <p class="quantity">(872)</p>
+                                                </div>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="filter__action">
+                        <button type="button" class="btn-main-outlined">Clear</button>
+                        <button type="button" class="btn-main-filled">Show 207 results</button>
+                    </div>
+                </section>
+            </div>
+
             <!-- swatches -->
             <div style="padding: 50px;">
                 <div style="display: flex; width: 300px; justify-content: space-between; margin-bottom: 20px;">
@@ -491,45 +598,45 @@
                 <button type="button" class="btn-main-filled" disabled><i class="icon-m-arrow-left m-margin-right"></i> WITH ICON</button>
             </div>
 
-
+            <!-- radio buttons -->
             <div class="inputs-container theme-dark">
                 <form class="radio radio--column ">
-                    <label class="radio__item">Radiobutton checked
+                    <label class="radio-item">Radiobutton checked
                         <input type="radio" checked name="radio">
-                        <span class="radiomark"></span>
+                        <span class="radio-item__radiomark"></span>
                     </label>
-                    <label class="radio__item m-disabled">Radiobutton disabled
+                    <label class="radio-item m-disabled">Radiobutton disabled
                         <input type="radio" disabled name="radio" >
-                        <span class="radiomark"></span>
+                        <span class="radio-item__radiomark"></span>
                     </label>
-                    <label class="radio__item">Radiobutton usual
+                    <label class="radio-item">Radiobutton usual
                         <input type="radio" name="radio">
-                        <span class="radiomark"></span>
+                        <span class="radio-item__radiomark"></span>
                     </label>
-                    <label class="radio__item error">Radiobutton error
+                    <label class="radio-item error">Radiobutton error
                         <input type="radio" name="radio">
-                        <span class="radiomark"></span>
+                        <span class="radio-item__radiomark"></span>
                     </label>
                 </form>
             </div>
 
             <div class="inputs-container">
                 <form class="radio radio--column">
-                    <label class="radio__item">Radiobutton checked
+                    <label class="radio-item">Radiobutton checked
                         <input type="radio" checked name="radio">
-                        <span class="radiomark"></span>
+                        <span class="radio-item__radiomark"></span>
                     </label>
-                    <label class="radio__item m-disabled">Radiobutton disabled
+                    <label class="radio-item m-disabled">Radiobutton disabled
                         <input type="radio" disabled name="radio" >
-                        <span class="radiomark"></span>
+                        <span class="radio-item__radiomark"></span>
                     </label>
-                    <label class="radio__item">Radiobutton usual
+                    <label class="radio-item">Radiobutton usual
                         <input type="radio" name="radio">
-                        <span class="radiomark"></span>
+                        <span class="radio-item__radiomark"></span>
                     </label>
-                    <label class="radio__item error">Radiobutton error
+                    <label class="radio-item error">Radiobutton error
                         <input type="radio" name="radio">
-                        <span class="radiomark"></span>
+                        <span class="radio-item__radiomark"></span>
                     </label>
                 </form>
             </div>
@@ -537,42 +644,42 @@
             <!-- checkboxes -->
             <div class="inputs-container theme-dark">
                 <form class="checkbox checkbox--column ">
-                    <label class="checkbox__item">Checkbox checked
+                    <label class="checkbox-item">Checkbox checked
                         <input type="checkbox" checked name="check">
-                        <span class="checkmark"></span>
+                        <span class="checkbox-item__checkmark"></span>
                     </label>
-                    <label class="checkbox__item m-disabled">Checkbox disabled
+                    <label class="checkbox-item m-disabled">Checkbox disabled
                         <input type="checkbox" disabled name="check" >
-                        <span class="checkmark"></span>
+                        <span class="checkbox-item__checkmark"></span>
                     </label>
-                    <label class="checkbox__item">Checkbox usual
+                    <label class="checkbox-item">Checkbox usual
                         <input type="checkbox" name="check">
-                        <span class="checkmark"></span>
+                        <span class="checkbox-item__checkmark"></span>
                     </label>
-                    <label class="checkbox__item error">Checkbox error
+                    <label class="checkbox-item error">Checkbox error
                         <input type="checkbox" name="check">
-                        <span class="checkmark"></span>
+                        <span class="checkbox-item__checkmark"></span>
                     </label>
                 </form>
             </div>
 
             <div class="inputs-container">
                 <form class="checkbox checkbox--column ">
-                    <label class="checkbox__item">Checkbox checked
+                    <label class="checkbox-item">Checkbox checked
                         <input type="checkbox" checked name="check">
-                        <span class="checkmark"></span>
+                        <span class="checkbox-item__checkmark"></span>
                     </label>
-                    <label class="checkbox__item m-disabled">Checkbox disabled
+                    <label class="checkbox-item m-disabled">Checkbox disabled
                         <input type="checkbox" disabled name="check" >
-                        <span class="checkmark"></span>
+                        <span class="checkbox-item__checkmark"></span>
                     </label>
-                    <label class="checkbox__item">Checkbox usual
+                    <label class="checkbox-item">Checkbox usual
                         <input type="checkbox" name="check">
-                        <span class="checkmark"></span>
+                        <span class="checkbox-item__checkmark"></span>
                     </label>
-                    <label class="checkbox__item error">Checkbox error
+                    <label class="checkbox-item error">Checkbox error
                         <input type="checkbox" name="check">
-                        <span class="checkmark"></span>
+                        <span class="checkbox-item__checkmark"></span>
                     </label>
                 </form>
             </div>
@@ -767,9 +874,9 @@
                                         </form>
                                         <div class="subscribe__check">
                                             <div class="checkbox">
-                                                <label class="checkbox__item">
+                                                <label class="checkbox-item">
                                                     <input type="checkbox" name="check">
-                                                    <span class="checkmark"></span>
+                                                    <span class="checkbox-item__checkmark"></span>
                                                 </label>
                                                 <span class="subscribe__check-description">
                                                     I want to receive e-mail from ODLO. I agree to <a class="privacy-policy" href="#">Privacy policy</a>
