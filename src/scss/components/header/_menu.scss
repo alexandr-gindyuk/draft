@@ -182,29 +182,35 @@ li {
 
         &__dropdown-content {
             display: flex;
+            justify-content: flex-end;
             // justify-content: flex-end;
             position: relative;
             background: aliceblue;
         }
 
-        &__list {
-            &.m-level-1 {
-                display: flex;
-            }
-        }
-
         &__list.m-level-1  {
+            display: flex;
+
+            #{$root}__item {
+                &:hover {
+                    #{$root}__dropdown {
+                        height: auto;
+                        opacity: 1;
+                        transform: translateY(0);
+                        z-index: 3;
+                    }
+                }
+            }
+
             & > #{$root}__item {
                 margin-right: 50px;
                 padding-bottom: 17px;
                 border-bottom: 2px solid transparent;
                 transition: all .1s ease;
-            }
-        }
 
-        &__list.m-level-1  {
-            & > #{$root}__item:hover {
-                border-bottom: 2px solid color('black');
+                &:hover {
+                    border-bottom: 2px solid color('black');
+                }
             }
         }
 
@@ -215,35 +221,27 @@ li {
                 flex-direction: column;
                 padding-top: 50px;
                 padding-bottom: 120px;
+
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+
                 outline: 1px solid gold;
-            }
-        }
 
-        &__list.m-level-1 &__item:hover >  {
-
-            #{$root}__dropdown {
-                height: auto;
-                opacity: 1;
-                transform: translateY(0);
-                z-index: 3;
-            }
-        }
-
-        &__list {
-            &.m-level-2  {
                 #{$root}__item {
                     font-size: 25px;
                     margin-bottom: 30px;
                     color: #717272;
-                }
-            }
-        }
 
-        &__list {
-            &.m-level-2  {
-                #{$root}__item {
                     &:hover {
                         color: color('black');
+
+                        #{$root}__list.m-level-3 {
+                            opacity: 1;
+                            visibility: visible;
+                        }
 
                         .menu__banner.m-subcategory {
                             display: block;
@@ -256,10 +254,37 @@ li {
         }
 
         &__list {
-            &.m-level-2 {
+            &.m-level-3 {
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                padding-top: 50px;
+                left: 320px;
+                top: 0;
+                background: aliceblue;
+                transition: all .3s ease;
+                z-index: 2;
+
                 #{$root}__item {
+                    font-size: 16px;
+                    margin-bottom: 15px;
+                    color: #717272;
+                    text-transform: capitalize;
+
+                    &:last-child {
+                        display: inline-flex;
+                        padding-top: 20px;
+                        margin-top: 15px;
+                        border-top: 1px solid color('grey-deep-light');
+                    }
+
                     &:hover {
-                        #{$root}__list.m-level-3 {
+                        color: color('black');
+
+                        .menu__banner.m-subcategory {
+                            display: block;
                             opacity: 1;
                             visibility: visible;
                         }
@@ -280,55 +305,6 @@ li {
             }
         }
 
-        &__list {
-            &.m-level-3 {
-                opacity: 0;
-                visibility: hidden;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                padding-top: 50px;
-                left: 320px;
-                top: 0;
-                transition: all .3s ease;
-                z-index: 2;
-            }
-        }
-
-        &__list {
-            &.m-level-3  {
-                #{$root}__item {
-                    font-size: 16px;
-                    margin-bottom: 15px;
-                    color: #717272;
-                    text-transform: capitalize;
-
-                    &:last-child {
-                        display: inline-flex;
-                        padding-top: 20px;
-                        margin-top: 15px;
-                        border-top: 1px solid color('grey-deep-light');
-                    }
-                }
-            }
-        }
-
-        &__list {
-            &.m-level-3 {
-                #{$root}__item {
-                    &:hover {
-                        color: color('black');
-
-                        .menu__banner.m-subcategory {
-                            display: block;
-                            opacity: 1;
-                            visibility: visible;
-                        }
-                    }
-                }
-            }
-        }
-
         &__link {
             display: block;
         }
@@ -342,6 +318,7 @@ li {
         font-size: 16px;
         text-transform: capitalize;
         color: color('black');
+        z-index: 3;
 
         @include media(md-down) {
             transform: translateX(100%);
@@ -376,18 +353,23 @@ li {
     @include media(lg-up) {
         width: 70%;
         height: 100%;
+    }
 
-        &.m-subcategory {
-            display: none;
-            opacity: 0;
-            visibility: hidden;
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 50%;
-            height: 100%;
-            background-color: darkmagenta;
-            z-index: 3;
+    &.m-subcategory {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: calc(50% + (#{$wrapper-padding-lg} / 2));
+        height: 100%;
+        background-color: darkmagenta;
+        transition: all .3s ease;
+        z-index: 3;
+
+        @include media(xl-up) {
+            width: calc(50% + (#{$wrapper-padding-xl} / 2));
         }
     }
 }
