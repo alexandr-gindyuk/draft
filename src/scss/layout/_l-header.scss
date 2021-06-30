@@ -15,6 +15,11 @@
         grid-template-columns: repeat(3, 1fr);
         align-items: center;
 
+        @include media(md-down) {
+            padding-left: $wrapper-padding-xs * 2;
+            padding-right: $wrapper-padding-xs * 2;
+        }
+
         @include media(lg-up) {
             display: none;
         }
@@ -46,6 +51,9 @@
 
         @include media(md-down) {
             grid-row-start: 2;
+
+            padding-left: $wrapper-padding-xs * 3;
+            padding-right: $wrapper-padding-xs * 3;
         }
     }
 
@@ -96,6 +104,11 @@
 
     .m-user-stuff {
         outline: 1px solid orange;
+
+        @include media(md-down) {
+            padding-left: $wrapper-padding-xs * 3;
+            padding-right: $wrapper-padding-xs * 3;
+        }
 
         @include media(lg-up) {
             grid-area: user-stuff;

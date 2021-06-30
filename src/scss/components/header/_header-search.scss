@@ -18,7 +18,8 @@
 
     &-menu-group {
         @include media(md-down) {
-            margin-top: 30px;
+            padding-top: 30px;
+            min-height: 100%;
         }
     }
 }

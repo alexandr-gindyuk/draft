@@ -1,29 +1,19 @@
 :root {
 
     @include media(md-down) {
-        --header-top-height: 101.3px;
+        --header-top-height: 92px;
     }
 
     @include media(lg-up) {
-        --header-top-height: 142.6px;
+        --header-top-height: 125px;
     }
 }
-
-// body {
-//     background-color: var(--main-bg-color);
-// }
 
 .header {
     font-family: $font-dinot;
     position: relative; //for wide dropdown-menu
-    padding-top: 9.5px;
-
-    @include media(md-down) {
-        padding-bottom: 9.5px;
-    }
 
     @include media(lg-up) {
-        padding-top: 17px;
         border-bottom: 1px solid color('grey-deep-light');
     }
 
