@@ -15,5 +15,11 @@
             display: none;
         }
     }
+
+    &-menu-group {
+        @include media(md-down) {
+            margin-top: 30px;
+        }
+    }
 }
 

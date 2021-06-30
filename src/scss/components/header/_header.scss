@@ -1,3 +1,18 @@
+:root {
+
+    @include media(md-down) {
+        --header-top-height: 101.3px;
+    }
+
+    @include media(lg-up) {
+        --header-top-height: 142.6px;
+    }
+}
+
+// body {
+//     background-color: var(--main-bg-color);
+// }
+
 .header {
     font-family: $font-dinot;
     position: relative; //for wide dropdown-menu

@@ -1,7 +1,12 @@
 .header__main {
-    display: none;
+    &.m-menu-expanded {
 
-    @include media(lg-up) {
-        display: block;
+        @include media(md-down) {
+            .header__top,
+            .header__search-mobile,
+            .l-header__user-staff {
+                display: none;
+            }
+        }
     }
 }
