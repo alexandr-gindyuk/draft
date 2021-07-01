@@ -1,5 +1,10 @@
+$footer-size-top: 30px;
+
+@include media(lg-up) {
+    $footer-size-top: 40px;
+}
+
 .footer__top {
-    @include media(md-up) {
-        background-color: #f1f1f1;
-    }
+    background-color: color('footer-top');
+    margin-top: $footer-size-top;
 }

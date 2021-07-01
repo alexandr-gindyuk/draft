@@ -1,0 +1,26 @@
+.header__info {
+    display: flex;
+
+    .country-lang {
+        @include media(lg-up) {
+            margin-right: 23px;
+        }
+    }
+
+    .store-locator {
+        @include media(md-down) {
+            display: none;
+        }
+
+        @include media(lg-up) {
+            display: flex;
+            align-items: center;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
+
+

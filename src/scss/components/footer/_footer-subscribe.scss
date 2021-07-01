@@ -1,5 +1,36 @@
-.footer__subscribe {
-    background-color: #132d40;
-    color: #ffffff;
-    padding: 40px 15px;
+.footer-subscribe {
+    color: color('white');
+    padding: 30px 0;
+
+    @include media(sm-down) {
+        width: calc(100% - (#{$grid-column-gap-xs} * 2));
+        margin: 0 auto;
+    }
+
+    @include media(md-up) {
+        padding: 40px 0;
+    }
+
+    .subscribe {
+
+        @include media(md) {
+            display: grid;
+            grid-column-gap: $grid-column-gap-sm;
+            grid-template-columns: repeat(12, 1fr);
+        }
+
+        .subscribe__title {
+            @include media(md) {
+                grid-column: 1 / span 5;
+                padding-left: 18px;
+            }
+        }
+
+
+        .subscribe-group {
+            @include media(md) {
+                grid-column: 6 / span 7;
+            }
+        }
+    }
 }

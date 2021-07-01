@@ -1,0 +1,43 @@
+.footer-payment {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+
+    @include media(sm-down) {
+        align-items: center;
+    }
+
+    &__country {
+        margin-bottom: 17.5px;
+
+        @include media(sm-down) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+        @include media(sm-down) {
+            justify-content: center;
+            margin-left: -14px;
+            margin-right: -14px;
+        }
+    }
+
+    &__item {
+        margin-bottom: 20px;
+
+        &:not(:first-child) {
+            margin-left: 30px;
+
+            @include media(sm-down) {
+                margin-left: 28px;
+            }
+        }
+    }
+}

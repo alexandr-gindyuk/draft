@@ -1,0 +1,10 @@
+.h-hidden {
+    display: none !important;
+    @each $breakpoint in map-keys($media) {
+        &-#{$breakpoint} {
+            @include media($breakpoint) {
+                display: none !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.header__main {
+
+    &.m-menu-expanded {
+
+        @include media(md-down) {
+            .header__top,
+            .header__search-mobile,
+            .l-header__user-staff {
+                display: none;
+            }
+        }
+
+        .menu__list.m-level-1 {
+            @include media(md-down) {
+                position: absolute;
+            }
+        }
+
+        .menu__body {
+            @include media(md-down) {
+                height: calc(100vh - var(--header-top-height) - 30px);
+            }
+        }
+    }
+}

@@ -4,8 +4,8 @@
 
         grid-template-columns: 1fr;
 
-        @include media(md-up) {
-            grid-template-columns: repeat(2, 1fr);
+        @include media(lg-up) {
+            grid-template-columns: repeat(12, 1fr);
         }
     }
 
@@ -21,14 +21,22 @@
         }
 
         &.m-comunity {
-            @include media(sm-down) {
-                background-color: #f1f1f1;
+            @include media(lg-up) {
+                grid-column: span 5;
             }
         }
 
         &.m-subscribe {
-            @include media(sm-down) {
-                background-color: #000000;
+            @include media(lg) {
+                grid-column: 7 / span 5;
+            }
+
+            @include media(xl-up) {
+                grid-column: 7 / span 5;
+            }
+
+            @include media(xxl) {
+                grid-column: 8 / span 4;
             }
         }
     }
@@ -36,50 +44,121 @@
     &__main {
         @include grid;
 
+        grid-row-gap: 30px;
         grid-template-columns: 1fr;
-        grid-row-gap: 40px;
-        grid-template-areas:
-            "navigation"
-            "storloc-rew"
-            "copy-links"
-            "selector-payment";
+        grid-template-rows: repeat(2, auto);
 
-        @include media(md-up) {
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(3, auto);
+        @include media(sm-down) {
             grid-row-gap: 60px;
-            grid-template-areas:
-                "navigation navigation"
-                "storloc-rew storloc-rew"
-                "copy-links selector-payment";
         }
 
         @include media(xl-up) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__main-top {
+        @include grid;
+
+        grid-row-gap: 40px;
+
+        @include media(md) {
+            grid-row-gap: 60px;
+        }
+
+        @include media(lg-up) {
+            grid-row-gap: none;
+        }
+
+        @include media(xl-up) {
+            grid-template-columns: 1fr;
+        }
+
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+                "navigation"
+                "storloc-rew";
+
+        @include media(lg-up) {
             grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(2, auto);
             grid-template-areas:
-                "navigation navigation navigation storloc-rew"
-                "copy-links copy-links selector-payment selector-payment";
+                "navigation navigation navigation storloc-rew";
+        }
+    }
+
+    &__main-bottom {
+        @include grid;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+                "copy-links"
+                "selector-payment";
+
+        @include media(md-up) {
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 1fr;
+            grid-template-areas: none;
+            padding-top: 30px;
+            border-top: 1px solid color('grey-deep-light');
         }
     }
 
     &__main-cell {
-        background-color: white;
-        
         &.m-navigation {
             grid-area: navigation;
+            outline: 1px solid blue;
         }
 
         &.m-storloc-rew {
+            outline: 1px solid gray;
             grid-area: storloc-rew;
         }
 
         &.m-copy-links {
             grid-area: copy-links;
+            outline: 1px solid red;
+
+            grid-column: 1 / span 1;
+
+            @include media(md-up) {
+                grid-column: 1 / span 7;
+            }
+
+            @include media(lg) {
+                grid-column: 1 / span 6;
+            }
+
+            @include media(xl-up) {
+                grid-column: 1 / span 7;
+            }
         }
 
         &.m-selector-payment {
             grid-area: selector-payment;
+            outline: 1px solid green;
+
+            grid-column: 1 / span 1;
+
+            @include media(md-up) {
+                grid-column: 8 / span 5;
+            }
+
+            @include media(lg) {
+                grid-column: 7 / span 6;
+            }
+
+            @include media(xl-up) {
+                grid-column: 8 / span 5;
+            }
+        }
+    }
+
+    &__nav {
+        @include media(md-up) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 }

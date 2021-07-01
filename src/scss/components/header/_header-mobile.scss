@@ -1,0 +1,22 @@
+.header__mobile {
+
+    &-buttons {
+        .burger {
+            display: block;
+        }
+
+        .close {
+            display: none;
+        }
+
+        &.open {
+            .burger {
+                display: none;
+            }
+
+            .close {
+                display: block;
+            }
+        }
+    }
+}

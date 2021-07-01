@@ -1,0 +1,56 @@
+.footer-storeloc {
+    margin-bottom: 60px;
+    grid-area: storeloc;
+
+    @include media(md) {
+        grid-column: 1 / span 5;
+        margin-bottom: 0;
+    }
+
+    &__title {
+        font-family: $font-dinot-medium;
+        font-size: 15px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        margin-bottom: 20px;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+        border: 1px solid color('white');
+        text-transform: uppercase;
+    }
+
+    span {
+        display: block;
+        margin-right: 11.5px;
+    }
+}
+
+.footer-storeloc-group {
+    @include media(md) {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-gap: $grid-column-gap-sm;
+    }
+
+    .review {
+        grid-area: review;
+
+        @include media(sm-down) {
+            display: flex;
+            justify-content: center;
+        }
+
+        @include media(md) {
+            grid-column: 10 / span 3;
+        }
+    }
+}

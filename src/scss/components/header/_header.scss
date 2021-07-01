@@ -1,0 +1,33 @@
+:root {
+
+    @include media(md-down) {
+        --header-top-height: 92px;
+    }
+
+    @include media(lg-up) {
+        --header-top-height: 125px;
+    }
+}
+
+.header {
+    font-family: $font-dinot;
+    position: relative; //for wide dropdown-menu
+
+    @include media(lg-up) {
+        border-bottom: 1px solid color('grey-deep-light');
+    }
+
+    &__logo {
+        width: 53px;
+        height: 51px;
+
+        @include media(md-down) {
+            margin: auto;
+        }
+
+        @include media(lg-up) {
+            width: 68px;
+            height: 66px;
+        }
+    }
+}

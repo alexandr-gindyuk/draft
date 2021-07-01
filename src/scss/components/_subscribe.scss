@@ -1,0 +1,112 @@
+.subscribe {
+    &__title {
+        font-family: $font-dinot-medium;
+        font-size: 25px;
+        margin-bottom: 20px;
+        line-height: 1.17;
+
+        grid-area: subscribe-title;
+
+        @include media(lg-up) {
+            font-size: 30px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .input-main {
+            display: flex;
+            flex-grow: 1;
+            margin-right: 15px;
+            background: color('white');
+
+            @include media(md-up) {
+                margin-right: 20px;
+            }
+        }
+
+        .input-submit-group {
+            position: relative;
+            height: 50px;
+            width: 50px;
+            min-width: 50px;
+            text-transform: uppercase;
+
+            @include media(lg-up) {
+                height: 50px;
+                width: auto;
+                min-width: 160px;
+            }
+        }
+
+        .input-submit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            color: color('white');
+            border: 1px solid color('white');
+            background: transparent;
+
+            &[attr="value"] {
+                content: '';
+            }
+        }
+
+        .input-submit-icon,
+        .input-submit-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .input-submit-icon {
+
+            @include media(lg-up) {
+                display: none;
+            }
+        }
+
+        .input-submit-text {
+            display: none;
+
+            @include media(lg-up) {
+                display: block;
+            }
+        }
+    }
+
+    &__check {
+        .checkmark {
+            background-color: rgba(0, 0, 0, 0.2);
+            background-image: none;
+            border: 1px solid gray;
+        }
+
+        &-description {
+            position: relative;
+            padding-left: 10px;
+
+            &::before {
+                content: '*';
+                position: absolute;
+                top: 2px;
+                left: 0;
+                color: color('danger-dark');
+            }
+        }
+    }
+
+    .privacy-policy {
+        text-decoration: underline;
+    }
+}
+
+.subscribe-group {
+    grid-area: subscribe;
+}
