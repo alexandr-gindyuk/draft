@@ -1,0 +1,49 @@
+.loader {
+    z-index: 3;
+
+    $root: &;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 6px solid color('grey-deep-light');
+        border-top: 6px solid color('grey-super-deep');
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 2s linear infinite;
+        z-index: 2;
+    }
+
+    &.m-dark {
+        &:before {
+            background: rgba(color('black'), 0.3);
+        }
+    }
+
+    &.m-light {
+        &:before {
+            background: rgba(color('white'), 0.3);
+        }
+    }
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
