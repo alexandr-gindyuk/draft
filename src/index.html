@@ -86,6 +86,9 @@
                                                  <!-- after click on this 'menu__item':
                                                     1. add (toggle) class 'm-show-level-2' to the 'menu__list m-level-1'
                                                     2. add (toggle) class m-active to the closest child in a block with a class 'menu__list m-level-2' -->
+
+                                                <!-- On touch-devices add for the clicked 'menu__item' a class 'm-touch-hover' - this class has the same behavior that a hover does  -->
+
                                                 <li class="menu__item">
 
                                                     <a href="#" class="menu__link">WOMEN
@@ -96,7 +99,7 @@
                                                         <div class="l-wrapper m-full-width-md-down m-stick-right">
                                                             <div class="menu__dropdown-content">
                                                                 <ul class="menu__list m-level-2 m-active">
-                                                                    <li>
+                                                                    <li class="menu__item m-back">
                                                                         <button class="menu__item-back">Women</button>
                                                                     </li>
 
@@ -104,27 +107,24 @@
                                                                         <a href="#" class="menu__link">Levelw-2 1
                                                                             <i class="icon-m-arrow-right"></i>
                                                                         </a>
-                                                                        <img class="menu__banner m-subcategory" style='background: darkblue' src="#" alt="">
 
                                                                         <ul class="menu__list m-level-3">
-                                                                            <li>
+                                                                            <li class="menu__item m-back">
                                                                                 <button class="menu__item-back">Levelw-2 1</button>
                                                                             </li>
 
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">Levelw-3 1 1</a>
-                                                                                <img class="menu__banner m-subcategory" style="background: deeppink;" src="#" alt="">
-
                                                                             </li>
+
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">Levelw-3 1 2</a>
-                                                                                <img class="menu__banner m-subcategory" style="background: rgb(255, 20, 20);" src="#" alt="">
-
                                                                             </li>
+
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">Levelw-3 1 3</a>
-                                                                                <img class="menu__banner m-subcategory" style="background: rgb(255, 220, 20);" src="#" alt="">
                                                                             </li>
+
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">View all</a>
                                                                             </li>
@@ -134,21 +134,24 @@
                                                                         <a href="#" class="menu__link">Levelw-2 2
                                                                             <i class="icon-m-arrow-right"></i>
                                                                         </a>
-                                                                        <img class="menu__banner m-subcategory" style='background: darkgreen;' src="#" alt="">
 
                                                                         <ul class="menu__list m-level-3">
-                                                                            <li>
+                                                                            <li class="menu__item m-back">
                                                                                 <button class="menu__item-back">Levelw-2 2</button>
                                                                             </li>
+
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">Levelw-3 2 1</a>
                                                                             </li>
+
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">Levelw-3 2 2</a>
                                                                             </li>
+
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">Levelw-3 2 3</a>
                                                                             </li>
+
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">View all</a>
                                                                             </li>
@@ -158,21 +161,24 @@
                                                                         <a href="#" class="menu__link">levelw-2 3
                                                                             <i class="icon-m-arrow-right"></i>
                                                                         </a>
-                                                                        <img class="menu__banner m-subcategory" style='background: darkseagreen;' src="#" alt="">
 
                                                                         <ul class="menu__list m-level-3">
-                                                                            <li>
+                                                                            <li class="menu__item m-back">
                                                                                 <button class="menu__item-back">Levelw-2 3</button>
                                                                             </li>
+
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">Levelw-3 3 1</a>
                                                                             </li>
+
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">Levelw-3 3 2</a>
                                                                             </li>
+
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">Levelw-3 3 3</a>
                                                                             </li>
+
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">View all</a>
                                                                             </li>
@@ -184,9 +190,11 @@
                                                                             <li class="menu__tags-item">
                                                                                 <a class="menu__tags-link" href="#">New Arrivals</a>
                                                                             </li>
+
                                                                             <li class="menu__tags-item">
                                                                                 <a class="menu__tags-link" href="#">Bestsellers</a>
                                                                             </li>
+
                                                                             <li class="menu__tags-item">
                                                                                 <a class="menu__tags-link" href="#">Sports Underwear & Baselayer</a>
                                                                             </li>
@@ -194,9 +202,12 @@
                                                                     </li>
                                                                 </ul>
 
+                                                                <!-- if .menu__list.m-level-2 menu__item or .menu__list.m-level-3 menu__item is hovered
+                                                                add class .m-subcategory to the .menu__banner    -->
+
                                                                 <div class="menu__banner">
                                                                     <!-- content-asset start -->
-                                                                        <img src="https://www.odlo.com/on/demandware.static/-/Library-Sites-odlo-content-global/default/dwe87f1a0b/images/Landing/ActiveSpine/SS21/LP-ActiveSpine-SS21_half_women_960x542.jpg" alt="">
+                                                                       <img src="https://www.odlo.com/on/demandware.static/-/Library-Sites-odlo-content-global/default/dwe87f1a0b/images/Landing/ActiveSpine/SS21/LP-ActiveSpine-SS21_half_women_960x542.jpg" alt="">
                                                                     <!-- content-asset end -->
                                                                 </div>
 
@@ -204,9 +215,11 @@
                                                                     <li class="menu__tags-item">
                                                                         <a class="menu__tags-link" href="#">New Arrivals</a>
                                                                     </li>
+
                                                                     <li class="menu__tags-item">
                                                                         <a class="menu__tags-link" href="#">Bestsellers</a>
                                                                     </li>
+
                                                                     <li class="menu__tags-item">
                                                                         <a class="menu__tags-link" href="#">Sports Underwear & Baselayer</a>
                                                                     </li>
@@ -225,75 +238,101 @@
                                                         <div class="l-wrapper m-stick-right">
                                                             <div class="menu__dropdown-content">
                                                                 <ul class="menu__list m-level-2">
+
+                                                                    <li class="menu__item m-back">
+                                                                        <button class="menu__item-back">Women</button>
+                                                                    </li>
+
                                                                     <li class="menu__item">
                                                                         <a href="#" class="menu__link">Levelm-2 1</a>
-                                                                        <img class="menu__banner m-subcategory" style='background: darkblue' src="#" alt="">
 
                                                                         <ul class="menu__list m-level-3">
+                                                                            <li class="menu__item m-back">
+                                                                                <button class="menu__item-back">Women</button>
+                                                                            </li>
+
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">Levelm-3 1 1</a>
-                                                                                <img class="menu__banner m-subcategory" style="background: deeppink;" src="#" alt="">
-
                                                                             </li>
+
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">Levelm-3 1 2</a>
-                                                                                <img class="menu__banner m-subcategory" style="background: rgb(255, 20, 20);" src="#" alt="">
-
                                                                             </li>
+
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">Levelm-3 1 3</a>
                                                                             </li>
+
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">View all</a>
                                                                             </li>
                                                                         </ul>
                                                                     </li>
+
                                                                     <li class="menu__item">
                                                                         <a href="#" class="menu__link">Levelm-2 2</a>
-                                                                        <img class="menu__banner m-subcategory" style='background: darkgreen;' src="#" alt="">
 
                                                                         <ul class="menu__list m-level-3">
+
+                                                                            <li class="menu__item m-back">
+                                                                                <button class="menu__item-back">Women</button>
+                                                                            </li>
+
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">Levelm-3 2 1</a>
                                                                             </li>
+
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">Levelm-3 2 2</a>
                                                                             </li>
+
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">Levelm-3 2 3</a>
                                                                             </li>
+
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">View all</a>
                                                                             </li>
                                                                         </ul>
                                                                     </li>
+
                                                                     <li class="menu__item">
                                                                         <a href="#" class="menu__link">levelm-2 3</a>
-                                                                        <img class="menu__banner m-subcategory" style='background: darkseagreen;' src="#" alt="">
 
                                                                         <ul class="menu__list m-level-3">
+
+                                                                            <li class="menu__item m-back">
+                                                                                <button class="menu__item-back">Women</button>
+                                                                            </li>
+
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">Levelm-3 3 1</a>
                                                                             </li>
+
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">Levelm-3 3 2</a>
                                                                             </li>
+
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">Levelms-3 3 3</a>
                                                                             </li>
+
                                                                             <li class="menu__item">
                                                                                 <a href="#" class="menu__link">View all</a>
                                                                             </li>
                                                                         </ul>
                                                                     </li>
+
                                                                     <li class="menu__tags-wrap h-hidden-lg-up">
                                                                         <ul class="menu__tags">
                                                                             <li class="menu__tags-item">
                                                                                 <a class="menu__tags-link" href="#">New Arrivals</a>
                                                                             </li>
+
                                                                             <li class="menu__tags-item">
                                                                                 <a class="menu__tags-link" href="#">Bestsellers</a>
                                                                             </li>
+
                                                                             <li class="menu__tags-item">
                                                                                 <a class="menu__tags-link" href="#">Sports Underwear & Baselayer</a>
                                                                             </li>
@@ -301,7 +340,7 @@
                                                                     </li>
                                                                 </ul>
 
-                                                                <div class="menu__banner">
+                                                                <div class="menu__banner m-subcategory">
                                                                     <!-- content-asset start -->
                                                                         <img src="https://www.odlo.com/on/demandware.static/-/Library-Sites-odlo-content-global/default/dw7a586f95/images/Landing/ActiveSpine/SS21/LP-ActiveSpine-SS21_half_men_960x542.jpg" alt="">
                                                                     <!-- content-asset end -->
@@ -311,15 +350,16 @@
                                                                     <li class="menu__tags-item">
                                                                         <a class="menu__tags-link" href="#">New Arrivals</a>
                                                                     </li>
+
                                                                     <li class="menu__tags-item">
                                                                         <a class="menu__tags-link" href="#">Bestsellers</a>
                                                                     </li>
+
                                                                     <li class="menu__tags-item">
                                                                         <a class="menu__tags-link" href="#">Sports Underwear & Baselayer</a>
                                                                     </li>
                                                                 </ul>
                                                             </div>
-
                                                         </div>
                                                     </div>
 
@@ -369,9 +409,7 @@
                                                 <span class="user-staff__link-text">Store Locator</span>
                                             </a>
                                         </li>
-
                                     </ul>
-
                                 </div>
                             </div>
                         </div>
