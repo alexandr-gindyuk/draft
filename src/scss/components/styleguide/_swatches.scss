@@ -23,7 +23,7 @@ $swatch-shadow-second-small: 3px;
     border-radius: 50%;
     box-shadow: 0 0 0 $swatch-shadow-second-default color('white'), 0 0 0 $swatch-shadow-first-default color('grey-light');
 
-    transition: all .2s ease;
+    transition: all $motion-ease;
 
     &:after {
         content: '';

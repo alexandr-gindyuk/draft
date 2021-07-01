@@ -42,7 +42,7 @@ $radio-theme: ('dark');
             position: absolute;
             opacity: 0;
             cursor: pointer;
-            transition: all .2s ease;
+            transition: all $motion-ease;
 
             &:checked ~ .radio-item__radiomark {
                 @if ($theme == 'default') {
@@ -126,7 +126,7 @@ $radio-theme: ('dark');
         border-radius: 50%;
         overflow: hidden;
 
-        transition: all .2s ease;
+        transition: all $motion-ease;
 
         @if ($theme == 'default') {
             //radio-default

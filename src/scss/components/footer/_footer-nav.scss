@@ -83,7 +83,7 @@
         position: absolute;
         top: 50%;
         left: 10px;
-        transition: all .3s ease;
+        transition: all $motion-ease;
     }
 
     &-contact-us {

@@ -1,5 +1,5 @@
 .footer-comunity {
-    font-family: "DINOT-Medium";
+    font-family: $font-dinot-medium;
     position: relative;
     height: 100%;
     padding: 0 20px 30px 20px;
@@ -54,7 +54,7 @@
     }
 
     &__title {
-        font-family: "DINOT-Bold";
+        font-family: $font-dinot-bold;
         font-size: 25px;
         margin-bottom: 20px;
         text-transform: uppercase;

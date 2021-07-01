@@ -42,7 +42,7 @@
         &__link-text {
             @include media(md-down) {
                 padding-left: 10px;
-                font-family: 'DINOT-Medium';
+                font-family: $font-dinot-medium;
                 font-size: 16px;
                 color: color('grey-super-deep');
             }
