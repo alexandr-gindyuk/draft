@@ -1,5 +1,12 @@
 .header__main {
 
+    @include media(md-down) {
+        height: 0;
+        overflow-y: scroll;
+        transition: height $motion-ease;
+        //the height's formula is written in the 'header-mobile.scss' file
+    }
+
     &.m-menu-expanded {
 
         @include media(md-down) {
