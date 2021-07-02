@@ -72,6 +72,8 @@
 
                 width: 100%;
                 transform: translateX(100%);
+                overflow-y: auto;
+                overflow-x: hidden;
                 transition: all $motion-ease-in-out;
             }
 
@@ -136,6 +138,8 @@
                 left: 0;
                 margin-bottom: 0;
                 transform: translateX(100%);
+                overflow-y: auto;
+                overflow-x: hidden;
             }
 
             @include media(lg-up) {
@@ -220,6 +224,12 @@
         &.m-show-level-3 {
             @include media(md-down) {
                 transform: translateX(-200%);
+            }
+
+            .m-level-2 {
+                @include media(md-down) {
+                    overflow: visible;
+                }
             }
         }
     }
@@ -375,6 +385,10 @@
             position: relative;
             height: calc(100vh - var(--header-top-height));
             background: color('white');
+        }
+
+        @include media(md-down) {
+            overflow-y: scroll;
         }
     }
 

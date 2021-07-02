@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+<!-- add m-has-dialog here when the navigation is open (gamburger menu) -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,7 +28,11 @@
         <header class="header">
             <div class="l-wrapper m-full-width-md-down">
                 <div class="l-header">
-                    <div class="l-header__mobile">
+
+                    <!-- toggle here the class 'open':
+                            when a user clicks a burger-menu to open a mobile-header-dropdown - add here the class 'open',
+                            when a user clicks again (to close tne dropdown) - remove the class 'open' from here -->
+                    <div class="l-header__mobile header__mobile">
                         <div class="header__mobile-buttons user-staff__item">
                             <button class="burger">
                                 <i class="icon-m-burger"></i>
@@ -53,7 +59,8 @@
                         </a>
                     </div>
 
-                    <div class="l-header__main header__main m-header-main m-menu-expanded"> <!--on mobile when menu__list has classes "m-show-level-2, m-show-level-3", add here the the class "m-menu-expanded" -->
+                    <!--on mobile when menu__list has classes "m-show-level-2, m-show-level-3", add here the the class "m-menu-expanded" -->
+                    <div class="l-header__main header__main m-header-main m-menu-expanded">
 
                         <!-- header-top -->
                         <div class="l-header__top header__top">

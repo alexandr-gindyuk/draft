@@ -1,18 +1,17 @@
-.l-page {
+body {
+    .m-has_dialog &,
+    .m-no_scroll & {
+        border-right: var(--scrollbar-width, 0) solid #e0e0e0;
+        overflow: hidden;
+    }
 
-    // .m-has_dialog &,
-    // .m-no_scroll & {
-    //     border-right: var(--scrollbar-width, 0) solid #e0e0e0;
-    //     overflow: hidden;
-    // }
-
-    // .m-no_scroll-ios & {
-    //     border-right: var(--scrollbar-width, 0) solid #e0e0e0;
-    //     height: 100%;
-    //     left: 0;
-    //     overflow: hidden;
-    //     position: fixed;
-    //     top: 0;
-    //     width: 100%;
-    // }
+    .m-no_scroll-ios & {
+        border-right: var(--scrollbar-width, 0) solid #e0e0e0;
+        height: 100%;
+        left: 0;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
 }

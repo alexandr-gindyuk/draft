@@ -8,8 +8,15 @@
         .close {
             display: none;
         }
+    }
 
-        &.open {
+    &.open {
+
+        & ~ .header__main {
+            height: calc(100vh - var(--header-top-height));
+        }
+
+        .header__mobile-buttons {
             .burger {
                 display: none;
             }

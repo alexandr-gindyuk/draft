@@ -12,6 +12,7 @@
 .header {
     font-family: $font-dinot;
     position: relative; //for wide dropdown-menu
+    z-index: 50;
 
     @include media(lg-up) {
         border-bottom: 1px solid color('grey-deep-light');
