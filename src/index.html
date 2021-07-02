@@ -440,9 +440,9 @@
                 <!-- classes modifiers for alignments: m-caption-bottom || m-caption-top + m-caption-right || m-caption-left -->
                 <figure class="promo-box m-caption-bottom m-caption-right">
                     <picture class="promo-box__picture">
-                        <source media="(min-width: 1024px)" srcset="images/promo_desktop.jpg">
-                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="images/promo_tablet.jpg">
-                        <source media="(max-width: 767px)" srcset="images/promo_mobile.jpg">
+                        <source media="(min-width: 1024px)" srcset="images/promo_desktop.jpg"> <!-- 1920px - 700px -->
+                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="images/promo_tablet.jpg"> <!-- 1024px - 580px -->
+                        <source media="(max-width: 767px)" srcset="images/promo_mobile.jpg"> <!-- 768px - 375px -->
                         <img src="images/promo_desktop.jpg" alt="" title="" loading="lazy">
                     </picture>
                     <figcaption class="promo-box__caption">
@@ -451,12 +451,21 @@
                             <h2 class="promo-caption__title">ULTRALIGHT PERFORMANCE</h2>
                             <p class="promo-caption__subtitle">Whatever your activity, our bra collection offers the right level of support</p>
                             <div class="promo-caption__actions">
-                                <a class="btn-main-outlined" href="">outlined</a>
-                                <button type="button" class="btn-main-outlined">outlined</button>
+                                <a class="btn-main-outlined promo-caption__actions-item" href="">outlined</a>
+                                <button type="button" class="btn-main-outlined promo-caption__actions-item">outlined</button>
+                                <a href="#" class="link-primary promo-caption__actions-item"><i class="icon-s-divider-breadcrumbs m-margin-right filled"></i>MORE TECHNOLOGIES</a>
                             </div>
                         </div>
                     </figcaption>
+
+                    <img src="https://www.odlo.com/on/demandware.static/-/Library-Sites-odlo-content-global/default/dw5ecb3383/OurWorld/Help/overall-size-chart/size-chart-overall-women-200x250.jpg" alt="">
+                    <!-- 200x250 -->
                 </figure>
+
+                <div>
+                    <img src="https://www.odlo.com/on/demandware.static/-/Library-Sites-odlo-content-global/default/dw5ecb3383/OurWorld/Help/overall-size-chart/size-chart-overall-women-200x250.jpg" alt="">
+                    <!-- 200x250 -->
+                </div>
                 <!-- end promo-box -->
             </div>
 

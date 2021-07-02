@@ -4,7 +4,6 @@ $links-main-theme: ('dark');
 @mixin link {
     text-decoration: none;
     cursor: pointer;
-    font-size: inherit;
     color: inherit;
 
     &:hover,
@@ -40,11 +39,23 @@ $links-main-theme: ('dark');
 
     @if ($type == 'primary') {
         font-family: $font-dinot-medium;
+        font-size: 15px;
+        line-height: 20px;
         text-transform: uppercase;
+
+        [class*='icon'] {
+            font-size: 20px;
+        }
     }
 
     @if ($type == 'secondary') {
         font-family: $font-open-sans;
+        font-size: 14px;
+        line-height: 20px;
+
+        [class*='icon'] {
+            font-size: 20px;
+        }
 
         &:hover {
             font-weight: 600;
@@ -53,6 +64,7 @@ $links-main-theme: ('dark');
 
     @if ($type == 'underline') {
         font-family: $font-open-sans;
+        font-size: inherit;
         text-decoration: underline;
 
         &:hover {
@@ -90,9 +102,11 @@ $links-main-theme: ('dark');
     [class*="icon-"] {
         font-weight: inherit;
         border-radius: 50%;
+        vertical-align: text-bottom;
 
         &.filled {
             background-color: color('grey-super-light');
+            color: color('black');
         }
 
         &.m-margin-left {
