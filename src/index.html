@@ -433,7 +433,32 @@
             </div>
         </header>
 
-        <main class="main" >
+        <main class="main">
+
+            <div class="l-wrapper m-full-width">
+                <!-- promo-box -->
+                <!-- classes modifiers for alignments: m-caption-bottom || m-caption-top + m-caption-right || m-caption-left -->
+                <figure class="promo-box m-caption-bottom m-caption-right">
+                    <picture class="promo-box__picture">
+                        <source media="(min-width: 1024px)" srcset="images/promo_desktop.jpg">
+                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="images/promo_tablet.jpg">
+                        <source media="(max-width: 767px)" srcset="images/promo_mobile.jpg">
+                        <img src="images/promo_desktop.jpg" alt="" title="" loading="lazy">
+                    </picture>
+                    <figcaption class="promo-box__caption">
+                        <!-- classes modifiers for styling promo-caption box: m-backgound-deep-brand -->
+                        <div class="promo-caption theme-dark">
+                            <h2 class="promo-caption__title">ULTRALIGHT PERFORMANCE</h2>
+                            <p class="promo-caption__subtitle">Whatever your activity, our bra collection offers the right level of support</p>
+                            <div class="promo-caption__actions">
+                                <a class="btn-main-outlined" href="">outlined</a>
+                                <button type="button" class="btn-main-outlined">outlined</button>
+                            </div>
+                        </div>
+                    </figcaption>
+                </figure>
+                <!-- end promo-box -->
+            </div>
 
             <!-- filter -->
             <div style="padding: 50px;">

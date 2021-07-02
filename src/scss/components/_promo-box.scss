@@ -1,0 +1,137 @@
+//// TODO: Should be deleted
+.header,
+.filter {
+    display: none;
+}
+//// end
+
+
+.promo-box {
+    @include media(lg-up) {
+        display: grid;
+    }
+
+    &__picture {
+        display: block;
+        position: relative;
+        z-index: 0;
+        height: 375px;
+
+        @include media(md-up) {
+            height: 580px;
+        }
+
+        @include media(lg-up) {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+
+        @include media(xxl) {
+            height: 700px;
+        }
+
+        img {
+            object-fit: cover;
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: transparent;
+        }
+    }
+
+    &__caption {
+        @include wrapper;
+
+        @include media(lg-up) {
+            position: relative;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-gap: 20px;
+        }
+
+        @include media(xxl) {
+            grid-gap: 30px;
+            max-width: none;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    &.m-caption-top {
+        .promo-caption {
+            align-self: start;
+        }
+
+        .promo-box__picture {
+            @include media(lg) {
+                margin-top: 40px;
+            }
+
+            @include media(xl) {
+                margin-top: 40px;
+            }
+
+            @include media(xxl) {
+                margin-top: 60px;
+            }
+        }
+    }
+
+    &.m-caption-bottom {
+        .promo-caption {
+            align-self: end;
+        }
+
+        .promo-box__picture {
+            @include media(lg) {
+                margin-bottom: 40px;
+            }
+
+            @include media(xl) {
+                margin-bottom: 40px;
+            }
+
+            @include media(xxl) {
+                margin-bottom: 60px;
+            }
+        }
+    }
+
+    &.m-caption-left {
+        .promo-caption {
+            @include media(lg) {
+                grid-column: 1 / span 6;
+            }
+
+            @include media(xl) {
+                grid-column: 1 / span 5;
+            }
+
+            @include media(xxl) {
+                grid-column: 1 / span 4;
+            }
+        }
+    }
+
+    &.m-caption-right {
+        .promo-caption {
+            @include media(lg) {
+                grid-column: 7 / span 6;
+            }
+
+            @include media(xl) {
+                grid-column: 8 / span 5;
+            }
+
+            @include media(xxl) {
+                grid-column: 9 / span 4;
+            }
+        }
+    }
+}

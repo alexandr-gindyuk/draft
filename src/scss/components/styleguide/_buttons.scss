@@ -159,8 +159,8 @@ $buttons-main-theme: ('dark');
         width: 100%;
     }
 
-    &.m-fluid-sm {
-        @include media(sm) {
+    &.m-fluid-sm-down {
+        @include media(sm-down) {
             width: 100%;
         }
     }
@@ -168,7 +168,7 @@ $buttons-main-theme: ('dark');
     &.m-fluid-md-down {
         @include media(md-down) {
             width: 100%;
-            min-width: 0
+            min-width: 0;
         }
     }
 }

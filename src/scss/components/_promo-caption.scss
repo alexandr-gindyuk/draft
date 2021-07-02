@@ -1,0 +1,39 @@
+.promo-caption {
+    background-color: color('black');
+    color: color('white');
+
+    @include media(xs) {
+        position: relative;
+        margin-top: -20px;
+        padding: 20px;
+    }
+
+    @include media(sm) {
+        position: relative;
+        margin-top: -20px;
+        padding: 20px;
+    }
+
+    @include media(md) {
+        position: relative;
+        margin-top: -40px;
+        padding: 40px;
+    }
+
+    @include media(lg) {
+        padding: 40px;
+    }
+
+    @include media(xl) {
+        padding: 40px;
+    }
+
+    @include media(xxl) {
+        padding: 60px;
+    }
+
+    &.m-backgound-deep-brand {
+        background-color: color('deep-brand');
+        color: color('white');
+    }
+}
