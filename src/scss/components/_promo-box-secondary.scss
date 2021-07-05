@@ -1,0 +1,35 @@
+.promo-box-secondary {
+    display: flex;
+
+    @include media(md-down) {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    @include media(lg-up) {
+        align-items: center;
+    }
+
+    &__picture {
+        @include media(lg-up) {
+            flex-basis: 58%;
+        }
+    }
+
+    &__caption {
+        @include media(md-down) {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding-top: 40px;
+        }
+
+        @include media(lg-up) {
+            padding: 40px;
+        }
+
+        @include media(xxl) {
+            padding: 60px;
+        }
+    }
+}

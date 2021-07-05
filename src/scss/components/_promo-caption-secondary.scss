@@ -1,0 +1,15 @@
+.promo-caption-secondary {
+    &__badge {
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__actions {
+        @include media(md-down) {
+            margin-top: auto;
+        }
+    }
+}
