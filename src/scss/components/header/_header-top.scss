@@ -1,8 +1,9 @@
 .header__top {
-    display: flex;
     color: color('grey-super-deep');
 
     @include media(md-down) {
+        display: flex;
+        justify-content: space-between;
         height: 40px;
         align-items: center;
         font-family: $font-dinot-medium;

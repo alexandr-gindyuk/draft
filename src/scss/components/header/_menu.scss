@@ -365,6 +365,8 @@
     }
 
     &__dropdown {
+        background-color: color('white');
+
         @include media(lg-up) {
             position: absolute;
             top: 100%;
@@ -400,6 +402,11 @@
         @include media(lg-up) {
             width: 75%;
             height: 100%;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
         }
 
         &.m-subcategory {

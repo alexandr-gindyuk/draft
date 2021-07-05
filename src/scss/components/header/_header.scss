@@ -1,5 +1,4 @@
 :root {
-
     @include media(md-down) {
         --header-top-height: 92px;
     }
@@ -9,10 +8,16 @@
     }
 }
 
+$padding-sticky-header: 20px;
+
 .header {
     font-family: $font-dinot;
     position: relative; //for wide dropdown-menu
+    background: color('white');
+    transition: $motion-ease-in-out;
+    transition-property: top;
     z-index: 50;
+
 
     @include media(lg-up) {
         border-bottom: 1px solid color('grey-deep-light');
@@ -29,6 +34,55 @@
         @include media(lg-up) {
             width: 68px;
             height: 66px;
+        }
+    }
+}
+
+body.header-stuck {
+    .header {
+        position: sticky;
+        top: 0;
+
+        &__top {
+            @include media(lg-up) {
+                display: none;
+            }
+        }
+
+        &__user-staff {
+
+            @include media(lg-up) {
+                height: 100%;
+            }
+        }
+
+        .user-staff {
+            &__list {
+                @include media(lg-up) {
+                    height: 100%;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    .l-header__main {
+        @include media(lg-up) {
+            row-gap: 0;
+            grid-template-rows: auto;
+        }
+    }
+
+    .menu {
+        &__list {
+            &.m-level-1 {
+                & > .menu__item {
+                    @include media(lg-up) {
+                        padding-bottom: $padding-sticky-header;
+                        margin-top: $padding-sticky-header;
+                    }
+                }
+            }
         }
     }
 }
