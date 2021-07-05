@@ -42,9 +42,13 @@
         }
     }
 
-    &.m-dialog-full-width {
+    &.m-dialog-top {
         bottom: initial;
-        padding: 0;
+        padding-top: 0;
+    }
+
+
+    &.m-dialog-full-width {
 
         #{$root}__window {
             @include wrapper;
