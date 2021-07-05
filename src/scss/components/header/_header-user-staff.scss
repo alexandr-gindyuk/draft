@@ -92,6 +92,20 @@
                 display: inline-flex;
                 justify-content: flex-end;
                 align-items: center;
+
+                .icon-m-bag-filled {
+                    display: none;
+                }
+
+                &.m-filled {
+                    .icon-m-bag {
+                        display: none;
+                    }
+
+                    .icon-m-bag-filled {
+                        display: flex;
+                    }
+                }
             }
         }
 
