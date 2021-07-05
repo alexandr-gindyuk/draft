@@ -118,6 +118,10 @@
         [class*='btn-main'] {
             flex-grow: 0;
         }
+
+        [class*="icon-"] {
+            transform: rotate(90deg);
+        }
     }
 
     &__window {
