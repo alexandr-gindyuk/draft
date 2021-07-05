@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-<!-- add m-has-dialog here when the navigation is open (gamburger menu) -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +7,9 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <title>Webpack</title>
 </head>
+
+<!-- add 'm-has-dialog' here when the navigation is open (gamburger menu) -->
+<!-- add 'header-stuck' here when the header should be sticky -->
 <body class="page__hp">
     <div class="l-page">
         <section class="messages m-grey">
@@ -354,7 +356,7 @@
                                                                     </li>
                                                                 </ul>
 
-                                                                <div class="menu__banner m-subcategory">
+                                                                <div class="menu__banner">
                                                                     <!-- content-asset start -->
                                                                         <img src="https://www.odlo.com/on/demandware.static/-/Library-Sites-odlo-content-global/default/dw7a586f95/images/Landing/ActiveSpine/SS21/LP-ActiveSpine-SS21_half_men_960x542.jpg" alt="">
                                                                     <!-- content-asset end -->
@@ -411,9 +413,12 @@
                                                 <span class="user-staff__link-text">My Account</span>
                                             </a>
                                         </li>
-                                        <li class="user-staff__item user-staff__item--cart">
+
+                                        <!-- if the cart has any items - add here class 'm-filled' to show specific icon -->
+                                        <li class="user-staff__item user-staff__item--cart m-filled">
                                             <a class="user-staff__link" href="#">
                                                 <i class="icon-m-bag"></i>
+                                                <i class="icon-m-bag-filled"></i>
                                                 <span>(0)</span>
                                             </a>
                                         </li>
@@ -470,7 +475,7 @@
             </div>
 
             <!-- filter -->
-            <div style="padding: 50px;">
+            <div style="padding: 50px; display: none;">
                 <section class="filter loader m-dark">
                     <button class="filter__close">
                         <i class="icon-m-close"></i>

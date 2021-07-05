@@ -28,13 +28,28 @@
                 @include media(md-down) {
                     display: none;
                 }
+
+                .icon-m-bag-filled {
+                    display: none;
+                }
+
+                &.m-filled {
+                    .icon-m-bag {
+                        display: none;
+                    }
+
+                    .icon-m-bag-filled {
+                        display: flex;
+                    }
+                }
             }
         }
 
         &__link {
+            display: flex;
+            align-items: center;
+
             @include media(md-down) {
-                display: flex;
-                align-items: center;
                 height: 40px;
             }
         }
@@ -76,6 +91,7 @@
             @include media(md-down) {
                 display: inline-flex;
                 justify-content: flex-end;
+                align-items: center;
             }
         }
 
