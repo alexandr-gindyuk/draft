@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 
+<!-- add 'm-has_dialog' here when the navigation is open (gamburger menu) -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +9,6 @@
     <title>Webpack</title>
 </head>
 
-<!-- add 'm-has-dialog' here when the navigation is open (gamburger menu) -->
 <!-- add 'header-stuck' here when the header should be sticky -->
 <body class="page__hp">
     <div class="l-page">
@@ -467,6 +467,84 @@
                 </figure>
                 <!-- end promo-box -->
             </div>
+
+
+            <!-- dialogs -->
+
+            <!-- Country-select -->
+            <div class="dialog">
+                <div class="dialog__window" role="dialog" data-ref="" aria-modal="" aria-label="">
+                    <button class="dialog__close" title="close">
+                        <i class="icon-m-close"></i>
+                    </button>
+
+                    <div class="dialog__header">
+                        <div class="dialog__title">
+                            <h1>Dialog title</h1>
+                        </div>
+                    </div>
+                    <div class="dialog__content">
+                        <div class="form__section dialog__content-item">
+                            <label class="form__label" for="country">
+                                <span class="form__section-required" aria-hidden="true">*</span>
+                                Your Country
+                            </label>
+                            <select class="input-select m-bordered" id="country" type="text">
+                                <option value="" selected="">Please select</option>
+                                <option value="1">Ukraine</option>
+                                <option value="2">Switzerland</option>
+                                <option value="3">USA</option>
+                            </select>
+                        </div>
+
+                        <div class="form__section dialog__content-item">
+                            <label class="form__label" for="language">
+                                <span class="form__section-required" aria-hidden="true">*</span>
+                                Language
+                            </label>
+                            <select class="input-select m-bordered" id="language" type="text">
+                                <option value="" selected="">Please select</option>
+                                <option value="1">Ukrainian</option>
+                                <option value="2">Hindi</option>
+                                <option value="3">English</option>
+                            </select>
+                        </div>
+
+                        <p class="dialog__content-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, dolorem est recusandae libero voluptatibus commodi culpa perspiciatis corporis?</p>
+                    </div>
+                    <div class="dialog__actions">
+                        <button type="button" class="btn-main-outlined">Apply</button>
+                        <button type="button" class="btn-main-filled">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coockies -->
+            <div class="dialog m-opened m-dialog-full-width m-dialog-closeless m-coockies">
+                <div class="dialog__window" role="dialog" data-ref="" aria-modal="" aria-label="">
+                    <button class="dialog__close" title="close">
+                        <i class="icon-m-close"></i>
+                    </button>
+
+                    <div class="dialog__header">
+                        <div class="dialog__title">
+                            <h1>We care, We act, We share</h1>
+                        </div>
+                    </div>
+                    <div class="dialog__content">
+                        <p class="dialog__content-item">We use cookies to keep our website reliable and secure and to improve your shopping experience. Cookies allow us to analyze our website performance and to show personalised content. You can change your settings anytime on our website and read our Privacy Policy here.</p>
+                    </div>
+                    <div class="dialog__action">
+                        <div class="dialog__action-group">
+                            <button type="button" class="btn-main-outlined">Apply</button>
+                            <button type="button" class="btn-main-filled">Cancel</button>
+                        </div>
+
+                        <button class="link-primary">Set preferences<i class="icon-s-divider-breadcrumbs m-margin-left filled"></i></button>
+                    </div>
+                </div>
+            </div>
+            <!-- end dialogs -->
 
             <!-- filter -->
             <div style="padding: 50px; display: none;">
