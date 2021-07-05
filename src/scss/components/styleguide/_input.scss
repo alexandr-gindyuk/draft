@@ -24,6 +24,12 @@ $inputs-theme: ('dark');
     &:focus {
         outline: none;
     }
+
+    &.m-bordered {
+        border: 1px solid color('grey');
+        background-position: right 15px center;
+        padding-left: 15px;
+    }
 }
 
 @mixin input($type, $theme: 'default') {
