@@ -21,12 +21,13 @@
         }
 
         @include media(md-up) {
-            height: 680px;
-            max-height: 680px;
+            height: 480px;
+            max-height: 480px;
         }
 
         @include media(xxl) {
-
+            height: 680px;
+            max-height: 680px;
         }
 
         @include media(lg) {
