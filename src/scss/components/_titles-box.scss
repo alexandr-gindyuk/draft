@@ -1,0 +1,54 @@
+.titles-box {
+
+
+
+    @include media(sm-down) {
+        margin-bottom: 30px;
+    }
+
+    @include media(md) {
+        margin-bottom: 35px;
+    }
+
+    @include media(lg-up) {
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        font-family: $font-dinot-medium;
+
+        @include media(sm-down) {
+            line-height: 1.39;
+        }
+
+        @include media(md-down) {
+            font-size: 25px;
+        }
+
+        @include media(md) {
+            line-height: 1.2;
+        }
+
+        @include media(lg-up) {
+            font-size: 35px;
+            line-height: 1.14;
+        }
+    }
+
+    &__subtitle {
+        margin-top: 10px;
+
+        @include media(sm-down) {
+            line-height: 1.39;
+        }
+
+        @include media(md-down) {
+            font-size: 18px;
+        }
+
+        @include media(lg-up) {
+            font-size: 22px;
+            line-height: 1.36;
+        }
+    }
+}
