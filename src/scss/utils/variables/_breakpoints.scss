@@ -1,5 +1,5 @@
 // Breakpoints
-$break-sm: 414px;
+$break-sm: 460px;
 $break-md: 768px;
 $break-lg: 1024px;
 $break-xl: 1366px;
@@ -7,8 +7,8 @@ $break-xxl: 1920px;
 
 // config for `media()` mixin
 $media: (
-    xs: 'screen and (max-width: #{$break-sm - 1})',                                //   ... - 413
-    sm: 'screen and (min-width: #{$break-sm}) and (max-width: #{$break-md - 1})',  //   414 - 767
+    xs: 'screen and (max-width: #{$break-sm - 1})',                                //   ... - 459
+    sm: 'screen and (min-width: #{$break-sm}) and (max-width: #{$break-md - 1})',  //   460 - 767
     md: 'screen and (min-width: #{$break-md}) and (max-width: #{$break-lg - 1})',  //   768 - 1023
     lg: 'screen and (min-width: #{$break-lg}) and (max-width: #{$break-xl - 1})',  //  1024 - 1365
     xl: 'screen and (min-width: #{$break-xl}) and (max-width: #{$break-xxl - 1})', //  1366 - 1919
