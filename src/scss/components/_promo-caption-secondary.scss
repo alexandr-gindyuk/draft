@@ -1,15 +1,61 @@
 .promo-caption-secondary {
     &__badge {
-        margin-bottom: 40px;
+        width: 113.4px;
+        height: 59.2px;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
     }
 
     &__title {
-        margin-bottom: 20px;
+        @include media(sm-down) {
+            font-family: $font-dinot-medium;
+            font-size: 25px;
+            margin-top: 40px;
+        }
+
+        @include media(md) {
+            margin-top: 0;
+        }
+
+        @include media(lg-up) {
+            margin-top: 20px;
+        }
+    }
+
+    &__description {
+        margin-top: 20px;
+
+        @include media(md-down) {
+            font-family: $font-dinot;
+            font-size: 18px;
+        }
     }
 
     &__actions {
-        @include media(md-down) {
-            margin-top: auto;
+        @include media(sm-down) {
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+        }
+
+        [class*='btn-main'] {
+
+            @include media(md-up) {
+                margin-top: 30px;
+            }
+
+            &:not(:last-child) {
+                @include media(md-down) {
+                    margin-bottom: 10px;
+                }
+
+                @include media(md-up) {
+                    margin-right: 20px;
+                }
+            }
         }
     }
 }
