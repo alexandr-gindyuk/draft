@@ -1,12 +1,43 @@
 .promo-box-secondary {
+
+    $root: &;
+
     display: flex;
 
     @include media(md-down) {
         flex-direction: column;
     }
 
-    @include media(lg-up) {
-        align-items: center;
+    &.m-vertical-center {
+        @include media(lg-up) {
+            align-items: center;
+        }
+    }
+
+    &.m-gapped {
+        @include media(xs) {
+            padding-left: $wrapper-padding-xs;
+        }
+
+        @include media(sm) {
+            padding-left: $wrapper-padding-sm;
+        }
+
+        @include media(md) {
+            padding-left: $wrapper-padding-md;
+        }
+
+        #{$root}__picture {
+            @include media(lg-up) {
+                flex-basis: 50%;
+            }
+        }
+
+        #{$root}__caption {
+            @include media(lg-up) {
+                padding: 0 0 0 120px;
+            }
+        }
     }
 
     &__picture {
@@ -35,11 +66,11 @@
         }
 
         @include media(lg-up) {
-            padding: 40px;
+            padding: 0 40px;
         }
 
         @include media(xxl) {
-            padding: 60px;
+            padding: 0 60px;
         }
     }
 
