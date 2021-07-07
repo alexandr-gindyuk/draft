@@ -12,12 +12,8 @@
     &__picture {
         flex-shrink: 0;
 
-        @include media(md-down) {
-            flex-basis: auto;
-        }
-
         @include media(lg) {
-            flex-basis: 58%;
+            flex-basis: 54%;
         }
 
         @include media(xl-up) {
@@ -55,7 +51,6 @@
         @include media(md-down) {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             flex-grow: 1;
         }
     }
