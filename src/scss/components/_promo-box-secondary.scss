@@ -44,10 +44,6 @@
     }
 
     &__group {
-        @include media(md) {
-            margin-left: 20px;
-        }
-
         @include media(md-down) {
             display: flex;
             flex-direction: column;
