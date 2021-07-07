@@ -3,7 +3,6 @@
 
     @include media(md-down) {
         flex-direction: column;
-        height: 100%;
     }
 
     @include media(lg-up) {
@@ -11,18 +10,18 @@
     }
 
     &__picture {
+        flex-shrink: 0;
+
         @include media(md-down) {
-            flex-basis: 100%;
+            flex-basis: auto;
         }
 
         @include media(lg) {
             flex-basis: 58%;
-            min-width: 58%;
         }
 
         @include media(xl-up) {
             flex-basis: 64%;
-            min-width: 64%;
         }
     }
 
@@ -50,9 +49,14 @@
 
     &__group {
         @include media(md) {
-            flex-basis: 64%;
-            min-width: 64%;
             margin-left: 20px;
+        }
+
+        @include media(md-down) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
         }
     }
 }

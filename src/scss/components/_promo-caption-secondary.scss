@@ -3,6 +3,18 @@
         width: 113.4px;
         height: 59.2px;
 
+        @include media(sm-down) {
+            margin-bottom: 40px;
+        }
+
+        @include media(md) {
+            margin-bottom: 0;
+        }
+
+        @include media(lg-up) {
+            margin-bottom: 20px;
+        }
+
         img {
             width: 100%;
             object-fit: cover;
@@ -10,23 +22,16 @@
     }
 
     &__title {
+        margin-bottom: 20px;
+
         @include media(sm-down) {
             font-family: $font-dinot-medium;
             font-size: 25px;
-            margin-top: 40px;
-        }
-
-        @include media(md) {
-            margin-top: 0;
-        }
-
-        @include media(lg-up) {
-            margin-top: 20px;
         }
     }
 
     &__description {
-        margin-top: 20px;
+        margin-bottom: 30px;
 
         @include media(md-down) {
             font-family: $font-dinot;
@@ -35,25 +40,27 @@
     }
 
     &__actions {
+        margin-top: auto;
+
         @include media(sm-down) {
             display: flex;
             flex-direction: column;
-            margin-top: 30px;
         }
 
         [class*='btn-main'] {
 
-            @include media(md-up) {
-                margin-top: 30px;
-            }
-
             &:not(:last-child) {
-                @include media(md-down) {
+
+                @include media(sm-down) {
                     margin-bottom: 10px;
                 }
 
                 @include media(md-up) {
                     margin-right: 20px;
+                }
+
+                @include media(lg) {
+                    margin-bottom: 10px;
                 }
             }
         }
