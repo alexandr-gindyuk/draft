@@ -13,7 +13,7 @@
                 "comunity-soc";
 
     @include media(md) {
-        padding: 0 30px 40px 30px;
+        padding: 0 30px 30px 30px;
 
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: 1fr;
@@ -56,12 +56,7 @@
     &__title {
         font-family: $font-dinot-bold;
         font-size: 25px;
-        margin-bottom: 20px;
         text-transform: uppercase;
-
-        @include media(md) {
-            margin-bottom: 0;
-        }
 
         @include media(lg-up) {
             font-size: 35px;

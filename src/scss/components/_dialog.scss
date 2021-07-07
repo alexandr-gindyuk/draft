@@ -1,4 +1,7 @@
 .dialog {
+    // TODO: delete this style
+    display: none !important;
+    // end todo
 
     $root: &;
 
@@ -15,6 +18,7 @@
 
     transition: visibility $motion-fast;
     visibility: hidden;
+    opacity: 0;
 
     z-index: 100;
 
@@ -28,12 +32,13 @@
         right: 0;
         top: 0;
         transition: $motion-ease-panels;
-        transition-property: opacity,background-color;
+        transition-property: opacity, background-color;
     }
 
 
     &.m-opened {
         visibility: visible;
+        opacity: 1;
         overflow-y: auto;
 
         &:before {

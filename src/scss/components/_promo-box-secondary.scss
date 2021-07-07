@@ -3,7 +3,6 @@
 
     @include media(md-down) {
         flex-direction: column;
-        height: 100%;
     }
 
     @include media(lg-up) {
@@ -11,8 +10,14 @@
     }
 
     &__picture {
-        @include media(lg-up) {
-            flex-basis: 58%;
+        flex-shrink: 0;
+
+        @include media(lg) {
+            flex-basis: 54%;
+        }
+
+        @include media(xl-up) {
+            flex-basis: 64%;
         }
     }
 
@@ -24,12 +29,29 @@
             padding-top: 40px;
         }
 
+        @include media(md) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
         @include media(lg-up) {
             padding: 40px;
         }
 
         @include media(xxl) {
             padding: 60px;
+        }
+    }
+
+    &__group {
+        @include media(md) {
+            margin-left: 20px;
+        }
+
+        @include media(md-down) {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
     }
 }

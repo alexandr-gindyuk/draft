@@ -1,0 +1,39 @@
+ul {
+    &.h-list-bullets {
+        padding-inline-start: 40px;
+
+        li {
+            list-style-type: disc;
+        }
+    }
+
+    &.h-list-circles {
+        padding-inline-start: 40px;
+
+        li {
+            list-style-type: circle;
+        }
+    }
+
+    &.h-list-numbers {
+        padding-inline-start: 40px;
+
+        li {
+            list-style-type: decimal;
+        }
+    }
+
+    &.h-list-lines {
+        padding-inline-start: 40px;
+
+        li {
+            position: relative;
+
+            &:before {
+                content: '-';
+                position: relative;
+                left: -14px;
+            }
+        }
+    }
+}

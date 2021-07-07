@@ -447,9 +447,9 @@
                 <!-- classes modifiers for alignments: m-caption-bottom || m-caption-top + m-caption-right || m-caption-left -->
                 <figure class="promo-box m-caption-bottom m-caption-right">
                     <picture class="promo-box__picture">
-                        <source media="(min-width: 1024px)" srcset="images/promo_desktop.jpg"> <!-- 1920px - 700px -->
-                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="images/promo_tablet.jpg"> <!-- 1024px - 580px -->
-                        <source media="(max-width: 767px)" srcset="images/promo_mobile.jpg"> <!-- 768px - 375px -->
+                        <source media="(min-width: 1024px)" srcset="https://dummyimage.com/3840x1400/132D40/fff.jpg">
+                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://dummyimage.com/2046x1160/132D40/fff.jpg">
+                        <source media="(max-width: 767px)" srcset="https://dummyimage.com/1534x750/132D40/fff.jpg">
                         <img src="images/promo_desktop.jpg" alt="" title="" loading="lazy">
                     </picture>
                     <figcaption class="promo-box__caption">
@@ -467,7 +467,7 @@
                 </figure>
                 <!-- end promo-box -->
             </div>
-          
+
             <!-- dialogs -->
             <!-- Country-select -->
             <div class="dialog">
@@ -487,7 +487,7 @@
                                 <span class="form__section-required" aria-hidden="true">*</span>
                                 Your Country
                             </label>
-                            <select class="input-select m-bordered" id="country" type="text">
+                            <select class="input-select" id="country" type="text">
                                 <option value="" selected="">Please select</option>
                                 <option value="1">Ukraine</option>
                                 <option value="2">Switzerland</option>
@@ -500,7 +500,7 @@
                                 <span class="form__section-required" aria-hidden="true">*</span>
                                 Language
                             </label>
-                            <select class="input-select m-bordered" id="language" type="text">
+                            <select class="input-select" id="language" type="text">
                                 <option value="" selected="">Please select</option>
                                 <option value="1">Ukrainian</option>
                                 <option value="2">Hindi</option>
@@ -518,7 +518,7 @@
             </div>
 
             <!-- Coockies -->
-            <div class="dialog m-opened m-dialog-full-width m-dialog-top m-dialog-closeless m-coockies">
+            <!-- <div class="dialog m-opened m-dialog-full-width m-dialog-top m-dialog-closeless m-coockies">
                 <div class="dialog__window" role="dialog" data-ref="" aria-modal="" aria-label="">
                     <button class="dialog__close" title="close">
                         <i class="icon-m-close"></i>
@@ -541,27 +541,38 @@
                         <button class="link-primary">Set preferences<i class="icon-s-divider-breadcrumbs m-margin-left filled"></i></button>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- end dialogs -->
 
-            <div class="l-wrapper">
+            <div class="l-wrapper" style="padding-top: 40px;">
+
+                <div class="titles-box">
+                    <div class="titles-box__title">Ultimate technology for your comfort</div>
+                    <div class="titles-box__subtitle">Any activity. Any weather</div>
+                </div>
+
                 <!-- Ultimate technology for your comfort -->
+
+                <!-- recommend: upload pics 767px x 767px (2x) for devices with 767px width and less -->
                 <figure class="promo-box-secondary">
                     <picture class="promo-box-secondary__picture">
-                        <source media="(min-width: 1024px)" srcset="images/promo-secondary_desktop.jpg"> <!-- 1920px - 700px -->
-                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="images/promo-secondary_tablet.jpg"> <!-- 1024px - 580px -->
-                        <source media="(max-width: 767px)" srcset="images/promo-secondary_mobile.jpg"> <!-- 768px - 375px -->
+                        <source media="(min-width: 1366px)" srcset="https://dummyimage.com/1970x1360/000/fff.jpg">
+                        <source media="(min-width: 1024px) and (max-width: 1365px)" srcset="https://dummyimage.com/1090x1090/000/fff.jpg">
+                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://dummyimage.com/1970x1360/000/fff.jpg">
+                        <source media="(max-width: 767px)" srcset="https://dummyimage.com/1090x1090/000/fff.jpg">
                         <img src="images/promo-secondary_desktop.jpg" alt="" title="" loading="lazy">
                     </picture>
                     <figcaption class="promo-box-secondary__caption promo-caption-secondary">
                         <div class="promo-caption-secondary__badge">
                             <img width="113" src="images/ispo-award.jpg" alt="">
                         </div>
-                        <h2 class="promo-caption-secondary__title">CERAMICOOL</h2>
-                        <p class="promo-caption-secondary__description">Ceramicool is unique because it is an active cooling technology, meaning it makes an impact as soon as you start being active.</p>
-                        <div class="promo-caption-secondary__actions">
-                            <a class="btn-main-outlined promo-caption-secondary__actions-item" href="">SHOP MEN</a>
-                            <a class="btn-main-outlined promo-caption-secondary__actions-item" href="">SHOP WOMEN</a>
+                        <div class="promo-box-secondary__group">
+                            <h2 class="promo-caption-secondary__title">CERAMICOOL</h2>
+                            <p class="promo-caption-secondary__description">Ceramicool is unique because it is an active cooling technology, meaning it makes an impact as soon as you start being active.</p>
+                            <div class="promo-caption-secondary__actions">
+                                <a class="btn-main-outlined promo-caption-secondary__actions-item" href="">SHOP MEN</a>
+                                <a class="btn-main-outlined promo-caption-secondary__actions-item" href="">SHOP WOMEN</a>
+                            </div>
                         </div>
                     </figcaption>
                 </figure>
@@ -593,6 +604,26 @@
                     </div>
                     <div class="grid__item">
                         <div style="background-color: gray; padding-bottom: 100%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="l-wrapper">
+                <div class="l-grid-1-1-2-2-2-3">
+                    <div class="grid__item">
+                        <div style="background-color: #403d5a; padding-bottom: 100%;"></div>
+                    </div>
+                    <div class="grid__item">
+                        <div style="background-color: #403d5a; padding-bottom: 100%;"></div>
+                    </div>
+                    <div class="grid__item">
+                        <div style="background-color: #403d5a; padding-bottom: 100%;"></div>
+                    </div>
+                    <div class="grid__item">
+                        <div style="background-color: #403d5a; padding-bottom: 100%;"></div>
+                    </div>
+                    <div class="grid__item">
+                        <div style="background-color: #403d5a; padding-bottom: 100%;"></div>
                     </div>
                 </div>
             </div>
@@ -705,7 +736,7 @@
             </div>
 
             <!-- swatches -->
-            <div style="padding: 50px;">
+            <div style="padding: 50px; display: none;">
                 <div style="display: flex; width: 300px; justify-content: space-between; margin-bottom: 20px;">
                     <div class="swatch m-large" style="background: #0086bf;"></div>
                     <div class="swatch m-large" style="background: #0086bf;"></div>
@@ -726,8 +757,40 @@
                 </div>
             </div>
 
+            <div class="l-wrapper">
+                <div style="padding: 50px;">
+                    <ul class="h-list-bullets">
+                        <li>First</li>
+                        <li>Second</li>
+                        <li>Third</li>
+                        <li>Fourth</li>
+                    </ul>
+
+                    <ul class="h-list-circles">
+                        <li>First</li>
+                        <li>Second</li>
+                        <li>Third</li>
+                        <li>Fourth</li>
+                    </ul>
+
+                    <ul class="h-list-numbers">
+                        <li>First</li>
+                        <li>Second</li>
+                        <li>Third</li>
+                        <li>Fourth</li>
+                    </ul>
+
+                    <ul class="h-list-lines">
+                        <li>First</li>
+                        <li>Second</li>
+                        <li>Third</li>
+                        <li>Fourth</li>
+                    </ul>
+                </div>
+            </div>
+
             <!-- headings -->
-            <div style="padding: 50px;">
+            <div style="padding: 50px; display: nones;">
                 <h1 class="h h1">Title H1</h1>
                 <h2 class="h h2">Title H2</h2>
                 <h3 class="h h3">Title H3</h3>
@@ -1100,7 +1163,7 @@
 
         </main>
 
-        <footer class="footer" style="display: none;">
+        <footer class="footer">
             <div class="footer__top">
                 <div class="l-wrapper m-full-width-sm-down">
                     <div class="l-footer__top">
@@ -1109,7 +1172,7 @@
                             <div class="footer-comunity">
                                 <div class="m-comunity-text">
                                     <p class="footer-comunity__text">Follow us</p>
-                                    <p class="footer-comunity__title">Join OUR COMMUNITY</p>
+                                    <h5 class="footer-comunity__title">Join OUR COMMUNITY</h5>
                                 </div>
 
                                 <div class="m-comunity-socials">
