@@ -1,23 +1,18 @@
 .promo-caption-secondary {
     &__badge {
-        width: 113.4px;
-        height: 59.2px;
-
         @include media(sm-down) {
             margin-bottom: 40px;
         }
 
         @include media(md) {
             margin-bottom: 0;
+            flex-basis: 25%;
+            flex-shrink: 0;
+            margin-right: $grid-column-gap-md;
         }
 
         @include media(lg-up) {
             margin-bottom: 20px;
-        }
-
-        img {
-            width: 100%;
-            object-fit: cover;
         }
     }
 
