@@ -15,17 +15,6 @@
     }
 
     &.m-gapped {
-        @include media(xs) {
-            padding-left: $wrapper-padding-xs;
-        }
-
-        @include media(sm) {
-            padding-left: $wrapper-padding-sm;
-        }
-
-        @include media(md) {
-            padding-left: $wrapper-padding-md;
-        }
 
         #{$root}__picture {
             @include media(lg-up) {
@@ -53,6 +42,16 @@
     }
 
     &__caption {
+        @include media(xs) {
+            padding-left: $wrapper-padding-xs;
+            padding-right: $wrapper-padding-xs;
+        }
+
+        @include media(sm) {
+            padding-left: $wrapper-padding-sm;
+            padding-right: $wrapper-padding-sm;
+        }
+
         @include media(md-down) {
             flex-grow: 1;
             display: flex;
@@ -63,6 +62,8 @@
         @include media(md) {
             flex-direction: row;
             justify-content: space-between;
+            padding-left: $wrapper-padding-md;
+            padding-right: $wrapper-padding-md;
         }
 
         @include media(lg-up) {
