@@ -1,8 +1,4 @@
 .l-messages {
     @include grid;
     grid-template-columns: 1fr;
-
-    &.m-grey {
-        background: color('grey-deep-light');
-    }
 }

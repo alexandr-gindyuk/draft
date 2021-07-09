@@ -1,0 +1,17 @@
+.pdp-top {
+    position: relative;
+
+    @include media(lg-up) {
+        display: flex;
+    }
+
+    &__image {
+        flex-basis: 60%;
+        flex-shrink: 0;
+    }
+
+    &__product-details {
+        flex-grow: 1;
+        padding-left: 80px;
+    }
+}

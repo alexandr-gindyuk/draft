@@ -133,7 +133,7 @@
         animation: dialog-appearance $motion-fast;
         background-color: color('white');
         border-radius: 2px;
-        box-shadow: 0 3px 15px rgb(color('black'), .3);
+        box-shadow: 0 3px 15px rgba(color('black'), .3);
         color: color('black');
         font-family: $font-dinot;
         font-size: 16px;

@@ -1,0 +1,17 @@
+.product-info {
+    &__item {
+        font-family: $font-dinot;
+        font-size: 16px;
+        color: color('black');
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        &-img {
+            margin-right: 20px;
+        }
+    }
+}
