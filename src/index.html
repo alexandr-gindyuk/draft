@@ -92,10 +92,21 @@
                         <div class="l-header__bottom">
                             <div class="l-header__menu-search m-menu-search">
                                 <div class="header__search-menu-group">
-                                    <label class="header__search-mobile">
-                                        <input type="search" class="search" placeholder="Search In Odlo"/>
-                                        <i class="icon-m-search"></i>
-                                    </label>
+
+
+                                    <!-- <div> -->
+                                        <label class="header__search-mobile">
+                                            <input type="search" class="search" placeholder="Search In Odlo"/>
+                                            <i class="icon-m-search"></i>
+                                        </label>
+
+                                        <!-- <button>Cancel</button>
+
+                                        <div>dropdown</div> -->
+                                    <!-- </div> -->
+
+
+
 
                                     <div class="header__menu menu">
                                         <nav class="menu__body">
@@ -442,12 +453,27 @@
 
         <main class="main">
 
-            <section class="l-wrapper" style="margin-bottom: 50px;">
+            <section class="l-wrapper m-full-width-md-down" style="margin-bottom: 50px;">
 
                 <!-- pdp-top -->
                 <section class="pdp-top">
-                    <div class="pdp-top__image">
-                        <img src="https://dummyimage.com/1360x1360/000/fff.jpg" alt="" title="" loading="lazy">
+                    <div class="pdp-top__product-view product-view">
+                        <img src="https://dummyimage.com/1360x1360/717272/fff.jpg" alt="" title="" loading="lazy">
+
+                        <div class="product-view__badges product-badges">
+                            <div class="badge m-sale">
+                                <span class="badge__text">-30%</span>
+                            </div>
+
+                            <div class="badge m-eco">
+                                <span class="badge__text">eco</span>
+                                <i class="icon-badges-eco"></i>
+                            </div>
+                        </div>
+
+                        <div class="product-view__icons product-icons">
+                            <i class="icon-m-heart"></i>
+                        </div>
                     </div>
                     <div class="pdp-top__product-details product-details">
                         <div class="product-details__share product-share">
@@ -564,20 +590,18 @@
                                         <span class="product-sizes__name">3xl</span>
                                     </label>
                                 </li>
-
-
                             </ul>
                         </div>
 
                         <div class="product-details__available product-available m-in-stock">
-                            <div class="in-stock">
+                            <div class="product-available__item in-stock ">
                                  <!-- TODO: change the icon -->
-                                <i class="icon-badges-eco"></i>&nbsp;
+                                <i class="icon-badges-eco"></i>
                                 <span>in stock</span>
                             </div>
 
-                            <div class="out-stock">
-                               <i class="icon-m-error"></i>&nbsp;
+                            <div class="product-available__item out-stock">
+                               <i class="icon-m-error"></i>
                                <span>out of stock</span>
                            </div>
                         </div>

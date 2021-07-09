@@ -24,6 +24,7 @@
         font-family: $font-dinot-medium;
         font-size: 15px;
         display: flex;
+        flex-wrap: wrap;
     }
 
     &__item  {
