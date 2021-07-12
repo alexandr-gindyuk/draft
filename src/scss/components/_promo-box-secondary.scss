@@ -23,6 +23,16 @@
         }
 
         #{$root}__caption {
+            @include media(xs) {
+                padding-left: $wrapper-padding-xs;
+                padding-right: $wrapper-padding-xs;
+            }
+
+            @include media(sm) {
+                padding-left: $wrapper-padding-sm;
+                padding-right: $wrapper-padding-sm;
+            }
+
             @include media(lg-up) {
                 padding: 0 0 0 120px;
             }
@@ -42,16 +52,6 @@
     }
 
     &__caption {
-        @include media(xs) {
-            padding-left: $wrapper-padding-xs;
-            padding-right: $wrapper-padding-xs;
-        }
-
-        @include media(sm) {
-            padding-left: $wrapper-padding-sm;
-            padding-right: $wrapper-padding-sm;
-        }
-
         @include media(md-down) {
             flex-grow: 1;
             display: flex;

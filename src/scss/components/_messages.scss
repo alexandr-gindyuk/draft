@@ -1,4 +1,5 @@
 .messages {
+    @include wrapper;
 
     $root: &;
 
@@ -23,5 +24,9 @@
         #{$root}__close {
             display: none;
         }
+    }
+
+    &.m-static-padding {
+        padding: 10px;
     }
 }
