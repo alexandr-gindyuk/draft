@@ -1,0 +1,13 @@
+.product-share {
+    display: flex;
+    align-items: center;
+    font-family: $font-dinot-medium;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: color('black');
+    cursor: pointer;
+
+    &__text {
+        margin-right: 10px;
+    }
+}

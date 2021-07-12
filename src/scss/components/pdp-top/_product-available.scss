@@ -1,0 +1,29 @@
+.product-available {
+    font-family: $font-dinot-medium;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+
+    // &.m-in-stock {
+    //     .in-stock {
+    //         display: flex;
+    //         align-items: center;
+    //     }
+    // }
+
+    // &.m-out-of-stock {
+    //     .out-stock {
+    //         display: flex;
+    //         align-items: center;
+    //     }
+    // }
+
+    // .in-stock,
+    // .out-stock {
+    //     display: none;
+    // }
+}

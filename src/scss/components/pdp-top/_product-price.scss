@@ -1,0 +1,25 @@
+.product-price {
+    display: flex;
+    font-family: $font-dinot-medium;
+    font-size: 20px;
+    text-transform: uppercase;
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+
+        &.m-usual {
+            color: color('black');
+        }
+
+        &.m-old {
+            color: color('grey-super-deep');
+            text-decoration: line-through;
+        }
+
+        &.m-new {
+            color: color('danger');
+        }
+    }
+}

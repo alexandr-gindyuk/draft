@@ -1,14 +1,15 @@
 .messages {
+    @include wrapper;
+
+    $root: &;
+
     font-family: $font-open-sans;
     font-size: 12px;
     font-weight: 600;
-
-    &__body {
-        position: relative;
-        width: 100%;
-        padding: 10px;
-        text-align: center;
-    }
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
 
     &__close {
         position: absolute;
@@ -19,13 +20,13 @@
         color: color('grey');
     }
 
-    &.m-dark {
-        background: color('black');
-        color: color('white');
+    &.m-closeless {
+        #{$root}__close {
+            display: none;
+        }
     }
 
-    &.m-grey {
-        background: color('grey-super-light');
-        color: color('grey-deep');
+    &.m-static-padding {
+        padding: 10px;
     }
 }

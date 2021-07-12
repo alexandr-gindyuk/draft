@@ -1,0 +1,12 @@
+.product-badges {
+    @include media(md-down) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .badge {
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+}
