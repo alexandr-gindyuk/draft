@@ -102,8 +102,6 @@
                                     <!-- </div> -->
 
 
-
-
                                     <div class="header__menu menu">
                                         <nav class="menu__body">
                                             <ul class="menu__list m-level-1 m-show-level-2"> <!-- m-show-level-1, m-show-level-2, m-show-level-3 -->
@@ -452,11 +450,11 @@
             <section class="l-wrapper m-full-width-md-down" style="margin-bottom: 50px;">
 
                 <!-- pdp-top -->
-                <section class="pdp-top">
-                    <div class="pdp-top__product-view product-view">
+                <section class="l-pdp__top">
+                    <div class="l-pdp__top-product-view product-view">
                         <img src="https://dummyimage.com/1360x1360/717272/fff.jpg" alt="" title="" loading="lazy">
 
-                        <div class="product-view__badges product-badges">
+                        <div class="product-view__badges badges">
                             <div class="badge m-sale">
                                 <span class="badge__text">-30%</span>
                             </div>
@@ -471,7 +469,7 @@
                             <i class="icon-m-heart"></i>
                         </div>
                     </div>
-                    <div class="pdp-top__product-details product-details">
+                    <div class="l-pdp__top-product-details product-details">
                         <div class="product-details__share product-share">
                             <span class="product-share__text">Share</span>
                             <!-- TODO: change the icon -->
@@ -744,6 +742,207 @@
                         </div>
 
                         <button class="link-primary">Set preferences<i class="icon-s-divider-breadcrumbs m-margin-left filled"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mini-cart -->
+            <div class="dialog m-opened m-dialog-under-header m-dialog-closeless m-mini-cart" >
+                <div class="dialog__window" role="dialog" data-ref="" aria-modal="" aria-label="">
+                    <div class="mini-cart">
+                        <div class="mini-cart__tiles">
+                            <div class="mini-cart__tile">
+
+                                <div class="mini-tile">
+                                    <button class="mini-tile__close">
+                                        <i class="icon-m-close"></i>
+                                    </button>
+                                    <div class="mini-tile__view">
+                                        <img src="https://dummyimage.com/120x120/717272/fff.jpg" alt="" title="" loading="lazy">
+                                        <div class="badges">
+                                            <div class="badge m-sale">
+                                                <span class="badge__text">%</span>
+                                            </div>
+
+                                            <div class="badge m-eco">
+                                                <span class="badge__text"></span>
+                                                <i class="icon-m-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mini-tile__description">
+                                        <h3 class="mini-tile__title">The Active Warm Originals ECO long sleeve</h3>
+
+                                        <ul class="mini-tile__info">
+                                            <li class="mini-tile__info-item">
+                                                <div class="mini-tile__info-name">
+                                                    <div class="info-item">Color:</div>
+                                                    <div class="info-item">Size:</div>
+                                                    <div class="info-item">Quantity:</div>
+                                                </div>
+                                                <div class="mini-tile__info-description">
+                                                    <div class="info-item">Grey</div>
+                                                    <div class="info-item">XS</div>
+                                                    <div class="info-item">10</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                        <div class="mini-tile__price">
+                                            <div class="product-price">
+                                                <span class="product-price__item m-new">
+                                                    <span>CHF</span>&nbsp;<span>76.00</span>
+                                                </span>
+                                                <span class="product-price__item m-old">
+                                                    <span>CHF</span>&nbsp;<span>76.00</span>
+                                                </span>
+                                            </div>
+                                            <p class="mini-tile__benefit">You save 30%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mini-cart__tile">
+
+                                <div class="mini-tile">
+                                    <button class="mini-tile__close">
+                                        <i class="icon-m-close"></i>
+                                    </button>
+                                    <div class="mini-tile__view">
+                                        <img src="https://dummyimage.com/120x120/717272/fff.jpg" alt="" title="" loading="lazy">
+                                        <div class="badges">
+                                            <div class="badge m-sale">
+                                                <span class="badge__text">%</span>
+                                            </div>
+
+                                            <div class="badge m-eco">
+                                                <span class="badge__text"></span>
+                                                <i class="icon-m-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mini-tile__description">
+                                        <h3 class="mini-tile__title">The Active Warm Originals ECO long sleeve</h3>
+
+                                        <ul class="mini-tile__info">
+                                            <li class="mini-tile__info-item">
+                                                <div class="mini-tile__info-name">
+                                                    <div class="info-item">Color:</div>
+                                                    <div class="info-item">Size:</div>
+                                                    <div class="info-item">Quantity:</div>
+                                                </div>
+                                                <div class="mini-tile__info-description">
+                                                    <div class="info-item">Grey</div>
+                                                    <div class="info-item">XS</div>
+                                                    <div class="info-item">10</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                        <div class="mini-tile__price">
+                                            <div class="product-price">
+                                                <span class="product-price__item m-usual">
+                                                    <span>CHF</span>&nbsp;<span>76.00</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mini-cart__tile">
+
+                                <div class="mini-tile">
+                                    <button class="mini-tile__close">
+                                        <i class="icon-m-close"></i>
+                                    </button>
+                                    <div class="mini-tile__view">
+                                        <img src="https://dummyimage.com/120x120/717272/fff.jpg" alt="" title="" loading="lazy">
+                                        <div class="badges">
+                                            <div class="badge m-sale">
+                                                <span class="badge__text">%</span>
+                                            </div>
+
+                                            <div class="badge m-eco">
+                                                <span class="badge__text"></span>
+                                                <i class="icon-m-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mini-tile__description">
+                                        <h3 class="mini-tile__title">The Active Warm Originals ECO long sleeve</h3>
+
+                                        <ul class="mini-tile__info">
+                                            <li class="mini-tile__info-item">
+                                                <div class="mini-tile__info-name">
+                                                    <div class="info-item">Color:</div>
+                                                    <div class="info-item">Size:</div>
+                                                    <div class="info-item">Quantity:</div>
+                                                </div>
+                                                <div class="mini-tile__info-description">
+                                                    <div class="info-item">Grey</div>
+                                                    <div class="info-item">XS</div>
+                                                    <div class="info-item">10</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                        <div class="mini-tile__price">
+                                            <div class="product-price">
+                                                <span class="product-price__item m-new">
+                                                    <span>CHF</span>&nbsp;<span>76.00</span>
+                                                </span>
+                                                <span class="product-price__item m-old">
+                                                    <span>CHF</span>&nbsp;<span>76.00</span>
+                                                </span>
+                                            </div>
+                                            <p class="mini-tile__benefit">You save 30%</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="mini-cart__order-summary">
+                            <div class="order-summary">
+                                <div class="order-summary__item order-summary__subtotal">
+                                    <p>Order Subtotal</p>
+                                    <div>
+                                        <span>$</span>
+                                        <span>249.00</span>
+                                    </div>
+                                </div>
+                                <div class="order-summary__item order-summary__delivery">
+                                    <p>UPS Delivery</p>
+                                    <div style="display: none;">
+                                        <span>$</span>
+                                        <span>249.00</span>
+                                    </div>
+                                    <p class="free">free</p>
+                                </div>
+                                <div class="order-summary__item order-summary__total">
+                                    <p>
+                                        Total
+                                        <span class=" order-summary__total-small">(VAT Included)</span>
+                                    </p>
+                                    <div>
+                                        <span>$</span>
+                                        <span>249.00</span>
+                                    </div>
+                                </div>
+
+                                <div class="order-summary__actions">
+                                    <a href="#" class="product-actions__item btn-main-filled">Go to checkout</a>
+                                    <a href="#" class="product-actions__item btn-main-outlined">Go to bag</a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

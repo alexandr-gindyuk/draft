@@ -1,7 +1,4 @@
 .dialog {
-    // TODO: delete this style
-    display: none !important;
-    // end todo
 
     $root: &;
 
@@ -52,9 +49,17 @@
         padding-top: 0;
     }
 
+    &.m-dialog-under-header {
+        bottom: inherit;
+        margin-top: var(--header-top-height);
+        padding-bottom: 0;
+
+        &::before {
+            top: var(--header-top-height);
+        }
+    }
 
     &.m-dialog-full-width {
-
         #{$root}__window {
             @include wrapper;
             width: 100%;
@@ -126,6 +131,22 @@
 
         [class*="icon-"] {
             transform: rotate(90deg);
+        }
+    }
+
+    &.m-mini-cart {
+        left: initial;
+        right: 0;
+        height: calc(100vh - var(--header-top-height));
+
+        // TODO: better show/hide it with a help of "if-else" in isml
+         @include media(md-down) {
+            display: none;
+        }
+
+        #{$root}__window {
+            padding: 0;
+            width: auto;
         }
     }
 
