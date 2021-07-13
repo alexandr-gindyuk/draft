@@ -51,7 +51,7 @@
 
     &.m-dialog-under-header {
         bottom: inherit;
-        margin-top: var(--header-top-height);
+        top: var(--header-top-height);
         padding-bottom: 0;
 
         &::before {
@@ -138,7 +138,6 @@
         left: initial;
         right: 0;
         padding: 0;
-        height: calc(100vh - var(--header-top-height));
 
         // TODO: better show/hide it with a help of "if-else" in isml
          @include media(md-down) {
@@ -148,6 +147,7 @@
         #{$root}__window {
             padding: 0;
             width: auto;
+            height: calc(var(--viewport-height,100vh) - 122px);
         }
     }
 

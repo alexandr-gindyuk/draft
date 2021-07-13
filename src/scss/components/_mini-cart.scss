@@ -1,8 +1,12 @@
 .mini-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
     @include media (lg-up) {
         right: 0;
         padding-top: 15px;
-        padding-bottom: 30px;
         background: color('white');
 
         @include media(lg) {
@@ -18,36 +22,43 @@
         }
     }
 
-    &__tiles {
-       @include scroll();
+    &__top {
+        @include scroll();
 
+        flex-grow: 1;
+        overflow: auto;
         margin-right: 10px; //for a gap between the scroll-line and the right edge of a window
+    }
+
+    &__bottom {
+
+    }
+
+    &__tiles {
         padding-top: 15px;
         padding-left: 50px;
-        max-height: 462px;
-        overflow: auto;
     }
 
     &__tile {
         margin-bottom: 30px;
 
         @include media(lg) {
-            padding-right: calc(#{$wrapper-padding-lg} - 10px); margin-right: 10px; // 10px for a gap between the scroll-line and the right edge of a window
+            padding-right: calc(#{$wrapper-padding-lg} - 20px);  // 20px for a gap between the scroll-line and the right edge of a window
         }
 
         @include media(xl) {
-            padding-right: calc(#{$wrapper-padding-xl} - 10px);
+            padding-right: calc(#{$wrapper-padding-xl} - 20px);
         }
 
         @include media(xxl) {
-            padding-right: calc(#{$wrapper-padding-xxl} - 10px);
+            padding-right: calc(#{$wrapper-padding-xxl} - 20px);
         }
     }
 
     &__order-summary {
         border-top: 1px solid color('grey-deep-light');
-        padding-top: 30px;
-        padding-left: 50px;
+        padding: 30px 0 30px 50px;
+        margin-top: auto;
 
         @include media(lg) {
             padding-right: $wrapper-padding-lg;
