@@ -16,6 +16,20 @@
         }
     }
 
+    // TODO: When start developing - copy the code from pdp-top...
+
+    &__colors {
+        &-list {
+            display: flex;
+        }
+
+        &-item {
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    }
+
     .m-feature & {
         &__image {
             padding-bottom: 0;

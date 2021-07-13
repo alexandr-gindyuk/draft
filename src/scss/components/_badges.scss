@@ -1,3 +1,14 @@
+.badges {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    @include media(md-down) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .badge {
     font-family: $font-dinot-medium;
     font-size: 12px;
@@ -10,6 +21,10 @@
 
     &:not(:last-child) {
         margin-right: 5px;
+
+        @include media(md-down) {
+            margin-bottom: 5px;
+        }
     }
 
     &.m-eco {

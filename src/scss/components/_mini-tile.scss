@@ -1,0 +1,105 @@
+.mini-tile {
+    display: flex;
+    position: relative;
+
+    &__view {
+        position: relative;
+        flex-basis: 120px;
+        flex-shrink: 0;
+        height: 120px;
+        border: 1px solid color('grey-deep-light');
+    }
+
+    &__description {
+        font-size: 14px;
+        padding-left: 20px;
+        padding-right: 40px;
+    }
+
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 20px;
+        color: color('grey-super-deep');
+        cursor: pointer;
+    }
+
+    &__title {
+        font-family: $font-dinot-medium;
+        line-height: 1.43;
+        color: color('black');
+        margin-bottom: 15px;
+    }
+
+    &__info {
+        font-family: $font-dinot;
+        margin-bottom: 15px;
+    }
+
+    &__info-item {
+        display: flex;
+        line-height: 1.43;
+    }
+
+    &__info-name {
+        color: color('grey-super-deep');
+        margin-right: 10px;
+    }
+
+    &__info-description {
+
+    }
+
+    &__price {
+        .product-price {
+            font-size: 14px;
+
+            &__item {
+                &:not(:last-child) {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+    &__benefit {
+        color: color('danger');
+        font-family: $font-dinot-medium;
+        font-size: 12px;
+        line-height: 1.67;
+        text-transform: uppercase;
+    }
+
+    .info-name {
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+
+    .badges {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 15px;
+    }
+
+    .badge {
+        display: flex;
+        justify-content: center;
+        min-width: 25px;
+        height: 25px;
+        padding: 5px;
+        margin-right: 0;
+
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+
+        [class*=icon-] {
+            margin-left: 0;
+            font-weight: normal;
+            font-size: 15px;
+        }
+    }
+}

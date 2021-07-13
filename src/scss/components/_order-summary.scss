@@ -1,0 +1,54 @@
+.order-summary {
+    &__item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__subtotal {
+        font-family: $font-dinot-medium;
+        font-size: 16px;
+        line-height: 1.25;
+        margin-bottom: 15px;
+    }
+
+    &__delivery {
+        font-family: $font-dinot;
+        font-size: 14px;
+        line-height: 1.43;
+        margin-bottom: 15px;
+    }
+
+    &__total {
+        font-family: $font-dinot-medium;
+        font-size: 20px;
+        line-height: 1.25;
+
+        &-small {
+            font-family: $font-dinot;
+            font-size: 12px;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        margin-top: 30px;
+
+        [class*=btn-main] {
+            flex-grow: 1;
+
+            &:first-child {
+                margin-right: 20px;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .free {
+        font-family: $font-dinot-medium;
+        text-transform: uppercase;
+        color: color('success');
+    }
+}

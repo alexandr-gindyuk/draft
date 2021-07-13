@@ -1,0 +1,64 @@
+.mini-cart {
+    @include media (lg-up) {
+        right: 0;
+        padding-top: 15px;
+        padding-bottom: 30px;
+        background: color('white');
+
+        @include media(lg) {
+            width: calc(430px + #{$wrapper-padding-lg});
+        }
+
+        @include media(xl) {
+            width: calc(430px + #{$wrapper-padding-xl});
+        }
+
+        @include media(xxl) {
+            width: calc(430px + #{$wrapper-padding-xxl});
+        }
+    }
+
+    &__tiles {
+       @include scroll();
+
+        margin-right: 10px; //for a gap between the scroll-line and the right edge of a window
+        padding-top: 15px;
+        padding-left: 50px;
+        max-height: 462px;
+        overflow: auto;
+    }
+
+    &__tile {
+        margin-bottom: 30px;
+
+        @include media(lg) {
+            padding-right: calc(#{$wrapper-padding-lg} - 10px); margin-right: 10px; // 10px for a gap between the scroll-line and the right edge of a window
+        }
+
+        @include media(xl) {
+            padding-right: calc(#{$wrapper-padding-xl} - 10px);
+        }
+
+        @include media(xxl) {
+            padding-right: calc(#{$wrapper-padding-xxl} - 10px);
+        }
+    }
+
+    &__order-summary {
+        border-top: 1px solid color('grey-deep-light');
+        padding-top: 30px;
+        padding-left: 50px;
+
+        @include media(lg) {
+            padding-right: $wrapper-padding-lg;
+        }
+
+        @include media(xl) {
+            padding-right: $wrapper-padding-xl;
+        }
+
+        @include media(xxl) {
+            padding-right: $wrapper-padding-xxl;
+        }
+    }
+}

@@ -2,6 +2,7 @@
 @import 'header/all';
 @import 'footer/all';
 @import 'product-tile';
+@import 'product-price';
 @import 'socials';
 @import 'subscribe';
 @import 'filter';
@@ -13,5 +14,8 @@
 @import 'promo-caption-secondary';
 @import 'titles-box';
 @import 'dialog';
-@import 'pdp-top/all';
-@import 'badge';
+@import 'pdp/all';
+@import 'badges';
+@import 'mini-cart';
+@import 'mini-tile';
+@import 'order-summary';
