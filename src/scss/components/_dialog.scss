@@ -137,6 +137,7 @@
     &.m-mini-cart {
         left: initial;
         right: 0;
+        padding: 0;
         height: calc(100vh - var(--header-top-height));
 
         // TODO: better show/hide it with a help of "if-else" in isml
