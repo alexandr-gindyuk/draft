@@ -154,11 +154,19 @@
     }
 
     &.m-search-suggestion {
+        @include media(md-down) {
+            top: var(--header-top-height);
+        }
+
+        &::before {
+            @include media(md-down) {
+                top: var(--header-top-height);
+            }
+        }
+
         #{$root}__window {
-            margin-bottom: 44px;
-            height: calc(var(--viewport-height,100vh) - 44px); //44px: gap between the bottom edge of a window and bottom of the dialog window
+            max-height: 100vh;
             padding: 0;
-            max-height: 100%;
         }
     }
 
