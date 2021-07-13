@@ -6,6 +6,8 @@
     @include media(lg-up) {
         --header-top-height: 125px;
     }
+
+    // var(--header-top-height);
 }
 
 $padding-sticky-header: 20px;

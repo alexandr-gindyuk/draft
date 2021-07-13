@@ -747,12 +747,12 @@
             </div>
 
             <!-- Mini-cart -->
-            <div class="dialog m-opened m-dialog-under-header m-dialog-closeless m-mini-cart" >
+            <div class="dialog m-opened m-dialog-under-header m-dialog-closeless m-mini-cart" style="display:none;">
                 <div class="dialog__window" role="dialog" data-ref="" aria-modal="" aria-label="">
                     <div class="mini-cart">
 
                         <div class="mini-cart__top">
-                            <div class="mini-cart__tiles">
+                            <div class="mini-cart__tiles mini-tiles m-without-name">
                                 <div class="mini-cart__tile">
 
                                     <div class="mini-tile">
@@ -775,6 +775,8 @@
 
                                         <div class="mini-tile__description">
                                             <h3 class="mini-tile__title">The Active Warm Originals ECO long sleeve</h3>
+
+                                            <p class="mini-tile__name">The Blackcomb ECO long sleeve</p>
 
                                             <ul class="mini-tile__info">
                                                 <li class="mini-tile__info-item">
@@ -829,6 +831,8 @@
                                         <div class="mini-tile__description">
                                             <h3 class="mini-tile__title">The Active Warm Originals ECO long sleeve</h3>
 
+                                            <p class="mini-tile__name">The Blackcomb ECO long sleeve</p>
+
                                             <ul class="mini-tile__info">
                                                 <li class="mini-tile__info-item">
                                                     <div class="mini-tile__info-name">
@@ -877,6 +881,8 @@
 
                                         <div class="mini-tile__description">
                                             <h3 class="mini-tile__title">The Active Warm Originals ECO long sleeve</h3>
+
+                                            <p class="mini-tile__name">The Blackcomb ECO long sleeve</p>
 
                                             <ul class="mini-tile__info">
                                                 <li class="mini-tile__info-item">
@@ -948,6 +954,277 @@
                             </div>
                         </div>
 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search-suggestion -->
+            <div class="dialog m-opened m-dialog-full-width m-dialog-top m-dialog-closeless m-search-suggestion">
+                <div class="dialog__window" role="dialog" data-ref="" aria-modal="" aria-label="">
+                    <div class="l-wrapper">
+                        <div class="search-suggestion">
+
+                            <div class="search-suggestion__top">
+                                <div class="search-suggestion__form">
+                                    <div class="form__section">
+                                        <i class="icon-m-search"></i>
+                                        <i class="icon-m-close"></i>
+                                        <input class="input-main" id="firstname" type="search" placeholder="Search">
+                                    </div>
+                                    <button class="search-suggestion__cancel">Cancel</button>
+                                </div>
+                            </div>
+
+                            <div class="search-suggestion__bottom">
+
+                                <!-- <div class="search-suggestion__quick-links suggestion-links">
+                                    <h5 class="suggestion-links__title">Quick links</h5>
+
+                                    <ul class="suggestion-links__list">
+                                        <li class="suggestion-links__item">
+                                            <a class="suggestion-links__link" href="#">Privacy policy</a>
+                                        </li>
+                                        <li class="suggestion-links__item">
+                                            <a class="suggestion-links__link" href="#">Men</a>
+                                        </li>
+                                        <li class="suggestion-links__item">
+                                            <a class="suggestion-links__link" href="#">Women</a>
+                                        </li>
+                                    </ul>
+                                </div> -->
+
+                                <div class="search-suggestion__suggestion suggestion-product-search">
+                                    <div class="suggestion-product-search__product">
+                                        <div class="suggestion-product-search__product-tiles mini-tiles m-closeless m-without-info m-without-benefit">
+                                            <div class="suggestion-product-search__product-tile">
+                                                <div class="mini-tile">
+                                                    <button class="mini-tile__close">
+                                                        <i class="icon-m-close"></i>
+                                                    </button>
+                                                    <div class="mini-tile__view">
+                                                        <img src="https://dummyimage.com/120x120/717272/fff.jpg" alt="" title="" loading="lazy">
+                                                        <div class="badges">
+                                                            <div class="badge m-sale">
+                                                                <span class="badge__text">%</span>
+                                                            </div>
+
+                                                            <div class="badge m-eco">
+                                                                <span class="badge__text"></span>
+                                                                <i class="icon-m-heart"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mini-tile__description">
+                                                        <h3 class="mini-tile__title">The Active Warm Originals ECO long sleeve</h3>
+
+                                                        <p class="mini-tile__name">The Blackcomb ECO long sleeve</p>
+
+                                                        <ul class="mini-tile__info">
+                                                            <li class="mini-tile__info-item">
+                                                                <div class="mini-tile__info-name">
+                                                                    <div class="info-item">Color:</div>
+                                                                    <div class="info-item">Size:</div>
+                                                                    <div class="info-item">Quantity:</div>
+                                                                </div>
+                                                                <div class="mini-tile__info-description">
+                                                                    <div class="info-item">Grey</div>
+                                                                    <div class="info-item">XS</div>
+                                                                    <div class="info-item">10</div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+
+                                                        <div class="mini-tile__price">
+                                                            <div class="product-price">
+                                                                <span class="product-price__item m-new">
+                                                                    <span>CHF</span>&nbsp;<span>76.00</span>
+                                                                </span>
+                                                                <span class="product-price__item m-old">
+                                                                    <span>CHF</span>&nbsp;<span>76.00</span>
+                                                                </span>
+                                                            </div>
+                                                            <p class="mini-tile__benefit">You save 30%</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="suggestion-product-search__product-tile">
+                                                <div class="mini-tile">
+                                                    <button class="mini-tile__close">
+                                                        <i class="icon-m-close"></i>
+                                                    </button>
+                                                    <div class="mini-tile__view">
+                                                        <img src="https://dummyimage.com/120x120/717272/fff.jpg" alt="" title="" loading="lazy">
+                                                        <div class="badges">
+                                                            <div class="badge m-sale">
+                                                                <span class="badge__text">%</span>
+                                                            </div>
+
+                                                            <div class="badge m-eco">
+                                                                <span class="badge__text"></span>
+                                                                <i class="icon-m-heart"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mini-tile__description">
+                                                        <h3 class="mini-tile__title">The Active Warm Originals ECO long sleeve</h3>
+
+                                                        <p class="mini-tile__name">The Blackcomb ECO long sleeve</p>
+
+                                                        <ul class="mini-tile__info">
+                                                            <li class="mini-tile__info-item">
+                                                                <div class="mini-tile__info-name">
+                                                                    <div class="info-item">Color:</div>
+                                                                    <div class="info-item">Size:</div>
+                                                                    <div class="info-item">Quantity:</div>
+                                                                </div>
+                                                                <div class="mini-tile__info-description">
+                                                                    <div class="info-item">Grey</div>
+                                                                    <div class="info-item">XS</div>
+                                                                    <div class="info-item">10</div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+
+                                                        <div class="mini-tile__price">
+                                                            <div class="product-price">
+                                                                <span class="product-price__item m-new">
+                                                                    <span>CHF</span>&nbsp;<span>76.00</span>
+                                                                </span>
+                                                                <span class="product-price__item m-old">
+                                                                    <span>CHF</span>&nbsp;<span>76.00</span>
+                                                                </span>
+                                                            </div>
+                                                            <p class="mini-tile__benefit">You save 30%</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="suggestion-product-search__product-tile">
+                                                <div class="mini-tile">
+                                                    <button class="mini-tile__close">
+                                                        <i class="icon-m-close"></i>
+                                                    </button>
+                                                    <div class="mini-tile__view">
+                                                        <img src="https://dummyimage.com/120x120/717272/fff.jpg" alt="" title="" loading="lazy">
+                                                        <div class="badges">
+                                                            <div class="badge m-sale">
+                                                                <span class="badge__text">%</span>
+                                                            </div>
+
+                                                            <div class="badge m-eco">
+                                                                <span class="badge__text"></span>
+                                                                <i class="icon-m-heart"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mini-tile__description">
+                                                        <h3 class="mini-tile__title">The Active Warm Originals ECO long sleeve</h3>
+
+                                                        <p class="mini-tile__name">The Blackcomb ECO long sleeve</p>
+
+                                                        <ul class="mini-tile__info">
+                                                            <li class="mini-tile__info-item">
+                                                                <div class="mini-tile__info-name">
+                                                                    <div class="info-item">Color:</div>
+                                                                    <div class="info-item">Size:</div>
+                                                                    <div class="info-item">Quantity:</div>
+                                                                </div>
+                                                                <div class="mini-tile__info-description">
+                                                                    <div class="info-item">Grey</div>
+                                                                    <div class="info-item">XS</div>
+                                                                    <div class="info-item">10</div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+
+                                                        <div class="mini-tile__price">
+                                                            <div class="product-price">
+                                                                <span class="product-price__item m-new">
+                                                                    <span>CHF</span>&nbsp;<span>76.00</span>
+                                                                </span>
+                                                                <span class="product-price__item m-old">
+                                                                    <span>CHF</span>&nbsp;<span>76.00</span>
+                                                                </span>
+                                                            </div>
+                                                            <p class="mini-tile__benefit">You save 30%</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button type="button" class="btn-main-filled">View all results</button>
+                                    </div>
+
+                                    <div class="suggestion-product-search__category">
+                                        <div class="suggestion-product-search__category-item suggestion-links">
+                                            <h5 class="suggestion-links__title">Category suggestions</h5>
+
+                                            <ul class="suggestion-links__list">
+                                                <li class="suggestion-links__item">
+                                                    <a class="suggestion-links__link" href="#">
+                                                        T-shirts, Shirts & Polos
+                                                    </a>
+                                                    <span>in Women</span>
+                                                </li>
+
+                                                <li class="suggestion-links__item">
+                                                    <a class="suggestion-links__link" href="#">
+                                                        T-shirts, Shirts & Polos
+                                                    </a>
+                                                    <span>in Men</span>
+                                                </li>
+
+                                                <li class="suggestion-links__item">
+                                                    <a class="suggestion-links__link" href="#">
+                                                        T-shirts, Shirts & Polos
+                                                    </a>
+                                                    <span>in <span>Sale %</span></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="suggestion__category-item suggestion-links">
+                                            <h5 class="suggestion-links__title">Odlo stories</h5>
+
+                                            <ul class="suggestion-links__list">
+                                                <li class="suggestion-links__item">
+                                                    <a class="suggestion-links__link" href="#">
+                                                        Swiss voters reject key climate protection initiative
+                                                    </a>
+                                                </li>
+                                                <li class="suggestion-links__item">
+                                                    <a class="suggestion-links__link" href="#">
+                                                        Sustainable Sports Underwear - We care for our Planet
+                                                    </a>
+                                                </li>
+                                                <li class="suggestion-links__item">
+                                                    <a class="suggestion-links__link" href="#">
+                                                        Staying Race Ready
+                                                    </a>
+                                                </li>
+                                                <li class="suggestion-links__item">
+                                                    <a class="suggestion-links__link" href="#">
+                                                        Swiss voters reject key climate protection initiative
+                                                    </a>
+                                                </li>
+                                                <li class="suggestion-links__item">
+                                                    <a class="suggestion-links__link" href="#">
+                                                        Sustainable Sports Underwear - We care for our Planet
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
