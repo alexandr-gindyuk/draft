@@ -20,10 +20,20 @@
         @include media(sm-down) {
            margin-bottom: 30px;
         }
+
+        @include media(md-up) {
+            grid-column: 1 / span 2;
+        }
     }
 
     &__name {
+        @include media(lg-up) {
+            grid-column: 3 / span 7;
+        }
 
+        @include media(md) {
+            grid-column: 3 / span 10;
+        }
     }
 
     &__title {
@@ -51,38 +61,20 @@
             margin-top: 30px;
         }
 
+        @include media(md) {
+            grid-column: 3 / span 10;
+        }
+
         @include media(lg-up) {
             display: flex;
             justify-content: flex-end;
             align-items: flex-end;
+
+            grid-column: 10 / span 3;
         }
 
         [class*='link'] {
             font-family: $font-dinot-bold;
-        }
-    }
-
-    .m-quote-sign {
-        grid-column: 1 / span 2;
-    }
-
-    .m-quote-name {
-        @include media(lg-up) {
-            grid-column: 3 / span 7;
-        }
-
-        @include media(md) {
-            grid-column: 3 / span 10;
-        }
-    }
-
-    .m-quote-action {
-        @include media(lg-up) {
-            grid-column: 10 / span 3;
-        }
-
-        @include media(md) {
-            grid-column: 3 / span 10;
         }
     }
 }
