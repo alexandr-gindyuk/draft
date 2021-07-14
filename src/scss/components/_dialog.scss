@@ -165,8 +165,15 @@
         }
 
         #{$root}__window {
-            max-height: 100vh;
             padding: 0;
+
+            @include media(lg-up) {
+                max-height: 100vh;
+            }
+
+            @include media(md-down) {
+                max-height: calc(100vh - var(--header-top-height));
+            }
         }
     }
 

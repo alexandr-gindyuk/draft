@@ -1,7 +1,5 @@
 .suggestion-product-search {
     &__product {
-
-
         @include media(lg-up) {
             flex-basis: 72%;
             flex-shrink: 0;
@@ -24,6 +22,7 @@
         @include media(lg-up) {
             display: flex;
             flex-wrap: wrap;
+            margin-bottom: 20px;
         }
     }
 
@@ -55,15 +54,50 @@
 
     &__category {
         @include media(lg-up) {
+            position: relative;
             flex-grow: 1;
-            padding: 30px 0 40px 30px;
             border-left: 1px solid color('grey-deep-light');
+        }
+    }
+
+    &__category-inner {
+        @include media(lg-up) {
+            @include scroll();
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 30px 0 40px 30px;
+
+            overflow-y: auto;
+            max-height: 100%;
+        }
+
+        @include media(lg) {
+            width: calc(100% + #{$wrapper-padding-lg} - 10px); //10px - the gap betweenthe an edge of a screen and the scrollbar
+            padding-right: $wrapper-padding-lg;
+        }
+
+        @include media(xl) {
+            width: calc(100% + #{$wrapper-padding-xl} - 10px );
+            padding-right: $wrapper-padding-xl;
+        }
+
+        @include media(xxl) {
+            width: calc(100% + #{$wrapper-padding-xxl} - 10px);
+            padding-right: $wrapper-padding-xxl;
         }
     }
 
     &__category-item {
         &:not(:last-child) {
-            margin-bottom: 60px;
+            @include media(lg-up) {
+                margin-bottom: 60px;
+            }
+        }
+
+        @include media(md-down) {
+           padding-bottom: 40px;
         }
     }
 }

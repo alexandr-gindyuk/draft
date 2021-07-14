@@ -8,18 +8,18 @@
         right: 0;
         padding-top: 15px;
         background: color('white');
+    }
 
-        @include media(lg) {
-            width: calc(430px + #{$wrapper-padding-lg});
-        }
+    @include media(lg) {
+        width: calc(430px + #{$wrapper-padding-lg});
+    }
 
-        @include media(xl) {
-            width: calc(430px + #{$wrapper-padding-xl});
-        }
+    @include media(xl) {
+        width: calc(430px + #{$wrapper-padding-xl});
+    }
 
-        @include media(xxl) {
-            width: calc(430px + #{$wrapper-padding-xxl});
-        }
+    @include media(xxl) {
+        width: calc(430px + #{$wrapper-padding-xxl});
     }
 
     &__top {
