@@ -1,4 +1,35 @@
+.mini-tiles {
+    &.m-closeless {
+        .mini-tile__close {
+            display: none;
+        }
+
+        .mini-tile__description {
+            padding-right: 0;
+        }
+    }
+
+    &.m-without-info {
+        .mini-tile__info {
+            display: none;
+        }
+    }
+
+    &.m-without-name {
+        .mini-tile__name {
+            display: none;
+        }
+    }
+
+    &.m-without-benefit {
+        .mini-tile__benefit {
+            display: none;
+        }
+    }
+}
+
 .mini-tile {
+
     display: flex;
     position: relative;
 
@@ -30,6 +61,10 @@
         line-height: 1.43;
         color: color('black');
         margin-bottom: 15px;
+    }
+
+    &__name {
+        margin-bottom: 10px;
     }
 
     &__info {

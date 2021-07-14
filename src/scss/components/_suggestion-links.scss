@@ -1,0 +1,25 @@
+.suggestion-links {
+    &__title {
+        font-family: $font-dinot-medium;
+        font-size: 20px;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+    }
+
+    &__list {
+
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__link {
+        font-size: 16px;
+        line-height: 1.25;
+        text-decoration: underline;
+        text-transform: capitalize;
+    }
+}

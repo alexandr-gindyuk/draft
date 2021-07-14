@@ -148,6 +148,32 @@
             padding: 0;
             width: auto;
             height: calc(var(--viewport-height,100vh) - 122px);
+
+            // height: calc(var(--viewport-height,100vh) - var(--header-top-height));
+        }
+    }
+
+    &.m-search-suggestion {
+        @include media(md-down) {
+            top: var(--header-top-height);
+        }
+
+        &::before {
+            @include media(md-down) {
+                top: var(--header-top-height);
+            }
+        }
+
+        #{$root}__window {
+            padding: 0;
+
+            @include media(lg-up) {
+                max-height: 100vh;
+            }
+
+            @include media(md-down) {
+                max-height: calc(100vh - var(--header-top-height));
+            }
         }
     }
 

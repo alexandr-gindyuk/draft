@@ -1,0 +1,103 @@
+.suggestion-product-search {
+    &__product {
+        @include media(lg-up) {
+            flex-basis: 72%;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        padding: 30px 0 40px;
+
+        [class*=btn-main] {
+            @include media(lg-up) {
+                width: 45%;
+            }
+        }
+    }
+
+    &__product-tiles {
+        @include media(lg-up) {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__product-tile {
+        margin-bottom: 20px;
+
+        @include media(lg-up) {
+            width: 50%;
+            padding-right: 20px;
+        }
+
+        &:last-child {
+            @include media(md-down) {
+                margin-bottom: 30px;
+            }
+        }
+
+
+
+        .mini-tile {
+            font-size: 16px;
+            line-height: 1.25;
+
+            &__title {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__category {
+        @include media(lg-up) {
+            position: relative;
+            flex-grow: 1;
+            border-left: 1px solid color('grey-deep-light');
+        }
+    }
+
+    &__category-inner {
+        @include media(lg-up) {
+            @include scroll();
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 30px 0 40px 30px;
+
+            overflow-y: auto;
+            max-height: 100%;
+        }
+
+        @include media(lg) {
+            width: calc(100% + #{$wrapper-padding-lg} - 10px); //10px - the gap betweenthe an edge of a screen and the scrollbar
+            padding-right: $wrapper-padding-lg;
+        }
+
+        @include media(xl) {
+            width: calc(100% + #{$wrapper-padding-xl} - 10px );
+            padding-right: $wrapper-padding-xl;
+        }
+
+        @include media(xxl) {
+            width: calc(100% + #{$wrapper-padding-xxl} - 10px);
+            padding-right: $wrapper-padding-xxl;
+        }
+    }
+
+    &__category-item {
+        &:not(:last-child) {
+            @include media(lg-up) {
+                margin-bottom: 60px;
+            }
+        }
+
+        @include media(md-down) {
+           padding-bottom: 40px;
+        }
+    }
+}
