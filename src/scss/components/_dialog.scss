@@ -147,9 +147,9 @@
         #{$root}__window {
             padding: 0;
             width: auto;
-            height: calc(var(--viewport-height,100vh) - 122px);
+            // height: calc(var(--viewport-height,100vh) - 122px);
 
-            // height: calc(var(--viewport-height,100vh) - var(--header-top-height));
+            height: calc(100vh - var(--header-top-height));
         }
     }
 
