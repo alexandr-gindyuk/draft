@@ -321,6 +321,7 @@
         z-index: 3;
 
         @include media(md-down) {
+
             width: 100%;
             position: absolute;
             overflow-x: auto;
@@ -328,8 +329,7 @@
             left: 0;
             height: 100%;
 
-            scrollbar-color: #d4aa70 #e4e4e4;
-            scrollbar-width: thin;
+            //didnt include here scroll-horizontal mixin because it has different styles
 
             &::-webkit-scrollbar {
                 height: 4px;
