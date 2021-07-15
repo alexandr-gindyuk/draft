@@ -1,0 +1,61 @@
+.temp-view-subcategories {
+    overflow: hidden;
+
+    &__list {
+        @include scroll-horizontal();
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 30px;
+        overflow-x: auto;
+    }
+
+    &__item {
+        @include media(sm-down) {
+            width: 285px;
+        }
+
+        @include media(md) {
+            width: 310px;
+        }
+
+        @include media(lg) {
+            width: 273px;
+        }
+
+        @include media(xl) {
+            width: 380px;
+        }
+
+        @include media(xxl) {
+            width: 405px;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            @include media(xs) {
+                margin-right: $grid-column-gap-xs;
+            }
+
+            @include media(sm) {
+                margin-right: $grid-column-gap-sm;
+            }
+
+            @include media(md) {
+                margin-right: $grid-column-gap-md;
+            }
+
+            @include media(lg) {
+                margin-right: $grid-column-gap-lg;
+            }
+
+            @include media(xl) {
+                margin-right: $grid-column-gap-xl;
+            }
+
+            @include media(xxl) {
+                margin-right: $grid-column-gap-xxl;
+            }
+        }
+    }
+}
