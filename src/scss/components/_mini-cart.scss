@@ -72,4 +72,9 @@
             padding-right: $wrapper-padding-xxl;
         }
     }
+    .badge {
+        &__text {
+            display: none;
+        }
+    }
 }

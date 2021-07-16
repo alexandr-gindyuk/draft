@@ -13,6 +13,7 @@
     font-family: $font-dinot-medium;
     font-size: 12px;
     display: inline-flex;
+    min-width: 25px;
     padding: 5px 10px;
     align-items: center;
     text-transform: uppercase;
@@ -20,10 +21,24 @@
     color: color('white');
 
     &:not(:last-child) {
-        margin-right: 5px;
+        @include media(lg-up) {
+            margin-right: 5px;
+        }
 
         @include media(md-down) {
             margin-bottom: 5px;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+    }
+
+    &__text {
+        @include media(md-down) {
+            display: none;
         }
     }
 
@@ -33,9 +48,5 @@
 
     &.m-sale {
         background: color('black');
-    }
-
-    [class*=icon-] {
-        margin-left: 5px;
     }
 }
