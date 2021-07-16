@@ -1,0 +1,23 @@
+.l-join-socials {
+    @include grid;
+
+    grid-template-columns: repeat(12, 1fr);
+
+    &__item {
+        @include media(md-down) {
+            grid-column: 1/ span 12;
+        }
+
+        @include media(lg) {
+            grid-column: 5/ span 8;
+        }
+
+        @include media(xl) {
+            grid-column: 5/ span 7;
+        }
+
+        @include media(xxl) {
+            grid-column: 7/ span 5;
+        }
+    }
+}
