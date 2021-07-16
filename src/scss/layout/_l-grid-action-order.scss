@@ -1,0 +1,42 @@
+.l-grid-action-order {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    @include media(sm-down) {
+        grid-template-rows: repeat(3, auto);
+    }
+
+    @include media(md-up) {
+        grid-template-rows: repeat(2, auto);
+    }
+
+
+
+    &__title {
+        @include media(sm-down) {
+            grid-column: 1 / span 12;
+        }
+
+        @include media(md-up) {
+            grid-column: 1 / span 6;
+        }
+    }
+
+    &__action {
+        @include media(sm-down) {
+            grid-column: 1 / span 12;
+            order: 1;
+            margin-top: 30px;
+        }
+
+        @include media(md-up) {
+            display: grid;
+            grid-column: 7 / span 6;
+            justify-items: end;
+        }
+    }
+
+    &__content {
+        grid-column: 1 / span 12;
+    }
+}
