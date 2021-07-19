@@ -63,7 +63,7 @@
         }
     }
 
-    .m-comunity-text {
+    &__description {
         grid-area: comunity-text;
 
         @include media(md) {
@@ -71,11 +71,23 @@
         }
     }
 
-    .m-comunity-socials {
+    &__socials {
         grid-area: comunity-soc;
+        margin-top: 20px;
 
         @include media(md) {
             grid-column: 6 / span 7;
+            margin-top: 0;
+        }
+
+        .socials {
+            &__item {
+                &:not(:last-child) {
+                    @include media(lg) {
+                        margin-right: 12px;
+                    }
+                }
+            }
         }
     }
 }

@@ -1,42 +1,176 @@
 .product-tile {
-    &__image {
+    &__image-link {
         display: block;
         position: relative;
-        padding-bottom: 100%;
-        overflow: hidden;
+        margin-bottom: 15px;
+    }
+
+    &__image {
 
         img {
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
             object-fit: cover;
         }
     }
 
-    // TODO: When start developing - copy the code from pdp-top...
+    &__info-part {
+
+    }
+
+    &__labels {
+        display: none;
+
+        font-family: $font-dinot-medium;
+        font-size: 16px;
+        text-transform: uppercase;
+        line-height: 1.25;
+        color: color('deep-brand');
+        margin-bottom: 62px;
+    }
+
+    &__label {
+        display: inline-flex;
+        padding: 5px;
+        border-bottom: 2px solid color('deep-brand');
+        background: color('deep-brand-opacity');
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
 
     &__colors {
-        &-list {
-            display: flex;
-        }
+        margin-bottom: 15px;
 
-        &-item {
-            &:not(:last-child) {
-                margin-right: 10px;
+        .product-colors {
+            &__name {
+                display: none;
+            }
+
+            &__list {
+                max-width: 166px;
+                overflow: hidden;
+
+                &.m-full-width {
+                    max-width: none;
+                    overflow: visible;
+
+                    & ~ .product-colors__more {
+                        display: none;
+                    }
+                }
             }
         }
     }
 
-    .m-feature & {
-        &__image {
-            padding-bottom: 0;
+    &__description {
+        font-family: $font-dinot-medium;
+        font-size: 16px;
+        line-height: 1.25;
+        margin-bottom: 10px;
+    }
 
-            img {
-                position: static;
+    &__title {
+        font-size: 16px;
+        line-height: 1.25;
+        margin-bottom: 10px;
+    }
+
+    &__price {
+
+    }
+
+    &__actions {
+        display: none;
+        align-items: center;
+        margin-top: auto;
+
+        [class*="btn-main"] {
+            flex-grow: 1;
+        }
+
+        .product-icons {
+            position: static;
+            width: 40px;
+            height: 40px;
+            margin-left: 15px;
+        }
+    }
+
+    .m-feature & {
+        display: flex;
+
+        &__image-link {
+            flex-basis: 50%;
+            flex-shrink: 1;
+            margin-bottom: 0;
+        }
+
+        &__info-part {
+            display: flex;
+            flex-direction: column;
+            padding-top: 40px;
+            padding-right: 40px;
+            padding-bottom: 40px;
+
+            @include media(xs) {
+                padding-left: $wrapper-padding-xs;
             }
+
+            @include media(sm) {
+                padding-left: $wrapper-padding-sm;
+            }
+
+            @include media(md) {
+                padding-left: $wrapper-padding-md;
+            }
+
+            @include media(lg) {
+                padding-left: $wrapper-padding-lg;
+            }
+
+            @include media(xl) {
+                padding-left: $wrapper-padding-xl;
+            }
+
+            @include media(xxl) {
+                padding-left: $wrapper-padding-xxl;
+            }
+        }
+
+        &__labels {
+            display: inline-flex;
+        }
+
+        &__title {
+            font-family: $font-dinot-medium;
+            font-size: 30px;
+            line-height: 1.17;
+
+            order: 1;
+        }
+
+        &__description {
+            font-family: $font-dinot;
+            margin-bottom: 30px;
+
+            order: 2;
+        }
+
+        &__colors {
+            margin-bottom: 30px;
+
+            order: 3;
+        }
+
+        &__price {
+            font-size: 20px;
+            order: 4;
+        }
+
+        &__actions {
+            display: flex;
+
+            order: 5;
         }
     }
 }

@@ -1,4 +1,7 @@
 .product-colors {
+
+    $root: &;
+
     &__name {
         color: color('black');
         font-family: $font-dinot;
@@ -10,6 +13,11 @@
         }
     }
 
+    &__group {
+        display: flex;
+        align-items: center;
+    }
+
     &__list {
         display: flex;
     }
@@ -18,5 +26,10 @@
         &:not(:last-child) {
             margin-right: 10px;
         }
+    }
+
+    &__more {
+        font-size: 12px;
+        margin-left: 10px;
     }
 }

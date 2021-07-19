@@ -1,0 +1,35 @@
+.product-icons {
+    font-size: 20px;
+    color: color('black');
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media(sm-down) {
+        padding: 10px;
+        top: 0;
+        right: 0;
+    }
+
+    [class="*icon"] {
+        cursor: pointer;
+    }
+
+    .icon-m-heart-filled {
+        display: none;
+    }
+
+    &.active,
+    &:hover {
+        .icon-m-heart {
+            display: none;
+        }
+
+        .icon-m-heart-filled {
+            display: block;
+        }
+    }
+}

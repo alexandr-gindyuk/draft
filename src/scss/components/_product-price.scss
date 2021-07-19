@@ -1,12 +1,35 @@
 .product-price {
+
+    $root: &;
+
     display: flex;
     font-family: $font-dinot-medium;
-    font-size: 20px;
+    font-size: 16px;
     text-transform: uppercase;
+
+    &.m-large {
+        font-size: 20px;
+
+        #{$root}__item {
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+        }
+    }
+
+    &.m-small {
+        font-size: 14px;
+
+        #{$root}__item {
+            &:not(:last-child) {
+                margin-right: 5px;
+            }
+        }
+    }
 
     &__item {
         &:not(:last-child) {
-            margin-right: 15px;
+            margin-right: 10px;
         }
 
         &.m-usual {

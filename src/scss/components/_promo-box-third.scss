@@ -1,0 +1,35 @@
+.promo-box-third {
+    &__content {
+        margin-top: 30px;
+
+        &-item {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__title {
+        font-family: $font-dinot-medium;
+        font-size: 20px;
+        line-height: 1.25;
+    }
+
+    &__label {
+        font-size: 14px;
+        line-height: 1.43;
+        text-transform: uppercase;
+        color: color('deep-brand-darker');
+    }
+
+    &__description {
+        font-size: 14px;
+        line-height: 1.39;
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+        }
+    }
+}

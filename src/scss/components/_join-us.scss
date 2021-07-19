@@ -1,0 +1,33 @@
+.join-us {
+    display: flex;
+    align-items: center;
+
+    @include media(sm-down) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    @include media(md-up) {
+       border-left: 2px solid color('black');
+       justify-content: space-between;
+    }
+
+    &__title {
+        font-family: $font-dinot-medium;
+        font-size: 20px;
+        line-height: 1.25;
+
+        @include media(sm-down) {
+            margin-bottom: 30px;
+        }
+
+        @include media(md-up) {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
+
+    &__content {
+
+    }
+}

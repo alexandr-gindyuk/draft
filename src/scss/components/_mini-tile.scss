@@ -87,15 +87,7 @@
     }
 
     &__price {
-        .product-price {
-            font-size: 14px;
 
-            &__item {
-                &:not(:last-child) {
-                    margin-right: 5px;
-                }
-            }
-        }
     }
 
     &__benefit {
