@@ -21,7 +21,7 @@
         padding-left: $wrapper-padding-xl;
         padding-right: $wrapper-padding-xl;
     }
-    
+
     @include media(xxl) {
         max-width: $wrapper-width-max;
         padding-left: $wrapper-padding-xxl;
@@ -66,6 +66,16 @@
                     padding-left: 0;
                 }
             }
+        }
+    }
+
+    &.m-margin-bottom-usual {
+        @include media(md-down) {
+            margin-bottom: 80px;
+        }
+
+        @include media(lg-up) {
+            margin-bottom: 120px;
         }
     }
 }

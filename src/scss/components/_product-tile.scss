@@ -172,5 +172,29 @@
 
             order: 5;
         }
+
+        .swatch {
+            width: swatch($swatch-size-default, $swatch-shadow-first-default);
+            height: swatch($swatch-size-default, $swatch-shadow-first-default);
+            margin: $swatch-shadow-first-default; //to fullfill the size
+            box-shadow: 0 0 0 $swatch-shadow-second-default color('white'), 0 0 0 $swatch-shadow-first-default color('grey-light');
+
+
+            &:after {
+                height: $swatch-size-default + $swatch-shadow-first-default;
+            }
+
+            &:hover {
+                box-shadow: 0 0 0 ($swatch-shadow-second-default - 1px) color('white'), 0 0 0 $swatch-shadow-first-default color('grey');
+            }
+
+            &.selected {
+                box-shadow: 0 0 0 ($swatch-shadow-second-default - 1px) color('white'), 0 0 0 $swatch-shadow-first-default color('black');
+            }
+
+            &.disabled {
+                box-shadow: 0 0 0 ($swatch-shadow-second-default - 1px) color('white'), 0 0 0 $swatch-shadow-first-default color('grey');
+            }
+        }
     }
 }

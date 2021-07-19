@@ -17,21 +17,21 @@
     }
 
     &__title {
+        font-family: $font-dinot-medium;
         margin-bottom: 20px;
 
-        @include media(sm-down) {
-            font-family: $font-dinot-medium;
+        @include media(md-down) {
             font-size: 25px;
+        }
+
+        @include media(lg-up) {
+            font-size: 30px;
         }
     }
 
     &__description {
         margin-bottom: 30px;
-
-        @include media(md-down) {
-            font-family: $font-dinot;
-            font-size: 18px;
-        }
+        font-size: 18px;
     }
 
     &__actions {
