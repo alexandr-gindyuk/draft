@@ -7,7 +7,7 @@
         align-items: flex-start;
     }
 
-    @include media(lg-up) {
+    @include media(md-down) {
         margin-top: 30px;
         margin-bottom: 30px;
     }

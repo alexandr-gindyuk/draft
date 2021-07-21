@@ -1,0 +1,27 @@
+.filter-labels {
+    display: flex;
+
+    &__item {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        border: 1px solid color('grey-deep-light');
+        border-radius: 20px;
+        height: 30px;
+        padding: 0 15px;
+        text-transform: capitalize;
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    [class*="icon-"] {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    .swatches {
+        margin-right: 5px;
+    }
+}
