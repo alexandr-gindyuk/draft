@@ -47,8 +47,12 @@
             }
 
             &__list {
-                max-width: 166px;
+                max-width: 140px;
                 overflow: hidden;
+
+                @include media(md-up) {
+                    max-width: 175px;
+                }
 
                 &.m-full-width {
                     max-width: none;
@@ -97,103 +101,93 @@
     }
 
     .m-feature & {
-        display: flex;
-
-        &__image-link {
-            flex-basis: 50%;
-            flex-shrink: 1;
-            margin-bottom: 0;
-        }
-
-        &__info-part {
-            display: flex;
-            flex-direction: column;
-            padding-top: 40px;
-            padding-right: 40px;
-            padding-bottom: 40px;
-
-            @include media(xs) {
-                padding-left: $wrapper-padding-xs;
-            }
-
-            @include media(sm) {
-                padding-left: $wrapper-padding-sm;
-            }
-
-            @include media(md) {
-                padding-left: $wrapper-padding-md;
-            }
-
-            @include media(lg) {
-                padding-left: $wrapper-padding-lg;
-            }
-
-            @include media(xl) {
-                padding-left: $wrapper-padding-xl;
-            }
-
-            @include media(xxl) {
-                padding-left: $wrapper-padding-xxl;
-            }
-        }
-
-        &__labels {
-            display: inline-flex;
-        }
-
-        &__title {
-            font-family: $font-dinot-medium;
-            font-size: 30px;
-            line-height: 1.17;
-
-            order: 1;
-        }
-
-        &__description {
-            font-family: $font-dinot;
-            margin-bottom: 30px;
-
-            order: 2;
-        }
-
-        &__colors {
-            margin-bottom: 30px;
-
-            order: 3;
-        }
-
-        &__price {
-            font-size: 20px;
-            order: 4;
-        }
-
-        &__actions {
+        @include media(xl-up) {
             display: flex;
 
-            order: 5;
-        }
-
-        .swatch {
-            width: swatch($swatch-size-default, $swatch-shadow-first-default);
-            height: swatch($swatch-size-default, $swatch-shadow-first-default);
-            margin: $swatch-shadow-first-default; //to fullfill the size
-            box-shadow: 0 0 0 $swatch-shadow-second-default color('white'), 0 0 0 $swatch-shadow-first-default color('grey-light');
-
-
-            &:after {
-                height: $swatch-size-default + $swatch-shadow-first-default;
+            &__image-link {
+                flex-basis: 50%;
+                flex-shrink: 1;
+                margin-bottom: 0;
             }
 
-            &:hover {
-                box-shadow: 0 0 0 ($swatch-shadow-second-default - 1px) color('white'), 0 0 0 $swatch-shadow-first-default color('grey');
+            &__info-part {
+                display: flex;
+                flex-direction: column;
+                padding-top: 40px;
+                padding-right: 40px;
+                padding-bottom: 40px;
+
+                @include media(xl) {
+                    padding-left: $wrapper-padding-xl;
+                }
+
+                @include media(xxl) {
+                    padding-left: $wrapper-padding-xxl;
+                }
             }
 
-            &.selected {
-                box-shadow: 0 0 0 ($swatch-shadow-second-default - 1px) color('white'), 0 0 0 $swatch-shadow-first-default color('black');
+            &__labels {
+                display: inline-flex;
             }
 
-            &.disabled {
-                box-shadow: 0 0 0 ($swatch-shadow-second-default - 1px) color('white'), 0 0 0 $swatch-shadow-first-default color('grey');
+            &__title {
+                font-family: $font-dinot-medium;
+                font-size: 30px;
+                line-height: 1.17;
+
+                order: 1;
+            }
+
+            &__description {
+                font-family: $font-dinot;
+                margin-bottom: 30px;
+
+                order: 2;
+            }
+
+            &__colors {
+                margin-bottom: 30px;
+
+                order: 3;
+            }
+
+            .product-colors__list {
+                max-width: 180px;
+            }
+
+            &__price {
+                font-size: 20px;
+                order: 4;
+            }
+
+            &__actions {
+                display: flex;
+
+                order: 5;
+            }
+
+            .swatch {
+                width: swatch($swatch-size-default, $swatch-shadow-first-default);
+                height: swatch($swatch-size-default, $swatch-shadow-first-default);
+                margin: $swatch-shadow-first-default; //to fullfill the size
+                box-shadow: 0 0 0 $swatch-shadow-second-default color('white'), 0 0 0 $swatch-shadow-first-default color('grey-light');
+
+
+                &:after {
+                    height: $swatch-size-default + $swatch-shadow-first-default;
+                }
+
+                &:hover {
+                    box-shadow: 0 0 0 ($swatch-shadow-second-default - 1px) color('white'), 0 0 0 $swatch-shadow-first-default color('grey');
+                }
+
+                &.selected {
+                    box-shadow: 0 0 0 ($swatch-shadow-second-default - 1px) color('white'), 0 0 0 $swatch-shadow-first-default color('black');
+                }
+
+                &.disabled {
+                    box-shadow: 0 0 0 ($swatch-shadow-second-default - 1px) color('white'), 0 0 0 $swatch-shadow-first-default color('grey');
+                }
             }
         }
     }
