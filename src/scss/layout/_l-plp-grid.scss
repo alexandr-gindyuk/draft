@@ -18,6 +18,12 @@
     }
 
     &__item {
+        &:nth-child(5n) {
+            @include media(sm-down) {
+                grid-column: span 2;
+            }
+        }
+
         &.m-feature {
             @include media(xl) {
                 grid-column: span 3;
