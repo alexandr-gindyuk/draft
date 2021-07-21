@@ -20,7 +20,6 @@ $buttons-main-theme: ('dark');
     }
 }
 
-
 @mixin button-main {
     @include button;
 
@@ -44,41 +43,31 @@ $buttons-main-theme: ('dark');
         @if ($theme == 'default') {
             color: color('black');
             background-color: transparent;
-            border-color: color('grey-light');
+            border-color: color('black');
 
             &:hover {
                 color: color('white');
-                background-color: color('grey-deep');
-                border-color: color('grey-deep');
+                background-color: color('brand-mid');
+                border-color: color('brand-mid');
             }
 
             &:disabled,
             &.m-disabled {
-                color: color('grey');
-                border-color: color('grey-super-light');
+                color: color('grey-light');
+                border-color: color('grey-light');
                 pointer-events: none;
-            }
-
-            &.m-black {
-                border-color: color('black');
-
-                &:hover {
-                    color: color('white');
-                    background-color: color('black');
-                    border-color: color('black');
-                }
             }
         }
 
         @if ($theme == 'dark') {
             color: color('white');
             background-color: transparent;
-            border-color: color('grey-deep');
+            border-color: color('white');
 
             &:hover {
-                color: color('black');
-                background-color: color('white');
-                border-color: color('white');
+                color: color('white');
+                background-color: color('brand-mid');
+                border-color: color('brand-mid');
             }
 
             &:focus {
@@ -87,19 +76,9 @@ $buttons-main-theme: ('dark');
 
             &:disabled,
             &.m-disabled {
-                color: color('grey');
+                color: color('grey-deep');
                 border-color: color('grey-deep');
                 pointer-events: none;
-            }
-
-            &.m-black {
-                border-color: color('black');
-
-                &:hover {
-                    color: color('black');
-                    background-color: color('white');
-                    border-color: color('white');
-                }
             }
         }
     }
@@ -110,21 +89,25 @@ $buttons-main-theme: ('dark');
             background-color: color('black');
 
             &:hover {
-                background-color: color('grey-deep');
+                color: color('white');
+                background-color: color('brand-mid');
+                border-color: color('brand-mid');
             }
 
             &:disabled,
             &.m-disabled {
-                background-color: color('grey');
+                background-color: color('grey-light');
                 pointer-events: none;
             }
         }
         @if ($theme == 'dark') {
             color: color('black');
-            background-color: color('grey-light');
+            background-color: color('white');
 
             &:hover {
-                background-color: color('white');
+                color: color('white');
+                background-color: color('brand-mid');
+                border-color: color('brand-mid');
             }
 
             &:focus {
@@ -133,7 +116,7 @@ $buttons-main-theme: ('dark');
 
             &:disabled,
             &.m-disabled {
-                color: color('grey');
+                color: color('grey-light');
                 background-color: color('grey-deep');
                 pointer-events: none;
             }
@@ -168,10 +151,6 @@ $buttons-main-theme: ('dark');
 
         &.m-margin-left {
             margin-left: 10px;
-        }
-
-        &.m-margin-right {
-            margin-right: 10px;
         }
     }
 

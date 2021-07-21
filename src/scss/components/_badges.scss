@@ -12,9 +12,11 @@
 .badge {
     font-family: $font-dinot-medium;
     font-size: 12px;
+    line-height: 1.25;
     display: inline-flex;
     min-width: 25px;
-    padding: 5px 10px;
+    height: 25px;
+    padding: 0 10px;
     align-items: center;
     text-transform: uppercase;
     background: color('black');
@@ -42,11 +44,15 @@
         }
     }
 
+    &__sign {
+        margin-left: 5px;
+    }
+
     &.m-eco {
         background: color('success');
     }
 
     &.m-sale {
-        background: color('black');
+        background: color('danger');
     }
 }

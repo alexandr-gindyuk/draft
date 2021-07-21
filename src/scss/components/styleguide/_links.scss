@@ -23,18 +23,8 @@ $links-main-theme: ('dark');
     }
 
     &:focus {
-        outline: 2px solid #0086bf;
+        outline: 2px solid color('brand');
         outline-offset: 2px;
-    }
-
-    &:hover {
-        [class*="icon-"] {
-
-            &.filled {
-                background-color: color('black');
-                color: color('white');
-            }
-        }
     }
 
     @if ($type == 'primary') {
@@ -52,10 +42,6 @@ $links-main-theme: ('dark');
         font-family: $font-open-sans;
         font-size: 14px;
         line-height: 20px;
-
-        [class*='icon'] {
-            font-size: 20px;
-        }
 
         &:hover {
             font-weight: 600;
@@ -101,20 +87,10 @@ $links-main-theme: ('dark');
 [class*='link'] {
     [class*="icon-"] {
         font-weight: inherit;
-        border-radius: 50%;
         vertical-align: text-bottom;
-
-        &.filled {
-            background-color: color('grey-super-light');
-            color: color('black');
-        }
 
         &.m-margin-left {
             margin-left: 10px;
-        }
-
-        &.m-margin-right {
-            margin-right: 10px;
         }
     }
 }
