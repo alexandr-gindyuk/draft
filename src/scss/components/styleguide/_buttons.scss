@@ -42,79 +42,99 @@ $buttons-main-theme: ('dark');
 @mixin button-main-type-and-theme($type, $theme: 'default') {
     @if ($type == 'outlined') {
         @if ($theme == 'default') {
-            color: #000000;
+            color: color('black');
             background-color: transparent;
-            border-color: #e3e3e3;
+            border-color: color('grey-light');
 
             &:hover {
-                color: #ffffff;
-                background-color: #5c6573;
-                border-color: #5c6573;
+                color: color('white');
+                background-color: color('grey-deep');
+                border-color: color('grey-deep');
             }
 
             &:disabled,
             &.m-disabled {
-                color: #a1a8b2;
-                border-color: #f1f1f1;
+                color: color('grey');
+                border-color: color('grey-super-light');
                 pointer-events: none;
+            }
+
+            &.m-black {
+                border-color: color('black');
+
+                &:hover {
+                    color: color('white');
+                    background-color: color('black');
+                    border-color: color('black');
+                }
             }
         }
 
         @if ($theme == 'dark') {
-            color: #ffffff;
+            color: color('white');
             background-color: transparent;
-            border-color: #5c6573;
+            border-color: color('grey-deep');
 
             &:hover {
-                color: #000000;
-                background-color: #ffffff;
-                border-color: #ffffff;
+                color: color('black');
+                background-color: color('white');
+                border-color: color('white');
             }
 
             &:focus {
-                outline-color: #ffffff;
+                outline-color: color('white');
             }
 
             &:disabled,
             &.m-disabled {
-                color: #a1a8b2;
-                border-color: #5c6573;
+                color: color('grey');
+                border-color: color('grey-deep');
                 pointer-events: none;
+            }
+
+            &.m-black {
+                border-color: color('black');
+
+                &:hover {
+                    color: color('black');
+                    background-color: color('white');
+                    border-color: color('white');
+                }
             }
         }
     }
 
     @if ($type == 'filled') {
         @if ($theme == 'default') {
-            color: #ffffff;
-            background-color: #000000;
+            color: color('white');
+            background-color: color('black');
 
             &:hover {
-                background-color: #5c6573;
+                background-color: color('grey-deep');
             }
 
             &:disabled,
             &.m-disabled {
-                background-color: #a1a8b2;
+                background-color: color('grey');
                 pointer-events: none;
             }
         }
         @if ($theme == 'dark') {
-            color: #000000;
-            background-color: #e3e3e3;
+            color: color('black');
+            background-color: color('grey-light');
 
             &:hover {
-                background-color: #ffffff;
+                background-color: color('white');
             }
 
             &:focus {
-                outline-color: #ffffff;
+                outline-color: color('white');
             }
 
             &:disabled,
             &.m-disabled {
-                color: #a1a8b2;
-                background-color: #5c6573;
+                color: color('grey');
+                background-color: color('grey-deep');
                 pointer-events: none;
             }
         }
