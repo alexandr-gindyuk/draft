@@ -3,7 +3,7 @@
     position: relative;
     height: 100%;
     padding: 0 20px 30px 20px;
-    background: color('grey-deep-light');
+    background: color('grey-light');
 
     display: grid;
     grid-template-columns: 1fr;
@@ -29,9 +29,9 @@
         position: absolute;
         width: 100%;
         left: 0;
-        top: (-$footer-size-top);
+        top: (-$footer-size-top) + 1px; //to avoid a transparent line between parent and this block
         height: $footer-size-top;
-        background: color('grey-deep-light');
+        background: color('grey-light');
     }
 
     &:after {
@@ -39,9 +39,9 @@
         position: absolute;
         width: 100%;
         left: 0;
-        bottom: (-$footer-size-top);
+        bottom: (-$footer-size-top) + 1px; //to avoid a transparent line between parent and this block
         height: $footer-size-top;
-        background: color('grey-deep-light');
+        background: color('grey-light');
         display: none;
 
         @include media(lg-up) {

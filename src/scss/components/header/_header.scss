@@ -22,7 +22,7 @@ $padding-sticky-header: 20px;
 
 
     @include media(lg-up) {
-        border-bottom: 1px solid color('grey-deep-light');
+        border-bottom: 1px solid color('grey-light');
     }
 
     &__logo {

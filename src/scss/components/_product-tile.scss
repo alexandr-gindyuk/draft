@@ -1,14 +1,36 @@
 .product-tile {
-    &__image-link {
-        display: block;
+    &__image-block {
         position: relative;
         margin-bottom: 15px;
+    }
+
+    &__image-link {
+        display: block;
     }
 
     &__image {
 
         img {
             object-fit: cover;
+        }
+    }
+
+    &__badges {
+
+    }
+
+    &__wishlist {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+
+        @include media(sm-down) {
+            top: 0;
+            right: 0;
+        }
+
+        .save-in-wishlist__text {
+            display: none;
         }
     }
 
@@ -23,15 +45,15 @@
         font-size: 16px;
         text-transform: uppercase;
         line-height: 1.25;
-        color: color('deep-brand');
+        color: color('brand-mid');
         margin-bottom: 62px;
     }
 
     &__label {
         display: inline-flex;
         padding: 5px;
-        border-bottom: 2px solid color('deep-brand');
-        background: color('deep-brand-opacity');
+        border-bottom: 2px solid color('brand-mid');
+        background: rgba(color('brand'), 0.15);
 
         &:not(:last-child) {
             margin-right: 10px;
@@ -83,7 +105,7 @@
 
     }
 
-    &__actions {
+    &__action {
         display: none;
         align-items: center;
         margin-top: auto;
@@ -91,12 +113,15 @@
         [class*="btn-main"] {
             flex-grow: 1;
         }
+    }
 
-        .product-icons {
-            position: static;
-            width: 40px;
-            height: 40px;
-            margin-left: 15px;
+    &__action-wishlist {
+        width: 40px;
+        height: 40px;
+        margin-left: 15px;
+
+        .save-in-wishlist__text {
+            display: none;
         }
     }
 
@@ -104,7 +129,7 @@
         @include media(xl-up) {
             display: flex;
 
-            &__image-link {
+            &__image-block {
                 flex-basis: 50%;
                 flex-shrink: 1;
                 margin-bottom: 0;
@@ -160,7 +185,7 @@
                 order: 4;
             }
 
-            &__actions {
+            &__action {
                 display: flex;
 
                 order: 5;

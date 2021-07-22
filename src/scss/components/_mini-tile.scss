@@ -38,7 +38,7 @@
         flex-basis: 120px;
         flex-shrink: 0;
         height: 120px;
-        border: 1px solid color('grey-deep-light');
+        border: 1px solid color('grey-light');
     }
 
     &__description {
@@ -52,7 +52,7 @@
         top: 0;
         right: 0;
         font-size: 20px;
-        color: color('grey-super-deep');
+        color: color('grey-deep');
         cursor: pointer;
     }
 
@@ -78,7 +78,7 @@
     }
 
     &__info-name {
-        color: color('grey-super-deep');
+        color: color('grey-deep');
         margin-right: 10px;
     }
 

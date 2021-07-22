@@ -5,11 +5,11 @@
     }
 
     &::-webkit-scrollbar-track {
-        background: color('grey-deep-light');
+        background: color('grey-light');
     }
 
     &::-webkit-scrollbar-thumb {
-        background: color('grey-super-deep');
+        background: color('grey-deep');
         border-radius: 10px;
     }
 
