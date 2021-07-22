@@ -46,8 +46,7 @@
     &__top {
         @include grid;
         grid-template-columns: repeat(2, 1fr);
-         grid-template-areas: "info cust-service";
-        outline: 1px solid white;
+        grid-template-areas: "info cust-service";
 
         @include media(md-down) {
             grid-row-start: 2;
@@ -59,7 +58,6 @@
 
     &__bottom {
         @include grid;
-        outline: 1px solid darkgreen;
 
         @include media(lg-up) {
             grid-template-columns: repeat(11, 1fr);
@@ -74,8 +72,6 @@
     }
 
     .m-header-main {
-        outline: 1px solid blue;
-
         @include media(lg-up) {
             grid-area: header-main;
             grid-column: 2 / span 11;
@@ -85,17 +81,13 @@
 
     .m-info {
         // grid-area: info;
-        outline: 1px solid red;
     }
 
     .m-cust-service {
         // grid-area: cust-service;
-        outline: 1px solid fuchsia;
     }
 
     .m-menu-search {
-        outline: 1px solid chartreuse;
-
         @include media(lg-up) {
             grid-area: menu-search;
             grid-column: 1 / span 8;
@@ -103,8 +95,6 @@
     }
 
     .m-user-stuff {
-        outline: 1px solid orange;
-
         @include media(md-down) {
             padding-left: $wrapper-padding-xs * 3;
             padding-right: $wrapper-padding-xs * 3;

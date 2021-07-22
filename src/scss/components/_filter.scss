@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 15px;
-    border: 1px solid color('grey-deep-light');
+    border: 1px solid color('grey-light');
 
     &__title {
         font-size: 20px;
@@ -22,10 +22,10 @@
     &__item {
         display: flex;
         align-items: center;
-        border-bottom: 1px solid color('grey-deep-light');
+        border-bottom: 1px solid color('grey-light');
 
         &:first-child {
-            border-top: 1px solid color('grey-deep-light');
+            border-top: 1px solid color('grey-light');
         }
 
         &:last-child {
@@ -58,7 +58,7 @@
         .name {
             font-size: 18px;
             text-transform: capitalize;
-            color: color('grey-super-deep');
+            color: color('grey-deep');
         }
 
         .quantity {
@@ -71,7 +71,7 @@
             min-width: 24px;
             border-radius: 50%;
             overflow: hidden;
-            background: color('grey-super-deep');
+            background: color('grey-deep');
             color: color('white');
         }
     }
@@ -152,18 +152,6 @@
         width: 100%;
         cursor: pointer;
 
-        // &__box {
-        //     position: absolute;
-        //     margin-left: -20px;
-        //     width: 20px;
-        //     height: 20px;
-        //     // border: 2px solid $black-light;
-        //     background-color: white;
-        //     background-size: 13px 10px;
-        //     background-position: center;
-        //     background-repeat: no-repeat;
-        // }
-
         &__input { //class for swatches input
             position: absolute;
             width: 1px;
@@ -174,10 +162,6 @@
             &:checked ~ .check__info {
                 font-weight: 600;
             }
-
-            // &:checked + .check__box {
-            //     // background-image: url("../img/svg/mark.svg");
-            // }
         }
 
         &__info {
@@ -193,7 +177,7 @@
 
             .quantity {
                 font-size: 14px;
-                color: color('grey-super-deep');
+                color: color('grey-deep');
             }
 
             p {

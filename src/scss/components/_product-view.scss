@@ -1,0 +1,20 @@
+.product-view {
+    &__badges {
+
+    }
+
+    &__wishlist {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+
+        @include media(sm-down) {
+            top: 0;
+            right: 0;
+        }
+
+        .save-in-wishlist__text {
+            display: none;
+        }
+    }
+}

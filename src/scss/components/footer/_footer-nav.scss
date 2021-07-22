@@ -4,7 +4,7 @@
 
     &:first-child {
         @include media(sm-down) {
-            border-top: 1px solid color('grey-super-deep');
+            border-top: 1px solid color('grey-deep');
         }
     }
 
@@ -20,7 +20,7 @@
         width: 100%;
         height: 60px;
         background: transparent;
-        border-bottom: 1px solid color('grey-super-deep');
+        border-bottom: 1px solid color('grey-deep');
         color: color('grey-light');
         text-transform: capitalize;
 
@@ -62,7 +62,7 @@
         @include media(sm-down) {
             padding-left: 45px;
             padding-bottom: 25px;
-            border-bottom: 1px solid color('grey-super-deep');
+            border-bottom: 1px solid color('grey-deep');
         }
     }
 

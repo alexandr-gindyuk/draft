@@ -28,6 +28,7 @@
 
             @include media(lg-up) {
                 display: flex;
+                color: color('black');
             }
 
             #{$root}__item {
@@ -173,7 +174,7 @@
                     display: flex;
                     padding-top: 20px;
                     margin-top: 30px;
-                    border-top: 1px solid color('grey-deep-light');
+                    border-top: 1px solid color('grey-light');
                 }
 
                 &:after {
@@ -190,7 +191,7 @@
                 font-size: 20px;
                 text-transform: uppercase;
                 transform: translateX(0);
-                color: color('grey-super-deep');
+                color: color('grey-deep');
             }
 
             #{$root}__item {
@@ -208,7 +209,7 @@
                 font-size: 20px;
                 text-transform: uppercase;
                 transform: translateX(-100%);
-                color: color('grey-super-deep');
+                color: color('grey-deep');
             }
 
             #{$root}__item {
@@ -294,8 +295,15 @@
             align-items: center;
         }
 
+        &.m-light {
+            @include media(lg-up) {
+                color: color('grey-deep');
+            }
+        }
+
+
         // TODO: better to show/hide with a if-else help, not css
-        i {
+        [class*="icon-"] {
             @include media(lg-up) {
                 display: none;
             }
@@ -336,11 +344,11 @@
             }
 
             &::-webkit-scrollbar-track {
-                background-color: color('grey-deep-light');
+                background-color: color('grey-light');
             }
 
             &::-webkit-scrollbar-thumb {
-                background: color('grey-super-deep');
+                background: color('grey-deep');
             }
         }
 

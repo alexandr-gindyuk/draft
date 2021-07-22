@@ -1,0 +1,46 @@
+.save-in-wishlist {
+
+    $root: &;
+
+    font-size: 15px;
+    color: color('black');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    [class="*icon"] {
+        cursor: pointer;
+    }
+
+    &__button {
+        font-size: 20px;
+        cursor: pointer;
+
+        &.m-added {
+            #{$root}__icon {
+                &.m-default {
+                    display: none;
+                }
+
+                &.m-added {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        display: flex;
+        padding: 10px;
+
+        &.m-added {
+            display: none;
+        }
+    }
+
+    &__text {
+        font-family: $font-dinot-medium;
+        text-transform: uppercase;
+    }
+}
