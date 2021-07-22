@@ -1,13 +1,10 @@
 $swatch-size-default: 30px;
-$swatch-size-large: 40px;
 $swatch-size-small: 20px;
 
 $swatch-shadow-first-default: 5px; // = (($swatch-size - inner-block's width) / 2)
-$swatch-shadow-first-large: 6px;
 $swatch-shadow-first-small: 3px;
 
 $swatch-shadow-second-default: 4px;
-$swatch-shadow-second-large: 5px;
 $swatch-shadow-second-small: 2px;
 
 
@@ -16,36 +13,11 @@ $swatch-shadow-second-small: 2px;
 }
 
 .swatches {
-    &.m-large {
-        .swatch {
-            width: swatch($swatch-size-large, $swatch-shadow-first-large);
-            height: swatch($swatch-size-large, $swatch-shadow-first-large);
-            margin: $swatch-shadow-first-large; //to fullfill the size
-            box-shadow: 0 0 0 $swatch-shadow-second-large color('white'), 0 0 0 $swatch-shadow-first-large color('grey-light');
-
-            &:hover {
-                box-shadow: 0 0 0 ($swatch-shadow-second-large - 1px) color('white'), 0 0 0 $swatch-shadow-first-large color('grey');
-            }
-
-            &.selected {
-                box-shadow: 0 0 0 ($swatch-shadow-second-large - 1px) color('white'), 0 0 0 $swatch-shadow-first-large color('black');
-            }
-
-            &.disabled {
-                box-shadow: 0 0 0 ($swatch-shadow-second-large - 1px) color('white'), 0 0 0 $swatch-shadow-first-large color('grey');
-            }
-
-            &:after {
-                height: $swatch-size-large + $swatch-shadow-first-large;
-            }
-        }
-    }
-
     &.m-small {
         .swatch {
             width: swatch($swatch-size-small, $swatch-shadow-first-small);
             height: swatch($swatch-size-small, $swatch-shadow-first-small);
-            margin: ($swatch-shadow-first-small + 1px); //to fullfill the size
+            margin: $swatch-shadow-first-small; //to fullfill the size
             box-shadow: 0 0 0 $swatch-shadow-second-small color('white'), 0 0 0 $swatch-shadow-first-small color('grey-light');
 
             &:hover {
@@ -54,10 +26,6 @@ $swatch-shadow-second-small: 2px;
 
             &.selected {
                 box-shadow: 0 0 0 $swatch-shadow-second-small color('white'), 0 0 0 $swatch-shadow-first-small color('black');
-            }
-
-            &.disabled {
-                box-shadow: 0 0 0 $swatch-shadow-second-small color('white'), 0 0 0 $swatch-shadow-first-small color('grey');
             }
 
             &:after {
@@ -74,7 +42,7 @@ $swatch-shadow-second-small: 2px;
     margin: $swatch-shadow-first-default; //to fullfill the size
     border-radius: 50%;
     box-shadow: 0 0 0 $swatch-shadow-second-default color('white'), 0 0 0 $swatch-shadow-first-default color('grey-light');
-
+    cursor: pointer;
     transition: all $motion-ease;
 
     &:after {
@@ -106,5 +74,3 @@ $swatch-shadow-second-small: 2px;
         }
     }
 }
-
-

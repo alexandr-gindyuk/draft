@@ -47,11 +47,11 @@
             }
 
             &__list {
-                max-width: 140px;
+                max-width: 132px;
                 overflow: hidden;
 
                 @include media(md-up) {
-                    max-width: 175px;
+                    max-width: 165px;
                 }
 
                 &.m-full-width {
