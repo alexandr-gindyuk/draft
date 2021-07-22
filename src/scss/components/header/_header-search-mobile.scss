@@ -3,7 +3,7 @@
         position: relative;
         display: block;
         margin-bottom: 30px;
-        font-size: 20px;
+        font-size: 16px;
         margin-left: $wrapper-padding-xs * 3;
         margin-right: $wrapper-padding-xs * 3;
     }
@@ -12,14 +12,14 @@
         width: 100%;
         height: 50px;
         padding: 15px 15px 15px 45px;
-        border: 1px solid color('grey-deep-light');
+        border: 1px solid color('grey-light');
     }
 
-    .icon-m-search {
+    .icon-search {
+        font-size: 20px;
         position: absolute;
         left: 15px;
         top: 50%;
         transform: translateY(-50%);
-        font-weight: bold;
     }
 }

@@ -21,7 +21,7 @@ $swatch-shadow-second-small: 2px;
             box-shadow: 0 0 0 $swatch-shadow-second-small color('white'), 0 0 0 $swatch-shadow-first-small color('grey-light');
 
             &:hover {
-                box-shadow: 0 0 0 $swatch-shadow-second-small color('white'), 0 0 0 $swatch-shadow-first-small color('grey');
+                box-shadow: 0 0 0 $swatch-shadow-second-small color('white'), 0 0 0 $swatch-shadow-first-small color('grey-mid');
             }
 
             &.selected {
@@ -54,12 +54,12 @@ $swatch-shadow-second-small: 2px;
         left: 50%;
         transform: translate(-50%, -50%) rotate(45deg);
         box-shadow: 0 0 0 0.5px color('white');
-        background: color('grey');
+        background: color('grey-light');
         display: none;
     }
 
     &:hover {
-        box-shadow: 0 0 0 ($swatch-shadow-second-default - 1px) color('white'), 0 0 0 $swatch-shadow-first-default color('grey');
+        box-shadow: 0 0 0 ($swatch-shadow-second-default - 1px) color('white'), 0 0 0 $swatch-shadow-first-default color('grey-mid');
     }
 
     &.selected {
@@ -67,7 +67,7 @@ $swatch-shadow-second-small: 2px;
     }
 
     &.disabled {
-        box-shadow: 0 0 0 ($swatch-shadow-second-default - 1px) color('white'), 0 0 0 $swatch-shadow-first-default color('grey');
+        box-shadow: 0 0 0 ($swatch-shadow-second-default - 1px) color('white'), 0 0 0 $swatch-shadow-first-default color('grey-light');
 
         &::after {
             display: block;

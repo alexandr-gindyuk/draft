@@ -13,7 +13,7 @@ $checkbox-theme: ('dark');
 
         $root: &;
 
-        &--column {
+        &.m-column {
             flex-direction: column;
 
             .checkbox-item {
@@ -21,9 +21,13 @@ $checkbox-theme: ('dark');
             }
         }
 
-        &--row {
+        &.m-row {
             .checkbox-item {
                 margin-bottom: 12px;
+
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
             }
         }
     }
@@ -33,7 +37,7 @@ $checkbox-theme: ('dark');
         position: relative;
         padding-left: calc(#{$check-size} + 10px);
         cursor: pointer;
-        font-size: 14px;
+        font-size: 16px;
         user-select: none;
 
         &.m-disabled {
@@ -145,11 +149,4 @@ $checkbox-theme: ('dark');
     .theme-#{$theme} {
         @include checkbox-theme($theme);
     }
-}
-
-.inputs-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 24px;
-    font-family: "Open-Sans", sans-serif;
 }
