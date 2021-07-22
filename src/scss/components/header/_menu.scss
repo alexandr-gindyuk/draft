@@ -5,7 +5,7 @@
     font-size: 16px;
     font-family: $font-dinot-medium;
     text-transform: uppercase;
-    color: color('black');
+    color: color('grey-deep');
 
     &__body {
         @include media(md-down) {
@@ -85,9 +85,8 @@
                 padding-top: 50px;
                 padding-bottom: 120px;
                 font-size: 25px;
-                color: color('grey-super-deep');
+                color: color('grey-deep');
                 overflow: hidden;
-                outline: 1px solid gold;
             }
 
             @include media(xl) {
@@ -130,7 +129,7 @@
             height: 100%;
             font-size: 16px;
             text-transform: capitalize;
-            color: color('grey-super-deep');
+            color: color('grey-deep');
             transition: all $motion-ease-in-out;
             background: color('white');
 
@@ -328,6 +327,7 @@
             bottom: 0;
             left: 0;
             height: 100%;
+            color: color('grey-deep');
 
             //didnt include here scroll-horizontal mixin because it has different styles
 
@@ -360,8 +360,15 @@
         display: block;
         white-space: nowrap;
         padding: 15px;
-        border: 1px solid color('grey-deep-light');
+        border: 1px solid color('grey-light');
         background-color: color('white');
+        transition: all $motion-ease;
+
+        &:hover {
+            color: color('white');
+            background-color: color('brand-deep');
+            border-color: color('brand-deep');
+        }
     }
 
     &__dropdown {

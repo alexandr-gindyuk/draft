@@ -1,5 +1,5 @@
 .header__top {
-    color: color('grey-super-deep');
+    color: color('grey-deep');
 
     @include media(md-down) {
         display: flex;

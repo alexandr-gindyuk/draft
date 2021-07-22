@@ -9,7 +9,7 @@ $radio-theme: ('dark');
 
         $root: &;
 
-        &--column {
+        &.m-column {
             flex-direction: column;
 
             .radio-item {
@@ -17,9 +17,13 @@ $radio-theme: ('dark');
             }
         }
 
-        &--row {
+        &.m-row {
             .radio-item {
                 margin-bottom: 12px;
+
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
             }
         }
     }
@@ -146,11 +150,4 @@ $radio-theme: ('dark');
     .theme-#{$theme} {
         @include radio-theme($theme);
     }
-}
-
-.inputs-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 24px;
-    font-family: "Open-Sans", sans-serif;
 }

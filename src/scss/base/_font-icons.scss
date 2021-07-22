@@ -24,114 +24,212 @@
 
   //icon-dynamic - the class name for those situations, when we just want to operate with the icon's content, not a class
 
-  .icon-payment-sofort:before {
-    content: "\e91d";
-    color: #5c6573;
-  }
-  .icon-payment-paypal:before {
-    content: "\e91e";
-    color: #5c6573;
-  }
-  .icon-payment-amex:before {
-    content: "\e91f";
-    color: #5c6573;
-  }
-  .icon-payment-master-card:before {
-    content: "\e920";
-    color: #5c6573;
-  }
-  .icon-payment-visa:before {
-    content: "\e921";
-    color: #5c6573;
-  }
-  .icon-social-strava:before {
-    content: "\e918";
-  }
-  .icon-social-linkedin:before {
-    content: "\e919";
-  }
-  .icon-social-youtube:before {
-    content: "\e91a";
-  }
-  .icon-social-instagram:before {
-    content: "\e91b";
-  }
-  .icon-social-facebook:before {
-    content: "\e91c";
-  }
-  .icon-badges-eco:before {
+  .icon-badge-eco:before {
     content: "\e900";
-    color: #00856c;
+    color: #0d875e;
   }
-  .icon-m-arrow-down:before {
+  .icon-flag-us .path1:before {
     content: "\e901";
+    color: rgb(255, 255, 255);
   }
-  .icon-m-arrow-left:before {
+  .icon-flag-us .path2:before {
     content: "\e902";
+    margin-left: -1em;
+    color: rgb(214, 21, 53);
   }
-  .icon-m-arrow-right:before {
+  .icon-flag-us .path3:before {
     content: "\e903";
-  }
-  .icon-m-arrow-up:before {
-    content: "\e904";
-  }
-  .icon-m-burger:before {
-    content: "\e905";
-  }
-  .icon-m-close:before {
-    content: "\e906";
-  }
-  .icon-m-error:before {
-    content: "\e907";
-    color: rgb(229, 23, 85);
-  }
-  .icon-m-error:after {
-    content: "\e908";
     margin-left: -1em;
     color: rgb(255, 255, 255);
   }
-  .icon-m-filter:before {
-    content: "\e909";
+  .icon-flag-us .path4:before {
+    content: "\e904";
+    margin-left: -1em;
+    color: rgb(214, 21, 53);
   }
-  .icon-m-location:before {
+  .icon-flag-us .path5:before {
+    content: "\e905";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  .icon-flag-us .path6:before {
+    content: "\e906";
+    margin-left: -1em;
+    color: rgb(214, 21, 53);
+  }
+  .icon-flag-us .path7:before {
+    content: "\e907";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  .icon-flag-us .path8:before {
+    content: "\e908";
+    margin-left: -1em;
+    color: rgb(1, 126, 180);
+  }
+  .icon-flag-us .path9:before {
+    content: "\e909";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  .icon-burger:before {
     content: "\e90a";
   }
-  .icon-m-message:before {
+  .icon-check-mark:before {
     content: "\e90b";
   }
-  .icon-m-search:before {
+  .icon-chevron .path1:before {
     content: "\e90c";
+    color: rgb(203, 204, 204);
   }
-  .icon-m-sort:before {
+  .icon-chevron .path2:before {
     content: "\e90d";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
   }
-  .icon-m-bag-filled:before {
+  .icon-close:before {
     content: "\e90e";
   }
-  .icon-m-bag:before {
+  .icon-error .path1:before {
     content: "\e90f";
+    color: rgb(214, 21, 53);
   }
-  .icon-m-heart-filled:before {
+  .icon-error .path2:before {
     content: "\e910";
+    margin-left: -0.7001953125em;
+    color: rgb(255, 255, 255);
   }
-  .icon-m-heart:before {
+  .icon-filter:before {
     content: "\e911";
   }
-  .icon-m-profile-filled:before {
+  .icon-location:before {
     content: "\e912";
   }
-  .icon-m-profile:before {
+  .icon-mail:before {
     content: "\e913";
   }
-  .icon-s-close:before {
+  .icon-message:before {
     content: "\e914";
   }
-  .icon-s-divider-breadcrumbs:before {
+  .icon-search:before {
     content: "\e915";
   }
-  .icon-s-minus:before {
+  .icon-share:before {
     content: "\e916";
   }
-  .icon-s-plus:before {
+  .icon-size:before {
     content: "\e917";
+  }
+  .icon-sort:before {
+    content: "\e918";
+  }
+  .icon-star-empty:before {
+    content: "\e919";
+  }
+  .icon-star-empty-half:before {
+    content: "\e91a";
+  }
+  .icon-star-full:before {
+    content: "\e91b";
+    color: #e5923f;
+  }
+  .icon-arrow-left:before {
+    content: "\e91c";
+  }
+  .icon-arrow-right:before {
+    content: "\e91d";
+  }
+  .icon-arrow-top:before {
+    content: "\e91e";
+  }
+  .icon-cart-filled .path1:before {
+    content: "\e91f";
+    color: rgb(0, 0, 0);
+  }
+  .icon-cart-filled .path2:before {
+    content: "\e920";
+    margin-left: -1em;
+    color: rgb(1, 126, 180);
+  }
+  .icon-heart:before {
+    content: "\e921";
+  }
+  .icon-heart-filled:before {
+    content: "\e922";
+  }
+  .icon-user:before {
+    content: "\e923";
+  }
+  .icon-user-filled:before {
+    content: "\e924";
+  }
+  .icon-cart:before {
+    content: "\e925";
+  }
+  .icon-sale-percents .path1:before {
+    content: "\e926";
+    color: rgb(255, 255, 255);
+  }
+  .icon-sale-percents .path2:before {
+    content: "\e927";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+  }
+  .icon-sale-percents .path3:before {
+    content: "\e928";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  .icon-arrow-down:before {
+    content: "\e929";
+  }
+  .icon-payments-amex:before {
+    content: "\e92a";
+    color: #717272;
+  }
+  .icon-payments-mastercard:before {
+    content: "\e92b";
+    color: #717272;
+  }
+  .icon-payments-paypal:before {
+    content: "\e92c";
+    color: #717272;
+  }
+  .icon-payments-sofort:before {
+    content: "\e92d";
+    color: #717272;
+  }
+  .icon-payments-visa:before {
+    content: "\e92e";
+    color: #717272;
+  }
+  .icon-s-close:before {
+    content: "\e92f";
+  }
+  .icon-s-arrow-right:before {
+    content: "\e930";
+  }
+  .icon-s-mail-filled:before {
+    content: "\e931";
+  }
+  .icon-s-minus:before {
+    content: "\e932";
+  }
+  .icon-s-plus:before {
+    content: "\e933";
+  }
+  .icon-smm-fb:before {
+    content: "\e934";
+  }
+  .icon-smm-instagram:before {
+    content: "\e935";
+  }
+  .icon-smm-linkedin:before {
+    content: "\e936";
+  }
+  .icon-smm-strava:before {
+    content: "\e937";
+  }
+  .icon-smm-youtube:before {
+    content: "\e938";
   }
