@@ -5,16 +5,32 @@
     grid-row-gap: 60px;
     grid-auto-flow: dense;
 
-    @include media(md-up) {
+    @include media(lg) {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    &__item {
-        &.m-feature {
-            grid-column: span 2;
+    @include media(xl) {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-            @include media(md-up) {
+    @include media(xxl) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__item {
+        &:nth-child(5n) {
+            @include media(sm-down) {
+                grid-column: span 2;
+            }
+        }
+
+        &.m-feature {
+            @include media(xl) {
                 grid-column: span 3;
+            }
+
+            @include media(xxl) {
+                grid-column: span 4;
             }
         }
     }
