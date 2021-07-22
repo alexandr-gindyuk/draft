@@ -92,18 +92,18 @@ $inputs-theme: ('dark');
         @if ($theme == 'default') {
             background-repeat: no-repeat;
             background-size: 14px;
-            background-position: right 5px center;
+            background-position: right 15px center;
             padding-right: 40px;
             padding-left: 15px;
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
             border: 1px solid color('grey-light');
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%23333'%3E%3Cpath d='M1 1L7 7 13 1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3E%3Cpath fill='%23000' d='M17.578 5.875c-.087-.087-.19-.156-.305-.204-.114-.047-.236-.071-.36-.071-.123 0-.246.024-.36.071-.114.048-.218.117-.305.204l-6.25 6.25-6.25-6.25c-.087-.087-.19-.156-.305-.204-.114-.047-.236-.071-.36-.071-.123 0-.246.024-.36.071-.114.048-.218.117-.305.204-.163.183-.253.42-.253.665 0 .245.09.482.253.665l6.92 6.91c.086.088.189.159.302.207.113.048.235.072.358.072s.245-.024.359-.072c.113-.048.215-.118.301-.207l6.92-6.91c.163-.183.253-.42.253-.665 0-.245-.09-.482-.253-.665z'/%3E%3C/svg%3E%0A");
         }
         @if ($theme == 'dark') {
             border: 1px solid color('grey-deep');
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%23333'%3E%3Cpath d='M1 1L7 7 13 1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3E%3Cpath fill='%23fff' d='M17.578 5.875c-.087-.087-.19-.156-.305-.204-.114-.047-.236-.071-.36-.071-.123 0-.246.024-.36.071-.114.048-.218.117-.305.204l-6.25 6.25-6.25-6.25c-.087-.087-.19-.156-.305-.204-.114-.047-.236-.071-.36-.071-.123 0-.246.024-.36.071-.114.048-.218.117-.305.204-.163.183-.253.42-.253.665 0 .245.09.482.253.665l6.92 6.91c.086.088.189.159.302.207.113.048.235.072.358.072s.245-.024.359-.072c.113-.048.215-.118.301-.207l6.92-6.91c.163-.183.253-.42.253-.665 0-.245-.09-.482-.253-.665z'/%3E%3C/svg%3E%0A");
             color: color('white');
         }
 

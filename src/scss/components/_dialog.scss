@@ -32,6 +32,102 @@
         transition-property: opacity, background-color;
     }
 
+    &__window {
+        animation: dialog-appearance $motion-fast;
+        background-color: color('white');
+        border-radius: 2px;
+        box-shadow: 0 3px 15px rgba(color('black'), .3);
+        color: color('black');
+        font-family: $font-dinot;
+        font-size: 16px;
+        line-height: 1.25;
+        margin: auto;
+        position: relative;
+        transform-origin: top center;
+        will-change: opacity;
+        overflow: auto;
+
+        @include media(sm-down) {
+            margin: auto 15px;
+            max-height: calc(var(--viewport-height,100vh) - 80px);
+            padding: 30px 15px 15px 15px;
+            width: auto;
+            width: 100%;
+        }
+
+        @include media(md-up) {
+            max-height: calc(var(--viewport-height,100vh) - 60px);
+            padding: 30px;
+            width: 480px;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        top: 30px;
+        cursor: pointer;
+
+        @include media(sm-down) {
+            right: 15px;
+        }
+
+        @include media(md-up) {
+            right: 30px;
+        }
+    }
+
+    &__header {
+        min-height: 20px;
+    }
+
+    &__title {
+        font-family: $font-dinot-medium;
+        font-size: 20px;
+        padding-bottom: 20px;
+        padding-right: 30px;
+        border-bottom: 1px solid color('grey');
+        margin-bottom: 30px;
+    }
+
+    &__content-item {
+        margin-bottom: 30px
+    }
+
+    &__action {
+        display: flex;
+        align-items: center;
+
+        @include media(sm-down) {
+            flex-direction: column;
+        }
+
+        [class*='btn-main'] {
+            flex-grow: 1;
+
+            &:not(:last-child) {
+                @include media(sm-down) {
+                    margin-bottom: 15px;
+                }
+
+                @include media(md-up) {
+                    margin-right: 15px;
+                }
+            }
+        }
+
+        &-group {
+            display: flex;
+
+            @include media(sm-down) {
+                flex-direction: column;
+                margin-bottom: 30px;
+                width: 100%;
+            }
+        }
+    }
 
     &.m-opened {
         visibility: visible;
@@ -173,103 +269,6 @@
 
             @include media(md-down) {
                 max-height: calc(100vh - var(--header-top-height));
-            }
-        }
-    }
-
-    &__window {
-        animation: dialog-appearance $motion-fast;
-        background-color: color('white');
-        border-radius: 2px;
-        box-shadow: 0 3px 15px rgba(color('black'), .3);
-        color: color('black');
-        font-family: $font-dinot;
-        font-size: 16px;
-        line-height: 1.25;
-        margin: auto;
-        position: relative;
-        transform-origin: top center;
-        will-change: opacity;
-        overflow: auto;
-
-        @include media(sm-down) {
-            margin: auto 15px;
-            max-height: calc(var(--viewport-height,100vh) - 80px);
-            padding: 30px 15px 15px 15px;
-            width: auto;
-            width: 100%;
-        }
-
-        @include media(md-up) {
-            max-height: calc(var(--viewport-height,100vh) - 60px);
-            padding: 30px;
-            width: 480px;
-        }
-    }
-
-    &__close {
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        font-size: 20px;
-        top: 30px;
-        cursor: pointer;
-
-        @include media(sm-down) {
-            right: 15px;
-        }
-
-        @include media(md-up) {
-            right: 30px;
-        }
-    }
-
-    &__header {
-        min-height: 20px;
-    }
-
-    &__title {
-        font-family: $font-dinot-medium;
-        font-size: 20px;
-        padding-bottom: 20px;
-        padding-right: 30px;
-        border-bottom: 1px solid color('grey');
-        margin-bottom: 30px;
-    }
-
-    &__content-item {
-        margin-bottom: 30px
-    }
-
-    &__action {
-        display: flex;
-        align-items: center;
-
-        @include media(sm-down) {
-            flex-direction: column;
-        }
-
-        [class*='btn-main'] {
-            flex-grow: 1;
-
-            &:not(:last-child) {
-                @include media(sm-down) {
-                    margin-bottom: 15px;
-                }
-
-                @include media(md-up) {
-                    margin-right: 15px;
-                }
-            }
-        }
-
-        &-group {
-            display: flex;
-
-            @include media(sm-down) {
-                flex-direction: column;
-                margin-bottom: 30px;
-                width: 100%;
             }
         }
     }
