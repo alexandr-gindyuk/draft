@@ -15,7 +15,7 @@
         <div class="l-messages m-grey">
             <div class="messages">
                 <button class="messages__close">
-                    <i class="icon-m-close"></i>
+                    <i class="icon-close"></i>
                 </button>
                 <!-- content asset -->
                     message
@@ -49,7 +49,7 @@
                         <a class="user-staff__item user-staff__item--cart" href="#">
                             <i class="icon-cart"></i>
                             <i class="icon-cart-filled"></i>
-                            <span>(0)</span>
+                            <span class="item-cart-number">(0)</span>
                         </a>
                     </div>
 
@@ -67,7 +67,8 @@
                             <div class="l-header__info m-info">
                                 <div class="header__info">
                                     <div class="country-lang">
-                                        US/Eng
+                                        <i class="icon-flag-us"></i>
+                                        <span>US/Eng</span>
                                     </div>
                                     <a class="store-locator" href="#">
                                         <i class="icon-location"></i>&nbsp;
@@ -413,11 +414,11 @@
                                         </li>
 
                                         <!-- if the cart has any items - add here class 'm-filled' to show specific icon -->
-                                        <li class="user-staff__item user-staff__item--cart m-filled">
+                                        <li class="user-staff__item user-staff__item--cart">
                                             <a class="user-staff__link" href="#">
                                                 <i class="icon-cart"></i>
                                                 <i class="icon-cart-filled"></i>
-                                                <span>(0)</span>
+                                                <span class="item-cart-number">(0)</span>
                                             </a>
                                         </li>
                                         <li class="user-staff__item user-staff__item--store">
@@ -877,7 +878,7 @@
                         <p class="quote-banner__text">N1no Schurter / The Legent of MTB</p>
                     </div>
                     <div class="quote-banner__action">
-                        <a href="" class="link-primary">Read the interview<i class="icon-s-divider-breadcrumbs m-margin-left filled"></i></a>
+                        <a href="" class="link-primary">Read the interview<i class="icon-s-arrow-right m-margin-left"></i></a>
                     </div>
                 </div>
                  <!-- end quoted-banner -->
@@ -907,8 +908,8 @@
 
                         <div class="product-icons">
                             <!-- TODO: change the icon height-->
-                            <i class="icon-m-heart"></i>
-                            <i class="icon-m-heart-filled"></i>
+                            <i class="icon-heart"></i>
+                            <i class="icon-heart-filled"></i>
                         </div>
 
                     </div>
@@ -916,7 +917,7 @@
                         <div class="product-details__share product-share">
                             <span class="product-share__text">Share</span>
                             <!-- TODO: change the icon -->
-                            <i class="icon-social-youtube"></i>
+                            <i class="icon-smm-youtube"></i>
                         </div>
                         <div class="product-details__rating product-rating">
                             Raiting
@@ -973,7 +974,7 @@
                                     <span>M</span>
                                 </div>
                                 <div class="product-sizes__heading-item m-pointer">
-                                    <i class="icon-social-youtube"></i>&nbsp;
+                                    <i class="icon-smm-youtube"></i>&nbsp;
                                     <p>What's my size?</p>
                                 </div>
                                 <div class="product-sizes__heading-item m-pointer">
@@ -1036,12 +1037,12 @@
                         <div class="product-details__available product-available m-in-stock">
                             <div class="product-available__item in-stock ">
                                  <!-- TODO: change the icon -->
-                                <i class="icon-badges-eco"></i>
+                                <i class="icon-badge-eco"></i>
                                 <span>in stock</span>
                             </div>
 
                             <div class="product-available__item out-stock">
-                               <i class="icon-m-error"></i>
+                               <i class="icon-error"></i>
                                <span>out of stock</span>
                            </div>
                         </div>
@@ -1050,7 +1051,7 @@
                             <div class="l-messages m-grey">
                                 <div class="messages m-closeless m-static-padding">
                                     <button class="messages__close">
-                                        <i class="icon-m-close"></i>
+                                        <i class="icon-close"></i>
                                     </button>
                                     <!-- content asset -->
                                         message
@@ -1062,11 +1063,11 @@
                         <div class="product-details__actions product-actions">
                             <button class="product-actions__item btn-main-filled m-large">
                                 <span>Add to bag</span>
-                                <i class="icon-m-bag"></i>
+                                <i class="icon-cart"></i>
                             </button>
                             <button class="product-actions__item btn-main-outlined">
                                 <span> Reverse in store</span>
-                                <i class="icon-m-location"></i>
+                                <i class="icon-location"></i>
                             </button>
                         </div>
 
@@ -1108,7 +1109,7 @@
                             <div class="promo-caption__actions">
                                 <a class="btn-main-outlined promo-caption__actions-item" href="">outlined</a>
                                 <button type="button" class="btn-main-outlined promo-caption__actions-item">outlined</button>
-                                <a href="#" class="link-primary promo-caption__actions-item"><i class="icon-s-divider-breadcrumbs m-margin-right filled"></i>MORE TECHNOLOGIES</a>
+                                <a href="#" class="link-primary promo-caption__actions-item"><i class="icon-s-arrow-right m-margin-right"></i>MORE TECHNOLOGIES</a>
                             </div>
                         </div>
                     </figcaption>
@@ -1122,7 +1123,7 @@
             <div class="dialog">
                 <div class="dialog__window" role="dialog" data-ref="" aria-modal="" aria-label="">
                     <button class="dialog__close" title="close">
-                        <i class="icon-m-close"></i>
+                        <i class="icon-close"></i>
                     </button>
 
                     <div class="dialog__header">
@@ -1170,7 +1171,7 @@
             <div class="dialog m-opened m-dialog-full-width m-dialog-top m-dialog-closeless m-coockies" style="display:none;">
                 <div class="dialog__window" role="dialog" data-ref="" aria-modal="" aria-label="">
                     <button class="dialog__close" title="close">
-                        <i class="icon-m-close"></i>
+                        <i class="icon-close"></i>
                     </button>
 
                     <div class="dialog__header">
@@ -1187,7 +1188,7 @@
                             <button type="button" class="btn-main-filled">Cancel</button>
                         </div>
 
-                        <button class="link-primary">Set preferences<i class="icon-s-divider-breadcrumbs m-margin-left filled"></i></button>
+                        <button class="link-primary">Set preferences<i class="icon-s-arrow-right m-margin-left filled"></i></button>
                     </div>
                 </div>
             </div>
@@ -1203,7 +1204,7 @@
 
                                     <div class="mini-tile">
                                         <button class="mini-tile__close">
-                                            <i class="icon-m-close"></i>
+                                            <i class="icon-close"></i>
                                         </button>
                                         <div class="mini-tile__view">
                                             <img src="https://dummyimage.com/120x120/717272/fff.jpg" alt="" title="" loading="lazy">
@@ -1216,7 +1217,7 @@
                                                 <div class="badge m-eco">
                                                     <span class="badge__item badge__text">eco</span>
                                                     <span class="badge__item badge__sign">
-                                                        <i class="icon-badges-eco"></i>
+                                                        <i class="icon-badge-eco"></i>
                                                     </span>
                                                 </div>
                                             </div>
@@ -1261,7 +1262,7 @@
 
                                     <div class="mini-tile">
                                         <button class="mini-tile__close">
-                                            <i class="icon-m-close"></i>
+                                            <i class="icon-close"></i>
                                         </button>
                                         <div class="mini-tile__view">
                                             <img src="https://dummyimage.com/120x120/717272/fff.jpg" alt="" title="" loading="lazy">
@@ -1274,7 +1275,7 @@
                                                 <div class="badge m-eco">
                                                     <span class="badge__item badge__text">eco</span>
                                                     <span class="badge__item badge__sign">
-                                                        <i class="icon-badges-eco"></i>
+                                                        <i class="icon-badge-eco"></i>
                                                     </span>
                                                 </div>
                                             </div>
@@ -1315,7 +1316,7 @@
 
                                     <div class="mini-tile">
                                         <button class="mini-tile__close">
-                                            <i class="icon-m-close"></i>
+                                            <i class="icon-close"></i>
                                         </button>
                                         <div class="mini-tile__view">
                                             <img src="https://dummyimage.com/120x120/717272/fff.jpg" alt="" title="" loading="lazy">
@@ -1328,7 +1329,7 @@
                                                 <div class="badge m-eco">
                                                     <span class="badge__item badge__text">eco</span>
                                                     <span class="badge__item badge__sign">
-                                                        <i class="icon-badges-eco"></i>
+                                                        <i class="icon-badge-eco"></i>
                                                     </span>
                                                 </div>
                                             </div>
@@ -1425,8 +1426,8 @@
                                         <div class="search-suggestion__top-inner">
                                             <div class="search-suggestion__form">
                                                 <div class="form__section">
-                                                    <i class="icon-m-search"></i>
-                                                    <i class="icon-m-close"></i>
+                                                    <i class="icon-search"></i>
+                                                    <i class="icon-close"></i>
                                                     <input class="input-main" id="firstname" type="search" placeholder="Search">
                                                 </div>
                                                 <button class="search-suggestion__cancel">Cancel</button>
@@ -1471,7 +1472,7 @@
                                                         <div class="suggestion-product-search__product-tile">
                                                             <div class="mini-tile">
                                                                 <button class="mini-tile__close">
-                                                                    <i class="icon-m-close"></i>
+                                                                    <i class="icon-close"></i>
                                                                 </button>
                                                                 <div class="mini-tile__view">
                                                                     <img src="https://dummyimage.com/120x120/717272/fff.jpg" alt="" title="" loading="lazy">
@@ -1482,7 +1483,7 @@
 
                                                                         <div class="badge m-eco">
                                                                             <span class="badge__text"></span>
-                                                                            <i class="icon-m-heart"></i>
+                                                                            <i class="icon-heart"></i>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1525,7 +1526,7 @@
                                                         <div class="suggestion-product-search__product-tile">
                                                             <div class="mini-tile">
                                                                 <button class="mini-tile__close">
-                                                                    <i class="icon-m-close"></i>
+                                                                    <i class="icon-close"></i>
                                                                 </button>
                                                                 <div class="mini-tile__view">
                                                                     <img src="https://dummyimage.com/120x120/717272/fff.jpg" alt="" title="" loading="lazy">
@@ -1536,7 +1537,7 @@
 
                                                                         <div class="badge m-eco">
                                                                             <span class="badge__text"></span>
-                                                                            <i class="icon-m-heart"></i>
+                                                                            <i class="icon-heart"></i>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1579,7 +1580,7 @@
                                                         <div class="suggestion-product-search__product-tile">
                                                             <div class="mini-tile">
                                                                 <button class="mini-tile__close">
-                                                                    <i class="icon-m-close"></i>
+                                                                    <i class="icon-close"></i>
                                                                 </button>
                                                                 <div class="mini-tile__view">
                                                                     <img src="https://dummyimage.com/120x120/717272/fff.jpg" alt="" title="" loading="lazy">
@@ -1590,7 +1591,7 @@
 
                                                                         <div class="badge m-eco">
                                                                             <span class="badge__text"></span>
-                                                                            <i class="icon-m-heart"></i>
+                                                                            <i class="icon-heart"></i>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1783,7 +1784,7 @@
                     </div>
 
                     <div class="l-grid-action-order__action">
-                        <a href="" class="link-primary">MORE community photos<i class="icon-s-divider-breadcrumbs m-margin-left filled"></i></a>
+                        <a href="" class="link-primary">MORE community photos<i class="icon-s-arrow-right m-margin-left"></i></a>
                     </div>
 
                     <div class="l-grid-action-order__content">
@@ -1832,27 +1833,27 @@
                                 <ul class="socials m-inverse">
                                     <li class="socials__item">
                                         <a class="socials__link m-fb" href="#">
-                                            <i class="icon-social-facebook"></i>
+                                            <i class="icon-smm-fb"></i>
                                         </a>
                                     </li>
                                     <li class="socials__item">
                                         <a class="socials__link m-instagram" href="#">
-                                            <i class="icon-social-instagram"></i>
+                                            <i class="icon-smm-instagram"></i>
                                         </a>
                                     </li>
                                     <li class="socials__item">
                                         <a class="socials__link m-youtube" href="#">
-                                            <i class="icon-social-youtube"></i>
+                                            <i class="icon-smm-youtube"></i>
                                         </a>
                                     </li>
                                     <li class="socials__item">
                                         <a class="socials__link m-linkedin" href="#">
-                                            <i class="icon-social-linkedin"></i>
+                                            <i class="icon-smm-linkedin"></i>
                                         </a>
                                     </li>
                                     <li class="socials__item">
                                         <a class="socials__link m-strava" href="#">
-                                            <i class="icon-social-strava"></i>
+                                            <i class="icon-smm-strava"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -1887,7 +1888,7 @@
             <div style="padding: 50px; display: none;">
                 <section class="filter loader m-dark">
                     <button class="filter__close">
-                        <i class="icon-m-close"></i>
+                        <i class="icon-close"></i>
                     </button>
 
                     <div>
@@ -2012,14 +2013,14 @@
                                     <div class="badge m-eco">
                                         <span class="badge__item badge__text">eco</span>
                                         <span class="badge__item badge__sign">
-                                            <i class="icon-badges-eco"></i>
+                                            <i class="icon-badge-eco"></i>
                                         </span>
                                     </div>
                                 </div>
 
                                 <div class="product-icons">
-                                    <i class="icon-m-heart"></i>
-                                    <i class="icon-m-heart-filled"></i>
+                                    <i class="icon-heart"></i>
+                                    <i class="icon-heart-filled"></i>
                                 </div>
                             </a>
 
@@ -2059,9 +2060,9 @@
                                                 </li>
                                             </ul>
 
-                                            <button class="product-colors__more">
+                                            <a href="#" class="product-colors__more">
                                                 +2
-                                            </button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -2090,8 +2091,8 @@
                                     <a href="#" class="btn-main-filled">Shop now</a>
 
                                     <div class="product-icons">
-                                        <i class="icon-m-heart"></i>
-                                        <i class="icon-m-heart-filled"></i>
+                                        <i class="icon-heart"></i>
+                                        <i class="icon-heart-filled"></i>
                                     </div>
                                 </div>
                             </div>
@@ -2117,14 +2118,14 @@
                                     <div class="badge m-eco">
                                         <span class="badge__item badge__text">eco</span>
                                         <span class="badge__item badge__sign">
-                                            <i class="icon-badges-eco"></i>
+                                            <i class="icon-badge-eco"></i>
                                         </span>
                                     </div>
                                 </div>
 
                                 <div class="product-icons">
-                                    <i class="icon-m-heart"></i>
-                                    <i class="icon-m-heart-filled"></i>
+                                    <i class="icon-heart"></i>
+                                    <i class="icon-heart-filled"></i>
                                 </div>
                             </a>
 
@@ -2164,9 +2165,9 @@
                                                 </li>
                                             </ul>
 
-                                            <button class="product-colors__more">
+                                            <a href="#" class="product-colors__more">
                                                 +2
-                                            </button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -2195,8 +2196,8 @@
                                     <a href="#" class="btn-main-filled">Shop now</a>
 
                                     <div class="product-icons">
-                                        <i class="icon-m-heart"></i>
-                                        <i class="icon-m-heart-filled"></i>
+                                        <i class="icon-heart"></i>
+                                        <i class="icon-heart-filled"></i>
                                     </div>
                                 </div>
                             </div>
@@ -2221,14 +2222,14 @@
                                     <div class="badge m-eco">
                                         <span class="badge__item badge__text">eco</span>
                                         <span class="badge__item badge__sign">
-                                            <i class="icon-badges-eco"></i>
+                                            <i class="icon-badge-eco"></i>
                                         </span>
                                     </div>
                                 </div>
 
                                 <div class="product-icons">
-                                    <i class="icon-m-heart"></i>
-                                    <i class="icon-m-heart-filled"></i>
+                                    <i class="icon-heart"></i>
+                                    <i class="icon-heart-filled"></i>
                                 </div>
                             </a>
 
@@ -2268,9 +2269,9 @@
                                                 </li>
                                             </ul>
 
-                                            <button class="product-colors__more">
+                                            <a href="#" class="product-colors__more">
                                                 +2
-                                            </button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -2299,8 +2300,8 @@
                                     <a href="#" class="btn-main-filled">Shop now</a>
 
                                     <div class="product-icons">
-                                        <i class="icon-m-heart"></i>
-                                        <i class="icon-m-heart-filled"></i>
+                                        <i class="icon-heart"></i>
+                                        <i class="icon-heart-filled"></i>
                                     </div>
                                 </div>
                             </div>
@@ -2325,14 +2326,14 @@
                                     <div class="badge m-eco">
                                         <span class="badge__item badge__text">eco</span>
                                         <span class="badge__item badge__sign">
-                                            <i class="icon-badges-eco"></i>
+                                            <i class="icon-badge-eco"></i>
                                         </span>
                                     </div>
                                 </div>
 
                                 <div class="product-icons">
-                                    <i class="icon-m-heart"></i>
-                                    <i class="icon-m-heart-filled"></i>
+                                    <i class="icon-heart"></i>
+                                    <i class="icon-heart-filled"></i>
                                 </div>
                             </a>
 
@@ -2372,9 +2373,9 @@
                                                 </li>
                                             </ul>
 
-                                            <button class="product-colors__more">
+                                            <a href="#" class="product-colors__more">
                                                 +2
-                                            </button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -2403,8 +2404,8 @@
                                     <a href="#" class="btn-main-filled">Shop now</a>
 
                                     <div class="product-icons">
-                                        <i class="icon-m-heart"></i>
-                                        <i class="icon-m-heart-filled"></i>
+                                        <i class="icon-heart"></i>
+                                        <i class="icon-heart-filled"></i>
                                     </div>
                                 </div>
                             </div>
@@ -2429,14 +2430,14 @@
                                     <div class="badge m-eco">
                                         <span class="badge__item badge__text">eco</span>
                                         <span class="badge__item badge__sign">
-                                            <i class="icon-badges-eco"></i>
+                                            <i class="icon-badge-eco"></i>
                                         </span>
                                     </div>
                                 </div>
 
                                 <div class="product-icons">
-                                    <i class="icon-m-heart"></i>
-                                    <i class="icon-m-heart-filled"></i>
+                                    <i class="icon-heart"></i>
+                                    <i class="icon-heart-filled"></i>
                                 </div>
                             </a>
 
@@ -2476,9 +2477,9 @@
                                                 </li>
                                             </ul>
 
-                                            <button class="product-colors__more">
+                                            <a href="#" class="product-colors__more">
                                                 +2
-                                            </button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -2507,8 +2508,8 @@
                                     <a href="#" class="btn-main-filled">Shop now</a>
 
                                     <div class="product-icons">
-                                        <i class="icon-m-heart"></i>
-                                        <i class="icon-m-heart-filled"></i>
+                                        <i class="icon-heart"></i>
+                                        <i class="icon-heart-filled"></i>
                                     </div>
                                 </div>
                             </div>
@@ -2533,14 +2534,14 @@
                                     <div class="badge m-eco">
                                         <span class="badge__item badge__text">eco</span>
                                         <span class="badge__item badge__sign">
-                                            <i class="icon-badges-eco"></i>
+                                            <i class="icon-badge-eco"></i>
                                         </span>
                                     </div>
                                 </div>
 
                                 <div class="product-icons">
-                                    <i class="icon-m-heart"></i>
-                                    <i class="icon-m-heart-filled"></i>
+                                    <i class="icon-heart"></i>
+                                    <i class="icon-heart-filled"></i>
                                 </div>
                             </a>
 
@@ -2580,9 +2581,9 @@
                                                 </li>
                                             </ul>
 
-                                            <button class="product-colors__more">
+                                            <a href="#" class="product-colors__more">
                                                 +2
-                                            </button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -2611,8 +2612,8 @@
                                     <a href="#" class="btn-main-filled">Shop now</a>
 
                                     <div class="product-icons">
-                                        <i class="icon-m-heart"></i>
-                                        <i class="icon-m-heart-filled"></i>
+                                        <i class="icon-heart"></i>
+                                        <i class="icon-heart-filled"></i>
                                     </div>
                                 </div>
                             </div>

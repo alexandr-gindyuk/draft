@@ -3,7 +3,7 @@
 
     @include media(md-down) {
         margin-bottom: 20px;
-        border-bottom: 1px solid color('grey-deep-light');
+        border-bottom: 1px solid color('grey-light');
     }
 
     @include media(lg-up) {
@@ -29,16 +29,16 @@
                     display: none;
                 }
 
-                .icon-m-bag-filled {
+                .icon-cart-filled {
                     display: none;
                 }
 
                 &.m-filled {
-                    .icon-m-bag {
+                    .icon-cart {
                         display: none;
                     }
 
-                    .icon-m-bag-filled {
+                    .icon-cart-filled {
                         display: flex;
                     }
                 }
@@ -59,7 +59,7 @@
                 padding-left: 10px;
                 font-family: $font-dinot-medium;
                 font-size: 16px;
-                color: color('grey-super-deep');
+                color: color('grey-deep');
             }
         }
     }
@@ -83,8 +83,6 @@
 
         [class*=icon-] {
             font-size: 20px;
-            font-weight: bold;
-            line-height: 1.5;
         }
 
         &--cart {
@@ -106,6 +104,11 @@
                         display: flex;
                     }
                 }
+            }
+
+            .item-cart-number {
+                font-size: 12px;
+                padding-left: 5px;
             }
         }
 
