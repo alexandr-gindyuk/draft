@@ -1,17 +1,17 @@
 .messages {
-    @include wrapper;
+    &__wrapper {
+        @include wrapper;
 
-    $root: &;
-
-    font-size: 14px;
-
-    width: 100%;
-    padding: 10px;
-    text-align: center;
+        font-size: 14px;
+        width: 100%;
+        padding: 10px;
+    }
 
     &__inner {
         position: relative;
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
         padding-right: 30px; // space for the close-icon
         padding-left: 30px; // to center-align the content
 
@@ -31,6 +31,34 @@
 
         @include media(md-down) {
             right: 0;
+        }
+    }
+
+    &.m-dark {
+        background: color('black');
+        color: color('white');
+    }
+
+    &.m-grey {
+        background: color('grey-light');
+        color: color('grey-deep');
+    }
+
+    &.m-coockies {
+        font-family: $font-dinot-medium;
+        font-size: 16px;
+        background: color('grey-deep');
+        color: color('white');
+    }
+
+    &.m-closeless {
+        .messages__inner {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .messages__close {
+            display: none;
         }
     }
 }
