@@ -3,24 +3,43 @@
 
     $root: &;
 
-    font-family: $font-open-sans;
-    font-size: 12px;
-    font-weight: 600;
-    position: relative;
+    font-size: 14px;
+
     width: 100%;
     padding: 10px;
     text-align: center;
 
+    &__inner {
+        position: relative;
+
+        padding-right: 30px; // space for the close-icon
+        padding-left: 30px; // to center-align the content
+
+        @include media(lg-up) {
+            padding-right: 40px; // space for the close-icon
+            padding-left: 40px; // to center-align the content
+        }
+    }
+
     &__close {
         position: absolute;
-        top: 10px;
+        top: 0;
         right: 10px;
         cursor: pointer;
-        font-size: 17px;
-        color: color('grey');
+        font-size: 20px;
+        color: inherit;
+
+        @include media(md-down) {
+            right: 0;
+        }
     }
 
     &.m-closeless {
+        #{$root}__inner {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
         #{$root}__close {
             display: none;
         }

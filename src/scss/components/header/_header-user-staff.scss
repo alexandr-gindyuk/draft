@@ -28,20 +28,6 @@
                 @include media(md-down) {
                     display: none;
                 }
-
-                .icon-cart-filled {
-                    display: none;
-                }
-
-                &.m-filled {
-                    .icon-cart {
-                        display: none;
-                    }
-
-                    .icon-cart-filled {
-                        display: flex;
-                    }
-                }
             }
         }
 
@@ -90,19 +76,19 @@
                 display: inline-flex;
                 justify-content: flex-end;
                 align-items: center;
+            }
 
-                .icon-m-bag-filled {
+            .cart-filled {
+                display: none;
+            }
+
+            &.m-filled {
+                .cart {
                     display: none;
                 }
 
-                &.m-filled {
-                    .icon-m-bag {
-                        display: none;
-                    }
-
-                    .icon-m-bag-filled {
-                        display: flex;
-                    }
+                .cart-filled {
+                    display: flex;
                 }
             }
 

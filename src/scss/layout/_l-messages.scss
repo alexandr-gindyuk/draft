@@ -8,7 +8,14 @@
     }
 
     &.m-grey {
-        background: color('grey-super-light');
+        background: color('grey-light');
         color: color('grey-deep');
+    }
+
+    &.m-coockies {
+        font-family: $font-dinot-medium;
+        font-size: 16px;
+        background: color('grey-deep');
+        color: color('white');
     }
 }
