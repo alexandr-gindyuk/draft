@@ -12,14 +12,16 @@
 <!-- add 'header-stuck' here when the header should be sticky -->
 <body class="page__hp">
     <div class="l-page">
-        <div class="l-messages m-grey">
-            <div class="messages">
-                <button class="messages__close">
-                    <i class="icon-close"></i>
-                </button>
-                <!-- content asset -->
-                    message
-                <!-- end content asset -->
+        <div class="messages m-grey">
+            <div class="messages__wrapper">
+                <div class="messages__inner">
+                    <button class="messages__close">
+                        <i class="icon-close"></i>
+                    </button>
+                    <!-- content asset -->
+                        message
+                    <!-- end content asset -->
+                </div>
             </div>
         </div>
 
@@ -47,8 +49,9 @@
 
                         <!-- if the cart has any items - add here class 'm-filled' to show specific icon -->
                         <a class="user-staff__item user-staff__item--cart" href="#">
-                            <i class="icon-cart"></i>
-                            <i class="icon-cart-filled"></i>
+                            <span class="cart"><i class="icon-cart"></i></span>
+                            <span class="cart-filled"><i class="icon-cart-filled"></i></span>
+
                             <span class="item-cart-number">(0)</span>
                         </a>
                     </div>
@@ -67,7 +70,7 @@
                             <div class="l-header__info m-info">
                                 <div class="header__info">
                                     <div class="country-lang">
-                                        <i class="icon-flag-us"></i>
+                                        <img class="country-lang__img" src="images/flag-us.png" alt="">
                                         <span>US/Eng</span>
                                     </div>
                                     <a class="store-locator" href="#">
@@ -91,7 +94,9 @@
                                 <div class="header__search-menu-group">
                                     <label class="header__search-mobile">
                                         <input type="search" class="search" placeholder="Search In Odlo"/>
-                                        <i class="icon-search"></i>
+                                        <span class="header__search-mobile-icon">
+                                            <i class="icon-search"></i>
+                                        </span>
                                     </label>
 
                                     <div class="header__menu menu">
@@ -383,7 +388,7 @@
                                                     <a href="#" class="menu__link">KIDS</a>
                                                 </li>
                                                 <li class="menu__item">
-                                                    <a href="#" class="menu__link">COMMUNITY</a>
+                                                    <a href="#" class="menu__link m-light">COMMUNITY</a>
                                                 </li>
                                             </ul>
                                         </nav>
@@ -406,9 +411,15 @@
                                                 <span class="user-staff__link-text">Wishlist</span>
                                             </a>
                                         </li>
-                                        <li class="user-staff__item">
+                                        <li class="user-staff__item user-staff__item--profile">
                                             <a class="user-staff__link" href="#">
-                                                <i class="icon-user"></i>
+                                                <span class="profile-anon">
+                                                    <i class="icon-user"></i>
+                                                </span>
+
+                                                <span class="profile-registered">
+                                                    <i class="icon-user-filled"></i>
+                                                </span>
                                                 <span class="user-staff__link-text">My Account</span>
                                             </a>
                                         </li>
@@ -416,8 +427,8 @@
                                         <!-- if the cart has any items - add here class 'm-filled' to show specific icon -->
                                         <li class="user-staff__item user-staff__item--cart">
                                             <a class="user-staff__link" href="#">
-                                                <i class="icon-cart"></i>
-                                                <i class="icon-cart-filled"></i>
+                                                <span class="cart"><i class="icon-cart"></i></span>
+                                                <span class="cart-filled"><i class="icon-cart-filled"></i></span>
                                                 <span class="item-cart-number">(0)</span>
                                             </a>
                                         </li>
@@ -438,341 +449,6 @@
         </header>
 
         <main class="main">
-
-
-            <!-- styleguide -->
-            <!-- swatches -->
-        <div class="l-wrapper" style="padding: 50px;">
-            <div class="swatches m-large" style="display: flex; width: 300px; justify-content: space-between; margin-bottom: 20px;">
-                <div class="swatch" style="background: #0086bf;"></div>
-                <div class="swatch" style="background: #0086bf;"></div>
-                <div class="swatch selected" style="background: #0086bf;"></div>
-                <div class="swatch disabled" style="background: #0086bf;"></div>
-            </div>
-            <div class="swatches" style="display: flex; width: 300px; justify-content: space-between; margin-bottom: 20px;">
-                <div class="swatch" style="background: #0086bf;"></div>
-                <div class="swatch" style="background: #0086bf;"></div>
-                <div class="swatch selected" style="background: #0086bf;"></div>
-                <div class="swatch disabled" style="background: #0086bf;"></div>
-            </div>
-            <div  class="swatches m-small" style="display: flex; width: 300px; justify-content: space-between;">
-                <div class="swatch" style="background: #0086bf;"></div>
-                <div class="swatch" style="background: #0086bf;"></div>
-                <div class="swatch selected" style="background: #0086bf;"></div>
-                <div class="swatch disabled" style="background: #0086bf;"></div>
-            </div>
-        </div>
-
-        <!-- ul variations -->
-        <div class="l-wrapper" style="padding: 50px;">
-            <ul class="h-list-bullets">
-                <li>First</li>
-                <li>Second</li>
-                <li>Third</li>
-                <li>Fourth</li>
-            </ul>
-
-            <ul class="h-list-circles">
-                <li>First</li>
-                <li>Second</li>
-                <li>Third</li>
-                <li>Fourth</li>
-            </ul>
-
-            <ul class="h-list-numbers">
-                <li>First</li>
-                <li>Second</li>
-                <li>Third</li>
-                <li>Fourth</li>
-            </ul>
-
-            <ul class="h-list-lines">
-                <li>First</li>
-                <li>Second</li>
-                <li>Third</li>
-                <li>Fourth</li>
-            </ul>
-        </div>
-
-        <!-- headings -->
-        <div class="l-wrapper" style="padding: 50px;">
-            <h1 class="h h1">Title H1 keep going</h1>
-            <h2 class="h h2">Title H2 keep going</h2>
-            <h3 class="h h3">Title H3 keep going</h3>
-            <h4 class="h h4">Title H4 keep going</h4>
-        </div>
-
-        <!-- links -->
-        <div class="l-wrapper" style="padding: 50px; display:grid; grid-template-columns: repeat(3, 1fr)">
-            <div>
-                <a href="" class="link-primary">MORE TECHNOLOGIES</a><br/><br/>
-                <a href="" class="link-primary">MORE TECHNOLOGIES<i class="icon-s-arrow-right m-margin-left"></i></a><br/><br/>
-                <a href="" class="link-primary disabled">View All</a><br/><br/>
-                <a href="" class="link-primary disabled">MORE TECHNOLOGIES<i class="icon-s-arrow-right m-margin-left"></i></a><br/><br/>
-                <br>
-            </div>
-
-            <div>
-                <a href="" class="link-secondary">View All</a><br/><br/>
-                <a href="" class="link-secondary disabled">View All</a><br/><br/>
-                <br>
-            </div>
-
-            <div>
-                <a href="" class="link-underline">View All</a><br/><br/>
-                <a href="" class="link-underline disabled">View All</a><br/><br/>
-            </div>
-        </div>
-
-        <!-- inputs -->
-        <div class="l-wrapper" style="padding: 50px;">
-            <form class="form m-registration" action="">
-                <div class="form__section">
-                    <label class="form__label" for="firstname">
-                        First Name
-                    </label>
-                    <input class="input-main" id="firstname" type="text" placeholder="Placeholder">
-                </div>
-
-                <div class="form__section">
-                    <label class="form__label" for="lastname">
-                        <span class="form__section-required" aria-hidden="true">*</span>
-                        Last Name
-                    </label>
-                    <input class="input-main m-invalid" id="lastname" type="text" placeholder="Placeholder">
-                    <div class="form__caption">For delivery purposes only.</div>
-                    <div class="form__error-message" role="alert">
-                        <i class="icon-heart"></i>
-                        Error message
-                    </div>
-                </div>
-
-                <div class="form__section">
-                    <label class="form__label" for="email">
-                        <span class="form__section-required" aria-hidden="true">*</span>
-                        Email
-                    </label>
-                    <input class="input-main" id="email" disabled type="email" placeholder="Placeholder">
-                </div>
-
-                <div class="form__section">
-                    <label class="form__label" for="country">
-                        <span class="form__section-required" aria-hidden="true">*</span>
-                        Country
-                    </label>
-                    <select class="input-select" id="country" type="text">
-                        <option value="" selected="">Please select</option>
-                        <option value="1">Ukraine</option>
-                        <option value="2">Switzerland</option>
-                        <option value="3">USA</option>
-                    </select>
-                </div>
-            </form>
-
-            <div class="theme-dark" style="padding: 50px;">
-                <form class="form m-registration" action="">
-                    <div class="form__section">
-                        <label class="form__label" for="firstname">
-                            First Name
-                        </label>
-                        <input class="input-main" id="firstname" type="text" placeholder="Placeholder">
-                    </div>
-
-                    <div class="form__section">
-                        <label class="form__label" for="lastname">
-                            <span class="form__section-required" aria-hidden="true">*</span>
-                            Last Name
-                        </label>
-                        <input class="input-main m-invalid" id="lastname" type="text" placeholder="Placeholder">
-                        <div class="form__error-message" role="alert">
-                            <i class="icon-m-error"></i>
-                            This field is required
-                        </div>
-                        <div class="form__caption">For delivery purposes only.</div>
-                    </div>
-
-
-                    <div class="form__section">
-                        <label class="form__label" for="email">
-                            <span class="form__section-required" aria-hidden="true">*</span>
-                            Email
-                        </label>
-                        <input class="input-main" id="email" disabled type="email" placeholder="Placeholder">
-                    </div>
-
-                    <div class="form__section">
-                        <label class="form__label" for="country">
-                            <span class="form__section-required" aria-hidden="true">*</span>
-                            Country
-                        </label>
-                        <select class="input-select" id="country" type="text">
-                            <option value="" selected="">Please select</option>
-                            <option value="1">Ukraine</option>
-                            <option value="2">Switzerland</option>
-                            <option value="3">USA</option>
-                        </select>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <!-- buttons -->
-        <div class="l-wrapper" style="padding: 50px;">
-            <button type="button" class="btn-main-outlined">outlined</button>
-            &nbsp;
-            <button type="button" class="btn-main-filled">filled</button>
-            &nbsp;
-            <button type="button" class="btn-main-filled">WITH ICON <i class="icon-arrow-right m-margin-left"></i></button>
-
-            <br/><br/>
-
-            <button type="button" class="btn-main-outlined" disabled>outlined</button>
-            &nbsp;
-            <button type="button" class="btn-main-filled" disabled>filled</button>
-            &nbsp;
-            <button type="button" class="btn-main-filled" disabled>WITH ICON <i class="icon-arrow-right m-margin-left"></i></button>
-        </div>
-
-        <div class="l-wrapper theme-dark" style="padding: 50px;">
-            <button type="button" class="btn-main-outlined">outlined</button>
-            &nbsp;
-            <button type="button" class="btn-main-filled">filled</button>
-            &nbsp;
-            <button type="button" class="btn-main-filled">WITH ICON <i class="icon-arrow-right m-margin-left"></i></button>
-
-            <br/><br/>
-
-            <button type="button" class="btn-main-outlined" disabled>outlined</button>
-            &nbsp;
-            <button type="button" class="btn-main-filled" disabled>filled</button>
-            &nbsp;
-            <button type="button" class="btn-main-filled" disabled>WITH ICON <i class="icon-arrow-right m-margin-left"></i></button>
-        </div>
-
-        <!-- radio buttons -->
-        <div class="l-wrapper theme-dark">
-            <form class="form" action="" style="padding: 40px;">
-                <div class="form__section radio m-row">
-                    <label class="radio-item">Radiobutton checked
-                        <input type="radio" checked name="radio">
-                        <span class="radio-item__radiomark"></span>
-                    </label>
-                    <label class="radio-item m-disabled">Radiobutton disabled
-                        <input type="radio" disabled name="radio" >
-                        <span class="radio-item__radiomark"></span>
-                    </label>
-                    <label class="radio-item">Radiobutton usual
-                        <input type="radio" name="radio">
-                        <span class="radio-item__radiomark"></span>
-                    </label>
-                    <label class="radio-item error">Radiobutton error
-                        <input type="radio" name="radio">
-                        <span class="radio-item__radiomark"></span>
-                    </label>
-                </div>
-            </form>
-        </div>
-
-        <div class="l-wrapper">
-            <form class="form" action="" style="padding: 40px;">
-                <div class="form__section radio m-column">
-                    <label class="radio-item">Radiobutton checked
-                        <input type="radio" checked name="radio">
-                        <span class="radio-item__radiomark"></span>
-                    </label>
-                    <label class="radio-item m-disabled">Radiobutton disabled
-                        <input type="radio" disabled name="radio" >
-                        <span class="radio-item__radiomark"></span>
-                    </label>
-                    <label class="radio-item">Radiobutton usual
-                        <input type="radio" name="radio">
-                        <span class="radio-item__radiomark"></span>
-                    </label>
-                    <label class="radio-item error">Radiobutton error
-                        <input type="radio" name="radio">
-                        <span class="radio-item__radiomark"></span>
-                    </label>
-                </div>
-            </form>
-        </div>
-
-        <!-- checkboxes -->
-        <div class="l-wrapper">
-            <form class="form m-registration theme-dark" action="" style="padding: 40px;">
-                <div class="form__section checkbox m-row">
-                    <label class="checkbox-item">
-                        <span class="form__section-required" aria-hidden="true">*</span>
-                        Checkbox checked
-
-                        <input type="checkbox" checked name="check">
-                        <span class="checkbox-item__checkmark"></span>
-                    </label>
-
-                    <label class="checkbox-item m-disabled">
-                        <span class="form__section-required" aria-hidden="true">*</span>
-                        Checkbox disabled
-
-                        <input type="checkbox" disabled name="check" >
-                        <span class="checkbox-item__checkmark"></span>
-                    </label>
-
-                    <label class="checkbox-item">
-                        <span class="form__section-required" aria-hidden="true">*</span>
-                        Checkbox usual
-
-                        <input type="checkbox" name="check">
-                        <span class="checkbox-item__checkmark"></span>
-                    </label>
-
-                    <label class="checkbox-item error">
-                        <span class="form__section-required" aria-hidden="true">*</span>
-                        Checkbox error
-
-                        <input type="checkbox" name="check">
-                        <span class="checkbox-item__checkmark"></span>
-                    </label>
-                </div>
-            </form>
-
-
-            <form class="checkbox checkbox m-column" style="padding: 40px;">
-                <label class="checkbox-item">
-                    <span class="form__section-required" aria-hidden="true">*</span>
-                    Checkbox checked
-
-                    <input type="checkbox" checked name="check">
-                    <span class="checkbox-item__checkmark"></span>
-                </label>
-
-                <label class="checkbox-item m-disabled">
-                    <span class="form__section-required" aria-hidden="true">*</span>
-                    Checkbox
-
-                    <input type="checkbox" disabled name="check" >
-                    <span class="checkbox-item__checkmark"></span>
-                </label>
-
-                <label class="checkbox-item">
-                    <span class="form__section-required" aria-hidden="true">*</span>
-                    Checkbox usual
-
-                    <input type="checkbox" name="check">
-                    <span class="checkbox-item__checkmark"></span>
-                </label>
-
-                <label class="checkbox-item error">
-                    <span class="form__section-required" aria-hidden="true">*</span>
-                    Checkbox error
-
-                    <input type="checkbox" name="check">
-                    <span class="checkbox-item__checkmark"></span>
-                </label>
-            </form>
-        </div>
-
-        <!-- end styleguide -->
-
-
             <section class="l-wrapper">
                 <!-- carousel - what's your next adventure -->
 
@@ -878,7 +554,7 @@
                         <p class="quote-banner__text">N1no Schurter / The Legent of MTB</p>
                     </div>
                     <div class="quote-banner__action">
-                        <a href="" class="link-primary">Read the interview<i class="icon-s-arrow-right m-margin-left"></i></a>
+                        <a href="" class="link-primary">Read the interview<i class="icon-chevron m-margin-left"></i></a>
                     </div>
                 </div>
                  <!-- end quoted-banner -->
@@ -902,7 +578,7 @@
                                 <div class="badge m-eco">
                                     <span class="badge__item badge__text">eco</span>
                                     <span class="badge__item badge__sign">
-                                        <i class="icon-badges-eco"></i>
+                                        <i class="icon-badge-eco"></i>
                                     </span>
                                 </div>
                             </div>
@@ -1121,7 +797,7 @@
                             <div class="promo-caption__actions">
                                 <a class="btn-main-outlined promo-caption__actions-item" href="">outlined</a>
                                 <button type="button" class="btn-main-outlined promo-caption__actions-item">outlined</button>
-                                <a href="#" class="link-primary promo-caption__actions-item"><i class="icon-s-arrow-right m-margin-right"></i>MORE TECHNOLOGIES</a>
+                                <a href="#" class="link-primary promo-caption__actions-item"><i class="icon-chevron m-margin-right"></i>MORE TECHNOLOGIES</a>
                             </div>
                         </div>
                     </figcaption>
@@ -1200,7 +876,7 @@
                             <button type="button" class="btn-main-filled">Cancel</button>
                         </div>
 
-                        <button class="link-primary">Set preferences<i class="icon-s-arrow-right m-margin-left filled"></i></button>
+                        <button class="link-primary">Set preferences<i class="icon-chevron m-margin-left filled"></i></button>
                     </div>
                 </div>
             </div>
@@ -1438,8 +1114,13 @@
                                         <div class="search-suggestion__top-inner">
                                             <div class="search-suggestion__form">
                                                 <div class="form__section">
-                                                    <i class="icon-search"></i>
-                                                    <i class="icon-close"></i>
+                                                    <span class="search">
+                                                        <i class="icon-search"></i>
+                                                    </span>
+
+                                                    <span class="close">
+                                                        <i class="icon-close"></i>
+                                                    </span>
                                                     <input class="input-main" id="firstname" type="search" placeholder="Search">
                                                 </div>
                                                 <button class="search-suggestion__cancel">Cancel</button>
@@ -1796,7 +1477,7 @@
                     </div>
 
                     <div class="l-grid-action-order__action">
-                        <a href="" class="link-primary">MORE community photos<i class="icon-s-arrow-right m-margin-left"></i></a>
+                        <a href="" class="link-primary">MORE community photos<i class="icon-chevron m-margin-left"></i></a>
                     </div>
 
                     <div class="l-grid-action-order__content">
@@ -2808,6 +2489,336 @@
                 </div>
             </div>
             <!-- end PLP layout-->
+
+
+            <!-- styleguide -->
+            <div>
+                <!-- swatches -->
+                <div class="l-wrapper" style="padding: 50px;">
+                    <div class="swatches" style="display: flex; width: 300px; justify-content: space-between; margin-bottom: 20px;">
+                        <div class="swatch" style="background: #0086bf;"></div>
+                        <div class="swatch" style="background: #0086bf;"></div>
+                        <div class="swatch selected" style="background: #0086bf;"></div>
+                        <div class="swatch disabled" style="background: #0086bf;"></div>
+                    </div>
+                    <div  class="swatches m-small" style="display: flex; width: 300px; justify-content: space-between;">
+                        <div class="swatch" style="background: #0086bf;"></div>
+                        <div class="swatch" style="background: #0086bf;"></div>
+                        <div class="swatch selected" style="background: #0086bf;"></div>
+                        <div class="swatch disabled" style="background: #0086bf;"></div>
+                    </div>
+                </div>
+
+                <!-- ul variations -->
+                <div class="l-wrapper" style="padding: 50px;">
+                    <ul class="h-list-bullets">
+                        <li>First</li>
+                        <li>Second</li>
+                        <li>Third</li>
+                        <li>Fourth</li>
+                    </ul>
+
+                    <ul class="h-list-circles">
+                        <li>First</li>
+                        <li>Second</li>
+                        <li>Third</li>
+                        <li>Fourth</li>
+                    </ul>
+
+                    <ul class="h-list-numbers">
+                        <li>First</li>
+                        <li>Second</li>
+                        <li>Third</li>
+                        <li>Fourth</li>
+                    </ul>
+
+                    <ul class="h-list-lines">
+                        <li>First</li>
+                        <li>Second</li>
+                        <li>Third</li>
+                        <li>Fourth</li>
+                    </ul>
+                </div>
+
+                <!-- headings -->
+                <div class="l-wrapper" style="padding: 50px;">
+                    <h1 class="h h1">Title H1 keep going</h1>
+                    <h2 class="h h2">Title H2 keep going</h2>
+                    <h3 class="h h3">Title H3 keep going</h3>
+                    <h4 class="h h4">Title H4 keep going</h4>
+                </div>
+
+                <!-- links -->
+                <div class="l-wrapper" style="padding: 50px; display:grid; grid-template-columns: repeat(3, 1fr)">
+                    <div>
+                        <a href="" class="link-primary">MORE TECHNOLOGIES</a><br/><br/>
+                        <a href="" class="link-primary">MORE TECHNOLOGIES<i class="icon-chevron m-margin-left"></i></a><br/><br/>
+                        <a href="" class="link-primary"><i class="icon-chevron m-margin-right"></i>MORE TECHNOLOGIES</a><br/><br/>
+                        <a href="" class="link-primary disabled">View All</a><br/><br/>
+                        <a href="" class="link-primary disabled">MORE TECHNOLOGIES<i class="icon-chevron m-margin-left"></i></a><br/><br/>
+                        <a href="" class="link-primary disabled"><i class="icon-chevron m-margin-right"></i>MORE TECHNOLOGIES</a><br/><br/>
+                        <br>
+                    </div>
+
+                    <div>
+                        <a href="" class="link-secondary">View All</a><br/><br/>
+                        <a href="" class="link-secondary disabled">View All</a><br/><br/>
+                        <br>
+                    </div>
+
+                    <div>
+                        <a href="" class="link-underline">View All</a><br/><br/>
+                        <a href="" class="link-underline disabled">View All</a><br/><br/>
+                    </div>
+                </div>
+
+                <!-- inputs -->
+                <div class="l-wrapper" style="padding: 50px;">
+                    <form class="form m-registration" action="">
+                        <div class="form__section">
+                            <label class="form__label" for="firstname">
+                                First Name
+                            </label>
+                            <input class="input-main" id="firstname" type="text" placeholder="Placeholder">
+                        </div>
+
+                        <div class="form__section">
+                            <label class="form__label" for="lastname">
+                                <span class="form__section-required" aria-hidden="true">*</span>
+                                Last Name
+                            </label>
+                            <input class="input-main m-invalid" id="lastname" type="text" placeholder="Placeholder">
+                            <div class="form__caption">For delivery purposes only.</div>
+                            <div class="form__error-message" role="alert">
+                                <i class="icon-error"></i>
+                                Error message
+                            </div>
+                        </div>
+
+                        <div class="form__section">
+                            <label class="form__label" for="email">
+                                <span class="form__section-required" aria-hidden="true">*</span>
+                                Email
+                            </label>
+                            <input class="input-main" id="email" disabled type="email" placeholder="Placeholder">
+                        </div>
+
+                        <div class="form__section">
+                            <label class="form__label" for="country">
+                                <span class="form__section-required" aria-hidden="true">*</span>
+                                Country
+                            </label>
+                            <select class="input-select" id="country" type="text">
+                                <option value="" selected="">Please select</option>
+                                <option value="1">Ukraine</option>
+                                <option value="2">Switzerland</option>
+                                <option value="3">USA</option>
+                            </select>
+                        </div>
+                    </form>
+
+                    <div class="theme-dark" style="padding: 50px;">
+                        <form class="form m-registration" action="">
+                            <div class="form__section">
+                                <label class="form__label" for="firstname">
+                                    First Name
+                                </label>
+                                <input class="input-main" id="firstname" type="text" placeholder="Placeholder">
+                            </div>
+
+                            <div class="form__section">
+                                <label class="form__label" for="lastname">
+                                    <span class="form__section-required" aria-hidden="true">*</span>
+                                    Last Name
+                                </label>
+                                <input class="input-main m-invalid" id="lastname" type="text" placeholder="Placeholder">
+                                <div class="form__error-message" role="alert">
+                                    <i class="icon-m-error"></i>
+                                    This field is required
+                                </div>
+                                <div class="form__caption">For delivery purposes only.</div>
+                            </div>
+
+
+                            <div class="form__section">
+                                <label class="form__label" for="email">
+                                    <span class="form__section-required" aria-hidden="true">*</span>
+                                    Email
+                                </label>
+                                <input class="input-main" id="email" disabled type="email" placeholder="Placeholder">
+                            </div>
+
+                            <div class="form__section">
+                                <label class="form__label" for="country">
+                                    <span class="form__section-required" aria-hidden="true">*</span>
+                                    Country
+                                </label>
+                                <select class="input-select" id="country" type="text">
+                                    <option value="" selected="">Please select</option>
+                                    <option value="1">Ukraine</option>
+                                    <option value="2">Switzerland</option>
+                                    <option value="3">USA</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- buttons -->
+                <div class="l-wrapper" style="padding: 50px;">
+                    <button type="button" class="btn-main-outlined">outlined</button>
+                    &nbsp;
+                    <button type="button" class="btn-main-filled">filled</button>
+                    &nbsp;
+                    <button type="button" class="btn-main-filled">WITH ICON <i class="icon-arrow-right m-margin-left"></i></button>
+
+                    <br/><br/>
+
+                    <button type="button" class="btn-main-outlined" disabled>outlined</button>
+                    &nbsp;
+                    <button type="button" class="btn-main-filled" disabled>filled</button>
+                    &nbsp;
+                    <button type="button" class="btn-main-filled" disabled>WITH ICON <i class="icon-arrow-right m-margin-left"></i></button>
+                </div>
+
+                <div class="l-wrapper theme-dark" style="padding: 50px;">
+                    <button type="button" class="btn-main-outlined">outlined</button>
+                    &nbsp;
+                    <button type="button" class="btn-main-filled">filled</button>
+                    &nbsp;
+                    <button type="button" class="btn-main-filled">WITH ICON <i class="icon-arrow-right m-margin-left"></i></button>
+
+                    <br/><br/>
+
+                    <button type="button" class="btn-main-outlined" disabled>outlined</button>
+                    &nbsp;
+                    <button type="button" class="btn-main-filled" disabled>filled</button>
+                    &nbsp;
+                    <button type="button" class="btn-main-filled" disabled>WITH ICON <i class="icon-arrow-right m-margin-left"></i></button>
+                </div>
+
+                <!-- radio buttons -->
+                <div class="l-wrapper theme-dark">
+                    <form class="form" action="" style="padding: 40px;">
+                        <div class="form__section radio m-row">
+                            <label class="radio-item">Radiobutton checked
+                                <input type="radio" checked name="radio">
+                                <span class="radio-item__radiomark"></span>
+                            </label>
+                            <label class="radio-item m-disabled">Radiobutton disabled
+                                <input type="radio" disabled name="radio" >
+                                <span class="radio-item__radiomark"></span>
+                            </label>
+                            <label class="radio-item">Radiobutton usual
+                                <input type="radio" name="radio">
+                                <span class="radio-item__radiomark"></span>
+                            </label>
+                            <label class="radio-item error">Radiobutton error
+                                <input type="radio" name="radio">
+                                <span class="radio-item__radiomark"></span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="l-wrapper">
+                    <form class="form" action="" style="padding: 40px;">
+                        <div class="form__section radio m-column">
+                            <label class="radio-item">Radiobutton checked
+                                <input type="radio" checked name="radio">
+                                <span class="radio-item__radiomark"></span>
+                            </label>
+                            <label class="radio-item m-disabled">Radiobutton disabled
+                                <input type="radio" disabled name="radio" >
+                                <span class="radio-item__radiomark"></span>
+                            </label>
+                            <label class="radio-item">Radiobutton usual
+                                <input type="radio" name="radio">
+                                <span class="radio-item__radiomark"></span>
+                            </label>
+                            <label class="radio-item error">Radiobutton error
+                                <input type="radio" name="radio">
+                                <span class="radio-item__radiomark"></span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- checkboxes -->
+                <div class="l-wrapper">
+                    <form class="form m-registration theme-dark" action="" style="padding: 40px;">
+                        <div class="form__section checkbox m-row">
+                            <label class="checkbox-item">
+                                <span class="form__section-required" aria-hidden="true">*</span>
+                                Checkbox checked
+
+                                <input type="checkbox" checked name="check">
+                                <span class="checkbox-item__checkmark"></span>
+                            </label>
+
+                            <label class="checkbox-item m-disabled">
+                                <span class="form__section-required" aria-hidden="true">*</span>
+                                Checkbox disabled
+
+                                <input type="checkbox" disabled name="check" >
+                                <span class="checkbox-item__checkmark"></span>
+                            </label>
+
+                            <label class="checkbox-item">
+                                <span class="form__section-required" aria-hidden="true">*</span>
+                                Checkbox usual
+
+                                <input type="checkbox" name="check">
+                                <span class="checkbox-item__checkmark"></span>
+                            </label>
+
+                            <label class="checkbox-item error">
+                                <span class="form__section-required" aria-hidden="true">*</span>
+                                Checkbox error
+
+                                <input type="checkbox" name="check">
+                                <span class="checkbox-item__checkmark"></span>
+                            </label>
+                        </div>
+                    </form>
+
+
+                    <form class="checkbox checkbox m-column" style="padding: 40px;">
+                        <label class="checkbox-item">
+                            <span class="form__section-required" aria-hidden="true">*</span>
+                            Checkbox checked
+
+                            <input type="checkbox" checked name="check">
+                            <span class="checkbox-item__checkmark"></span>
+                        </label>
+
+                        <label class="checkbox-item m-disabled">
+                            <span class="form__section-required" aria-hidden="true">*</span>
+                            Checkbox
+
+                            <input type="checkbox" disabled name="check" >
+                            <span class="checkbox-item__checkmark"></span>
+                        </label>
+
+                        <label class="checkbox-item">
+                            <span class="form__section-required" aria-hidden="true">*</span>
+                            Checkbox usual
+
+                            <input type="checkbox" name="check">
+                            <span class="checkbox-item__checkmark"></span>
+                        </label>
+
+                        <label class="checkbox-item error">
+                            <span class="form__section-required" aria-hidden="true">*</span>
+                            Checkbox error
+
+                            <input type="checkbox" name="check">
+                            <span class="checkbox-item__checkmark"></span>
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <!-- end styleguide -->
         </main>
 
         <footer class="footer">

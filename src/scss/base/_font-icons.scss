@@ -78,11 +78,11 @@
   .icon-check-mark:before {
     content: "\e90b";
   }
-  .icon-chevron .path1:before {
+  .icon-chevron:before {
     content: "\e90c";
     color: rgb(203, 204, 204);
   }
-  .icon-chevron .path2:before {
+  .icon-chevron:after {
     content: "\e90d";
     margin-left: -1em;
     color: rgb(0, 0, 0);
@@ -90,11 +90,11 @@
   .icon-close:before {
     content: "\e90e";
   }
-  .icon-error .path1:before {
+  .icon-error:before {
     content: "\e90f";
     color: rgb(214, 21, 53);
   }
-  .icon-error .path2:before {
+  .icon-error:after {
     content: "\e910";
     margin-left: -0.7001953125em;
     color: rgb(255, 255, 255);
@@ -142,11 +142,11 @@
   .icon-arrow-top:before {
     content: "\e91e";
   }
-  .icon-cart-filled .path1:before {
+  .icon-cart-filled:before {
     content: "\e91f";
     color: rgb(0, 0, 0);
   }
-  .icon-cart-filled .path2:before {
+  .icon-cart-filled:after {
     content: "\e920";
     margin-left: -1em;
     color: rgb(1, 126, 180);

@@ -1,32 +1,64 @@
 .messages {
-    @include wrapper;
+    &__wrapper {
+        @include wrapper;
 
-    $root: &;
-
-    font-family: $font-open-sans;
-    font-size: 12px;
-    font-weight: 600;
-    position: relative;
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-
-    &__close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
-        font-size: 17px;
-        color: color('grey');
+        font-size: 14px;
+        width: 100%;
+        padding: 10px;
     }
 
-    &.m-closeless {
-        #{$root}__close {
-            display: none;
+    &__inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 30px; // space for the close-icon
+        padding-left: 30px; // to center-align the content
+
+        @include media(lg-up) {
+            padding-right: 40px; // space for the close-icon
+            padding-left: 40px; // to center-align the content
         }
     }
 
-    &.m-static-padding {
-        padding: 10px;
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        color: inherit;
+
+        @include media(md-down) {
+            right: 0;
+        }
+    }
+
+    &.m-dark {
+        background: color('black');
+        color: color('white');
+    }
+
+    &.m-grey {
+        background: color('grey-light');
+        color: color('grey-deep');
+    }
+
+    &.m-coockies {
+        font-family: $font-dinot-medium;
+        font-size: 16px;
+        background: color('grey-deep');
+        color: color('white');
+    }
+
+    &.m-closeless {
+        .messages__inner {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .messages__close {
+            display: none;
+        }
     }
 }

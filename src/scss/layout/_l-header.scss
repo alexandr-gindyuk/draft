@@ -30,6 +30,7 @@
 
         @include media(lg-up) {
             @include grid;
+            align-items: center
         }
     }
 

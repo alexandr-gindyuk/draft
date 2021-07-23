@@ -10,12 +10,14 @@
     <div class="l-page">
         <div class="l-messages m-grey">
             <div class="messages">
-                <button class="messages__close">
-                    <i class="icon-close"></i>
-                </button>
-                <!-- content asset -->
-                    message
-                <!-- end content asset -->
+                <div class="messages__inner">
+                    <button class="messages__close">
+                        <i class="icon-close"></i>
+                    </button>
+                    <!-- content asset -->
+                        message
+                    <!-- end content asset -->
+                </div>
             </div>
         </div>
 
@@ -43,9 +45,10 @@
 
                         <!-- if the cart has any items - add here class 'm-filled' to show specific icon -->
                         <a class="user-staff__item user-staff__item--cart" href="#">
-                            <i class="icon-cart"></i>
-                            <i class="icon-cart-filled"></i>
-                            <span>(0)</span>
+                            <span class="cart"><i class="icon-cart"></i></span>
+                            <span class="cart-filled"><i class="icon-cart-filled"></i></span>
+
+                            <span class="item-cart-number">(0)</span>
                         </a>
                     </div>
 
@@ -63,7 +66,8 @@
                             <div class="l-header__info m-info">
                                 <div class="header__info">
                                     <div class="country-lang">
-                                        US/Eng
+                                        <i class="icon-flag-us"></i>
+                                        <span>US/Eng</span>
                                     </div>
                                     <a class="store-locator" href="#">
                                         <i class="icon-location"></i>&nbsp;
@@ -86,7 +90,9 @@
                                 <div class="header__search-menu-group">
                                     <label class="header__search-mobile">
                                         <input type="search" class="search" placeholder="Search In Odlo"/>
-                                        <i class="icon-search"></i>
+                                        <span class="header__search-mobile-icon">
+                                            <i class="icon-search"></i>
+                                        </span>
                                     </label>
 
                                     <div class="header__menu menu">
@@ -378,7 +384,7 @@
                                                     <a href="#" class="menu__link">KIDS</a>
                                                 </li>
                                                 <li class="menu__item">
-                                                    <a href="#" class="menu__link m-light">COMMUNITY</a>
+                                                    <a href="#" class="menu__link">COMMUNITY</a>
                                                 </li>
                                             </ul>
                                         </nav>
@@ -409,11 +415,11 @@
                                         </li>
 
                                         <!-- if the cart has any items - add here class 'm-filled' to show specific icon -->
-                                        <li class="user-staff__item user-staff__item--cart m-filled">
+                                        <li class="user-staff__item user-staff__item--cart">
                                             <a class="user-staff__link" href="#">
-                                                <i class="icon-cart"></i>
-                                                <i class="icon-cart-filled"></i>
-                                                <span>(0)</span>
+                                                <span class="cart"><i class="icon-cart"></i></span>
+                                                <span class="cart-filled"><i class="icon-cart-filled"></i></span>
+                                                <span class="item-cart-number">(0)</span>
                                             </a>
                                         </li>
                                         <li class="user-staff__item user-staff__item--store">
