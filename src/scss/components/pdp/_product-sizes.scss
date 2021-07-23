@@ -4,8 +4,6 @@
 
     &__heading {
         display: flex;
-        justify-content: space-between;
-        font-family: $font-dinot;
         font-size: 16px;
         color: color('black');
         margin-bottom: 20px;
@@ -14,6 +12,12 @@
     &__heading-item {
         display: flex;
         align-items: center;
+
+        &:not(:last-child) {
+            padding-right: 20px;
+            margin-right: 20px;
+            border-right: 1px solid color('grey-light');
+        }
 
         &.m-pointer {
             cursor: pointer;
@@ -58,7 +62,8 @@
 
         &.m-disabled {
             #{$root}__name {
-                color: color('grey-deep');
+                color: color('grey-mid');
+                text-decoration: line-through;
             }
         }
     }

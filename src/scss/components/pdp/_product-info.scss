@@ -1,17 +1,20 @@
 .product-info {
+    display: flex;
+
     &__item {
-        font-family: $font-dinot;
         font-size: 16px;
-        color: color('black');
+        color: color('grey-deep');
         display: flex;
-        align-items: center;
+        align-items: flex-start;
+        flex-direction: column;
+        flex-basis: 33.3%;
 
         &:not(:last-child) {
-            margin-bottom: 10px;
+            margin-right: 20px;
         }
 
         &-img {
-            margin-right: 20px;
+            margin-bottom: 20px;
         }
     }
 }

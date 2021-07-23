@@ -6,24 +6,29 @@
     &__item {
         display: flex;
         align-items: center;
+
+        &-text {
+            display: inline-block;
+            margin-left: 5px;
+        }
+
+        &-icon {
+            font-size: 20px;
+            line-height: 20px;
+        }
     }
 
-    // &.m-in-stock {
-    //     .in-stock {
-    //         display: flex;
-    //         align-items: center;
-    //     }
-    // }
-
-    // &.m-out-of-stock {
-    //     .out-stock {
-    //         display: flex;
-    //         align-items: center;
-    //     }
-    // }
-
-    // .in-stock,
-    // .out-stock {
+    // .out-of-stock {
     //     display: none;
+    // }
+
+    // &.m-not-available {
+    //     .in-stock {
+    //         display: none;
+    //     }
+
+    //     .out-of-stock {
+    //         display: flex;
+    //     }
     // }
 }

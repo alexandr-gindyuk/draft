@@ -22,6 +22,10 @@
         }
     }
 
+    &__text {
+        margin-bottom: 20px;
+    }
+
     &__price-group {
         display: flex;
         justify-content: space-between;
@@ -36,23 +40,80 @@
     }
 
     &__colors {
-        margin-bottom: 30px;
+        margin-bottom: 40px;
+
+        .product-colors {
+            &__list {
+                margin-bottom: 10px;
+            }
+        }
     }
 
     &__sizes {
         margin-bottom: 22px;
     }
 
+    &__available-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
     &__available {
-        margin-bottom: 22px;
+
+    }
+
+    &__remind {
+        display: flex;
+        cursor: pointer;
+
+        &-icon {
+            font-size: 20px;
+            color: color('grey-mid');
+        }
+
+        &-text {
+            font-size: 16px;
+            margin-left: 10px;
+        }
     }
 
     &__message {
+        font-family: $font-dinot-medium;
+        font-size: 16px;
         margin-bottom: 20px;
     }
 
-    &__actions {
+    &__action {
         margin-bottom: 40px;
+    }
+
+    &__action-group {
+        font-family: $font-dinot-medium;
+        font-size: 15px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        [class*="icon"] {
+            font-size: 20px;
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+
+            .icon-wrap,
+            .save-in-wishlist__icon.m-default {
+                color: color('grey-mid');
+            }
+
+            .icon-wrap {
+                padding-right: 10px;
+            }
+        }
     }
 }
 

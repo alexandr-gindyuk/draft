@@ -31,11 +31,18 @@ $swatch-shadow-second-small: 2px;
             &:after {
                 height: $swatch-size-small + $swatch-shadow-first-small;
             }
+
+            &__badge {
+                top: -($swatch-shadow-first-small + 2px);
+                right: -($swatch-shadow-first-small + 2px);
+            }
         }
     }
 }
 
 .swatch {
+    $root: &;
+
     position: relative;
     width: swatch($swatch-size-default, $swatch-shadow-first-default);
     height: swatch($swatch-size-default, $swatch-shadow-first-default);
@@ -71,6 +78,30 @@ $swatch-shadow-second-small: 2px;
 
         &::after {
             display: block;
+        }
+    }
+
+    &__badge {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        border: 3px solid color('white');
+        background: color('black');
+        color: color('white');
+        border-radius: 50%;
+        overflow: hidden;
+        position: absolute;
+        top: -($swatch-shadow-first-default + 2px);
+        right: -($swatch-shadow-first-default + 2px);
+        font-size: 10px;
+        line-height: 9px;
+    }
+
+    &.m-badged {
+        #{$root}__badge {
+            display: flex;
         }
     }
 }

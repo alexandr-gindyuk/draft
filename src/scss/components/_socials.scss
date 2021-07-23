@@ -7,13 +7,6 @@
     align-items: center;
     flex-wrap: wrap;
 
-    &.m-inverse {
-        #{$root}__link {
-            background: color('black');
-            color: color('white');
-        }
-    }
-
     &__item {
         &:not(:last-child) {
             margin-right: 12px;
@@ -40,5 +33,33 @@
         background: color('white');
         color: color('black');
         overflow: hidden;
+        transition: all $motion-ease;
+
+        &:hover {
+            color: color('white');
+            background: color('brand');
+        }
+    }
+
+    &.m-inverse {
+        #{$root}__link {
+            background: color('black');
+            color: color('white');
+
+            &:hover {
+                color: color('white');
+                background: color('brand');
+            }
+        }
+    }
+
+    &.m-bordered {
+        #{$root}__link {
+            border: 1px solid color('grey-light');
+
+            &:hover {
+                border-color: color('brand');
+            }
+        }
     }
 }

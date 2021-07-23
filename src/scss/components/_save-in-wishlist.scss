@@ -1,7 +1,6 @@
 .save-in-wishlist {
 
     $root: &;
-
     font-size: 15px;
     color: color('black');
     display: flex;
@@ -9,12 +8,15 @@
     justify-content: center;
 
 
-    [class="*icon"] {
+    [class*="icon"] {
         cursor: pointer;
+        font-size: 20px;
     }
 
     &__button {
-        font-size: 20px;
+        display: flex;
+        align-items: center;
+        font-size: 15px;
         cursor: pointer;
 
         &.m-added {
@@ -32,7 +34,7 @@
 
     &__icon {
         display: flex;
-        padding: 10px;
+        padding-right: 10px;
 
         &.m-added {
             display: none;
@@ -42,5 +44,15 @@
     &__text {
         font-family: $font-dinot-medium;
         text-transform: uppercase;
+    }
+
+    &.m-without-text {
+        #{$root}__text {
+            display: none;
+        }
+
+        #{$root}__icon {
+            padding: 10px;
+        }
     }
 }
