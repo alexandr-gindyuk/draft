@@ -18,4 +18,15 @@
         background: color('grey-deep');
         color: color('white');
     }
+
+    &.m-closeless {
+        .messages__inner {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .messages__close {
+            display: none;
+        }
+    }
 }

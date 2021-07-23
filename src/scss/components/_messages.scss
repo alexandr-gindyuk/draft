@@ -33,19 +33,4 @@
             right: 0;
         }
     }
-
-    &.m-closeless {
-        #{$root}__inner {
-            padding-right: 0;
-            padding-left: 0;
-        }
-
-        #{$root}__close {
-            display: none;
-        }
-    }
-
-    &.m-static-padding {
-        padding: 10px;
-    }
 }
