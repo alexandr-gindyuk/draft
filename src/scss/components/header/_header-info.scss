@@ -2,8 +2,15 @@
     display: flex;
 
     .country-lang {
+        display: flex;
+        align-items: center;
+
         @include media(lg-up) {
-            margin-right: 23px;
+            margin-right: 24px;
+        }
+
+        &__img {
+            margin-right: 5px;
         }
     }
 
