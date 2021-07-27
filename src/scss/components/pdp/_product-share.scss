@@ -2,6 +2,7 @@
 
     $root: &;
 
+    position: relative;
     display: inline-flex;
     align-items: center;
     font-family: $font-dinot-medium;
@@ -13,8 +14,13 @@
 
     &:hover,
     &.m-active {
+        #{$root}__item {
+            padding-bottom: 30px;
+            margin-bottom: -30px;
+        }
+
         #{$root}__popup {
-            display: block;
+            height: auto;
             opacity: 1;
             visibility: visible;
         }
@@ -22,8 +28,7 @@
 
     &__item {
         position: relative;
-        padding-bottom: 20px; // add area for hover
-        margin-bottom: -30px; // delete additional margin for all block
+        line-height: 20px;
     }
 
     &__text {
@@ -43,17 +48,17 @@
     }
 
     &__popup {
-        display: none;
+        height: 0;
         opacity: 0;
         visibility: hidden;
         position: absolute;
-        bottom: -122px;
+        top: 52px;
         right: 0;
         padding: 20px;
         background: color('white');
         border-top: 3px solid color('black');
         box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
-        transition: all $motion-ease;
+        transition: all $motion-fast;
         z-index: 10;
 
         @include media(xs) {
