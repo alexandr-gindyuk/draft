@@ -59,11 +59,6 @@ $swatch-shadow-second-small: 2px;
             &:after {
                 height: $swatch-size-small + $swatch-shadow-first-small;
             }
-
-            // &__badge {
-            //     top: -($swatch-shadow-first-small + 2px);
-            //     right: -($swatch-shadow-first-small + 2px);
-            // }
         }
     }
 }
