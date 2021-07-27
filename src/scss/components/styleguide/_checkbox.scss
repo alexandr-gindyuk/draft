@@ -121,8 +121,7 @@ $checkbox-theme: ('dark');
 
     .checkbox-item__checkmark {
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 0;
         left: 0;
         height: $check-size;
         width: $check-size;

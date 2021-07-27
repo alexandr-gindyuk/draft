@@ -1,17 +1,43 @@
 .product-info {
-    &__item {
-        font-family: $font-dinot;
-        font-size: 16px;
-        color: color('black');
+    @include media(lg-up) {
         display: flex;
-        align-items: center;
+    }
+
+    &__item {
+        font-size: 16px;
+        color: color('grey-deep');
+        display: flex;
+
+        @include media(md-down) {
+            align-items: center;
+        }
+
+        @include media(lg-up) {
+            align-items: flex-start;
+            flex-direction: column;
+            flex-basis: 33.3%;
+        }
 
         &:not(:last-child) {
-            margin-bottom: 10px;
+            @include media(md-down) {
+                margin-bottom: 20px;
+            }
+
+            @include media(lg-up) {
+                margin-right: 20px;
+            }
         }
 
         &-img {
-            margin-right: 20px;
+            @include media(md-down) {
+                margin-right: 12px;
+            }
+
+            @include media(lg-up) {
+                margin-bottom: 20px;
+            }
         }
     }
 }
+
+

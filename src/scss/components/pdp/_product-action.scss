@@ -1,0 +1,12 @@
+.product-action {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+        margin-bottom: 40px;
+
+        [class*="icon-"] {
+            margin-left: 10px;
+        }
+    }
+}
