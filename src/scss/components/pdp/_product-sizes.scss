@@ -31,6 +31,24 @@
         flex-wrap: wrap;
     }
 
+    &__icon {
+        display: inline-block;
+        margin-right: 10px;
+        color: color('grey-deep');
+
+        @include media(md-down) {
+            font-size: 18px;
+        }
+
+        @include media(lg-up) {
+            font-size: 20px;
+        }
+
+        [class*="icon-"] {
+            vertical-align: text-bottom;
+        }
+    }
+
     &__item  {
         display: flex;
         margin-bottom: 10px;

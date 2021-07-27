@@ -7,7 +7,37 @@
     color: color('black');
     cursor: pointer;
 
+    &__item {
+
+    }
+
     &__text {
         margin-right: 10px;
+    }
+
+    &__popup {
+        display: none;
+        // opacity: 0;
+        // visibility: hidden;
+        position: absolute;
+        bottom: -112px;
+        right: 0;
+        padding: 20px;
+        background: color('white');
+        border-top: 3px solid color('black');
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+        z-index: 10;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: -18px;
+            right: 30px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 15px solid color('black');
+        }
     }
 }

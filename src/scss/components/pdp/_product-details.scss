@@ -1,21 +1,46 @@
 .product-details {
     &__group {
-
+        @include media(md-down) {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
     }
 
     &__share {
         position: absolute;
+        top: -40px;
         right: 0;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
     }
 
     &__rating {
-        margin-bottom: 20px;
+
+        &.m-mobile {
+            @include media(lg-up) {
+                display: none;
+            }
+        }
+
+        &.m-desktop {
+            margin-bottom: 12px;
+
+            @include media(md-down) {
+                display: none;
+            }
+        }
     }
 
     &__title {
+        color: color('black');
+        font-family: $font-dinot-medium;
+        font-size: 18px;
+        line-height: 1.39;
+        margin-bottom: 12px;
+
         @include media(lg-up) {
-            color: color('black');
-            font-family: $font-dinot-medium;
             font-size: 30px;
             line-height: 1.17;
             margin-bottom: 40px;
@@ -23,14 +48,52 @@
     }
 
     &__text {
-        margin-bottom: 20px;
+        @include media(md-down) {
+            display: none;
+        }
+
+        @include media(lg-up) {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
     }
 
     &__price-group {
         display: flex;
-        justify-content: space-between;
         align-items: flex-end;
-        margin-bottom: 40px;
+
+        @include media(md-down) {
+            flex-direction: column;
+        }
+
+        @include media(lg-up) {
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .product-price {
+            @include media(md-down) {
+                flex-direction: column;
+            }
+
+            &.m-large {
+                .product-price__item {
+                    @include media(md-down) {
+                        margin-right: 0;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            &__item {
+                &.m-old {
+                    @include media(md-down) {
+                        font-family: $font-dinot;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
     }
 
     &__taxes {
@@ -44,7 +107,26 @@
 
         .product-colors {
             &__list {
-                margin-bottom: 10px;
+                @include media(md-down) {
+                    flex-wrap: nowrap;
+                    overflow-x: auto;
+                }
+
+                @include media(xs) {
+                    margin-right: -$wrapper-padding-xs;
+                }
+
+                @include media(sm) {
+                    margin-right: -$wrapper-padding-sm;
+                }
+
+                @include media(md) {
+                    margin-right: -$wrapper-padding-md;
+                }
+            }
+
+            &__item {
+                padding-bottom: 10px;
             }
         }
     }
@@ -114,6 +196,16 @@
                 padding-right: 10px;
             }
         }
+    }
+
+    &__info {
+        margin-bottom: 20px;
+    }
+
+    &__delivery-details {
+        font-family: $font-dinot-medium;
+        font-size: 16px;
+        text-decoration: underline;
     }
 }
 
