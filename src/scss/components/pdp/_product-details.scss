@@ -7,14 +7,14 @@
         }
     }
 
-    &__share {
-        position: absolute;
-        top: -40px;
-        right: 0;
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-    }
+    // &__share {
+    //     position: absolute;
+    //     top: -40px;
+    //     right: 0;
+    //     width: 100%;
+    //     display: flex;
+    //     justify-content: flex-end;
+    // }
 
     &__rating {
 
@@ -107,6 +107,11 @@
 
         .product-colors {
             &__list {
+
+                @include media(lg-up) {
+                    flex-wrap: wrap;
+                }
+
                 @include media(md-down) {
                     flex-wrap: nowrap;
                     overflow-x: auto;

@@ -118,8 +118,7 @@ $radio-theme: ('dark');
 
     .radio-item__radiomark {
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 0;
         left: 0;
         height: $radio-size;
         width: $radio-size;

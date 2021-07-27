@@ -88,7 +88,7 @@
         font-size: 20px;
         padding-bottom: 20px;
         padding-right: 30px;
-        border-bottom: 1px solid color('grey');
+        border-bottom: 1px solid color('grey-light');
         margin-bottom: 30px;
     }
 
@@ -269,6 +269,40 @@
 
             @include media(md-down) {
                 max-height: calc(100vh - var(--header-top-height));
+            }
+        }
+    }
+
+    &.m-back-in-stock {
+        .button-icon {
+            margin-left: 10px;
+        }
+
+        .product-colors {
+            margin-bottom: 30px;
+
+            &__item {
+                padding-bottom: 10px;
+            }
+        }
+
+        .product-sizes__list {
+            margin-bottom: 20px;
+        }
+
+        .checkbox {
+            margin-bottom: 30px;
+        }
+
+        .product-colors {
+            &__list {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                margin-right: -15px;
+
+                @include media(md-up) {
+                    margin-right: -30px;
+                }
             }
         }
     }

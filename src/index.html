@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-<!-- add 'm-has_dialog' here when the navigation is open (gamburger menu) -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +7,8 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <title>Webpack</title>
 </head>
+
+<!-- add 'm-has_dialog' here when the navigation is open (gamburger menu) or when any of popups (dialogs) are opened -->
 
 <!-- add 'header-stuck' here when the header should be sticky -->
 <body class="page__hp">
@@ -561,6 +562,53 @@
 
             </section>
 
+            <section class="l-wrapper">
+                <div style="position: relative; display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                    <p>some text</p>
+
+                    <!-- on mobile after user clicked on it - add here class "m-active" -->
+                    <div class="product-share">
+                        <div class="product-share__item">
+                            <span class="product-share__text">Share</span>
+
+                            <span class="product-share__icon">
+                                <i class="icon-share"></i>
+                            </span>
+                        </div>
+
+                        <div class="product-share__popup">
+                            <ul class="socials m-bordered">
+                                <li class="socials__item">
+                                    <a class="socials__link m-fb" href="#">
+                                        <i class="icon-smm-fb"></i>
+                                    </a>
+                                </li>
+                                <li class="socials__item">
+                                    <a class="socials__link m-instagram" href="#">
+                                        <i class="icon-smm-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="socials__item">
+                                    <a class="socials__link m-youtube" href="#">
+                                        <i class="icon-smm-youtube"></i>
+                                    </a>
+                                </li>
+                                <li class="socials__item">
+                                    <a class="socials__link m-linkedin" href="#">
+                                        <i class="icon-smm-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li class="socials__item">
+                                    <a class="socials__link m-strava" href="#">
+                                        <i class="icon-smm-strava"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="l-wrapper m-full-width-md-down" style="margin-bottom: 50px;">
 
                 <!-- pdp-top -->
@@ -602,43 +650,6 @@
                         </div>
                     </div>
                     <div class="l-pdp__top-product-details product-details">
-                        <div class="product-details__share product-share">
-                            <div class="product-share__item">
-                                <span class="product-share__text">Share</span>
-                                <i class="icon-share"></i>
-                            </div>
-
-                            <div class="product-share__popup">
-                                <ul class="socials m-bordered">
-                                    <li class="socials__item">
-                                        <a class="socials__link m-fb" href="#">
-                                            <i class="icon-smm-fb"></i>
-                                        </a>
-                                    </li>
-                                    <li class="socials__item">
-                                        <a class="socials__link m-instagram" href="#">
-                                            <i class="icon-smm-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li class="socials__item">
-                                        <a class="socials__link m-youtube" href="#">
-                                            <i class="icon-smm-youtube"></i>
-                                        </a>
-                                    </li>
-                                    <li class="socials__item">
-                                        <a class="socials__link m-linkedin" href="#">
-                                            <i class="icon-smm-linkedin"></i>
-                                        </a>
-                                    </li>
-                                    <li class="socials__item">
-                                        <a class="socials__link m-strava" href="#">
-                                            <i class="icon-smm-strava"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
                         <div class="product-details__rating product-rating m-desktop">
                             Raiting
                         </div>
@@ -674,9 +685,11 @@
 
                         <div class="product-details__colors">
                             <div class="product-colors">
-                                <ul class="product-colors__list">
+                                <ul class="product-colors__list swatches m-large">
                                     <li class="product-colors__item">
-                                        <div class="swatch" style="background: #0086bf;"></div>
+
+                                        <!-- if a swatch has a percent sign - add here class "m-badged" -->
+                                        <div class="swatch m-badged" style="background: #0086bf;"></div>
                                     </li>
                                     <li class="product-colors__item">
                                         <div class="swatch" style="background: #132D40;"></div>
@@ -770,7 +783,7 @@
                                         <span class="product-sizes__name">xl</span>
                                     </label>
                                 </li>
-                                <li class="product-sizes__item m-mail-me">
+                                <li class="product-sizes__item">
                                     <label class="product-sizes__label">
                                         <input class="product-sizes__action" type="radio" name="variants__item-size">
                                         <span class="product-sizes__name">xxl</span>
@@ -1497,6 +1510,140 @@
                             </div>
                         </div>
                     <!-- </div> -->
+                </div>
+            </div>
+
+            <!-- PDP-back in stock -->
+            <div class="dialog m-opened m-back-in-stock" style="display: none;">
+                <div class="dialog__window" role="dialog" data-ref="" aria-modal="" aria-label="">
+                    <button class="dialog__close" title="close">
+                        <i class="icon-close"></i>
+                    </button>
+
+                    <div class="dialog__header">
+                        <h1 class="dialog__title">Back in stock notification</h1>
+                    </div>
+
+                    <!-- show this block before a user choose the parameters -->
+                    <div>
+                        <div class="dialog__content">
+                            <p class="dialog__content-item">Select your color & size and we'll send you an email when it is available again.</p>
+
+                            <div class="product-colors">
+                                <ul class="product-colors__list swatches m-large">
+                                    <li class="product-colors__item">
+                                        <div class="swatch" style="background: #0086bf;"></div>
+                                    </li>
+                                    <li class="product-colors__item">
+                                        <div class="swatch" style="background: #132D40;"></div>
+                                    </li>
+                                    <li class="product-colors__item">
+                                        <div class="swatch selected" style="background: #0086bf;"></div>
+                                    </li>
+                                    <li class="product-colors__item">
+                                        <div class="swatch disabled" style="background: #0086bf;"></div>
+                                    </li>
+                                    <li class="product-colors__item">
+                                        <div class="swatch disabled" style="background: #0086bf;"></div>
+                                    </li>
+                                    <li class="product-colors__item">
+                                        <div class="swatch disabled" style="background: #0086bf;"></div>
+                                    </li>
+                                </ul>
+
+                                <p class="product-colors__name">
+                                    Matte Green - Odlo Graphic SS21
+                                </p>
+                            </div>
+
+                            <!-- if there will be reload - after user selected a size, add class "m-active" or attribute "checked" to the selected sizes in a tag with the class "product-sizes__action"-->
+                            <ul class="product-sizes__list" role="tablist" tabindex="0" aria-label="sizes">
+                                <li class="product-sizes__item">
+                                    <label class="product-sizes__label">
+                                        <input class="product-sizes__action" type="radio" name="variants__item-size">
+                                        <span class="product-sizes__name">xxs</span>
+                                    </label>
+                                </li>
+                                <li class="product-sizes__item">
+                                    <label class="product-sizes__label">
+                                        <input class="product-sizes__action" type="radio" name="variants__item-size">
+                                        <span class="product-sizes__name">xs</span>
+                                    </label>
+                                </li>
+                                <li class="product-sizes__item">
+                                    <label class="product-sizes__label">
+                                        <input class="product-sizes__action" type="radio" name="variants__item-size">
+                                        <span class="product-sizes__name">s</span>
+                                    </label>
+                                </li>
+                                <li class="product-sizes__item">
+                                    <label class="product-sizes__label">
+                                        <input class="product-sizes__action" type="radio" name="variants__item-size">
+                                        <span class="product-sizes__name">m</span>
+                                    </label>
+                                </li>
+                                <li class="product-sizes__item">
+                                    <label class="product-sizes__label">
+                                        <input class="product-sizes__action" type="radio" name="variants__item-size">
+                                        <span class="product-sizes__name">l</span>
+                                    </label>
+                                </li>
+                                <li class="product-sizes__item">
+                                    <label class="product-sizes__label">
+                                        <input class="product-sizes__action" type="radio" name="variants__item-size">
+                                        <span class="product-sizes__name">xl</span>
+                                    </label>
+                                </li>
+                                <li class="product-sizes__item">
+                                    <label class="product-sizes__label">
+                                        <input class="product-sizes__action" type="radio" name="variants__item-size">
+                                        <span class="product-sizes__name">xxl</span>
+                                    </label>
+                                </li>
+                                <li class="product-sizes__item m-disabled">
+                                    <label class="product-sizes__label">
+                                        <input class="product-sizes__action" type="radio" name="variants__item-size">
+                                        <span class="product-sizes__name">3xl</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="dialog__action">
+                            <form class="form" action="">
+                                <div class="form__section">
+                                    <label class="form__label" for="email">
+                                        E-mail:
+                                    </label>
+                                    <input class="input-main" id="email" type="mail" placeholder="Enter your email address">
+                                </div>
+
+                                <div class="checkbox">
+                                    <label class="checkbox-item">
+                                        <span class="form__section-required" aria-hidden="true">*</span>
+                                        <p>
+                                            I have read and agree to the <a href="#">Odlo Privacy Notice</a>. I agree to receive an email notification if the article is back in stock.
+                                        </p>
+
+                                        <input type="checkbox" name="check">
+                                        <span class="checkbox-item__checkmark"></span>
+                                    </label>
+                                </div>
+
+                                <!-- after user push this button, delete class "m-disabled" from here  -->
+                                <button type="button" class="btn-main-filled m-fluid m-disabled" >notify me
+                                    <span class="button-icon">
+                                        <i class="icon-mail"></i>
+                                    </span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- show this block before a user choose the parameters -->
+                    <div class="dialog__content">
+                        We have signed you up for a product reminder. You will receive an email once the article is available again.
+                    </div>
                 </div>
             </div>
             <!-- end dialogs -->
@@ -2593,6 +2740,12 @@
             <div style="display: none;">
                 <!-- swatches -->
                 <div class="l-wrapper" style="padding: 50px;">
+                    <div  class="swatches m-large" style="display: flex; width: 300px; justify-content: space-between;">
+                        <div class="swatch" style="background: #0086bf;"></div>
+                        <div class="swatch" style="background: #0086bf;"></div>
+                        <div class="swatch selected" style="background: #0086bf;"></div>
+                        <div class="swatch disabled" style="background: #0086bf;"></div>
+                    </div>
                     <div class="swatches" style="display: flex; width: 300px; justify-content: space-between; margin-bottom: 20px;">
                         <div class="swatch m-badged" style="background: #0086bf;">
                             <span class="swatch__badge">%</span></div>
