@@ -1,5 +1,6 @@
 .filter-labels {
     display: flex;
+    flex-wrap: wrap;
 
     &__item {
         font-size: 14px;
@@ -7,18 +8,29 @@
         align-items: center;
         border: 1px solid color('grey-light');
         border-radius: 20px;
-        height: 30px;
+        height: 40px;
         padding: 0 15px;
+        margin-top: 5px;
+        margin-bottom: 5px;
         text-transform: capitalize;
+
+        @include media(md-up) {
+            height: 30px;
+        }
 
         &:not(:last-child) {
             margin-right: 10px;
         }
     }
 
-    [class*="icon-"] {
+    &__close {
+        font-size: 12px;
         margin-left: 10px;
         cursor: pointer;
+
+        [class*="icon-"] {
+            font-weight: bold;
+        }
     }
 
     .swatches {
