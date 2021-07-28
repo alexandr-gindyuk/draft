@@ -451,6 +451,8 @@
 
         <main class="main">
 
+            <!-- filters-pannel -->
+
             <!-- to make this filters-pannel sticky - add here class "m-sticky" -->
             <section class="filter-box m-sticky">
                 <div class="l-wrapper">
@@ -1711,7 +1713,124 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Vertical-filter -->
+            <div class="dialog m-opened m-dialog-full-height-left m-vertical-filter" style="display:none;" >
+                <div class="dialog__window" role="dialog" data-ref="" aria-modal="" aria-label="">
+                    <button class="dialog__close" title="close">
+                        <i class="icon-close"></i>
+                    </button>
+
+                    <div class="dialog__header">
+                        <h1 class="dialog__title">Filters</h1>
+                    </div>
+
+                    <div class="dialog__content">
+                        <section class="filter">
+                            <ul class="filter__list">
+                                <li class="filter__item">
+                                    <label class="filter__item-check">
+                                        <input class="input-check" type="checkbox">
+                                        <h5 class="filter__item-name">
+                                            <span class="name">Color</span>
+                                            <span class="quantity">1</span>
+                                        </h5>
+
+                                        <ul class="filter__variants">
+
+                                            <li class="filter__variants-item">
+                                                <label class="check">
+                                                    <input class="check__input" type="checkbox">
+                                                    <button class="swatch m-large" style="background: #0086bf;"></button>
+                                                    <div class="check__info">
+                                                        <p class="name">blue</p>
+                                                        <p class="quantity">(&nbsp;872&nbsp;)</p>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                            <li class="filter__variants-item">
+                                                <label class="check">
+                                                    <input class="check__input" type="checkbox">
+                                                    <button class="swatch m-large" style="background: green;"></button>
+                                                    <div class="check__info">
+                                                        <p class="name">Green</p>
+                                                        <p class="quantity">(&nbsp;243&nbsp;)</p>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                            <li class="filter__variants-item">
+                                                <label class="check">
+                                                    <input class="check__input" type="checkbox">
+                                                    <button class="swatch m-large" style="background: purple;"></button>
+                                                    <div class="check__info">
+                                                        <p class="name">purple</p>
+                                                        <p class="quantity">(&nbsp;35&nbsp;)</p>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </label>
+                                </li>
+
+                                <li class="filter__item">
+                                    <label class="filter__item-check">
+                                        <input class="input-check" type="checkbox">
+                                        <h5 class="filter__item-name">
+                                            <span class="name">Size</span>
+                                            <span class="quantity">1</span>
+                                        </h5>
+
+                                        <ul class="filter__variants">
+
+                                            <li class="filter__variants-item">
+                                                <label class="check checkbox-item">
+                                                    <input type="checkbox">
+                                                    <span class="checkbox-item__checkmark"></span>
+                                                    <div class="check__info">
+                                                        <p class="name">S</p>
+                                                        <p class="quantity">(&nbsp;82&nbsp;)</p>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                            <li class="filter__variants-item">
+                                                <label class="check checkbox-item">
+                                                    <input type="checkbox">
+                                                    <span class="checkbox-item__checkmark"></span>
+                                                    <div class="check__info">
+                                                        <p class="name">M</p>
+                                                        <p class="quantity">(&nbsp;2&nbsp;)</p>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                            <li class="filter__variants-item">
+                                                <label class="check checkbox-item">
+                                                    <input type="checkbox">
+                                                    <span class="checkbox-item__checkmark"></span>
+                                                    <div class="check__info">
+                                                        <p class="name">L</p>
+                                                        <p class="quantity">(&nbsp;872&nbsp;)</p>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </label>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <div class="dialog__action">
+                        <button type="button" class="btn-main-outlined">Clear</button>
+                        <button type="button" class="btn-main-filled">Show <span>&nbsp;451&nbsp;</span> results</button>
+                    </div>
+
+                </div>
+            </div>
             <!-- end dialogs -->
+
+            <div class="l-wrapper">
+                <div class="loader m-dark" style="height: 100px; position: relative;"></div>
+            </div>
 
             <div class="l-wrapper" style="margin-top: 40px; margin-bottom: 40px;">
 
@@ -1885,113 +2004,6 @@
                         <div style="background-color: #403d5a; padding-bottom: 100%;"></div>
                     </div>
                 </div>
-            </div>
-
-            <!-- filter -->
-            <div style="padding: 50px; display: none;">
-                <section class="filter loader m-dark">
-                    <button class="filter__close">
-                        <i class="icon-close"></i>
-                    </button>
-
-                    <div>
-                        <h3 class="filter__title">Filters</h3>
-                        <ul class="filter__list">
-                            <li class="filter__item">
-                                <label class="filter__item-check">
-                                    <input class="input-check" type="checkbox">
-                                    <h5 class="filter__item-name">
-                                        <span class="name">Color</span>
-                                        <span class="quantity">1</span>
-                                    </h5>
-
-                                    <ul class="filter__variants">
-
-                                        <li class="filter__variants-item">
-                                            <label class="check">
-                                                <input class="check__input" type="checkbox">
-                                                <button class="swatch m-large" style="background: #0086bf;"></button>
-                                                <div class="check__info">
-                                                    <p class="name">blue</p>
-                                                    <p class="quantity">(872)</p>
-                                                </div>
-                                            </label>
-                                        </li>
-                                        <li class="filter__variants-item">
-                                            <label class="check">
-                                                <input class="check__input" type="checkbox">
-                                                <button class="swatch m-large" style="background: green;"></button>
-                                                <div class="check__info">
-                                                    <p class="name">Green</p>
-                                                    <p class="quantity">(243)</p>
-                                                </div>
-                                            </label>
-                                        </li>
-                                        <li class="filter__variants-item">
-                                            <label class="check">
-                                                <input class="check__input" type="checkbox">
-                                                <button class="swatch m-large" style="background: purple;"></button>
-                                                <div class="check__info">
-                                                    <p class="name">purple</p>
-                                                    <p class="quantity">(35)</p>
-                                                </div>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </label>
-                            </li>
-
-                            <li class="filter__item">
-                                <label class="filter__item-check">
-                                    <input class="input-check" type="checkbox">
-                                    <h5 class="filter__item-name">
-                                        <span class="name">Size</span>
-                                        <span class="quantity">1</span>
-                                    </h5>
-
-                                    <ul class="filter__variants">
-
-                                        <li class="filter__variants-item">
-                                            <label class="check checkbox-item">
-                                                <input type="checkbox">
-                                                <span class="checkbox-item__checkmark"></span>
-                                                <div class="check__info">
-                                                    <p class="name">S</p>
-                                                    <p class="quantity">(82)</p>
-                                                </div>
-                                            </label>
-                                        </li>
-                                        <li class="filter__variants-item">
-                                            <label class="check checkbox-item">
-                                                <input type="checkbox">
-                                                <span class="checkbox-item__checkmark"></span>
-                                                <div class="check__info">
-                                                    <p class="name">M</p>
-                                                    <p class="quantity">(2)</p>
-                                                </div>
-                                            </label>
-                                        </li>
-                                        <li class="filter__variants-item">
-                                            <label class="check checkbox-item">
-                                                <input type="checkbox">
-                                                <span class="checkbox-item__checkmark"></span>
-                                                <div class="check__info">
-                                                    <p class="name">L</p>
-                                                    <p class="quantity">(872)</p>
-                                                </div>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="filter__action">
-                        <button type="button" class="btn-main-outlined">Clear</button>
-                        <button type="button" class="btn-main-filled">Show 207 results</button>
-                    </div>
-                </section>
             </div>
 
             <!-- PLP layout-->

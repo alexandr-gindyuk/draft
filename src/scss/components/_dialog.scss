@@ -51,7 +51,6 @@
             margin: auto 15px;
             max-height: calc(var(--viewport-height,100vh) - 80px);
             padding: 30px 15px 15px 15px;
-            width: auto;
             width: 100%;
         }
 
@@ -169,6 +168,32 @@
                 padding-top: 40px;
                 padding-bottom: 40px;
             }
+        }
+    }
+
+    &.m-dialog-full-height-left {
+        padding: 0;
+        right: initial;
+
+        #{$root}__window {
+            border-radius: 0;
+            height: 100%;
+            max-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+
+            @include media(sm-down) {
+                margin: 0;
+            }
+
+            @include media(md-up) {
+                width: 550px;
+            }
+        }
+
+        #{$root}__action {
+            margin-top: auto;
         }
     }
 
@@ -302,6 +327,50 @@
 
                 @include media(md-up) {
                     margin-right: -30px;
+                }
+            }
+        }
+    }
+
+    &.m-vertical-filter {
+        #{$root}__header {
+            min-height: auto;
+        }
+
+        #{$root}__title {
+            margin-bottom: 0;
+            text-transform: uppercase;
+        }
+
+        #{$root}__content {
+            @include scroll();
+            overflow-y: auto;
+        }
+
+        #{$root}__action {
+            display: flex;
+
+            @include media(sm-down) {
+                flex-direction: row;
+            }
+
+            [class*=btn-main] {
+                flex-grow: 1;
+
+                @include media(xs) {
+                    min-width: 120px;
+                }
+
+                @include media(sm-down) {
+                    margin-bottom: 0;
+                }
+
+                &:first-child {
+                    margin-right: 10px;
+                }
+
+                &:last-child {
+                    margin-right: 0;
                 }
             }
         }

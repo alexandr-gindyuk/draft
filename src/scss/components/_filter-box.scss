@@ -129,6 +129,10 @@
         [class*="btn-main-"] {
             min-width: auto;
             border: none;
+
+            @include media(sm-down) {
+                width: 100%;
+            }
         }
     }
 }
