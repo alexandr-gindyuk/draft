@@ -2,7 +2,7 @@
     overflow: hidden;
 
     &__list {
-        @include scroll();
+        @include scroll('grey');
         display: flex;
         flex-wrap: nowrap;
         // padding-bottom: 30px;

@@ -33,7 +33,7 @@ $buttons-main-theme: ('dark');
     border: 1px solid transparent;
 
     &:focus {
-        outline: 2px solid #0086bf;
+        outline: 2px solid color('brand-mid');
         outline-offset: 2px;
     }
 }

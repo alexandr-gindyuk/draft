@@ -62,8 +62,6 @@
     }
 
     &__variants {
-        @include scroll();
-
         padding-left: 45px;
         height: 0;
         overflow-y: auto;

@@ -88,6 +88,15 @@
             @include media(lg-up) {
                flex-wrap: nowrap;
             }
+
+            &__item {
+                &.m-instagram,
+                &.m-youtube,
+                &.m-linkedin,
+                &.m-strava {
+                    display: none;
+                }
+            }
         }
     }
 }

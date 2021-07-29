@@ -343,7 +343,7 @@
         }
 
         #{$root}__content {
-            @include scroll();
+            @include scroll;
             overflow-y: auto;
         }
 

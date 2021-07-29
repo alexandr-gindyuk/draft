@@ -60,7 +60,7 @@
 
     &__category-inner {
         @include media(lg-up) {
-            @include scroll();
+            @include scroll;
 
             position: absolute;
             top: 0;
