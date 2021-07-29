@@ -11,8 +11,16 @@
     border: 1px solid color('grey-mid');
 
     &:hover {
-        border-color: color('black');
-        border-width: 2px;
+        background-color: color('black');
+        border-color: transparent;
+        color: color('white');
+    }
+
+    &.m-disabled {
+        pointer-events: none;
+        border-color: rgba(color('white'), 0.4);
+        border-color: color('grey-light');
+        color: color('grey-light');
     }
 
     &.m-light {
@@ -21,7 +29,15 @@
         color: color('white');
 
         &:hover {
-            border-color: color('white');
+            background-color: color('white');
+            border-color: transparent;
+            color: color('black');
+        }
+
+        &.m-disabled {
+            background: rgba(color('black'), 0.2);
+            border-color: color('grey-deep');
+            color: color('grey-deep');
         }
     }
 
