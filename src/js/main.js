@@ -1,3 +1,3 @@
 import { Collapse } from 'bootstrap';
 
-import './widgets/global/Accordion'
+import './widgets/global/Swiper'

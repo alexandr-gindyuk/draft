@@ -1,0 +1,30 @@
+@import "~swiper/swiper-bundle";
+
+.swiper-button-controls {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    gap: 20px;
+    top: 30px;
+    right: $wrapper-padding-xs;
+
+    @include media(sm) {
+        right: $wrapper-padding-sm;
+    }
+
+    @include media(md) {
+        right: $wrapper-padding-md;
+    }
+
+    @include media(lg) {
+        right: $wrapper-padding-lg;
+    }
+
+    @include media(xl) {
+        right: $wrapper-padding-xl;
+    }
+
+    @include media(xxl) {
+        right: $wrapper-padding-xxl;
+    }
+}

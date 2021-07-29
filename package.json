@@ -46,6 +46,7 @@
         "@babel/polyfill": "^7.12.1",
         "@popperjs/core": "^2.9.2",
         "bootstrap": "^5.0.2",
-        "normalize.css": "^8.0.1"
+        "normalize.css": "^8.0.1",
+        "swiper": "^6.8.0"
     }
 }
