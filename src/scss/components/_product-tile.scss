@@ -29,8 +29,14 @@
             right: 0;
         }
 
-        .save-in-wishlist__text {
-            display: none;
+        .save-in-wishlist {
+            &__text {
+                display: none;
+            }
+
+            &__icon {
+                padding: 10px;
+            }
         }
     }
 
