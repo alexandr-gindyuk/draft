@@ -38,6 +38,14 @@
     }
 
     &__content {
-
+        .socials {
+            &__item {
+                &.m-twitter,
+                &.m-pinterest,
+                &.m-mail {
+                    display: none;
+                }
+            }
+        }
     }
 }

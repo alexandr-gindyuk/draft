@@ -24,6 +24,12 @@
 
   //icon-dynamic - the class name for those situations, when we just want to operate with the icon's content, not a class
 
+  .icon-smm-pinterest:before {
+    content: "\e931";
+  }
+  .icon-smm-twitter:before {
+    content: "\e932";
+  }
   .icon-badge-eco:before {
     content: "\e900";
     color: #0d875e;

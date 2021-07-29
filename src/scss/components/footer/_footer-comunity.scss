@@ -87,6 +87,12 @@
                         margin-right: 12px;
                     }
                 }
+
+                &.m-twitter,
+                &.m-pinterest,
+                &.m-mail {
+                    display: none;
+                }
             }
         }
     }

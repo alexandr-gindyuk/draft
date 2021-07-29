@@ -23,7 +23,7 @@
     }
 
     &__top {
-        @include scroll();
+        @include scroll;
 
         flex-grow: 1;
         overflow: auto;

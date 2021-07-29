@@ -58,7 +58,6 @@
         background: color('white');
         border-top: 3px solid color('black');
         box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
-        transition: all $motion-fast;
         z-index: 10;
 
         @include media(xs) {
@@ -88,6 +87,15 @@
         .socials {
             @include media(lg-up) {
                flex-wrap: nowrap;
+            }
+
+            &__item {
+                &.m-instagram,
+                &.m-youtube,
+                &.m-linkedin,
+                &.m-strava {
+                    display: none;
+                }
             }
         }
     }

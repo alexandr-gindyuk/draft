@@ -450,6 +450,83 @@
         </header>
 
         <main class="main">
+
+            <!-- filters-pannel -->
+
+            <!-- to make this filters-pannel sticky - add here class "m-sticky" -->
+            <section class="filter-box">
+                <div class="l-wrapper">
+                    <div class="filter-box__inner">
+                        <div class="filter-box__action filter-box__filter">
+                            <button class="btn-main-outlined">
+                                <i class="icon-filter"></i>
+                                Filters
+                            </button>
+                        </div>
+
+                        <div class="filter-box__labels">
+                            <ul class="filter-labels">
+                                <li class="filter-labels__item">
+                                    <span>Running and trail</span>
+                                    <span class="filter-labels__close">
+                                        <i class="icon-close"></i>
+                                    </span>
+                                </li>
+
+                                <li class="filter-labels__item">
+                                    <span>Cycling & MTB</span>
+                                    <span class="filter-labels__close">
+                                        <i class="icon-close"></i>
+                                    </span>
+                                </li>
+
+                                <li class="filter-labels__item">
+                                    <span>M</span>
+                                    <span class="filter-labels__close">
+                                        <i class="icon-close"></i>
+                                    </span>
+                                </li>
+
+                                <li class="filter-labels__item">
+                                    <div class="swatches m-small">
+                                        <div class="swatch" style="background: #0086bf;"></div>
+                                    </div>
+
+                                    <span>Blue</span>
+                                    <span class="filter-labels__close">
+                                        <i class="icon-close"></i>
+                                    </span>
+                                </li>
+
+                                <li class="filter-labels__item">
+                                    <span>+2</span>
+                                </li>
+
+                                <li class="filter-labels__item">
+                                    <span>Clear all</span>
+                                    <span class="filter-labels__close">
+                                        <i class="icon-close"></i>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="filter-box__action filter-box__sort">
+                            <label class="btn-main-outlined filter-box__select-label" for="plp-sort">
+                                Sort
+                                <i class="icon-sort"></i>
+
+                                <select class="filter-box__select" name="" id="plp-sort">
+                                    <option value="1">option-1</option>
+                                    <option value="2">option-2</option>
+                                    <option value="3">option-3</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="l-wrapper">
                 <!-- carousel - what's your next adventure -->
 
@@ -579,29 +656,45 @@
 
                         <div class="product-share__popup">
                             <ul class="socials m-bordered">
-                                <li class="socials__item">
-                                    <a class="socials__link m-fb" href="#">
+                                <li class="socials__item m-fb">
+                                    <a class="socials__link" href="#">
                                         <i class="icon-smm-fb"></i>
                                     </a>
                                 </li>
-                                <li class="socials__item">
-                                    <a class="socials__link m-instagram" href="#">
+                                <li class="socials__item m-instagram">
+                                    <a class="socials__link" href="#">
                                         <i class="icon-smm-instagram"></i>
                                     </a>
                                 </li>
-                                <li class="socials__item">
-                                    <a class="socials__link m-youtube" href="#">
+                                <li class="socials__item m-youtube">
+                                    <a class="socials__link" href="#">
                                         <i class="icon-smm-youtube"></i>
                                     </a>
                                 </li>
-                                <li class="socials__item">
-                                    <a class="socials__link m-linkedin" href="#">
+                                <li class="socials__item m-linkedin">
+                                    <a class="socials__link" href="#">
                                         <i class="icon-smm-linkedin"></i>
                                     </a>
                                 </li>
-                                <li class="socials__item">
-                                    <a class="socials__link m-strava" href="#">
+                                <li class="socials__item m-strava">
+                                    <a class="socials__link" href="#">
                                         <i class="icon-smm-strava"></i>
+                                    </a>
+                                </li>
+
+                                <li class="socials__item m-twitter">
+                                    <a class="socials__link" href="#">
+                                        <i class="icon-smm-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="socials__item m-pinterest">
+                                    <a class="socials__link" href="#">
+                                        <i class="icon-smm-pinterest"></i>
+                                    </a>
+                                </li>
+                                <li class="socials__item m-mail">
+                                    <a class="socials__link" href="#">
+                                        <i class="icon-mail"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -1647,7 +1740,124 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Vertical-filter -->
+            <div class="dialog m-opened m-dialog-full-height-left m-vertical-filter" style="display:none;" >
+                <div class="dialog__window" role="dialog" data-ref="" aria-modal="" aria-label="">
+                    <button class="dialog__close" title="close">
+                        <i class="icon-close"></i>
+                    </button>
+
+                    <div class="dialog__header">
+                        <h1 class="dialog__title">Filters</h1>
+                    </div>
+
+                    <div class="dialog__content">
+                        <section class="filter">
+                            <ul class="filter__list">
+                                <li class="filter__item">
+                                    <label class="filter__item-check">
+                                        <input class="input-check" type="checkbox">
+                                        <h5 class="filter__item-name">
+                                            <span class="name">Color</span>
+                                            <span class="quantity">1</span>
+                                        </h5>
+
+                                        <ul class="filter__variants">
+
+                                            <li class="filter__variants-item">
+                                                <label class="check">
+                                                    <input class="check__input" type="checkbox">
+                                                    <button class="swatch m-large" style="background: #0086bf;"></button>
+                                                    <div class="check__info">
+                                                        <p class="name">blue</p>
+                                                        <p class="quantity">(&nbsp;872&nbsp;)</p>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                            <li class="filter__variants-item">
+                                                <label class="check">
+                                                    <input class="check__input" type="checkbox">
+                                                    <button class="swatch m-large" style="background: green;"></button>
+                                                    <div class="check__info">
+                                                        <p class="name">Green</p>
+                                                        <p class="quantity">(&nbsp;243&nbsp;)</p>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                            <li class="filter__variants-item">
+                                                <label class="check">
+                                                    <input class="check__input" type="checkbox">
+                                                    <button class="swatch m-large" style="background: purple;"></button>
+                                                    <div class="check__info">
+                                                        <p class="name">purple</p>
+                                                        <p class="quantity">(&nbsp;35&nbsp;)</p>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </label>
+                                </li>
+
+                                <li class="filter__item">
+                                    <label class="filter__item-check">
+                                        <input class="input-check" type="checkbox">
+                                        <h5 class="filter__item-name">
+                                            <span class="name">Size</span>
+                                            <span class="quantity">1</span>
+                                        </h5>
+
+                                        <ul class="filter__variants">
+
+                                            <li class="filter__variants-item">
+                                                <label class="check checkbox-item">
+                                                    <input type="checkbox">
+                                                    <span class="checkbox-item__checkmark"></span>
+                                                    <div class="check__info">
+                                                        <p class="name">S</p>
+                                                        <p class="quantity">(&nbsp;82&nbsp;)</p>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                            <li class="filter__variants-item">
+                                                <label class="check checkbox-item">
+                                                    <input type="checkbox">
+                                                    <span class="checkbox-item__checkmark"></span>
+                                                    <div class="check__info">
+                                                        <p class="name">M</p>
+                                                        <p class="quantity">(&nbsp;2&nbsp;)</p>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                            <li class="filter__variants-item">
+                                                <label class="check checkbox-item">
+                                                    <input type="checkbox">
+                                                    <span class="checkbox-item__checkmark"></span>
+                                                    <div class="check__info">
+                                                        <p class="name">L</p>
+                                                        <p class="quantity">(&nbsp;872&nbsp;)</p>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </label>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <div class="dialog__action">
+                        <button type="button" class="btn-main-outlined">Clear</button>
+                        <button type="button" class="btn-main-filled">Show <span>&nbsp;451&nbsp;</span> results</button>
+                    </div>
+
+                </div>
+            </div>
             <!-- end dialogs -->
+
+            <div class="l-wrapper">
+                <div class="loader m-dark" style="height: 100px; position: relative;"></div>
+            </div>
 
             <div class="l-wrapper" style="margin-top: 40px; margin-bottom: 40px;">
 
@@ -1770,29 +1980,45 @@
                             </div>
                             <div class="join-us__content">
                                 <ul class="socials m-inverse">
-                                    <li class="socials__item">
-                                        <a class="socials__link m-fb" href="#">
+                                    <li class="socials__item m-fb">
+                                        <a class="socials__link" href="#">
                                             <i class="icon-smm-fb"></i>
                                         </a>
                                     </li>
-                                    <li class="socials__item">
-                                        <a class="socials__link m-instagram" href="#">
+                                    <li class="socials__item m-instagram">
+                                        <a class="socials__link" href="#">
                                             <i class="icon-smm-instagram"></i>
                                         </a>
                                     </li>
-                                    <li class="socials__item">
-                                        <a class="socials__link m-youtube" href="#">
+                                    <li class="socials__item m-youtube">
+                                        <a class="socials__link" href="#">
                                             <i class="icon-smm-youtube"></i>
                                         </a>
                                     </li>
-                                    <li class="socials__item">
-                                        <a class="socials__link m-linkedin" href="#">
+                                    <li class="socials__item m-linkedin">
+                                        <a class="socials__link" href="#">
                                             <i class="icon-smm-linkedin"></i>
                                         </a>
                                     </li>
-                                    <li class="socials__item">
-                                        <a class="socials__link m-strava" href="#">
+                                    <li class="socials__item m-strava">
+                                        <a class="socials__link" href="#">
                                             <i class="icon-smm-strava"></i>
+                                        </a>
+                                    </li>
+
+                                    <li class="socials__item m-twitter">
+                                        <a class="socials__link" href="#">
+                                            <i class="icon-smm-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="socials__item m-pinterest">
+                                        <a class="socials__link" href="#">
+                                            <i class="icon-smm-pinterest"></i>
+                                        </a>
+                                    </li>
+                                    <li class="socials__item m-mail">
+                                        <a class="socials__link" href="#">
+                                            <i class="icon-mail"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -1821,113 +2047,6 @@
                         <div style="background-color: #403d5a; padding-bottom: 100%;"></div>
                     </div>
                 </div>
-            </div>
-
-            <!-- filter -->
-            <div style="padding: 50px; display: none;">
-                <section class="filter loader m-dark">
-                    <button class="filter__close">
-                        <i class="icon-close"></i>
-                    </button>
-
-                    <div>
-                        <h3 class="filter__title">Filters</h3>
-                        <ul class="filter__list">
-                            <li class="filter__item">
-                                <label class="filter__item-check">
-                                    <input class="input-check" type="checkbox">
-                                    <h5 class="filter__item-name">
-                                        <span class="name">Color</span>
-                                        <span class="quantity">1</span>
-                                    </h5>
-
-                                    <ul class="filter__variants">
-
-                                        <li class="filter__variants-item">
-                                            <label class="check">
-                                                <input class="check__input" type="checkbox">
-                                                <button class="swatch m-large" style="background: #0086bf;"></button>
-                                                <div class="check__info">
-                                                    <p class="name">blue</p>
-                                                    <p class="quantity">(872)</p>
-                                                </div>
-                                            </label>
-                                        </li>
-                                        <li class="filter__variants-item">
-                                            <label class="check">
-                                                <input class="check__input" type="checkbox">
-                                                <button class="swatch m-large" style="background: green;"></button>
-                                                <div class="check__info">
-                                                    <p class="name">Green</p>
-                                                    <p class="quantity">(243)</p>
-                                                </div>
-                                            </label>
-                                        </li>
-                                        <li class="filter__variants-item">
-                                            <label class="check">
-                                                <input class="check__input" type="checkbox">
-                                                <button class="swatch m-large" style="background: purple;"></button>
-                                                <div class="check__info">
-                                                    <p class="name">purple</p>
-                                                    <p class="quantity">(35)</p>
-                                                </div>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </label>
-                            </li>
-
-                            <li class="filter__item">
-                                <label class="filter__item-check">
-                                    <input class="input-check" type="checkbox">
-                                    <h5 class="filter__item-name">
-                                        <span class="name">Size</span>
-                                        <span class="quantity">1</span>
-                                    </h5>
-
-                                    <ul class="filter__variants">
-
-                                        <li class="filter__variants-item">
-                                            <label class="check checkbox-item">
-                                                <input type="checkbox">
-                                                <span class="checkbox-item__checkmark"></span>
-                                                <div class="check__info">
-                                                    <p class="name">S</p>
-                                                    <p class="quantity">(82)</p>
-                                                </div>
-                                            </label>
-                                        </li>
-                                        <li class="filter__variants-item">
-                                            <label class="check checkbox-item">
-                                                <input type="checkbox">
-                                                <span class="checkbox-item__checkmark"></span>
-                                                <div class="check__info">
-                                                    <p class="name">M</p>
-                                                    <p class="quantity">(2)</p>
-                                                </div>
-                                            </label>
-                                        </li>
-                                        <li class="filter__variants-item">
-                                            <label class="check checkbox-item">
-                                                <input type="checkbox">
-                                                <span class="checkbox-item__checkmark"></span>
-                                                <div class="check__info">
-                                                    <p class="name">L</p>
-                                                    <p class="quantity">(872)</p>
-                                                </div>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="filter__action">
-                        <button type="button" class="btn-main-outlined">Clear</button>
-                        <button type="button" class="btn-main-filled">Show 207 results</button>
-                    </div>
-                </section>
             </div>
 
             <!-- PLP layout-->
@@ -3088,29 +3207,45 @@
 
                                 <div class="footer-comunity__socials">
                                     <ul class="socials">
-                                        <li class="socials__item">
-                                            <a class="socials__link m-fb" href="#">
+                                        <li class="socials__item m-fb">
+                                            <a class="socials__link" href="#">
                                                 <i class="icon-smm-fb"></i>
                                             </a>
                                         </li>
-                                        <li class="socials__item">
-                                            <a class="socials__link m-instagram" href="#">
+                                        <li class="socials__item m-instagram">
+                                            <a class="socials__link" href="#">
                                                 <i class="icon-smm-instagram"></i>
                                             </a>
                                         </li>
-                                        <li class="socials__item">
-                                            <a class="socials__link m-youtube" href="#">
+                                        <li class="socials__item m-youtube">
+                                            <a class="socials__link" href="#">
                                                 <i class="icon-smm-youtube"></i>
                                             </a>
                                         </li>
-                                        <li class="socials__item">
-                                            <a class="socials__link m-linkedin" href="#">
+                                        <li class="socials__item m-linkedin">
+                                            <a class="socials__link" href="#">
                                                 <i class="icon-smm-linkedin"></i>
                                             </a>
                                         </li>
-                                        <li class="socials__item">
-                                            <a class="socials__link m-strava" href="#">
+                                        <li class="socials__item m-strava">
+                                            <a class="socials__link" href="#">
                                                 <i class="icon-smm-strava"></i>
+                                            </a>
+                                        </li>
+
+                                        <li class="socials__item m-twitter">
+                                            <a class="socials__link" href="#">
+                                                <i class="icon-smm-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="socials__item m-pinterest">
+                                            <a class="socials__link" href="#">
+                                                <i class="icon-smm-pinterest"></i>
+                                            </a>
+                                        </li>
+                                        <li class="socials__item m-mail">
+                                            <a class="socials__link" href="#">
+                                                <i class="icon-mail"></i>
                                             </a>
                                         </li>
                                     </ul>
