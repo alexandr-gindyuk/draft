@@ -60,6 +60,20 @@
             flex-basis: 522px;
             padding: 0 $grid-column-gap-xxl;
         }
+
+        [class*="m-stick-right"] & {
+            @include media(lg-up) {
+                flex-basis: calc(360px + #{$wrapper-padding-lg});
+            }
+
+            @include media(xl) {
+                flex-basis: calc(460px + #{$wrapper-padding-xl});
+            }
+
+            @include media(xxl) {
+                flex-basis: calc(522px + #{$wrapper-padding-xxl});
+            }
+        }
     }
 
     &__group {
@@ -73,9 +87,6 @@
     &.m-gapped {
         @include media(lg-up) {
             gap: 0;
-        }
-
-        #{$root}__picture {
         }
 
         #{$root}__caption {
@@ -130,33 +141,65 @@
         }
 
         #{$root}__caption {
-            padding: 0 120px 0 0;
-
             [class*="m-stick-left"] & {
                 @include media(lg-up) {
-                    flex-basis: calc(50% + #{$wrapper-padding-lg} / 2);
+                    flex-basis: calc(360px + #{$wrapper-padding-lg});
                 }
 
                 @include media(xl) {
-                    flex-basis: calc(50% + #{$wrapper-padding-xl} / 2);
+                    flex-basis: calc(460px + #{$wrapper-padding-xl});
                 }
 
                 @include media(xxl) {
-                    flex-basis: calc(50% + #{$wrapper-padding-xxl} / 2);
+                    flex-basis: calc(522px + #{$wrapper-padding-xxl});
                 }
             }
 
             [class*="m-stick-right"] & {
                 @include media(lg-up) {
-                    flex-basis: calc(50% - #{$wrapper-padding-lg} / 2);
+                    flex-basis: 360px;
                 }
 
                 @include media(xl) {
-                    flex-basis: calc(50% - #{$wrapper-padding-xl} / 2);
+                    flex-basis: 460px;
                 }
 
                 @include media(xxl) {
-                    flex-basis: calc(50% - #{$wrapper-padding-xxl} / 2);
+                    flex-basis: 522px;
+                }
+            }
+        }
+
+        &.m-gapped {
+            #{$root}__caption {
+                padding: 0 120px 0 0;
+
+                [class*="m-stick-left"] & {
+                    @include media(lg-up) {
+                        flex-basis: calc(50% + #{$wrapper-padding-lg} / 2);
+                    }
+
+                    @include media(xl) {
+                        flex-basis: calc(50% + #{$wrapper-padding-xl} / 2);
+                    }
+
+                    @include media(xxl) {
+                        flex-basis: calc(50% + #{$wrapper-padding-xxl} / 2);
+                    }
+                }
+
+                [class*="m-stick-right"] & {
+                    @include media(lg-up) {
+                        flex-basis: calc(50% - #{$wrapper-padding-lg} / 2);
+                    }
+
+                    @include media(xl) {
+                        flex-basis: calc(50% - #{$wrapper-padding-xl} / 2);
+                    }
+
+                    @include media(xxl) {
+                        flex-basis: calc(50% - #{$wrapper-padding-xxl} / 2);
+                    }
                 }
             }
         }
