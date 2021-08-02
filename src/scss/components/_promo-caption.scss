@@ -1,7 +1,4 @@
 .promo-caption {
-    background-color: color('black');
-    color: color('white');
-
     @include media(xs) {
         position: relative;
         margin-top: -40px;

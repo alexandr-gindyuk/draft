@@ -78,6 +78,16 @@
             margin-bottom: 120px;
         }
     }
+
+    &.m-margin-bottom-small {
+        // @include media(md-down) {
+        //     margin-bottom: 80px;
+        // }
+
+        @include media(lg-up) {
+            margin-bottom: 60px;
+        }
+    }
 }
 
 
