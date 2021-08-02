@@ -460,7 +460,7 @@
                                         <div class="promo-caption__actions">
                                             <a class="btn-main-outlined promo-caption__actions-item" href="">outlined</a>
                                             <button type="button" class="btn-main-outlined promo-caption__actions-item">outlined</button>
-                                            <a href="#" class="link-primary promo-caption__actions-item"><i class="icon-s-arrow-right m-margin-right"></i>MORE TECHNOLOGIES</a>
+                                            <a href="#" class="link-primary promo-caption__actions-item"><i class="icon-chevron m-margin-right"></i>MORE TECHNOLOGIES</a>
                                         </div>
                                     </div>
                                 </figcaption>
@@ -485,7 +485,7 @@
                                         <div class="promo-caption__actions">
                                             <a class="btn-main-outlined promo-caption__actions-item" href="">outlined</a>
                                             <button type="button" class="btn-main-outlined promo-caption__actions-item">outlined</button>
-                                            <a href="#" class="link-primary promo-caption__actions-item"><i class="icon-s-arrow-right m-margin-right"></i>MORE TECHNOLOGIES</a>
+                                            <a href="#" class="link-primary promo-caption__actions-item"><i class="icon-chevron m-margin-right"></i>MORE TECHNOLOGIES</a>
                                         </div>
                                     </div>
                                 </figcaption>
@@ -510,7 +510,7 @@
                                         <div class="promo-caption__actions">
                                             <a class="btn-main-outlined promo-caption__actions-item" href="">outlined</a>
                                             <button type="button" class="btn-main-outlined promo-caption__actions-item">outlined</button>
-                                            <a href="#" class="link-primary promo-caption__actions-item"><i class="icon-s-arrow-right m-margin-right"></i>MORE TECHNOLOGIES</a>
+                                            <a href="#" class="link-primary promo-caption__actions-item"><i class="icon-chevron m-margin-right"></i>MORE TECHNOLOGIES</a>
                                         </div>
                                     </div>
                                 </figcaption>
@@ -527,9 +527,11 @@
 
             <section class="l-wrapper m-margin-bottom-usual">
                 <!-- carousel - what's your next adventure -->
-                <div class="titles-box">
-                    <h2 class="titles-box__title">What’s your next adventure?</h2>
-                    <h3 class="titles-box__subtitle">Feel comfortable at any time</h3>
+                <div class="content-head">
+                    <div class="titles-box">
+                        <h2 class="titles-box__title">What’s your next adventure?</h2>
+                        <h3 class="titles-box__subtitle">Feel comfortable at any time</h3>
+                    </div>
                 </div>
 
                 <div class="temp-view-subcategories">
@@ -588,10 +590,13 @@
             </section>
 
             <section class="l-wrapper m-margin-bottom-usual">
-                <div class="titles-box">
-                    <div class="titles-box__title">Ultimate technology for your comfort</div>
-                    <div class="titles-box__subtitle">Any activity. Any weather</div>
+                <div class="content-head">
+                    <div class="titles-box">
+                        <h2 class="titles-box__title">Ultimate technology for your comfort</h2>
+                        <h3 class="titles-box__subtitle">Any activity. Any weather</h3>
+                    </div>
                 </div>
+
                 <!-- Ultimate technology for your comfort -->
                 <figure class="promo-box-secondary m-vertical-center">
                     <picture class="promo-box-secondary__picture">
@@ -620,9 +625,11 @@
 
             <section class="l-wrapper m-margin-bottom-usual">
                 <!-- carousel - priduct-tiles -->
-                <div class="titles-box">
-                    <h2 class="titles-box__title">Designed for outdoor activity</h2>
-                    <h3 class="titles-box__subtitle">Ready for anything</h3>
+                <div class="content-head">
+                    <div class="titles-box">
+                        <h2 class="titles-box__title">Designed for outdoor activity</h2>
+                        <h3 class="titles-box__subtitle">Ready for anything</h3>
+                    </div>
                 </div>
 
                 <div class="temp-view-subcategories">
@@ -631,33 +638,49 @@
                         <li class="temp-view-subcategories__item">
                             <!-- product-tile -->
                             <section class="product-tile">
-                                <a class="product-tile__image-link" href="">
-                                    <picture class="product-tile__image">
-                                        <source media="(min-width: 1025px)" srcset="images/1.jpg">
-                                        <source media="(min-width: 768px) and (max-width: 1024px)" srcset="images/1.jpg">
-                                        <source media="(max-width: 767px)" srcset="images/1.jpg">
-                                        <img src="images/1.jpg" alt="" title="" loading="lazy">
-                                    </picture>
+                                <div class="product-tile__image-block">
+                                    <a class="product-tile__image-link" href="">
+                                        <picture class="product-tile__image">
+                                            <source media="(min-width: 1025px)" srcset="images/1.jpg">
+                                            <source media="(min-width: 768px) and (max-width: 1024px)" srcset="images/1.jpg">
+                                            <source media="(max-width: 767px)" srcset="images/1.jpg">
+                                            <img src="images/1.jpg" alt="" title="" loading="lazy">
+                                        </picture>
 
-                                    <div class="badges">
-                                        <div class="badge m-sale">
-                                            <span class="badge__item badge__text">-30</span>
-                                            <span class="badge__item badge__sign">%</span>
+                                        <div class="product-tile__badges">
+                                            <div class="badges">
+                                                <div class="badge m-sale">
+                                                    <span class="badge__item badge__text">-30</span>
+                                                    <span class="badge__item badge__sign">%</span>
+                                                </div>
+
+                                                <div class="badge m-eco">
+                                                    <span class="badge__item badge__text">eco</span>
+                                                    <span class="badge__item badge__sign">
+                                                        <i class="icon-badge-eco"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
+                                    </a>
+                                    <div class="product-tile__wishlist">
+                                        <div class="save-in-wishlist">
 
-                                        <div class="badge m-eco">
-                                            <span class="badge__item badge__text">eco</span>
-                                            <span class="badge__item badge__sign">
-                                                <i class="icon-badge-eco"></i>
-                                            </span>
+                                            <!-- add here class "m-added" if user clicked on the heart icon to change the icon view-->
+                                            <button class="save-in-wishlist__button">
+                                                <span class="save-in-wishlist__icon m-default">
+                                                    <i class="icon-heart"></i>
+                                                </span>
+
+                                                <span class="save-in-wishlist__icon m-added">
+                                                    <i class="icon-heart-filled"></i>
+                                                </span>
+
+                                                <p class="save-in-wishlist__text">Save in wishlist</p>
+                                            </button>
                                         </div>
                                     </div>
-
-                                    <div class="product-icons">
-                                        <i class="icon-heart"></i>
-                                        <i class="icon-heart-filled"></i>
-                                    </div>
-                                </a>
+                                </div>
 
                                 <div class="product-tile__info-part">
                                     <div class="product-tile__labels">
@@ -722,12 +745,25 @@
                                         </div>
                                     </div>
 
-                                    <div class="product-tile__actions">
+                                    <div class="product-tile__action">
                                         <a href="#" class="btn-main-filled">Shop now</a>
 
-                                        <div class="product-icons">
-                                            <i class="icon-heart"></i>
-                                            <i class="icon-heart-filled"></i>
+                                        <div class="product-tile__action-wishlist">
+                                            <div class="save-in-wishlist">
+
+                                                <!-- add here class "m-added" if user clicked on the heart icon to change the icon view-->
+                                                <button class="save-in-wishlist__button">
+                                                    <span class="save-in-wishlist__icon m-default">
+                                                        <i class="icon-heart"></i>
+                                                    </span>
+
+                                                    <span class="save-in-wishlist__icon m-added">
+                                                        <i class="icon-heart-filled"></i>
+                                                    </span>
+
+                                                    <p class="save-in-wishlist__text">Save in wishlist</p>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -738,33 +774,49 @@
                         <li class="temp-view-subcategories__item">
                              <!-- product-tile -->
                              <section class="product-tile">
-                                <a class="product-tile__image-link" href="">
-                                    <picture class="product-tile__image">
-                                        <source media="(min-width: 1025px)" srcset="images/1.jpg">
-                                        <source media="(min-width: 768px) and (max-width: 1024px)" srcset="images/1.jpg">
-                                        <source media="(max-width: 767px)" srcset="images/1.jpg">
-                                        <img src="images/1.jpg" alt="" title="" loading="lazy">
-                                    </picture>
+                                <div class="product-tile__image-block">
+                                    <a class="product-tile__image-link" href="">
+                                        <picture class="product-tile__image">
+                                            <source media="(min-width: 1025px)" srcset="images/1.jpg">
+                                            <source media="(min-width: 768px) and (max-width: 1024px)" srcset="images/1.jpg">
+                                            <source media="(max-width: 767px)" srcset="images/1.jpg">
+                                            <img src="images/1.jpg" alt="" title="" loading="lazy">
+                                        </picture>
 
-                                    <div class="badges">
-                                        <div class="badge m-sale">
-                                            <span class="badge__item badge__text">-30</span>
-                                            <span class="badge__item badge__sign">%</span>
+                                        <div class="product-tile__badges">
+                                            <div class="badges">
+                                                <div class="badge m-sale">
+                                                    <span class="badge__item badge__text">-30</span>
+                                                    <span class="badge__item badge__sign">%</span>
+                                                </div>
+
+                                                <div class="badge m-eco">
+                                                    <span class="badge__item badge__text">eco</span>
+                                                    <span class="badge__item badge__sign">
+                                                        <i class="icon-badge-eco"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
+                                    </a>
+                                    <div class="product-tile__wishlist">
+                                        <div class="save-in-wishlist">
 
-                                        <div class="badge m-eco">
-                                            <span class="badge__item badge__text">eco</span>
-                                            <span class="badge__item badge__sign">
-                                                <i class="icon-badge-eco"></i>
-                                            </span>
+                                            <!-- add here class "m-added" if user clicked on the heart icon to change the icon view-->
+                                            <button class="save-in-wishlist__button">
+                                                <span class="save-in-wishlist__icon m-default">
+                                                    <i class="icon-heart"></i>
+                                                </span>
+
+                                                <span class="save-in-wishlist__icon m-added">
+                                                    <i class="icon-heart-filled"></i>
+                                                </span>
+
+                                                <p class="save-in-wishlist__text">Save in wishlist</p>
+                                            </button>
                                         </div>
                                     </div>
-
-                                    <div class="product-icons">
-                                        <i class="icon-heart"></i>
-                                        <i class="icon-heart-filled"></i>
-                                    </div>
-                                </a>
+                                </div>
 
                                 <div class="product-tile__info-part">
                                     <div class="product-tile__labels">
@@ -829,12 +881,25 @@
                                         </div>
                                     </div>
 
-                                    <div class="product-tile__actions">
+                                    <div class="product-tile__action">
                                         <a href="#" class="btn-main-filled">Shop now</a>
 
-                                        <div class="product-icons">
-                                            <i class="icon-heart"></i>
-                                            <i class="icon-heart-filled"></i>
+                                        <div class="product-tile__action-wishlist">
+                                            <div class="save-in-wishlist">
+
+                                                <!-- add here class "m-added" if user clicked on the heart icon to change the icon view-->
+                                                <button class="save-in-wishlist__button">
+                                                    <span class="save-in-wishlist__icon m-default">
+                                                        <i class="icon-heart"></i>
+                                                    </span>
+
+                                                    <span class="save-in-wishlist__icon m-added">
+                                                        <i class="icon-heart-filled"></i>
+                                                    </span>
+
+                                                    <p class="save-in-wishlist__text">Save in wishlist</p>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -845,33 +910,49 @@
                         <li class="temp-view-subcategories__item">
                             <!-- product-tile -->
                             <section class="product-tile">
-                                <a class="product-tile__image-link" href="">
-                                    <picture class="product-tile__image">
-                                        <source media="(min-width: 1025px)" srcset="images/1.jpg">
-                                        <source media="(min-width: 768px) and (max-width: 1024px)" srcset="images/1.jpg">
-                                        <source media="(max-width: 767px)" srcset="images/1.jpg">
-                                        <img src="images/1.jpg" alt="" title="" loading="lazy">
-                                    </picture>
+                                <div class="product-tile__image-block">
+                                    <a class="product-tile__image-link" href="">
+                                        <picture class="product-tile__image">
+                                            <source media="(min-width: 1025px)" srcset="images/1.jpg">
+                                            <source media="(min-width: 768px) and (max-width: 1024px)" srcset="images/1.jpg">
+                                            <source media="(max-width: 767px)" srcset="images/1.jpg">
+                                            <img src="images/1.jpg" alt="" title="" loading="lazy">
+                                        </picture>
 
-                                    <div class="badges">
-                                        <div class="badge m-sale">
-                                            <span class="badge__item badge__text">-30</span>
-                                            <span class="badge__item badge__sign">%</span>
+                                        <div class="product-tile__badges">
+                                            <div class="badges">
+                                                <div class="badge m-sale">
+                                                    <span class="badge__item badge__text">-30</span>
+                                                    <span class="badge__item badge__sign">%</span>
+                                                </div>
+
+                                                <div class="badge m-eco">
+                                                    <span class="badge__item badge__text">eco</span>
+                                                    <span class="badge__item badge__sign">
+                                                        <i class="icon-badge-eco"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
+                                    </a>
+                                    <div class="product-tile__wishlist">
+                                        <div class="save-in-wishlist">
 
-                                        <div class="badge m-eco">
-                                            <span class="badge__item badge__text">eco</span>
-                                            <span class="badge__item badge__sign">
-                                                <i class="icon-badge-eco"></i>
-                                            </span>
+                                            <!-- add here class "m-added" if user clicked on the heart icon to change the icon view-->
+                                            <button class="save-in-wishlist__button">
+                                                <span class="save-in-wishlist__icon m-default">
+                                                    <i class="icon-heart"></i>
+                                                </span>
+
+                                                <span class="save-in-wishlist__icon m-added">
+                                                    <i class="icon-heart-filled"></i>
+                                                </span>
+
+                                                <p class="save-in-wishlist__text">Save in wishlist</p>
+                                            </button>
                                         </div>
                                     </div>
-
-                                    <div class="product-icons">
-                                        <i class="icon-heart"></i>
-                                        <i class="icon-heart-filled"></i>
-                                    </div>
-                                </a>
+                                </div>
 
                                 <div class="product-tile__info-part">
                                     <div class="product-tile__labels">
@@ -936,12 +1017,25 @@
                                         </div>
                                     </div>
 
-                                    <div class="product-tile__actions">
+                                    <div class="product-tile__action">
                                         <a href="#" class="btn-main-filled">Shop now</a>
 
-                                        <div class="product-icons">
-                                            <i class="icon-heart"></i>
-                                            <i class="icon-heart-filled"></i>
+                                        <div class="product-tile__action-wishlist">
+                                            <div class="save-in-wishlist">
+
+                                                <!-- add here class "m-added" if user clicked on the heart icon to change the icon view-->
+                                                <button class="save-in-wishlist__button">
+                                                    <span class="save-in-wishlist__icon m-default">
+                                                        <i class="icon-heart"></i>
+                                                    </span>
+
+                                                    <span class="save-in-wishlist__icon m-added">
+                                                        <i class="icon-heart-filled"></i>
+                                                    </span>
+
+                                                    <p class="save-in-wishlist__text">Save in wishlist</p>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -952,33 +1046,49 @@
                         <li class="temp-view-subcategories__item">
                             <!-- product-tile -->
                             <section class="product-tile">
-                                <a class="product-tile__image-link" href="">
-                                    <picture class="product-tile__image">
-                                        <source media="(min-width: 1025px)" srcset="images/1.jpg">
-                                        <source media="(min-width: 768px) and (max-width: 1024px)" srcset="images/1.jpg">
-                                        <source media="(max-width: 767px)" srcset="images/1.jpg">
-                                        <img src="images/1.jpg" alt="" title="" loading="lazy">
-                                    </picture>
+                                <div class="product-tile__image-block">
+                                    <a class="product-tile__image-link" href="">
+                                        <picture class="product-tile__image">
+                                            <source media="(min-width: 1025px)" srcset="images/1.jpg">
+                                            <source media="(min-width: 768px) and (max-width: 1024px)" srcset="images/1.jpg">
+                                            <source media="(max-width: 767px)" srcset="images/1.jpg">
+                                            <img src="images/1.jpg" alt="" title="" loading="lazy">
+                                        </picture>
 
-                                    <div class="badges">
-                                        <div class="badge m-sale">
-                                            <span class="badge__item badge__text">-30</span>
-                                            <span class="badge__item badge__sign">%</span>
+                                        <div class="product-tile__badges">
+                                            <div class="badges">
+                                                <div class="badge m-sale">
+                                                    <span class="badge__item badge__text">-30</span>
+                                                    <span class="badge__item badge__sign">%</span>
+                                                </div>
+
+                                                <div class="badge m-eco">
+                                                    <span class="badge__item badge__text">eco</span>
+                                                    <span class="badge__item badge__sign">
+                                                        <i class="icon-badge-eco"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
+                                    </a>
+                                    <div class="product-tile__wishlist">
+                                        <div class="save-in-wishlist">
 
-                                        <div class="badge m-eco">
-                                            <span class="badge__item badge__text">eco</span>
-                                            <span class="badge__item badge__sign">
-                                                <i class="icon-badge-eco"></i>
-                                            </span>
+                                            <!-- add here class "m-added" if user clicked on the heart icon to change the icon view-->
+                                            <button class="save-in-wishlist__button">
+                                                <span class="save-in-wishlist__icon m-default">
+                                                    <i class="icon-heart"></i>
+                                                </span>
+
+                                                <span class="save-in-wishlist__icon m-added">
+                                                    <i class="icon-heart-filled"></i>
+                                                </span>
+
+                                                <p class="save-in-wishlist__text">Save in wishlist</p>
+                                            </button>
                                         </div>
                                     </div>
-
-                                    <div class="product-icons">
-                                        <i class="icon-heart"></i>
-                                        <i class="icon-heart-filled"></i>
-                                    </div>
-                                </a>
+                                </div>
 
                                 <div class="product-tile__info-part">
                                     <div class="product-tile__labels">
@@ -1043,12 +1153,25 @@
                                         </div>
                                     </div>
 
-                                    <div class="product-tile__actions">
+                                    <div class="product-tile__action">
                                         <a href="#" class="btn-main-filled">Shop now</a>
 
-                                        <div class="product-icons">
-                                            <i class="icon-heart"></i>
-                                            <i class="icon-heart-filled"></i>
+                                        <div class="product-tile__action-wishlist">
+                                            <div class="save-in-wishlist">
+
+                                                <!-- add here class "m-added" if user clicked on the heart icon to change the icon view-->
+                                                <button class="save-in-wishlist__button">
+                                                    <span class="save-in-wishlist__icon m-default">
+                                                        <i class="icon-heart"></i>
+                                                    </span>
+
+                                                    <span class="save-in-wishlist__icon m-added">
+                                                        <i class="icon-heart-filled"></i>
+                                                    </span>
+
+                                                    <p class="save-in-wishlist__text">Save in wishlist</p>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1071,7 +1194,7 @@
                         <p class="quote-banner__text">N1no Schurter / The Legent of MTB</p>
                     </div>
                     <div class="quote-banner__action">
-                        <a href="" class="link-primary">Read the interview<i class="icon-s-arrow-right m-margin-left"></i></a>
+                        <a href="" class="link-primary">Read the interview<i class="icon-chevron m-margin-left"></i></a>
                     </div>
                 </div>
                  <!-- end quoted-banner -->
@@ -1095,7 +1218,7 @@
                             <div class="promo-caption__actions">
                                 <a class="btn-main-outlined promo-caption__actions-item" href="">outlined</a>
                                 <button type="button" class="btn-main-outlined promo-caption__actions-item">outlined</button>
-                                <a href="#" class="link-primary promo-caption__actions-item"><i class="icon-s-arrow-right m-margin-right"></i>MORE TECHNOLOGIES</a>
+                                <a href="#" class="link-primary promo-caption__actions-item"><i class="icon-chevron m-margin-right"></i>MORE TECHNOLOGIES</a>
                             </div>
                         </div>
                     </figcaption>
@@ -1109,13 +1232,15 @@
                 <!-- hp-grid-2-2-2-3-3-4 with down-link on mobile -->
                 <div class="l-grid-action-order">
                     <div class="l-grid-action-order__title">
-                        <div class="titles-box">
-                            <div class="titles-box__title">Inspired by ODLO</div>
+                        <div class="content-head">
+                            <div class="titles-box">
+                                <h2 class="titles-box__title">Inspired by ODLO</h2>
+                            </div>
                         </div>
                     </div>
 
                     <div class="l-grid-action-order__action">
-                        <a href="" class="link-primary">MORE community photos<i class="icon-s-arrow-right m-margin-left"></i></a>
+                        <a href="" class="link-primary">MORE community photos<i class="icon-chevron m-margin-left"></i></a>
                     </div>
 
                     <div class="l-grid-action-order__content">
@@ -1161,29 +1286,45 @@
                             </div>
                             <div class="join-us__content">
                                 <ul class="socials m-inverse">
-                                    <li class="socials__item">
-                                        <a class="socials__link m-fb" href="#">
+                                    <li class="socials__item m-fb">
+                                        <a class="socials__link" href="#">
                                             <i class="icon-smm-fb"></i>
                                         </a>
                                     </li>
-                                    <li class="socials__item">
-                                        <a class="socials__link m-instagram" href="#">
+                                    <li class="socials__item m-instagram">
+                                        <a class="socials__link" href="#">
                                             <i class="icon-smm-instagram"></i>
                                         </a>
                                     </li>
-                                    <li class="socials__item">
-                                        <a class="socials__link m-youtube" href="#">
+                                    <li class="socials__item m-youtube">
+                                        <a class="socials__link" href="#">
                                             <i class="icon-smm-youtube"></i>
                                         </a>
                                     </li>
-                                    <li class="socials__item">
-                                        <a class="socials__link m-linkedin" href="#">
+                                    <li class="socials__item m-linkedin">
+                                        <a class="socials__link" href="#">
                                             <i class="icon-smm-linkedin"></i>
                                         </a>
                                     </li>
-                                    <li class="socials__item">
-                                        <a class="socials__link m-strava" href="#">
+                                    <li class="socials__item m-strava">
+                                        <a class="socials__link" href="#">
                                             <i class="icon-smm-strava"></i>
+                                        </a>
+                                    </li>
+
+                                    <li class="socials__item m-twitter">
+                                        <a class="socials__link" href="#">
+                                            <i class="icon-smm-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="socials__item m-pinterest">
+                                        <a class="socials__link" href="#">
+                                            <i class="icon-smm-pinterest"></i>
+                                        </a>
+                                    </li>
+                                    <li class="socials__item m-mail">
+                                        <a class="socials__link" href="#">
+                                            <i class="icon-mail"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -1196,8 +1337,10 @@
 
             <section class="l-wrapper m-margin-bottom-usual">
                 <!-- carousel - Innovative layers for optimal layering -->
-                <div class="titles-box">
-                    <h2 class="titles-box__title">Innovative layers for optimal layering</h2>
+                <div class="content-head">
+                    <div class="titles-box">
+                        <h2 class="titles-box__title">Innovative layers for optimal layering</h2>
+                    </div>
                 </div>
 
                 <div class="temp-view-subcategories">
@@ -1257,9 +1400,11 @@
 
             <section class="l-wrapper m-margin-bottom-usual">
                 <!-- carousel - priduct-tiles -->
-                <div class="titles-box">
-                    <h2 class="titles-box__title">Designed for outdoor activity</h2>
-                    <h3 class="titles-box__subtitle">Ready for anything</h3>
+                <div class="content-head">
+                    <div class="titles-box">
+                        <h2 class="titles-box__title">Designed for outdoor activity</h2>
+                        <h3 class="titles-box__subtitle">Ready for anything</h3>
+                    </div>
                 </div>
 
                 <div class="temp-view-subcategories">
@@ -1268,140 +1413,49 @@
                         <li class="temp-view-subcategories__item">
                             <!-- product-tile -->
                             <section class="product-tile">
-                                <a class="product-tile__image-link" href="">
-                                    <picture class="product-tile__image">
-                                        <source media="(min-width: 1025px)" srcset="images/1.jpg">
-                                        <source media="(min-width: 768px) and (max-width: 1024px)" srcset="images/1.jpg">
-                                        <source media="(max-width: 767px)" srcset="images/1.jpg">
-                                        <img src="images/1.jpg" alt="" title="" loading="lazy">
-                                    </picture>
+                                <div class="product-tile__image-block">
+                                    <a class="product-tile__image-link" href="">
+                                        <picture class="product-tile__image">
+                                            <source media="(min-width: 1025px)" srcset="images/1.jpg">
+                                            <source media="(min-width: 768px) and (max-width: 1024px)" srcset="images/1.jpg">
+                                            <source media="(max-width: 767px)" srcset="images/1.jpg">
+                                            <img src="images/1.jpg" alt="" title="" loading="lazy">
+                                        </picture>
 
-                                    <div class="badges">
-                                        <div class="badge m-sale">
-                                            <span class="badge__item badge__text">-30</span>
-                                            <span class="badge__item badge__sign">%</span>
-                                        </div>
+                                        <div class="product-tile__badges">
+                                            <div class="badges">
+                                                <div class="badge m-sale">
+                                                    <span class="badge__item badge__text">-30</span>
+                                                    <span class="badge__item badge__sign">%</span>
+                                                </div>
 
-                                        <div class="badge m-eco">
-                                            <span class="badge__item badge__text">eco</span>
-                                            <span class="badge__item badge__sign">
-                                                <i class="icon-badge-eco"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <div class="product-icons">
-                                        <i class="icon-heart"></i>
-                                        <i class="icon-heart-filled"></i>
-                                    </div>
-                                </a>
-
-                                <div class="product-tile__info-part">
-                                    <div class="product-tile__labels">
-                                        <div class="product-tile__label">
-                                            Active spine
-                                        </div>
-                                    </div>
-
-                                    <div class="product-tile__colors">
-                                        <div class="product-colors">
-                                            <p class="product-colors__name">
-                                                <span class="product-colors__name-color">Color:&nbsp;</span>
-                                                <span>Matte Green - Odlo Graphic SS21</span>
-                                            </p>
-
-                                            <div class="product-colors__group">
-                                                <ul class="product-colors__list swatches m-small">
-                                                    <li class="product-colors__item">
-                                                        <div class="swatch" style="background: #bf0059;"></div>
-                                                    </li>
-                                                    <li class="product-colors__item">
-                                                        <div class="swatch" style="background: #0086bf;"></div>
-                                                    </li>
-                                                    <li class="product-colors__item">
-                                                        <div class="swatch" style="background: #132D40;"></div>
-                                                    </li>
-                                                    <li class="product-colors__item">
-                                                        <div class="swatch" style="background: #3f8826;"></div>
-                                                    </li>
-                                                    <li class="product-colors__item">
-                                                        <div class="swatch selected" style="background: #0086bf;"></div>
-                                                    </li>
-                                                    <li class="product-colors__item">
-                                                        <div class="swatch disabled" style="background: #0086bf;"></div>
-                                                    </li>
-                                                </ul>
-
-                                                <a href="#" class="product-colors__more">
-                                                    +2
-                                                </a>
+                                                <div class="badge m-eco">
+                                                    <span class="badge__item badge__text">eco</span>
+                                                    <span class="badge__item badge__sign">
+                                                        <i class="icon-badge-eco"></i>
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
+                                    <div class="product-tile__wishlist">
+                                        <div class="save-in-wishlist">
 
-                                    <p class="product-tile__description">Scott Fan Exclusive</p>
+                                            <!-- add here class "m-added" if user clicked on the heart icon to change the icon view-->
+                                            <button class="save-in-wishlist__button">
+                                                <span class="save-in-wishlist__icon m-default">
+                                                    <i class="icon-heart"></i>
+                                                </span>
 
-                                    <h3 class="product-tile__title">
-                                        <a class="product-tile__link" href="">Women's Seamless High Sports Bra</a>
-                                    </h3>
+                                                <span class="save-in-wishlist__icon m-added">
+                                                    <i class="icon-heart-filled"></i>
+                                                </span>
 
-                                    <div class="product-tile__price">
-                                        <div class="product-price">
-                                            <span class="product-price__item m-usual">
-                                                <span>CHF&nbsp;</span><span>76.00</span>
-                                            </span>
-                                            <span class="product-price__item m-old">
-                                                <span>CHF&nbsp;</span><span>76.00</span>
-                                            </span>
-                                            <span class="product-price__item m-new">
-                                                <span>CHF&nbsp;</span><span>76.00</span>
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <div class="product-tile__actions">
-                                        <a href="#" class="btn-main-filled">Shop now</a>
-
-                                        <div class="product-icons">
-                                            <i class="icon-heart"></i>
-                                            <i class="icon-heart-filled"></i>
+                                                <p class="save-in-wishlist__text">Save in wishlist</p>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
-                            </section>
-                            <!-- end product-tile -->
-                        </li>
-
-                        <li class="temp-view-subcategories__item">
-                             <!-- product-tile -->
-                             <section class="product-tile">
-                                <a class="product-tile__image-link" href="">
-                                    <picture class="product-tile__image">
-                                        <source media="(min-width: 1025px)" srcset="images/1.jpg">
-                                        <source media="(min-width: 768px) and (max-width: 1024px)" srcset="images/1.jpg">
-                                        <source media="(max-width: 767px)" srcset="images/1.jpg">
-                                        <img src="images/1.jpg" alt="" title="" loading="lazy">
-                                    </picture>
-
-                                    <div class="badges">
-                                        <div class="badge m-sale">
-                                            <span class="badge__item badge__text">-30</span>
-                                            <span class="badge__item badge__sign">%</span>
-                                        </div>
-
-                                        <div class="badge m-eco">
-                                            <span class="badge__item badge__text">eco</span>
-                                            <span class="badge__item badge__sign">
-                                                <i class="icon-badge-eco"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <div class="product-icons">
-                                        <i class="icon-heart"></i>
-                                        <i class="icon-heart-filled"></i>
-                                    </div>
-                                </a>
 
                                 <div class="product-tile__info-part">
                                     <div class="product-tile__labels">
@@ -1466,12 +1520,25 @@
                                         </div>
                                     </div>
 
-                                    <div class="product-tile__actions">
+                                    <div class="product-tile__action">
                                         <a href="#" class="btn-main-filled">Shop now</a>
 
-                                        <div class="product-icons">
-                                            <i class="icon-heart"></i>
-                                            <i class="icon-heart-filled"></i>
+                                        <div class="product-tile__action-wishlist">
+                                            <div class="save-in-wishlist">
+
+                                                <!-- add here class "m-added" if user clicked on the heart icon to change the icon view-->
+                                                <button class="save-in-wishlist__button">
+                                                    <span class="save-in-wishlist__icon m-default">
+                                                        <i class="icon-heart"></i>
+                                                    </span>
+
+                                                    <span class="save-in-wishlist__icon m-added">
+                                                        <i class="icon-heart-filled"></i>
+                                                    </span>
+
+                                                    <p class="save-in-wishlist__text">Save in wishlist</p>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1482,33 +1549,49 @@
                         <li class="temp-view-subcategories__item">
                             <!-- product-tile -->
                             <section class="product-tile">
-                                <a class="product-tile__image-link" href="">
-                                    <picture class="product-tile__image">
-                                        <source media="(min-width: 1025px)" srcset="images/1.jpg">
-                                        <source media="(min-width: 768px) and (max-width: 1024px)" srcset="images/1.jpg">
-                                        <source media="(max-width: 767px)" srcset="images/1.jpg">
-                                        <img src="images/1.jpg" alt="" title="" loading="lazy">
-                                    </picture>
+                                <div class="product-tile__image-block">
+                                    <a class="product-tile__image-link" href="">
+                                        <picture class="product-tile__image">
+                                            <source media="(min-width: 1025px)" srcset="images/1.jpg">
+                                            <source media="(min-width: 768px) and (max-width: 1024px)" srcset="images/1.jpg">
+                                            <source media="(max-width: 767px)" srcset="images/1.jpg">
+                                            <img src="images/1.jpg" alt="" title="" loading="lazy">
+                                        </picture>
 
-                                    <div class="badges">
-                                        <div class="badge m-sale">
-                                            <span class="badge__item badge__text">-30</span>
-                                            <span class="badge__item badge__sign">%</span>
+                                        <div class="product-tile__badges">
+                                            <div class="badges">
+                                                <div class="badge m-sale">
+                                                    <span class="badge__item badge__text">-30</span>
+                                                    <span class="badge__item badge__sign">%</span>
+                                                </div>
+
+                                                <div class="badge m-eco">
+                                                    <span class="badge__item badge__text">eco</span>
+                                                    <span class="badge__item badge__sign">
+                                                        <i class="icon-badge-eco"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
+                                    </a>
+                                    <div class="product-tile__wishlist">
+                                        <div class="save-in-wishlist">
 
-                                        <div class="badge m-eco">
-                                            <span class="badge__item badge__text">eco</span>
-                                            <span class="badge__item badge__sign">
-                                                <i class="icon-badge-eco"></i>
-                                            </span>
+                                            <!-- add here class "m-added" if user clicked on the heart icon to change the icon view-->
+                                            <button class="save-in-wishlist__button">
+                                                <span class="save-in-wishlist__icon m-default">
+                                                    <i class="icon-heart"></i>
+                                                </span>
+
+                                                <span class="save-in-wishlist__icon m-added">
+                                                    <i class="icon-heart-filled"></i>
+                                                </span>
+
+                                                <p class="save-in-wishlist__text">Save in wishlist</p>
+                                            </button>
                                         </div>
                                     </div>
-
-                                    <div class="product-icons">
-                                        <i class="icon-heart"></i>
-                                        <i class="icon-heart-filled"></i>
-                                    </div>
-                                </a>
+                                </div>
 
                                 <div class="product-tile__info-part">
                                     <div class="product-tile__labels">
@@ -1573,12 +1656,25 @@
                                         </div>
                                     </div>
 
-                                    <div class="product-tile__actions">
+                                    <div class="product-tile__action">
                                         <a href="#" class="btn-main-filled">Shop now</a>
 
-                                        <div class="product-icons">
-                                            <i class="icon-heart"></i>
-                                            <i class="icon-heart-filled"></i>
+                                        <div class="product-tile__action-wishlist">
+                                            <div class="save-in-wishlist">
+
+                                                <!-- add here class "m-added" if user clicked on the heart icon to change the icon view-->
+                                                <button class="save-in-wishlist__button">
+                                                    <span class="save-in-wishlist__icon m-default">
+                                                        <i class="icon-heart"></i>
+                                                    </span>
+
+                                                    <span class="save-in-wishlist__icon m-added">
+                                                        <i class="icon-heart-filled"></i>
+                                                    </span>
+
+                                                    <p class="save-in-wishlist__text">Save in wishlist</p>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1589,33 +1685,49 @@
                         <li class="temp-view-subcategories__item">
                             <!-- product-tile -->
                             <section class="product-tile">
-                                <a class="product-tile__image-link" href="">
-                                    <picture class="product-tile__image">
-                                        <source media="(min-width: 1025px)" srcset="images/1.jpg">
-                                        <source media="(min-width: 768px) and (max-width: 1024px)" srcset="images/1.jpg">
-                                        <source media="(max-width: 767px)" srcset="images/1.jpg">
-                                        <img src="images/1.jpg" alt="" title="" loading="lazy">
-                                    </picture>
+                                <div class="product-tile__image-block">
+                                    <a class="product-tile__image-link" href="">
+                                        <picture class="product-tile__image">
+                                            <source media="(min-width: 1025px)" srcset="images/1.jpg">
+                                            <source media="(min-width: 768px) and (max-width: 1024px)" srcset="images/1.jpg">
+                                            <source media="(max-width: 767px)" srcset="images/1.jpg">
+                                            <img src="images/1.jpg" alt="" title="" loading="lazy">
+                                        </picture>
 
-                                    <div class="badges">
-                                        <div class="badge m-sale">
-                                            <span class="badge__item badge__text">-30</span>
-                                            <span class="badge__item badge__sign">%</span>
+                                        <div class="product-tile__badges">
+                                            <div class="badges">
+                                                <div class="badge m-sale">
+                                                    <span class="badge__item badge__text">-30</span>
+                                                    <span class="badge__item badge__sign">%</span>
+                                                </div>
+
+                                                <div class="badge m-eco">
+                                                    <span class="badge__item badge__text">eco</span>
+                                                    <span class="badge__item badge__sign">
+                                                        <i class="icon-badge-eco"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
+                                    </a>
+                                    <div class="product-tile__wishlist">
+                                        <div class="save-in-wishlist">
 
-                                        <div class="badge m-eco">
-                                            <span class="badge__item badge__text">eco</span>
-                                            <span class="badge__item badge__sign">
-                                                <i class="icon-badge-eco"></i>
-                                            </span>
+                                            <!-- add here class "m-added" if user clicked on the heart icon to change the icon view-->
+                                            <button class="save-in-wishlist__button">
+                                                <span class="save-in-wishlist__icon m-default">
+                                                    <i class="icon-heart"></i>
+                                                </span>
+
+                                                <span class="save-in-wishlist__icon m-added">
+                                                    <i class="icon-heart-filled"></i>
+                                                </span>
+
+                                                <p class="save-in-wishlist__text">Save in wishlist</p>
+                                            </button>
                                         </div>
                                     </div>
-
-                                    <div class="product-icons">
-                                        <i class="icon-heart"></i>
-                                        <i class="icon-heart-filled"></i>
-                                    </div>
-                                </a>
+                                </div>
 
                                 <div class="product-tile__info-part">
                                     <div class="product-tile__labels">
@@ -1680,12 +1792,161 @@
                                         </div>
                                     </div>
 
-                                    <div class="product-tile__actions">
+                                    <div class="product-tile__action">
                                         <a href="#" class="btn-main-filled">Shop now</a>
 
-                                        <div class="product-icons">
-                                            <i class="icon-heart"></i>
-                                            <i class="icon-heart-filled"></i>
+                                        <div class="product-tile__action-wishlist">
+                                            <div class="save-in-wishlist">
+
+                                                <!-- add here class "m-added" if user clicked on the heart icon to change the icon view-->
+                                                <button class="save-in-wishlist__button">
+                                                    <span class="save-in-wishlist__icon m-default">
+                                                        <i class="icon-heart"></i>
+                                                    </span>
+
+                                                    <span class="save-in-wishlist__icon m-added">
+                                                        <i class="icon-heart-filled"></i>
+                                                    </span>
+
+                                                    <p class="save-in-wishlist__text">Save in wishlist</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- end product-tile -->
+                        </li>
+
+                        <li class="temp-view-subcategories__item">
+                            <!-- product-tile -->
+                            <section class="product-tile">
+                                <div class="product-tile__image-block">
+                                    <a class="product-tile__image-link" href="">
+                                        <picture class="product-tile__image">
+                                            <source media="(min-width: 1025px)" srcset="images/1.jpg">
+                                            <source media="(min-width: 768px) and (max-width: 1024px)" srcset="images/1.jpg">
+                                            <source media="(max-width: 767px)" srcset="images/1.jpg">
+                                            <img src="images/1.jpg" alt="" title="" loading="lazy">
+                                        </picture>
+
+                                        <div class="product-tile__badges">
+                                            <div class="badges">
+                                                <div class="badge m-sale">
+                                                    <span class="badge__item badge__text">-30</span>
+                                                    <span class="badge__item badge__sign">%</span>
+                                                </div>
+
+                                                <div class="badge m-eco">
+                                                    <span class="badge__item badge__text">eco</span>
+                                                    <span class="badge__item badge__sign">
+                                                        <i class="icon-badge-eco"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="product-tile__wishlist">
+                                        <div class="save-in-wishlist">
+
+                                            <!-- add here class "m-added" if user clicked on the heart icon to change the icon view-->
+                                            <button class="save-in-wishlist__button">
+                                                <span class="save-in-wishlist__icon m-default">
+                                                    <i class="icon-heart"></i>
+                                                </span>
+
+                                                <span class="save-in-wishlist__icon m-added">
+                                                    <i class="icon-heart-filled"></i>
+                                                </span>
+
+                                                <p class="save-in-wishlist__text">Save in wishlist</p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product-tile__info-part">
+                                    <div class="product-tile__labels">
+                                        <div class="product-tile__label">
+                                            Active spine
+                                        </div>
+                                    </div>
+
+                                    <div class="product-tile__colors">
+                                        <div class="product-colors">
+                                            <p class="product-colors__name">
+                                                <span class="product-colors__name-color">Color:&nbsp;</span>
+                                                <span>Matte Green - Odlo Graphic SS21</span>
+                                            </p>
+
+                                            <div class="product-colors__group">
+                                                <ul class="product-colors__list swatches m-small">
+                                                    <li class="product-colors__item">
+                                                        <div class="swatch" style="background: #bf0059;"></div>
+                                                    </li>
+                                                    <li class="product-colors__item">
+                                                        <div class="swatch" style="background: #0086bf;"></div>
+                                                    </li>
+                                                    <li class="product-colors__item">
+                                                        <div class="swatch" style="background: #132D40;"></div>
+                                                    </li>
+                                                    <li class="product-colors__item">
+                                                        <div class="swatch" style="background: #3f8826;"></div>
+                                                    </li>
+                                                    <li class="product-colors__item">
+                                                        <div class="swatch selected" style="background: #0086bf;"></div>
+                                                    </li>
+                                                    <li class="product-colors__item">
+                                                        <div class="swatch disabled" style="background: #0086bf;"></div>
+                                                    </li>
+                                                </ul>
+
+                                                <a href="#" class="product-colors__more">
+                                                    +2
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p class="product-tile__description">Scott Fan Exclusive</p>
+
+                                    <h3 class="product-tile__title">
+                                        <a class="product-tile__link" href="">Women's Seamless High Sports Bra</a>
+                                    </h3>
+
+                                    <div class="product-tile__price">
+                                        <div class="product-price">
+                                            <span class="product-price__item m-usual">
+                                                <span>CHF&nbsp;</span><span>76.00</span>
+                                            </span>
+                                            <span class="product-price__item m-old">
+                                                <span>CHF&nbsp;</span><span>76.00</span>
+                                            </span>
+                                            <span class="product-price__item m-new">
+                                                <span>CHF&nbsp;</span><span>76.00</span>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-tile__action">
+                                        <a href="#" class="btn-main-filled">Shop now</a>
+
+                                        <div class="product-tile__action-wishlist">
+                                            <div class="save-in-wishlist">
+
+                                                <!-- add here class "m-added" if user clicked on the heart icon to change the icon view-->
+                                                <button class="save-in-wishlist__button">
+                                                    <span class="save-in-wishlist__icon m-default">
+                                                        <i class="icon-heart"></i>
+                                                    </span>
+
+                                                    <span class="save-in-wishlist__icon m-added">
+                                                        <i class="icon-heart-filled"></i>
+                                                    </span>
+
+                                                    <p class="save-in-wishlist__text">Save in wishlist</p>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1715,7 +1976,7 @@
                             <div class="promo-caption__actions">
                                 <a class="btn-main-outlined promo-caption__actions-item" href="">outlined</a>
                                 <button type="button" class="btn-main-outlined promo-caption__actions-item">outlined</button>
-                                <a href="#" class="link-primary promo-caption__actions-item"><i class="icon-s-arrow-right m-margin-right"></i>MORE TECHNOLOGIES</a>
+                                <a href="#" class="link-primary promo-caption__actions-item"><i class="icon-chevron m-margin-right"></i>MORE TECHNOLOGIES</a>
                             </div>
                         </div>
                     </figcaption>
@@ -1728,13 +1989,15 @@
                 <!-- hp-grid-1-1-2-2-2-3 with down-link on mobile -->
                 <div class="l-grid-action-order">
                     <div class="l-grid-action-order__title">
-                        <div class="titles-box">
-                            <div class="titles-box__title">What is your story about?</div>
+                        <div class="content-head">
+                            <div class="titles-box">
+                                <h2 class="titles-box__title">What is your story about?</h2>
+                            </div>
                         </div>
                     </div>
 
                     <div class="l-grid-action-order__action">
-                        <a href="" class="link-primary">MORE stories<i class="icon-s-arrow-right m-margin-left"></i></a>
+                        <a href="" class="link-primary">MORE stories<i class="icon-chevron m-margin-left"></i></a>
                     </div>
 
                     <div class="l-grid-action-order__content">
@@ -1805,29 +2068,45 @@
 
                                 <div class="footer-comunity__socials">
                                     <ul class="socials">
-                                        <li class="socials__item">
-                                            <a class="socials__link m-fb" href="#">
+                                        <li class="socials__item m-fb">
+                                            <a class="socials__link" href="#">
                                                 <i class="icon-smm-fb"></i>
                                             </a>
                                         </li>
-                                        <li class="socials__item">
-                                            <a class="socials__link m-instagram" href="#">
+                                        <li class="socials__item m-instagram">
+                                            <a class="socials__link" href="#">
                                                 <i class="icon-smm-instagram"></i>
                                             </a>
                                         </li>
-                                        <li class="socials__item">
-                                            <a class="socials__link m-youtube" href="#">
+                                        <li class="socials__item m-youtube">
+                                            <a class="socials__link" href="#">
                                                 <i class="icon-smm-youtube"></i>
                                             </a>
                                         </li>
-                                        <li class="socials__item">
-                                            <a class="socials__link m-linkedin" href="#">
+                                        <li class="socials__item m-linkedin">
+                                            <a class="socials__link" href="#">
                                                 <i class="icon-smm-linkedin"></i>
                                             </a>
                                         </li>
-                                        <li class="socials__item">
-                                            <a class="socials__link m-strava" href="#">
+                                        <li class="socials__item m-strava">
+                                            <a class="socials__link" href="#">
                                                 <i class="icon-smm-strava"></i>
+                                            </a>
+                                        </li>
+
+                                        <li class="socials__item m-twitter">
+                                            <a class="socials__link" href="#">
+                                                <i class="icon-smm-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="socials__item m-pinterest">
+                                            <a class="socials__link" href="#">
+                                                <i class="icon-smm-pinterest"></i>
+                                            </a>
+                                        </li>
+                                        <li class="socials__item m-mail">
+                                            <a class="socials__link" href="#">
+                                                <i class="icon-mail"></i>
                                             </a>
                                         </li>
                                     </ul>
@@ -1846,7 +2125,9 @@
                                             <div class="input-submit-group">
                                                 <input class="input-submit" type="submit" value=''>
                                                 <span class="input-submit-text">Subscribe</span>
-                                                <i class="icon-arrow-right"></i>
+                                                <span class="input-submit-icon">
+                                                    <i class="icon-arrow-right"></i>
+                                                </span>
                                             </div>
 
                                         </form>
