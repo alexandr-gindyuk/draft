@@ -1,0 +1,18 @@
+.content-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include media(sm-down) {
+        margin-bottom: 30px;
+    }
+
+    @include media(md) {
+        margin-bottom: 35px;
+    }
+
+    @include media(lg-up) {
+        margin-bottom: 40px;
+    }
+
+}

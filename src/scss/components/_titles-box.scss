@@ -1,16 +1,4 @@
 .titles-box {
-    @include media(sm-down) {
-        margin-bottom: 30px;
-    }
-
-    @include media(md) {
-        margin-bottom: 35px;
-    }
-
-    @include media(lg-up) {
-        margin-bottom: 40px;
-    }
-
     &__title {
         font-family: $font-dinot-medium;
 
