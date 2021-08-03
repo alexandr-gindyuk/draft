@@ -12,11 +12,11 @@ swiperSliders.forEach(el => {
     Object.assign(swiperDefaultOptions, {
         navigation: {
             disabledClass: 'm-disabled',
-            nextEl: el.closest('.slot-swiper').querySelector('.button-arrow.m-right'),
-            prevEl: el.closest('.slot-swiper').querySelector('.button-arrow.m-left')
+            nextEl: el.closest('.slot').querySelector('.button-arrow.m-right'),
+            prevEl: el.closest('.slot').querySelector('.button-arrow.m-left')
         },
         scrollbar: {
-            el: el.closest('.slot-swiper').querySelector('.swiper-scrollbar')
+            el: el.closest('.slot').querySelector('.swiper-scrollbar')
         },
     });
 

@@ -18,7 +18,7 @@
 
     &.m-disabled {
         pointer-events: none;
-        border-color: rgba(color('white'), 0.4);
+        background-color: rgba(color('white'), 0.4);
         border-color: color('grey-light');
         color: color('grey-light');
     }
