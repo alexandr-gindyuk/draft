@@ -1,0 +1,31 @@
+.load-more {
+    max-width: 380px;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+
+    &__info {
+        @include scroll;
+
+        font-family: $font-dinot-medium;
+        font-size: 20px;
+        line-height: 1.25;
+        color: color('grey-deep');
+        margin-bottom: 20px;
+        overflow-x: auto;
+    }
+
+    &__progress {
+        width: 100%;
+        height: 4px;
+        background-color: color('grey-light');
+        margin-bottom: 30px;
+        border-radius: 4px;
+
+        &-inner {
+            height: 100%;
+            background-color: color('black');
+            border-radius: 4px;
+        }
+    }
+}

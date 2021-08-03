@@ -6,15 +6,10 @@
     height: 100%;
     align-items: center;
     flex-wrap: wrap;
+    gap: 12px;
 
-    &__item {
-        &:not(:last-child) {
-            margin-right: 12px;
-
-            @include media(md-up) {
-                margin-right: 20px;
-            }
-        }
+    @include media(md-up) {
+        gap: 20px;
     }
 
     &__link {

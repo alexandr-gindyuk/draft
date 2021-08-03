@@ -1,4 +1,12 @@
+$footer-size-top: 30px;
+
+@include media(lg-up) {
+    $footer-size-top: 40px;
+}
+
 .l-footer {
+    padding-top: $footer-size-top;
+
     &__top {
         @include grid;
 
