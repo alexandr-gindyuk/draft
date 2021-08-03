@@ -1,0 +1,66 @@
+.filter-tabs {
+
+    $root: &;
+
+    &__list {
+        font-family: $font-dinot-medium;
+        font-size: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: -10px;
+    }
+
+    &__item  {
+        display: flex;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        transition: all $motion-ease;
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        &.m-disabled {
+            #{$root}__name {
+                color: color('grey-mid');
+                text-decoration: line-through;
+            }
+        }
+    }
+
+    &__label {
+        position: relative;
+        width: 50px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    &__name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: color('black');
+        background: color('white');
+        border: 1px solid color('grey-light');
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+        transition: all $motion-ease;
+    }
+
+    &__action {
+        width: 1px;
+        height: 1px;
+        position: absolute;
+        overflow: hidden;
+        opacity: 0;
+
+        &:hover ~ .filter-tabs__name,
+        &:checked ~ .filter-tabs__name,
+        &.m-active {
+            color: color('white');
+            background: color('black');
+            border: 1px solid color('black');
+        }
+    }
+}

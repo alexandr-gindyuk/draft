@@ -80,13 +80,12 @@
     }
 
     &.m-margin-bottom-small {
-        // @include media(md-down) {
-        //     margin-bottom: 80px;
-        // }
+        margin-bottom: 60px;
+    }
 
-        @include media(lg-up) {
-            margin-bottom: 60px;
-        }
+    &.m-vertical-padding {
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 }
 

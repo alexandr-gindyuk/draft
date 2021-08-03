@@ -1,0 +1,38 @@
+.text-with-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include media(lg-up) {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__text {
+        @include media(md-down) {
+            margin-bottom: 40px;
+        }
+
+        @include media(lg-up) {
+            flex-basis: 260px;
+            flex-shrink: 0;
+            margin-right: 40px;
+        }
+    }
+
+    &__title {
+        font-family: $font-dinot-medium;
+
+        @include media(lg-up) {
+            font-size: 30px;
+            line-height: 1.17;
+        }
+    }
+
+    &__content {
+        flex-grow: 1;
+
+        // TODO: delete this rule
+        overflow-x: auto;
+    }
+}

@@ -1,0 +1,81 @@
+//headings
+.h-title {
+    font-family: $font-dinot-medium;
+    margin-bottom: 20px;
+}
+
+.h-title-1 {
+    font-family: $font-dinot-bold;
+    font-size: 28px;
+    line-height: 1.07;
+    text-transform: uppercase;
+
+    @include media(md-up) {
+        font-size: 40px;
+        line-height: 1.13;
+    }
+}
+
+.h-title-2 {
+    font-size: 25px;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    @include media(md-up) {
+        font-size: 35px;
+        line-height: 1.14;
+    }
+}
+
+.h-title-3 {
+    font-size: 25px;
+    line-height: 1.2;
+    text-transform: capitalize;
+}
+
+.h-title-4 {
+    font-size: 20px;
+    line-height: 1.5;
+    text-transform: capitalize;
+}
+
+//paragraph text
+.h-text {
+    font-family: $font-open-sans;
+    font-size: 16px;
+    color: color('grey-deep');
+    line-height: 1.56;
+
+    @include media(md-up) {
+        font-family: $font-dinot;
+        color: color('black');
+    }
+}
+
+.h-text-1 {
+    @include media(md-up) {
+        font-size: 18px;
+        line-height: 1.39;
+    }
+}
+
+.h-text-2 {
+    @include media(md-up) {
+        font-size: 16px;
+        line-height: 1.25;
+    }
+}
+
+.h-text-3 {
+    @include media(md-up) {
+        font-size: 14px;
+        line-height: 1.43;
+    }
+}
+
+.h-text-rich {
+    @include media(md-up) {
+        font-size: 22px;
+        line-height: 1.36;
+    }
+}

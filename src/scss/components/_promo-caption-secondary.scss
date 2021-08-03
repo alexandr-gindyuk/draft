@@ -1,4 +1,7 @@
 .promo-caption-secondary {
+
+    $root: &;
+
     &__badge {
         @include media(sm-down) {
             margin-bottom: 40px;
@@ -13,6 +16,25 @@
 
         @include media(lg-up) {
             margin-bottom: 20px;
+        }
+
+        &.m-list {
+            display: flex;
+
+            @include media(md) {
+                flex-direction: column;
+            }
+
+            #{$root}__badge-item {
+                &:not(:last-child) {
+                    margin-right: 15px;
+
+                    @include media(md) {
+                        margin-right: 0;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
         }
     }
 
