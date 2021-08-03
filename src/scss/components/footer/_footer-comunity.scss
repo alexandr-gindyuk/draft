@@ -6,6 +6,7 @@
     background: color('grey-light');
 
     display: grid;
+    align-content: center;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto);
     grid-template-areas:
@@ -78,22 +79,6 @@
         @include media(md) {
             grid-column: 6 / span 7;
             margin-top: 0;
-        }
-
-        .socials {
-            &__item {
-                &:not(:last-child) {
-                    @include media(lg) {
-                        margin-right: 12px;
-                    }
-                }
-
-                &.m-twitter,
-                &.m-pinterest,
-                &.m-mail {
-                    display: none;
-                }
-            }
         }
     }
 }

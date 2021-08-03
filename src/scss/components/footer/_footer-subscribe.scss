@@ -1,5 +1,7 @@
 .footer-subscribe {
-    color: color('white');
+    height: 100%;
+    display: flex;
+    align-items: center;
     padding: 30px 0;
 
     @include media(sm-down) {
@@ -12,7 +14,6 @@
     }
 
     .subscribe {
-
         @include media(md) {
             display: grid;
             grid-column-gap: $grid-column-gap-sm;
@@ -30,6 +31,22 @@
         .subscribe-group {
             @include media(md) {
                 grid-column: 6 / span 7;
+            }
+        }
+
+        &.m-step-2 {
+            @include media(md) {
+                display: block; // overwrite display: grid;
+            }
+
+            .l-grid-1-1-2-2-2-3 {
+                gap: 20px 10px;
+            }
+        }
+
+        &.m-step-3 {
+            @include media(md) {
+                display: block; // overwrite display: grid;
             }
         }
     }

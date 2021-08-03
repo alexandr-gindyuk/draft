@@ -171,6 +171,13 @@ $buttons-main-theme: ('dark');
         }
     }
 
+    &.m-square-md-down {
+        @include media(md-down) {
+            min-width: 50px;
+            padding: 0;
+        }
+    }
+
     &.m-large {
         height: 70px;
     }
