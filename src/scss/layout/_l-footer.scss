@@ -18,14 +18,14 @@ $footer-size-top: 30px;
     }
 
     &__top-cell {
-        @include media(sm-down) {
-            padding-left: $wrapper-padding-sm;
-            padding-right: $wrapper-padding-sm;
-        }
-
         @include media(xs) {
             padding-left: $wrapper-padding-xs;
             padding-right: $wrapper-padding-xs;
+        }
+
+        @include media(sm) {
+            padding-left: $wrapper-padding-sm;
+            padding-right: $wrapper-padding-sm;
         }
 
         &.m-comunity {
@@ -69,6 +69,11 @@ $footer-size-top: 30px;
         @include grid;
 
         grid-row-gap: 40px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+                "navigation"
+                "storloc-rew";
 
         @include media(md) {
             grid-row-gap: 60px;
@@ -76,19 +81,6 @@ $footer-size-top: 30px;
 
         @include media(lg-up) {
             grid-row-gap: none;
-        }
-
-        @include media(xl-up) {
-            grid-template-columns: 1fr;
-        }
-
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        grid-template-areas:
-                "navigation"
-                "storloc-rew";
-
-        @include media(lg-up) {
             grid-template-columns: repeat(4, 1fr);
             grid-template-areas:
                 "navigation navigation navigation storloc-rew";
@@ -119,7 +111,7 @@ $footer-size-top: 30px;
         }
 
         &.m-storloc-rew {
-
+            grid-area: storloc-rew;
         }
 
         &.m-copy-links {
@@ -161,7 +153,8 @@ $footer-size-top: 30px;
 
     &__nav {
         @include media(md-up) {
-            display: grid;
+            @include grid;
+
             grid-template-columns: repeat(3, 1fr);
         }
     }
