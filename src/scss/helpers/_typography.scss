@@ -42,12 +42,7 @@
 //paragraph text
 .h-text {
     font-size: 16px;
-    color: color('grey-deep');
     line-height: 1.56;
-
-    @include media(md-up) {
-        color: color('black');
-    }
 }
 
 .h-text-1 {

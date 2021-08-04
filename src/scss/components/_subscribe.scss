@@ -1,4 +1,8 @@
 .subscribe {
+    &__check {
+        margin-top: 20px;
+    }
+
     &__title {
         font-family: $font-dinot-medium;
         font-size: 25px;
@@ -15,59 +19,21 @@
     &__form {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 20px;
 
-        .input-main {
-            display: flex;
+        &-input-wrapper {
             flex-grow: 1;
             margin-right: 15px;
-            background: color('white');
 
             @include media(md-up) {
                 margin-right: 20px;
             }
         }
 
-        .input-submit-group {
-            position: relative;
-            height: 50px;
-            width: 50px;
-            min-width: 50px;
-            text-transform: uppercase;
-
-            @include media(lg-up) {
-                height: 50px;
-                width: auto;
-                min-width: 160px;
-            }
-        }
-
-        .input-submit {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            width: 100%;
-            color: color('white');
-            border: 1px solid color('white');
-            background: transparent;
-            cursor: pointer;
-
-            &[attr="value"] {
-                content: '';
-            }
-        }
-
-        .input-submit-icon,
-        .input-submit-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        .input-main {
+            background: color('white');
         }
 
         .input-submit-icon {
-
             @include media(lg-up) {
                 display: none;
             }
@@ -101,6 +67,12 @@
                 color: color('danger');
             }
         }
+    }
+
+    &__radio-group {
+        margin-top: 35px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid color('white');
     }
 
     .privacy-policy {

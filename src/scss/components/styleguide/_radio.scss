@@ -1,30 +1,16 @@
 $radio-theme: ('dark');
 
 @mixin radio-theme($theme: 'default') {
-
     $radio-size: 24px;
 
     .radio {
-        display: inline-flex;
-
         $root: &;
+
+        display: inline-flex;
+        gap: 40px;
 
         &.m-column {
             flex-direction: column;
-
-            .radio-item {
-                margin-bottom: 20px;
-            }
-        }
-
-        &.m-row {
-            .radio-item {
-                margin-bottom: 12px;
-
-                &:not(:last-child) {
-                    margin-right: 10px;
-                }
-            }
         }
     }
 
@@ -34,7 +20,7 @@ $radio-theme: ('dark');
         position: relative;
         padding-left: calc(#{$radio-size} + 10px);
         cursor: pointer;
-        font-size: 14px;
+        font-size: 16px;
         user-select: none;
 
         &.m-disabled {
