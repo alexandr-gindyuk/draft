@@ -10,7 +10,7 @@
 
     &__text {
         @include media(md-down) {
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
 
         @include media(lg-up) {
@@ -22,6 +22,11 @@
 
     &__title {
         font-family: $font-dinot-medium;
+
+        @include media(md-down) {
+            font-size: 25px;
+            line-height: 1.2;
+        }
 
         @include media(lg-up) {
             font-size: 30px;
