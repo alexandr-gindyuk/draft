@@ -119,7 +119,7 @@ $footer-size-top: 30px;
         }
 
         &.m-storloc-rew {
-
+            grid-area: storloc-rew;
         }
 
         &.m-copy-links {
@@ -161,7 +161,8 @@ $footer-size-top: 30px;
 
     &__nav {
         @include media(md-up) {
-            display: grid;
+            @include grid;
+
             grid-template-columns: repeat(3, 1fr);
         }
     }
