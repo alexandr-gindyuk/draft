@@ -84,11 +84,17 @@
     }
 
     &.m-vertical-padding {
-        padding-top: 80px;
-        padding-bottom: 80px;
+        @include media(md-down) {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        @include media(lg-up) {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
     }
 }
-
 
 .l-wrapper {
     @include wrapper;
