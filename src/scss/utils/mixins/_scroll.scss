@@ -3,6 +3,7 @@ $scroll-bg: ('default', 'grey');
 @mixin scroll($bg: 'default') {
     &::-webkit-scrollbar {
         width: 4px;
+        height: 4px;
     }
 
     &::-webkit-scrollbar-thumb {

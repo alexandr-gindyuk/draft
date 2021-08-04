@@ -2142,22 +2142,6 @@
                                                 <i class="icon-smm-strava"></i>
                                             </a>
                                         </li>
-
-                                        <li class="socials__item m-twitter">
-                                            <a class="socials__link" href="#">
-                                                <i class="icon-smm-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="socials__item m-pinterest">
-                                            <a class="socials__link" href="#">
-                                                <i class="icon-smm-pinterest"></i>
-                                            </a>
-                                        </li>
-                                        <li class="socials__item m-mail">
-                                            <a class="socials__link" href="#">
-                                                <i class="icon-mail"></i>
-                                            </a>
-                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -2165,33 +2149,138 @@
                         </div>
                         <div class="l-footer__top-cell m-subscribe">
                             <!-- content asset -->
-                            <div class="footer-subscribe">
-                                <div class="subscribe">
-                                    <p class="subscribe__title">Never miss any product release and promotions</p>
+                            <div class="footer-subscribe theme-dark h-bg-brand-deep">
+                                <div class="subscribe m-step-1">
+                                    <h3 class="subscribe__title">Never miss any product release and promotions</h3>
                                     <div class="subscribe-group">
-                                        <form class="subscribe__form">
-                                            <input class="input-main" type="email" placeholder="Please enter your email...">
-                                            <div class="input-submit-group">
-                                                <input class="input-submit" type="submit" value=''>
-                                                <span class="input-submit-text">Subscribe</span>
-                                                <span class="input-submit-icon">
-                                                    <i class="icon-arrow-right"></i>
-                                                </span>
+                                        <form class="form m-subscribe">
+                                            <div class="form__section">
+                                                <div class="subscribe__form">
+                                                    <div class="subscribe__form-input-wrapper">
+                                                        <input class="input-main" type="email" placeholder="Please enter your email...">
+                                                        <div class="form__error-message" role="alert">
+                                                            <i class="icon-m-error"></i>
+                                                            This field is required
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn-main-outlined m-square-md-down">
+                                                        <span class="input-submit-text">Subscribe</span>
+                                                        <span class="input-submit-icon">
+                                                            <i class="icon-arrow-right"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
                                             </div>
-
+                                            <div class="form__section">
+                                                <div class="subscribe__check">
+                                                    <div class="checkbox">
+                                                        <label class="checkbox-item">
+                                                            <input type="checkbox" name="check">
+                                                            <span class="checkbox-item__checkmark"></span>
+                                                        </label>
+                                                        <span class="subscribe__check-description">
+                                                            I want to receive e-mail from ODLO. I agree to <a class="privacy-policy" href="#">Privacy policy</a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </form>
-                                        <div class="subscribe__check">
-                                            <div class="checkbox">
-                                                <label class="checkbox-item">
-                                                    <input type="checkbox" name="check">
-                                                    <span class="checkbox-item__checkmark"></span>
-                                                </label>
-                                                <span class="subscribe__check-description">
-                                                    I want to receive e-mail from ODLO. I agree to <a class="privacy-policy" href="#">Privacy policy</a>
-                                                </span>
+                                    </div>
+                                </div>
+                                <div class="subscribe m-step-2" style="display: none;">
+                                    <h3 class="subscribe__title">Thanks you for subscription!</h3>
+                                    <p class="h-text h-text-2">Choose your gender and your interests to receive only relevant newsletters</p>
+                                    <form class="form m-subscribe-relevant">
+                                        <div class="form__section subscribe__radio-group">
+                                            <div class="l-grid-1-1-2-2-2-3">
+                                                <div class="grid__item">
+                                                    <label class="radio-item">I'm a Man
+                                                        <input type="radio" name="gender" />
+                                                        <span class="radio-item__radiomark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="grid__item">
+                                                    <label class="radio-item">I'm a Woman
+                                                        <input type="radio" name="gender" />
+                                                        <span class="radio-item__radiomark"></span>
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                        <div class="form__section">
+                                            <div class="l-grid-1-1-2-2-2-3">
+                                                <div class="grid__item">
+                                                    <label class="checkbox-item">
+                                                        Hikking & Trekking
+                                                        <input type="checkbox" checked="" name="interests">
+                                                        <span class="checkbox-item__checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="grid__item">
+                                                    <label class="checkbox-item">
+                                                        Travel & Leisure
+                                                        <input type="checkbox" checked="" name="interests">
+                                                        <span class="checkbox-item__checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="grid__item">
+                                                    <label class="checkbox-item">
+                                                        Running
+                                                        <input type="checkbox" checked="" name="interests">
+                                                        <span class="checkbox-item__checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="grid__item">
+                                                    <label class="checkbox-item">
+                                                        Fitness & Cross Training
+                                                        <input type="checkbox" checked="" name="interests">
+                                                        <span class="checkbox-item__checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="grid__item">
+                                                    <label class="checkbox-item">
+                                                        Cross Country Skiing
+                                                        <input type="checkbox" checked="" name="interests">
+                                                        <span class="checkbox-item__checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="grid__item">
+                                                    <label class="checkbox-item">
+                                                        Skiing & Snowboard
+                                                        <input type="checkbox" checked="" name="interests">
+                                                        <span class="checkbox-item__checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="grid__item">
+                                                    <label class="checkbox-item">
+                                                        Cycling Road & MTB
+                                                        <input type="checkbox" checked="" name="interests">
+                                                        <span class="checkbox-item__checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="grid__item">
+                                                    <label class="checkbox-item">
+                                                        Team Sports
+                                                        <input type="checkbox" checked="" name="interests">
+                                                        <span class="checkbox-item__checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="grid__item">
+                                                    <label class="checkbox-item">
+                                                        Yoga & Pilates
+                                                        <input type="checkbox" checked="" name="interests">
+                                                        <span class="checkbox-item__checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form__section ">
+                                            <button type="button" class="btn-main-outlined">Send</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="subscribe m-step-3" style="display: none;">
+                                    <h3 class="subscribe__title">Thanks you for subscription!</h3>
                                 </div>
                             </div>
                             <!-- end content asset -->
@@ -2312,10 +2401,10 @@
 
                             <div class="l-footer__main-cell m-storloc-rew">
                                 <div class="footer-storeloc-group">
-                                    <div class="footer-storeloc">
+                                    <div class="footer-storeloc theme-dark">
                                         <p class="footer-storeloc__title">Store locator</p>
                                         <p class="footer-storeloc__text">Explore a retail store near you.</p>
-                                        <a class="footer-storeloc__button" href="#">
+                                        <a class="btn-main-outlined m-fluid" href="#">
                                             <span>Find a store</span>
                                             <i class="icon-location"></i>
                                         </a>
