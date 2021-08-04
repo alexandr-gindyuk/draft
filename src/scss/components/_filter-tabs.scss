@@ -7,13 +7,11 @@
         font-size: 15px;
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: -10px;
+        gap: 10px;
     }
 
     &__item  {
         display: flex;
-        margin-bottom: 10px;
-        text-transform: uppercase;
         transition: all $motion-ease;
 
         &:not(:last-child) {
@@ -30,7 +28,7 @@
 
     &__label {
         position: relative;
-        width: 50px;
+        min-width: 50px;
         height: 40px;
         cursor: pointer;
     }
@@ -62,5 +60,9 @@
             background: color('black');
             border: 1px solid color('black');
         }
+    }
+
+    &.m-uppercase {
+        text-transform: uppercase;
     }
 }

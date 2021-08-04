@@ -1,0 +1,17 @@
+.filter-tabs-filter {
+    .filter-tabs {
+        &__list {
+            @include scroll('grey');
+
+            flex-wrap: nowrap;
+            overflow-x: auto;
+
+            // TODO: add this padding only when a scroll appears
+            padding-bottom: 30px;
+        }
+
+        &__label {
+            white-space: nowrap;
+        }
+    }
+}
