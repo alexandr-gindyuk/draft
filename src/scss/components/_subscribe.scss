@@ -31,6 +31,11 @@
 
         .input-main {
             background: color('white');
+            color: color('black');
+
+            &:focus {
+                color: color('black');
+            }
         }
 
         .input-submit-icon {
