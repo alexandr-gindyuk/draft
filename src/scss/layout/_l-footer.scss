@@ -10,6 +10,7 @@ $footer-size-top: 30px;
     &__top {
         @include grid;
 
+        position: relative;
         grid-template-columns: 1fr;
 
         @include media(lg-up) {
