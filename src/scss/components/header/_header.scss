@@ -20,11 +20,6 @@ $padding-sticky-header: 20px;
     transition-property: top;
     z-index: 50;
 
-
-    @include media(lg-up) {
-        border-bottom: 1px solid color('grey-light');
-    }
-
     &__logo {
         width: 53px;
         height: 51px;
