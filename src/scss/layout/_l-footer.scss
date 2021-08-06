@@ -5,12 +5,12 @@ $footer-size-top: 30px;
 }
 
 .l-footer {
+    position: relative;
     padding-top: $footer-size-top;
 
     &__top {
         @include grid;
 
-        position: relative;
         grid-template-columns: 1fr;
 
         @include media(lg-up) {

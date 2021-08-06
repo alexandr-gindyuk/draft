@@ -2,17 +2,13 @@
     display: none;
 
     @include media(lg-up) {
-        display: block;
-        position: absolute;
-        top: 30px;
-        right: 0; //50px (button width) + 14px (size for shifting this button)
-    }
-
-    @include media(xl) {
-        right: -64px; //50px (button width) + 14px (size for shifting this button)
-    }
-
-    @include media(xxl) {
-        right: -70px; //50px (button width) + 20px (size for shifting this button)
+        display: flex;
+        position: sticky;
+        justify-content: flex-end;
+        top: 0;
+        width: 50px;
+        margin-bottom: -80px;
+        margin-left: calc(100% - 80px);
+        padding-top: 30px;
     }
 }
